@@ -16,11 +16,11 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Warning: pcihellocore.pcihellocore: Module dependency loop involving: "pcie_hard_ip_0" (altera_pcie_hard_ip 17.1), "hexport" (altera_avalon_pio 17.1)
+Warning: pcihellocore.pcihellocore: Module dependency loop involving: "hexport" (altera_avalon_pio 17.1), "pcie_hard_ip_0" (altera_pcie_hard_ip 17.1)
 Info: pcihellocore.inport: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: pcihellocore.pcie_hard_ip_0:  Rx Master BAR 0 mapped to 32 -bit Avalon-MM address
+Info: pcihellocore.pcie_hard_ip_0:  Rx Master BAR 0 mapped to 16 -bit Avalon-MM address
 Warning: pcihellocore.pcie_hard_ip_0.pcie_hard_ip_0: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 17.1)
-Warning: pcihellocore.pcie_hard_ip_0.pcie_hard_ip_0: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 17.1), "avalon_clk" (altera_clock_bridge 17.1)
+Warning: pcihellocore.pcie_hard_ip_0.pcie_hard_ip_0: Module dependency loop involving: "avalon_clk" (altera_clock_bridge 17.1), "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 17.1)
 Warning: pcihellocore.pcie_hard_ip_0.: Can't contact license server "27200@pesqueira.cin.ufpe.br" -- this server will be ignored.
 Info: pcihellocore.pcie_hard_ip_0.pcie_internal_hip:  Txs Address width is 15
 Info: pcihellocore.pcie_hard_ip_0.pcie_internal_hip: Application clock frequency is 62.5 Mhz 
@@ -80,9 +80,9 @@ Progress: Building connections
 Progress: Parameterizing connections
 Progress: Validating
 Progress: Done reading input file
-Warning: pcihellocore.pcihellocore: Module dependency loop involving: "pcie_hard_ip_0" (altera_pcie_hard_ip 17.1), "hexport" (altera_avalon_pio 17.1)
+Warning: pcihellocore.pcihellocore: Module dependency loop involving: "hexport" (altera_avalon_pio 17.1), "pcie_hard_ip_0" (altera_pcie_hard_ip 17.1)
 Info: pcihellocore.inport: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
-Info: pcihellocore.pcie_hard_ip_0:  Rx Master BAR 0 mapped to 32 -bit Avalon-MM address
+Info: pcihellocore.pcie_hard_ip_0:  Rx Master BAR 0 mapped to 16 -bit Avalon-MM address
 Warning: pcihellocore.pcie_hard_ip_0.pcie_hard_ip_0: Module dependency loop involving: "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 17.1)
 Warning: pcihellocore.pcie_hard_ip_0.pcie_hard_ip_0: Module dependency loop involving: "avalon_clk" (altera_clock_bridge 17.1), "pcie_internal_hip" (altera_pcie_internal_hard_ip_qsys 17.1)
 Warning: pcihellocore.pcie_hard_ip_0.: Can't contact license server "27200@pesqueira.cin.ufpe.br" -- this server will be ignored.
@@ -125,11 +125,11 @@ Warning: pcihellocore.pcie_hard_ip_0: pcie_hard_ip_0.reconfig_fromgxb_0 must be 
 Warning: pcihellocore.pcie_hard_ip_0: Interrupt sender pcie_hard_ip_0.cra_irq is not connected to an interrupt receiver
 Info: pcihellocore: Generating pcihellocore "pcihellocore" for QUARTUS_SYNTH
 Info: hexport: Starting RTL generation for module 'pcihellocore_hexport'
-Info: hexport:   Generation command is [exec C:/altera/17.1/quartus/bin64/perl/bin/perl.exe -I C:/altera/17.1/quartus/bin64/perl/lib -I C:/altera/17.1/quartus/sopc_builder/bin/europa -I C:/altera/17.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/17.1/quartus/sopc_builder/bin -I C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pcihellocore_hexport --dir=D:/Users/mfss2/AppData/Local/Temp/alt0160_1170244219133006051.dir/0058_hexport_gen/ --quartus_dir=C:/altera/17.1/quartus --verilog --config=D:/Users/mfss2/AppData/Local/Temp/alt0160_1170244219133006051.dir/0058_hexport_gen//pcihellocore_hexport_component_configuration.pl  --do_build_sim=0  ]
+Info: hexport:   Generation command is [exec C:/altera/17.1/quartus/bin64/perl/bin/perl.exe -I C:/altera/17.1/quartus/bin64/perl/lib -I C:/altera/17.1/quartus/sopc_builder/bin/europa -I C:/altera/17.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/17.1/quartus/sopc_builder/bin -I C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pcihellocore_hexport --dir=D:/Users/mfss2/AppData/Local/Temp/alt0160_1170244219133006051.dir/0085_hexport_gen/ --quartus_dir=C:/altera/17.1/quartus --verilog --config=D:/Users/mfss2/AppData/Local/Temp/alt0160_1170244219133006051.dir/0085_hexport_gen//pcihellocore_hexport_component_configuration.pl  --do_build_sim=0  ]
 Info: hexport: Done RTL generation for module 'pcihellocore_hexport'
 Info: hexport: "pcihellocore" instantiated altera_avalon_pio "hexport"
 Info: inport: Starting RTL generation for module 'pcihellocore_inport'
-Info: inport:   Generation command is [exec C:/altera/17.1/quartus/bin64/perl/bin/perl.exe -I C:/altera/17.1/quartus/bin64/perl/lib -I C:/altera/17.1/quartus/sopc_builder/bin/europa -I C:/altera/17.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/17.1/quartus/sopc_builder/bin -I C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pcihellocore_inport --dir=D:/Users/mfss2/AppData/Local/Temp/alt0160_1170244219133006051.dir/0059_inport_gen/ --quartus_dir=C:/altera/17.1/quartus --verilog --config=D:/Users/mfss2/AppData/Local/Temp/alt0160_1170244219133006051.dir/0059_inport_gen//pcihellocore_inport_component_configuration.pl  --do_build_sim=0  ]
+Info: inport:   Generation command is [exec C:/altera/17.1/quartus/bin64/perl/bin/perl.exe -I C:/altera/17.1/quartus/bin64/perl/lib -I C:/altera/17.1/quartus/sopc_builder/bin/europa -I C:/altera/17.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/17.1/quartus/sopc_builder/bin -I C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/altera/17.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=pcihellocore_inport --dir=D:/Users/mfss2/AppData/Local/Temp/alt0160_1170244219133006051.dir/0086_inport_gen/ --quartus_dir=C:/altera/17.1/quartus --verilog --config=D:/Users/mfss2/AppData/Local/Temp/alt0160_1170244219133006051.dir/0086_inport_gen//pcihellocore_inport_component_configuration.pl  --do_build_sim=0  ]
 Info: inport: Done RTL generation for module 'pcihellocore_inport'
 Info: inport: "pcihellocore" instantiated altera_avalon_pio "inport"
 Info: pcie_hard_ip_0: "pcihellocore" instantiated altera_pcie_hard_ip "pcie_hard_ip_0"

@@ -123,7 +123,7 @@ assign HEX1 = hexbus[14: 8];
 assign HEX2 = hexbus[22:16];
 assign HEX3 = hexbus[30:24];
 
-assign inbus = SW[15:0];
+assign inbus = SW[17:0];
 
 assign LEDG = green_bus[8:0];
 assign LEDR = red_bus[17:0];
