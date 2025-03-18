@@ -2,7 +2,6 @@ set_global_assignment -entity "pcihellocore" -library "pcihellocore" -name IP_TO
 set_global_assignment -entity "pcihellocore" -library "pcihellocore" -name IP_TOOL_VERSION "17.1"
 set_global_assignment -entity "pcihellocore" -library "pcihellocore" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "pcihellocore" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../pcihellocore.sopcinfo"]
-set_global_assignment -entity "pcihellocore" -library "pcihellocore" -name SLD_INFO "QSYS_NAME pcihellocore HAS_SOPCINFO 1 GENERATION_ID 1741899572"
 set_global_assignment -entity "pcihellocore" -library "pcihellocore" -name SLD_INFO "QSYS_NAME pcihellocore HAS_SOPCINFO 1 GENERATION_ID 1742330361"
 set_global_assignment -library "pcihellocore" -name SLD_FILE [file join $::quartus(qip_path) "pcihellocore.regmap"]
 set_global_assignment -library "pcihellocore" -name SLD_FILE [file join $::quartus(qip_path) "pcihellocore.debuginfo"]

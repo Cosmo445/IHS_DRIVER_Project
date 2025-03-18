@@ -5,7 +5,6 @@
 `timescale 1 ps / 1 ps
 module pcihellocore (
 		output wire [31:0] hexport_external_connection_export,       //       hexport_external_connection.export
-		input  wire [15:0] inport_external_connection_export,        //        inport_external_connection.export
 		input  wire [31:0] inport_external_connection_export,        //        inport_external_connection.export
 		output wire [31:0] ledsgreenport_external_connection_export, // ledsgreenport_external_connection.export
 		output wire [31:0] ledsredport_external_connection_export,   //   ledsredport_external_connection.export
