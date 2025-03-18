@@ -86,6 +86,14 @@
          type = "String";
       }
    }
+   element switchesport
+   {
+      datum _sortIndex
+      {
+         value = "5";
+         type = "int";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -150,6 +158,11 @@
  <interface
    name="pcie_hard_ip_0_tx_out"
    internal="pcie_hard_ip_0.tx_out"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="switchesport_external_connection"
+   internal="switchesport.external_connection"
    type="conduit"
    dir="end" />
  <module name="hexport" kind="altera_avalon_pio" version="17.1" enabled="1">
@@ -341,6 +354,24 @@
   <parameter name="use_crc_forwarding" value="false" />
   <parameter name="vendor_id" value="4466" />
  </module>
+ <module
+   name="switchesport"
+   kind="altera_avalon_pio"
+   version="17.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="62500000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
  <connection
    kind="avalon"
    version="17.1"
@@ -356,7 +387,7 @@
    start="pcie_hard_ip_0.bar0"
    end="inport.s1">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0xc020" />
+  <parameter name="baseAddress" value="0xc0c0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -384,6 +415,15 @@
    end="ledsredport.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0xc040" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="pcie_hard_ip_0.bar0"
+   end="switchesport.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0xc020" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -424,6 +464,11 @@
    kind="clock"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_clk"
+   end="switchesport.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pcie_hard_ip_0.pcie_core_clk"
    end="pcie_hard_ip_0.fixedclk" />
  <connection
    kind="clock"
@@ -450,6 +495,11 @@
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_reset"
    end="ledsredport.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="pcie_hard_ip_0.pcie_core_reset"
+   end="switchesport.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

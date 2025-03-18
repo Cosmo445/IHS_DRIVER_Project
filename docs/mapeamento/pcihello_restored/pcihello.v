@@ -89,7 +89,7 @@ inout 		          		FAN_CTRL;
 //=======================================================
 
 wire [31:0] hexbus;
-wire [15:0] inbus;
+wire [31:0] switchbus;
 wire [31:0] green_bus;
 wire [31:0] red_bus;
 //wire [31:0] hex_bus2;
@@ -109,9 +109,10 @@ wire [31:0] red_bus;
         .pcie_hard_ip_0_refclk_export              (PCIE_REFCLK_P),  // pcie_hard_ip_0_refclk.export
         .pcie_hard_ip_0_pcie_rstn_export           (PCIE_PERST_N),
         .hexport_external_connection_export        (hexbus),        // hexport_external_connection.export
-        .inport_external_connection_export         (inbus),         //  inport_external_connection.export
+        //.inport_external_connection_export         (inbus),         //  inport_external_connection.export
 		  .ledsgreenport_external_connection_export  (green_bus),      // ledsgreenport_pio_0_external_connection
-		  .ledsredport_external_connection_export    (red_bus)
+		  .ledsredport_external_connection_export    (red_bus),
+		  .switchesport_external_connection_export   (switchbus)
 	 );
 
 
@@ -123,7 +124,8 @@ assign HEX1 = hexbus[14: 8];
 assign HEX2 = hexbus[22:16];
 assign HEX3 = hexbus[30:24];
 
-assign inbus = SW[17:0];
+//assign inbus = SW[17:0];
+assign switchbus = SW[17:0];
 
 assign LEDG = green_bus[8:0];
 assign LEDR = red_bus[17:0];

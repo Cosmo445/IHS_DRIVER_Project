@@ -1,5 +1,5 @@
 Restore Archived Project report for pcihello
-Sat Mar 15 18:30:25 2025
+Tue Mar 18 15:58:02 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Sat Mar 15 18:30:25 2025 ;
+; Restore Archived Project Status ; Successful - Tue Mar 18 15:58:02 2025 ;
 ; Revision Name                   ; pcihello                              ;
 ; Top-level Entity Name           ; pcihello                              ;
 ; Family                          ; Cyclone IV GX                         ;
@@ -52,8 +52,8 @@ Info: Generated report 'pcihello.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/altera/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 105 warnings
     Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Sat Mar 15 18:30:25 2025
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Tue Mar 18 15:58:02 2025
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:01
 
 

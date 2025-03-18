@@ -8,6 +8,7 @@
 		.pcie_hard_ip_0_powerdown_gxb_powerdown   (<connected-to-pcie_hard_ip_0_powerdown_gxb_powerdown>),   //                                  .gxb_powerdown
 		.pcie_hard_ip_0_refclk_export             (<connected-to-pcie_hard_ip_0_refclk_export>),             //             pcie_hard_ip_0_refclk.export
 		.pcie_hard_ip_0_rx_in_rx_datain_0         (<connected-to-pcie_hard_ip_0_rx_in_rx_datain_0>),         //              pcie_hard_ip_0_rx_in.rx_datain_0
-		.pcie_hard_ip_0_tx_out_tx_dataout_0       (<connected-to-pcie_hard_ip_0_tx_out_tx_dataout_0>)        //             pcie_hard_ip_0_tx_out.tx_dataout_0
+		.pcie_hard_ip_0_tx_out_tx_dataout_0       (<connected-to-pcie_hard_ip_0_tx_out_tx_dataout_0>),       //             pcie_hard_ip_0_tx_out.tx_dataout_0
+		.switchesport_external_connection_export  (<connected-to-switchesport_external_connection_export>)   //  switchesport_external_connection.export
 	);
 
