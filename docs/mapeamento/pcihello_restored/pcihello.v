@@ -92,9 +92,8 @@ wire [31:0] hexbus;
 wire [31:0] switchbus;
 wire [31:0] green_bus;
 wire [31:0] red_bus;
-//wire [31:0] hex_bus2;
-//wire [31:0] hex_bus3;
-//wire [31:0] but_bus;
+wire [31:0] hexl_bus;
+wire [31:0] key_bus;
 
 
 //=======================================================
@@ -108,26 +107,34 @@ wire [31:0] red_bus;
         .pcie_hard_ip_0_powerdown_gxb_powerdown    (PCIE_WAKE_N),    //     .gxb_powerdown
         .pcie_hard_ip_0_refclk_export              (PCIE_REFCLK_P),  // pcie_hard_ip_0_refclk.export
         .pcie_hard_ip_0_pcie_rstn_export           (PCIE_PERST_N),
-        .hexport_external_connection_export        (hexbus),        // hexport_external_connection.export
         //.inport_external_connection_export         (inbus),         //  inport_external_connection.export
 		  .ledsgreenport_external_connection_export  (green_bus),      // ledsgreenport_pio_0_external_connection
 		  .ledsredport_external_connection_export    (red_bus),
-		  .switchesport_external_connection_export   (switchbus)
+		  .hexport_external_connection_export        (hexbus),        // hexport_external_connection.export
+		  .hexlport_external_connection_export       (hexl_bus),
+		  .switchesport_external_connection_export   (switchbus),
+        .keysport_external_connection_export       (key_bus)
 	 );
 
 
 	//////////// FAN Control //////////
 assign FAN_CTRL = 1'b1; // turn off FAN
 
+assign LEDG = green_bus[8:0];
+assign LEDR = red_bus[17:0];
+
 assign HEX0 = hexbus[ 6: 0];
 assign HEX1 = hexbus[14: 8];
 assign HEX2 = hexbus[22:16];
 assign HEX3 = hexbus[30:24];
+assign HEX4 = hexl_bus[ 6: 0];
+assign HEX5 = hexl_bus[14: 8];
+assign HEX6 = hexl_bus[22:16];
+assign HEX7 = hexl_bus[30:24];
 
 //assign inbus = SW[17:0];
-assign switchbus = SW[17:0];
+assign switchbus[17:0] = SW[17:0];
+assign key_bus[3:0]    = KEY[3:0];
 
-assign LEDG = green_bus[8:0];
-assign LEDR = red_bus[17:0];
 
 endmodule

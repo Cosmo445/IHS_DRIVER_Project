@@ -9,6 +9,14 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element hexlport
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
    element hexport
    {
       datum _sortIndex
@@ -39,6 +47,14 @@
       {
          value = "49184";
          type = "String";
+      }
+   }
+   element keysport
+   {
+      datum _sortIndex
+      {
+         value = "6";
+         type = "int";
       }
    }
    element ledsgreenport
@@ -116,13 +132,21 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
+   name="hexlport_external_connection"
+   internal="hexlport.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
    name="hexport_external_connection"
    internal="hexport.external_connection"
    type="conduit"
    dir="end" />
  <interface
    name="inport_external_connection"
-   internal="inport.external_connection"
+   internal="inport.external_connection" />
+ <interface
+   name="keysport_external_connection"
+   internal="keysport.external_connection"
    type="conduit"
    dir="end" />
  <interface
@@ -165,6 +189,20 @@
    internal="switchesport.external_connection"
    type="conduit"
    dir="end" />
+ <module name="hexlport" kind="altera_avalon_pio" version="17.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="62500000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="1077952576" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
  <module name="hexport" kind="altera_avalon_pio" version="17.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
@@ -179,7 +217,21 @@
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="32" />
  </module>
- <module name="inport" kind="altera_avalon_pio" version="17.1" enabled="1">
+ <module name="inport" kind="altera_avalon_pio" version="17.1" enabled="0">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="62500000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="keysport" kind="altera_avalon_pio" version="17.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -430,6 +482,24 @@
    kind="avalon"
    version="17.1"
    start="pcie_hard_ip_0.bar0"
+   end="keysport.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0xc0a0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="pcie_hard_ip_0.bar0"
+   end="hexlport.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0xc080" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="pcie_hard_ip_0.bar0"
    end="pcie_hard_ip_0.txs">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x0000" />
@@ -469,6 +539,16 @@
    kind="clock"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_clk"
+   end="keysport.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pcie_hard_ip_0.pcie_core_clk"
+   end="hexlport.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pcie_hard_ip_0.pcie_core_clk"
    end="pcie_hard_ip_0.fixedclk" />
  <connection
    kind="clock"
@@ -500,6 +580,16 @@
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_reset"
    end="switchesport.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="pcie_hard_ip_0.pcie_core_reset"
+   end="keysport.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="pcie_hard_ip_0.pcie_core_reset"
+   end="hexlport.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

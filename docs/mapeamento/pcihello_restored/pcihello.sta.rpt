@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for pcihello
-Tue Mar 18 17:40:45 2025
+Thu Mar 20 15:20:28 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -92,12 +92,12 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.70        ;
+; Average used               ; 1.56        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   4.7%      ;
+;     Processors 2-16        ;   3.8%      ;
 +----------------------------+-------------+
 
 
@@ -106,11 +106,11 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                                                                                                ; Status ; Read at                  ;
 +----------------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
-; pcihellocore/synthesis/submodules/altera_reset_controller.sdc                                                                                ; OK     ; Tue Mar 18 17:40:43 2025 ;
-; pcihellocore/synthesis/submodules/altera_pci_express.sdc                                                                                     ; OK     ; Tue Mar 18 17:40:43 2025 ;
-; pcihello.sdc                                                                                                                                 ; OK     ; Tue Mar 18 17:40:43 2025 ;
-; d:/users/mfss2/desktop/github/ihs_driver_project/docs/mapeamento/pcihello_restored/db/ip/pcihellocore/submodules/altera_pci_express.sdc      ; OK     ; Tue Mar 18 17:40:43 2025 ;
-; d:/users/mfss2/desktop/github/ihs_driver_project/docs/mapeamento/pcihello_restored/db/ip/pcihellocore/submodules/altera_reset_controller.sdc ; OK     ; Tue Mar 18 17:40:43 2025 ;
+; pcihellocore/synthesis/submodules/altera_reset_controller.sdc                                                                                ; OK     ; Thu Mar 20 15:20:25 2025 ;
+; pcihellocore/synthesis/submodules/altera_pci_express.sdc                                                                                     ; OK     ; Thu Mar 20 15:20:25 2025 ;
+; pcihello.sdc                                                                                                                                 ; OK     ; Thu Mar 20 15:20:25 2025 ;
+; d:/users/mfss2/desktop/github/ihs_driver_project/docs/mapeamento/pcihello_restored/db/ip/pcihellocore/submodules/altera_pci_express.sdc      ; OK     ; Thu Mar 20 15:20:25 2025 ;
+; d:/users/mfss2/desktop/github/ihs_driver_project/docs/mapeamento/pcihello_restored/db/ip/pcihellocore/submodules/altera_reset_controller.sdc ; OK     ; Thu Mar 20 15:20:25 2025 ;
 +----------------------------------------------------------------------------------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -386,16 +386,16 @@ No synchronizer chains to report.
 ; CLOCK_50            ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; CLOCK2_50           ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; CLOCK3_50           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[0]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[1]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[2]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; KEY[3]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PCIE_RX_P[1]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; FAN_CTRL            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; PCIE_PERST_N        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[0]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[0]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[1]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[1]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[2]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[2]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[3]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[3]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[4]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; SW[5]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
@@ -730,10 +730,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 9     ; 9    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 19    ; 19   ;
-; Unconstrained Input Port Paths  ; 21    ; 21   ;
-; Unconstrained Output Ports      ; 55    ; 55   ;
-; Unconstrained Output Port Paths ; 55    ; 55   ;
+; Unconstrained Input Ports       ; 23    ; 23   ;
+; Unconstrained Input Port Paths  ; 25    ; 25   ;
+; Unconstrained Output Ports      ; 83    ; 83   ;
+; Unconstrained Output Port Paths ; 83    ; 83   ;
 +---------------------------------+-------+------+
 
 
@@ -762,6 +762,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------+--------------------------------------------------------------------------------------+
 ; Input Port   ; Comment                                                                              ;
 +--------------+--------------------------------------------------------------------------------------+
+; KEY[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PCIE_PERST_N ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -817,6 +821,34 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDG[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDG[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -852,6 +884,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------+--------------------------------------------------------------------------------------+
 ; Input Port   ; Comment                                                                              ;
 +--------------+--------------------------------------------------------------------------------------+
+; KEY[0]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[1]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[2]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY[3]       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; PCIE_PERST_N ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[0]        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[1]        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -907,6 +943,34 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX3[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX3[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX4[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX6[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX7[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDG[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDG[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -943,7 +1007,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Mar 18 17:40:41 2025
+    Info: Processing started: Thu Mar 20 15:20:23 2025
 Info: Command: quartus_sta pcihello -c pcihello
 Info: qsta_default_script.tcl version: #3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1106,9 +1170,9 @@ Warning (18330): Ignoring Synchronizer Identification setting Off, and using Aut
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 76 warnings
-    Info: Peak virtual memory: 5163 megabytes
-    Info: Processing ended: Tue Mar 18 17:40:45 2025
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 5165 megabytes
+    Info: Processing ended: Thu Mar 20 15:20:28 2025
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:04
 
 

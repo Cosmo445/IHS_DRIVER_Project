@@ -4,8 +4,9 @@
 
 `timescale 1 ps / 1 ps
 module pcihellocore (
+		output wire [31:0] hexlport_external_connection_export,      //      hexlport_external_connection.export
 		output wire [31:0] hexport_external_connection_export,       //       hexport_external_connection.export
-		input  wire [31:0] inport_external_connection_export,        //        inport_external_connection.export
+		input  wire [31:0] keysport_external_connection_export,      //      keysport_external_connection.export
 		output wire [31:0] ledsgreenport_external_connection_export, // ledsgreenport_external_connection.export
 		output wire [31:0] ledsredport_external_connection_export,   //   ledsredport_external_connection.export
 		input  wire        pcie_hard_ip_0_pcie_rstn_export,          //          pcie_hard_ip_0_pcie_rstn.export
@@ -17,7 +18,7 @@ module pcihellocore (
 		input  wire [31:0] switchesport_external_connection_export   //  switchesport_external_connection.export
 	);
 
-	wire         pcie_hard_ip_0_pcie_core_clk_clk;                   // pcie_hard_ip_0:pcie_core_clk_clk -> [hexport:clk, inport:clk, irq_mapper:clk, ledsgreenport:clk, ledsredport:clk, mm_interconnect_0:pcie_hard_ip_0_pcie_core_clk_clk, pcie_hard_ip_0:cal_blk_clk_clk, pcie_hard_ip_0:fixedclk_clk, pcie_hard_ip_0:reconfig_gxbclk_clk, rst_controller:clk, switchesport:clk]
+	wire         pcie_hard_ip_0_pcie_core_clk_clk;                   // pcie_hard_ip_0:pcie_core_clk_clk -> [hexlport:clk, hexport:clk, irq_mapper:clk, keysport:clk, ledsgreenport:clk, ledsredport:clk, mm_interconnect_0:pcie_hard_ip_0_pcie_core_clk_clk, pcie_hard_ip_0:cal_blk_clk_clk, pcie_hard_ip_0:fixedclk_clk, pcie_hard_ip_0:reconfig_gxbclk_clk, rst_controller:clk, switchesport:clk]
 	wire         pcie_hard_ip_0_bar0_waitrequest;                    // mm_interconnect_0:pcie_hard_ip_0_bar0_waitrequest -> pcie_hard_ip_0:bar0_waitrequest
 	wire  [63:0] pcie_hard_ip_0_bar0_readdata;                       // mm_interconnect_0:pcie_hard_ip_0_bar0_readdata -> pcie_hard_ip_0:bar0_readdata
 	wire  [31:0] pcie_hard_ip_0_bar0_address;                        // pcie_hard_ip_0:bar0_address -> mm_interconnect_0:pcie_hard_ip_0_bar0_address
@@ -35,8 +36,6 @@ module pcihellocore (
 	wire   [3:0] mm_interconnect_0_pcie_hard_ip_0_cra_byteenable;    // mm_interconnect_0:pcie_hard_ip_0_cra_byteenable -> pcie_hard_ip_0:cra_byteenable
 	wire         mm_interconnect_0_pcie_hard_ip_0_cra_write;         // mm_interconnect_0:pcie_hard_ip_0_cra_write -> pcie_hard_ip_0:cra_write
 	wire  [31:0] mm_interconnect_0_pcie_hard_ip_0_cra_writedata;     // mm_interconnect_0:pcie_hard_ip_0_cra_writedata -> pcie_hard_ip_0:cra_writedata
-	wire  [31:0] mm_interconnect_0_inport_s1_readdata;               // inport:readdata -> mm_interconnect_0:inport_s1_readdata
-	wire   [1:0] mm_interconnect_0_inport_s1_address;                // mm_interconnect_0:inport_s1_address -> inport:address
 	wire         mm_interconnect_0_hexport_s1_chipselect;            // mm_interconnect_0:hexport_s1_chipselect -> hexport:chipselect
 	wire  [31:0] mm_interconnect_0_hexport_s1_readdata;              // hexport:readdata -> mm_interconnect_0:hexport_s1_readdata
 	wire   [1:0] mm_interconnect_0_hexport_s1_address;               // mm_interconnect_0:hexport_s1_address -> hexport:address
@@ -54,6 +53,13 @@ module pcihellocore (
 	wire  [31:0] mm_interconnect_0_ledsredport_s1_writedata;         // mm_interconnect_0:ledsredport_s1_writedata -> ledsredport:writedata
 	wire  [31:0] mm_interconnect_0_switchesport_s1_readdata;         // switchesport:readdata -> mm_interconnect_0:switchesport_s1_readdata
 	wire   [1:0] mm_interconnect_0_switchesport_s1_address;          // mm_interconnect_0:switchesport_s1_address -> switchesport:address
+	wire  [31:0] mm_interconnect_0_keysport_s1_readdata;             // keysport:readdata -> mm_interconnect_0:keysport_s1_readdata
+	wire   [1:0] mm_interconnect_0_keysport_s1_address;              // mm_interconnect_0:keysport_s1_address -> keysport:address
+	wire         mm_interconnect_0_hexlport_s1_chipselect;           // mm_interconnect_0:hexlport_s1_chipselect -> hexlport:chipselect
+	wire  [31:0] mm_interconnect_0_hexlport_s1_readdata;             // hexlport:readdata -> mm_interconnect_0:hexlport_s1_readdata
+	wire   [1:0] mm_interconnect_0_hexlport_s1_address;              // mm_interconnect_0:hexlport_s1_address -> hexlport:address
+	wire         mm_interconnect_0_hexlport_s1_write;                // mm_interconnect_0:hexlport_s1_write -> hexlport:write_n
+	wire  [31:0] mm_interconnect_0_hexlport_s1_writedata;            // mm_interconnect_0:hexlport_s1_writedata -> hexlport:writedata
 	wire         mm_interconnect_0_pcie_hard_ip_0_txs_chipselect;    // mm_interconnect_0:pcie_hard_ip_0_txs_chipselect -> pcie_hard_ip_0:txs_chipselect
 	wire  [63:0] mm_interconnect_0_pcie_hard_ip_0_txs_readdata;      // pcie_hard_ip_0:txs_readdata -> mm_interconnect_0:pcie_hard_ip_0_txs_readdata
 	wire         mm_interconnect_0_pcie_hard_ip_0_txs_waitrequest;   // pcie_hard_ip_0:txs_waitrequest -> mm_interconnect_0:pcie_hard_ip_0_txs_waitrequest
@@ -65,8 +71,19 @@ module pcihellocore (
 	wire  [63:0] mm_interconnect_0_pcie_hard_ip_0_txs_writedata;     // mm_interconnect_0:pcie_hard_ip_0_txs_writedata -> pcie_hard_ip_0:txs_writedata
 	wire   [6:0] mm_interconnect_0_pcie_hard_ip_0_txs_burstcount;    // mm_interconnect_0:pcie_hard_ip_0_txs_burstcount -> pcie_hard_ip_0:txs_burstcount
 	wire  [15:0] pcie_hard_ip_0_rxm_irq_irq;                         // irq_mapper:sender_irq -> pcie_hard_ip_0:rxm_irq_irq
-	wire         rst_controller_reset_out_reset;                     // rst_controller:reset_out -> [hexport:reset_n, inport:reset_n, irq_mapper:reset, ledsgreenport:reset_n, ledsredport:reset_n, mm_interconnect_0:inport_reset_reset_bridge_in_reset_reset, switchesport:reset_n]
+	wire         rst_controller_reset_out_reset;                     // rst_controller:reset_out -> [hexlport:reset_n, hexport:reset_n, irq_mapper:reset, keysport:reset_n, ledsgreenport:reset_n, ledsredport:reset_n, mm_interconnect_0:hexport_reset_reset_bridge_in_reset_reset, switchesport:reset_n]
 	wire         pcie_hard_ip_0_pcie_core_reset_reset;               // pcie_hard_ip_0:pcie_core_reset_reset_n -> rst_controller:reset_in0
+
+	pcihellocore_hexlport hexlport (
+		.clk        (pcie_hard_ip_0_pcie_core_clk_clk),         //                 clk.clk
+		.reset_n    (~rst_controller_reset_out_reset),          //               reset.reset_n
+		.address    (mm_interconnect_0_hexlport_s1_address),    //                  s1.address
+		.write_n    (~mm_interconnect_0_hexlport_s1_write),     //                    .write_n
+		.writedata  (mm_interconnect_0_hexlport_s1_writedata),  //                    .writedata
+		.chipselect (mm_interconnect_0_hexlport_s1_chipselect), //                    .chipselect
+		.readdata   (mm_interconnect_0_hexlport_s1_readdata),   //                    .readdata
+		.out_port   (hexlport_external_connection_export)       // external_connection.export
+	);
 
 	pcihellocore_hexport hexport (
 		.clk        (pcie_hard_ip_0_pcie_core_clk_clk),        //                 clk.clk
@@ -79,12 +96,12 @@ module pcihellocore (
 		.out_port   (hexport_external_connection_export)       // external_connection.export
 	);
 
-	pcihellocore_inport inport (
-		.clk      (pcie_hard_ip_0_pcie_core_clk_clk),     //                 clk.clk
-		.reset_n  (~rst_controller_reset_out_reset),      //               reset.reset_n
-		.address  (mm_interconnect_0_inport_s1_address),  //                  s1.address
-		.readdata (mm_interconnect_0_inport_s1_readdata), //                    .readdata
-		.in_port  (inport_external_connection_export)     // external_connection.export
+	pcihellocore_keysport keysport (
+		.clk      (pcie_hard_ip_0_pcie_core_clk_clk),       //                 clk.clk
+		.reset_n  (~rst_controller_reset_out_reset),        //               reset.reset_n
+		.address  (mm_interconnect_0_keysport_s1_address),  //                  s1.address
+		.readdata (mm_interconnect_0_keysport_s1_readdata), //                    .readdata
+		.in_port  (keysport_external_connection_export)     // external_connection.export
 	);
 
 	pcihellocore_hexport ledsgreenport (
@@ -328,7 +345,7 @@ module pcihellocore (
 		.fixedclk_clk                       (pcie_hard_ip_0_pcie_core_clk_clk)                    //           fixedclk.clk
 	);
 
-	pcihellocore_inport switchesport (
+	pcihellocore_keysport switchesport (
 		.clk      (pcie_hard_ip_0_pcie_core_clk_clk),           //                 clk.clk
 		.reset_n  (~rst_controller_reset_out_reset),            //               reset.reset_n
 		.address  (mm_interconnect_0_switchesport_s1_address),  //                  s1.address
@@ -337,54 +354,59 @@ module pcihellocore (
 	);
 
 	pcihellocore_mm_interconnect_0 mm_interconnect_0 (
-		.pcie_hard_ip_0_pcie_core_clk_clk         (pcie_hard_ip_0_pcie_core_clk_clk),                   //       pcie_hard_ip_0_pcie_core_clk.clk
-		.inport_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                     // inport_reset_reset_bridge_in_reset.reset
-		.pcie_hard_ip_0_bar0_address              (pcie_hard_ip_0_bar0_address),                        //                pcie_hard_ip_0_bar0.address
-		.pcie_hard_ip_0_bar0_waitrequest          (pcie_hard_ip_0_bar0_waitrequest),                    //                                   .waitrequest
-		.pcie_hard_ip_0_bar0_burstcount           (pcie_hard_ip_0_bar0_burstcount),                     //                                   .burstcount
-		.pcie_hard_ip_0_bar0_byteenable           (pcie_hard_ip_0_bar0_byteenable),                     //                                   .byteenable
-		.pcie_hard_ip_0_bar0_read                 (pcie_hard_ip_0_bar0_read),                           //                                   .read
-		.pcie_hard_ip_0_bar0_readdata             (pcie_hard_ip_0_bar0_readdata),                       //                                   .readdata
-		.pcie_hard_ip_0_bar0_readdatavalid        (pcie_hard_ip_0_bar0_readdatavalid),                  //                                   .readdatavalid
-		.pcie_hard_ip_0_bar0_write                (pcie_hard_ip_0_bar0_write),                          //                                   .write
-		.pcie_hard_ip_0_bar0_writedata            (pcie_hard_ip_0_bar0_writedata),                      //                                   .writedata
-		.hexport_s1_address                       (mm_interconnect_0_hexport_s1_address),               //                         hexport_s1.address
-		.hexport_s1_write                         (mm_interconnect_0_hexport_s1_write),                 //                                   .write
-		.hexport_s1_readdata                      (mm_interconnect_0_hexport_s1_readdata),              //                                   .readdata
-		.hexport_s1_writedata                     (mm_interconnect_0_hexport_s1_writedata),             //                                   .writedata
-		.hexport_s1_chipselect                    (mm_interconnect_0_hexport_s1_chipselect),            //                                   .chipselect
-		.inport_s1_address                        (mm_interconnect_0_inport_s1_address),                //                          inport_s1.address
-		.inport_s1_readdata                       (mm_interconnect_0_inport_s1_readdata),               //                                   .readdata
-		.ledsgreenport_s1_address                 (mm_interconnect_0_ledsgreenport_s1_address),         //                   ledsgreenport_s1.address
-		.ledsgreenport_s1_write                   (mm_interconnect_0_ledsgreenport_s1_write),           //                                   .write
-		.ledsgreenport_s1_readdata                (mm_interconnect_0_ledsgreenport_s1_readdata),        //                                   .readdata
-		.ledsgreenport_s1_writedata               (mm_interconnect_0_ledsgreenport_s1_writedata),       //                                   .writedata
-		.ledsgreenport_s1_chipselect              (mm_interconnect_0_ledsgreenport_s1_chipselect),      //                                   .chipselect
-		.ledsredport_s1_address                   (mm_interconnect_0_ledsredport_s1_address),           //                     ledsredport_s1.address
-		.ledsredport_s1_write                     (mm_interconnect_0_ledsredport_s1_write),             //                                   .write
-		.ledsredport_s1_readdata                  (mm_interconnect_0_ledsredport_s1_readdata),          //                                   .readdata
-		.ledsredport_s1_writedata                 (mm_interconnect_0_ledsredport_s1_writedata),         //                                   .writedata
-		.ledsredport_s1_chipselect                (mm_interconnect_0_ledsredport_s1_chipselect),        //                                   .chipselect
-		.pcie_hard_ip_0_cra_address               (mm_interconnect_0_pcie_hard_ip_0_cra_address),       //                 pcie_hard_ip_0_cra.address
-		.pcie_hard_ip_0_cra_write                 (mm_interconnect_0_pcie_hard_ip_0_cra_write),         //                                   .write
-		.pcie_hard_ip_0_cra_read                  (mm_interconnect_0_pcie_hard_ip_0_cra_read),          //                                   .read
-		.pcie_hard_ip_0_cra_readdata              (mm_interconnect_0_pcie_hard_ip_0_cra_readdata),      //                                   .readdata
-		.pcie_hard_ip_0_cra_writedata             (mm_interconnect_0_pcie_hard_ip_0_cra_writedata),     //                                   .writedata
-		.pcie_hard_ip_0_cra_byteenable            (mm_interconnect_0_pcie_hard_ip_0_cra_byteenable),    //                                   .byteenable
-		.pcie_hard_ip_0_cra_waitrequest           (mm_interconnect_0_pcie_hard_ip_0_cra_waitrequest),   //                                   .waitrequest
-		.pcie_hard_ip_0_cra_chipselect            (mm_interconnect_0_pcie_hard_ip_0_cra_chipselect),    //                                   .chipselect
-		.pcie_hard_ip_0_txs_address               (mm_interconnect_0_pcie_hard_ip_0_txs_address),       //                 pcie_hard_ip_0_txs.address
-		.pcie_hard_ip_0_txs_write                 (mm_interconnect_0_pcie_hard_ip_0_txs_write),         //                                   .write
-		.pcie_hard_ip_0_txs_read                  (mm_interconnect_0_pcie_hard_ip_0_txs_read),          //                                   .read
-		.pcie_hard_ip_0_txs_readdata              (mm_interconnect_0_pcie_hard_ip_0_txs_readdata),      //                                   .readdata
-		.pcie_hard_ip_0_txs_writedata             (mm_interconnect_0_pcie_hard_ip_0_txs_writedata),     //                                   .writedata
-		.pcie_hard_ip_0_txs_burstcount            (mm_interconnect_0_pcie_hard_ip_0_txs_burstcount),    //                                   .burstcount
-		.pcie_hard_ip_0_txs_byteenable            (mm_interconnect_0_pcie_hard_ip_0_txs_byteenable),    //                                   .byteenable
-		.pcie_hard_ip_0_txs_readdatavalid         (mm_interconnect_0_pcie_hard_ip_0_txs_readdatavalid), //                                   .readdatavalid
-		.pcie_hard_ip_0_txs_waitrequest           (mm_interconnect_0_pcie_hard_ip_0_txs_waitrequest),   //                                   .waitrequest
-		.pcie_hard_ip_0_txs_chipselect            (mm_interconnect_0_pcie_hard_ip_0_txs_chipselect),    //                                   .chipselect
-		.switchesport_s1_address                  (mm_interconnect_0_switchesport_s1_address),          //                    switchesport_s1.address
-		.switchesport_s1_readdata                 (mm_interconnect_0_switchesport_s1_readdata)          //                                   .readdata
+		.pcie_hard_ip_0_pcie_core_clk_clk          (pcie_hard_ip_0_pcie_core_clk_clk),                   //        pcie_hard_ip_0_pcie_core_clk.clk
+		.hexport_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                     // hexport_reset_reset_bridge_in_reset.reset
+		.pcie_hard_ip_0_bar0_address               (pcie_hard_ip_0_bar0_address),                        //                 pcie_hard_ip_0_bar0.address
+		.pcie_hard_ip_0_bar0_waitrequest           (pcie_hard_ip_0_bar0_waitrequest),                    //                                    .waitrequest
+		.pcie_hard_ip_0_bar0_burstcount            (pcie_hard_ip_0_bar0_burstcount),                     //                                    .burstcount
+		.pcie_hard_ip_0_bar0_byteenable            (pcie_hard_ip_0_bar0_byteenable),                     //                                    .byteenable
+		.pcie_hard_ip_0_bar0_read                  (pcie_hard_ip_0_bar0_read),                           //                                    .read
+		.pcie_hard_ip_0_bar0_readdata              (pcie_hard_ip_0_bar0_readdata),                       //                                    .readdata
+		.pcie_hard_ip_0_bar0_readdatavalid         (pcie_hard_ip_0_bar0_readdatavalid),                  //                                    .readdatavalid
+		.pcie_hard_ip_0_bar0_write                 (pcie_hard_ip_0_bar0_write),                          //                                    .write
+		.pcie_hard_ip_0_bar0_writedata             (pcie_hard_ip_0_bar0_writedata),                      //                                    .writedata
+		.hexlport_s1_address                       (mm_interconnect_0_hexlport_s1_address),              //                         hexlport_s1.address
+		.hexlport_s1_write                         (mm_interconnect_0_hexlport_s1_write),                //                                    .write
+		.hexlport_s1_readdata                      (mm_interconnect_0_hexlport_s1_readdata),             //                                    .readdata
+		.hexlport_s1_writedata                     (mm_interconnect_0_hexlport_s1_writedata),            //                                    .writedata
+		.hexlport_s1_chipselect                    (mm_interconnect_0_hexlport_s1_chipselect),           //                                    .chipselect
+		.hexport_s1_address                        (mm_interconnect_0_hexport_s1_address),               //                          hexport_s1.address
+		.hexport_s1_write                          (mm_interconnect_0_hexport_s1_write),                 //                                    .write
+		.hexport_s1_readdata                       (mm_interconnect_0_hexport_s1_readdata),              //                                    .readdata
+		.hexport_s1_writedata                      (mm_interconnect_0_hexport_s1_writedata),             //                                    .writedata
+		.hexport_s1_chipselect                     (mm_interconnect_0_hexport_s1_chipselect),            //                                    .chipselect
+		.keysport_s1_address                       (mm_interconnect_0_keysport_s1_address),              //                         keysport_s1.address
+		.keysport_s1_readdata                      (mm_interconnect_0_keysport_s1_readdata),             //                                    .readdata
+		.ledsgreenport_s1_address                  (mm_interconnect_0_ledsgreenport_s1_address),         //                    ledsgreenport_s1.address
+		.ledsgreenport_s1_write                    (mm_interconnect_0_ledsgreenport_s1_write),           //                                    .write
+		.ledsgreenport_s1_readdata                 (mm_interconnect_0_ledsgreenport_s1_readdata),        //                                    .readdata
+		.ledsgreenport_s1_writedata                (mm_interconnect_0_ledsgreenport_s1_writedata),       //                                    .writedata
+		.ledsgreenport_s1_chipselect               (mm_interconnect_0_ledsgreenport_s1_chipselect),      //                                    .chipselect
+		.ledsredport_s1_address                    (mm_interconnect_0_ledsredport_s1_address),           //                      ledsredport_s1.address
+		.ledsredport_s1_write                      (mm_interconnect_0_ledsredport_s1_write),             //                                    .write
+		.ledsredport_s1_readdata                   (mm_interconnect_0_ledsredport_s1_readdata),          //                                    .readdata
+		.ledsredport_s1_writedata                  (mm_interconnect_0_ledsredport_s1_writedata),         //                                    .writedata
+		.ledsredport_s1_chipselect                 (mm_interconnect_0_ledsredport_s1_chipselect),        //                                    .chipselect
+		.pcie_hard_ip_0_cra_address                (mm_interconnect_0_pcie_hard_ip_0_cra_address),       //                  pcie_hard_ip_0_cra.address
+		.pcie_hard_ip_0_cra_write                  (mm_interconnect_0_pcie_hard_ip_0_cra_write),         //                                    .write
+		.pcie_hard_ip_0_cra_read                   (mm_interconnect_0_pcie_hard_ip_0_cra_read),          //                                    .read
+		.pcie_hard_ip_0_cra_readdata               (mm_interconnect_0_pcie_hard_ip_0_cra_readdata),      //                                    .readdata
+		.pcie_hard_ip_0_cra_writedata              (mm_interconnect_0_pcie_hard_ip_0_cra_writedata),     //                                    .writedata
+		.pcie_hard_ip_0_cra_byteenable             (mm_interconnect_0_pcie_hard_ip_0_cra_byteenable),    //                                    .byteenable
+		.pcie_hard_ip_0_cra_waitrequest            (mm_interconnect_0_pcie_hard_ip_0_cra_waitrequest),   //                                    .waitrequest
+		.pcie_hard_ip_0_cra_chipselect             (mm_interconnect_0_pcie_hard_ip_0_cra_chipselect),    //                                    .chipselect
+		.pcie_hard_ip_0_txs_address                (mm_interconnect_0_pcie_hard_ip_0_txs_address),       //                  pcie_hard_ip_0_txs.address
+		.pcie_hard_ip_0_txs_write                  (mm_interconnect_0_pcie_hard_ip_0_txs_write),         //                                    .write
+		.pcie_hard_ip_0_txs_read                   (mm_interconnect_0_pcie_hard_ip_0_txs_read),          //                                    .read
+		.pcie_hard_ip_0_txs_readdata               (mm_interconnect_0_pcie_hard_ip_0_txs_readdata),      //                                    .readdata
+		.pcie_hard_ip_0_txs_writedata              (mm_interconnect_0_pcie_hard_ip_0_txs_writedata),     //                                    .writedata
+		.pcie_hard_ip_0_txs_burstcount             (mm_interconnect_0_pcie_hard_ip_0_txs_burstcount),    //                                    .burstcount
+		.pcie_hard_ip_0_txs_byteenable             (mm_interconnect_0_pcie_hard_ip_0_txs_byteenable),    //                                    .byteenable
+		.pcie_hard_ip_0_txs_readdatavalid          (mm_interconnect_0_pcie_hard_ip_0_txs_readdatavalid), //                                    .readdatavalid
+		.pcie_hard_ip_0_txs_waitrequest            (mm_interconnect_0_pcie_hard_ip_0_txs_waitrequest),   //                                    .waitrequest
+		.pcie_hard_ip_0_txs_chipselect             (mm_interconnect_0_pcie_hard_ip_0_txs_chipselect),    //                                    .chipselect
+		.switchesport_s1_address                   (mm_interconnect_0_switchesport_s1_address),          //                     switchesport_s1.address
+		.switchesport_s1_readdata                  (mm_interconnect_0_switchesport_s1_readdata)          //                                    .readdata
 	);
 
 	pcihellocore_irq_mapper irq_mapper (
