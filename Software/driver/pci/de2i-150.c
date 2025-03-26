@@ -322,4 +322,5 @@ static void __exit my_pci_remove(struct pci_dev *dev)
 }
 
 module_init(my_init);
+
 module_exit(my_exit);
