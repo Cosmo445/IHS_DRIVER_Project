@@ -11,7 +11,7 @@
 #include <time.h>
 
 // ioctl commands defined for the pci driver header
-#include "../../include/ioctl_cmds.h"
+#include "../include/ioctl_cmds.h"
 
 int main(int argc, char** argv)
 {
