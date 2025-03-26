@@ -213,39 +213,39 @@ module pcihellocore_mm_interconnect_0_router
     end
 
     // ( 0xc000 .. 0xc010 )
-    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 16'hc000   ) begin
-            src_channel = 8'b00000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
-    end
-
-    // ( 0xc020 .. 0xc030 )
-    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 16'hc020  && read_transaction  ) begin
+    if ( {address[RG:PAD2],{PAD2{1'b0}}} == 16'hc000  && read_transaction  ) begin
             src_channel = 8'b00010000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 7;
     end
 
+    // ( 0xc020 .. 0xc030 )
+    if ( {address[RG:PAD3],{PAD3{1'b0}}} == 16'hc020  && read_transaction  ) begin
+            src_channel = 8'b00100000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+    end
+
     // ( 0xc040 .. 0xc050 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 16'hc040   ) begin
-            src_channel = 8'b00001000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
-    end
-
-    // ( 0xc060 .. 0xc070 )
-    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 16'hc060   ) begin
-            src_channel = 8'b00000100;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
-    end
-
-    // ( 0xc080 .. 0xc090 )
-    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 16'hc080   ) begin
             src_channel = 8'b01000000;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
+    // ( 0xc060 .. 0xc070 )
+    if ( {address[RG:PAD5],{PAD5{1'b0}}} == 16'hc060   ) begin
+            src_channel = 8'b00000010;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
+    end
+
+    // ( 0xc080 .. 0xc090 )
+    if ( {address[RG:PAD6],{PAD6{1'b0}}} == 16'hc080   ) begin
+            src_channel = 8'b00001000;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 4;
+    end
+
     // ( 0xc0a0 .. 0xc0b0 )
-    if ( {address[RG:PAD7],{PAD7{1'b0}}} == 16'hc0a0  && read_transaction  ) begin
-            src_channel = 8'b00100000;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 2;
+    if ( {address[RG:PAD7],{PAD7{1'b0}}} == 16'hc0a0   ) begin
+            src_channel = 8'b00000100;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 3;
     end
 
 end

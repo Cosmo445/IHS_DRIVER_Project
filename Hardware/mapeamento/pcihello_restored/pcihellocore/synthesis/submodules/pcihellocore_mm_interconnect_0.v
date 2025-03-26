@@ -7,59 +7,59 @@
 
 `timescale 1 ps / 1 ps
 module pcihellocore_mm_interconnect_0 (
-		input  wire        pcie_hard_ip_0_pcie_core_clk_clk,          //        pcie_hard_ip_0_pcie_core_clk.clk
-		input  wire        hexport_reset_reset_bridge_in_reset_reset, // hexport_reset_reset_bridge_in_reset.reset
-		input  wire [31:0] pcie_hard_ip_0_bar0_address,               //                 pcie_hard_ip_0_bar0.address
-		output wire        pcie_hard_ip_0_bar0_waitrequest,           //                                    .waitrequest
-		input  wire [6:0]  pcie_hard_ip_0_bar0_burstcount,            //                                    .burstcount
-		input  wire [7:0]  pcie_hard_ip_0_bar0_byteenable,            //                                    .byteenable
-		input  wire        pcie_hard_ip_0_bar0_read,                  //                                    .read
-		output wire [63:0] pcie_hard_ip_0_bar0_readdata,              //                                    .readdata
-		output wire        pcie_hard_ip_0_bar0_readdatavalid,         //                                    .readdatavalid
-		input  wire        pcie_hard_ip_0_bar0_write,                 //                                    .write
-		input  wire [63:0] pcie_hard_ip_0_bar0_writedata,             //                                    .writedata
-		output wire [1:0]  hexlport_s1_address,                       //                         hexlport_s1.address
-		output wire        hexlport_s1_write,                         //                                    .write
-		input  wire [31:0] hexlport_s1_readdata,                      //                                    .readdata
-		output wire [31:0] hexlport_s1_writedata,                     //                                    .writedata
-		output wire        hexlport_s1_chipselect,                    //                                    .chipselect
-		output wire [1:0]  hexport_s1_address,                        //                          hexport_s1.address
-		output wire        hexport_s1_write,                          //                                    .write
-		input  wire [31:0] hexport_s1_readdata,                       //                                    .readdata
-		output wire [31:0] hexport_s1_writedata,                      //                                    .writedata
-		output wire        hexport_s1_chipselect,                     //                                    .chipselect
-		output wire [1:0]  keysport_s1_address,                       //                         keysport_s1.address
-		input  wire [31:0] keysport_s1_readdata,                      //                                    .readdata
-		output wire [1:0]  ledsgreenport_s1_address,                  //                    ledsgreenport_s1.address
-		output wire        ledsgreenport_s1_write,                    //                                    .write
-		input  wire [31:0] ledsgreenport_s1_readdata,                 //                                    .readdata
-		output wire [31:0] ledsgreenport_s1_writedata,                //                                    .writedata
-		output wire        ledsgreenport_s1_chipselect,               //                                    .chipselect
-		output wire [1:0]  ledsredport_s1_address,                    //                      ledsredport_s1.address
-		output wire        ledsredport_s1_write,                      //                                    .write
-		input  wire [31:0] ledsredport_s1_readdata,                   //                                    .readdata
-		output wire [31:0] ledsredport_s1_writedata,                  //                                    .writedata
-		output wire        ledsredport_s1_chipselect,                 //                                    .chipselect
-		output wire [11:0] pcie_hard_ip_0_cra_address,                //                  pcie_hard_ip_0_cra.address
-		output wire        pcie_hard_ip_0_cra_write,                  //                                    .write
-		output wire        pcie_hard_ip_0_cra_read,                   //                                    .read
-		input  wire [31:0] pcie_hard_ip_0_cra_readdata,               //                                    .readdata
-		output wire [31:0] pcie_hard_ip_0_cra_writedata,              //                                    .writedata
-		output wire [3:0]  pcie_hard_ip_0_cra_byteenable,             //                                    .byteenable
-		input  wire        pcie_hard_ip_0_cra_waitrequest,            //                                    .waitrequest
-		output wire        pcie_hard_ip_0_cra_chipselect,             //                                    .chipselect
-		output wire [14:0] pcie_hard_ip_0_txs_address,                //                  pcie_hard_ip_0_txs.address
-		output wire        pcie_hard_ip_0_txs_write,                  //                                    .write
-		output wire        pcie_hard_ip_0_txs_read,                   //                                    .read
-		input  wire [63:0] pcie_hard_ip_0_txs_readdata,               //                                    .readdata
-		output wire [63:0] pcie_hard_ip_0_txs_writedata,              //                                    .writedata
-		output wire [6:0]  pcie_hard_ip_0_txs_burstcount,             //                                    .burstcount
-		output wire [7:0]  pcie_hard_ip_0_txs_byteenable,             //                                    .byteenable
-		input  wire        pcie_hard_ip_0_txs_readdatavalid,          //                                    .readdatavalid
-		input  wire        pcie_hard_ip_0_txs_waitrequest,            //                                    .waitrequest
-		output wire        pcie_hard_ip_0_txs_chipselect,             //                                    .chipselect
-		output wire [1:0]  switchesport_s1_address,                   //                     switchesport_s1.address
-		input  wire [31:0] switchesport_s1_readdata                   //                                    .readdata
+		input  wire        pcie_hard_ip_0_pcie_core_clk_clk,           //         pcie_hard_ip_0_pcie_core_clk.clk
+		input  wire        hexrport_reset_reset_bridge_in_reset_reset, // hexrport_reset_reset_bridge_in_reset.reset
+		input  wire [31:0] pcie_hard_ip_0_bar0_address,                //                  pcie_hard_ip_0_bar0.address
+		output wire        pcie_hard_ip_0_bar0_waitrequest,            //                                     .waitrequest
+		input  wire [6:0]  pcie_hard_ip_0_bar0_burstcount,             //                                     .burstcount
+		input  wire [7:0]  pcie_hard_ip_0_bar0_byteenable,             //                                     .byteenable
+		input  wire        pcie_hard_ip_0_bar0_read,                   //                                     .read
+		output wire [63:0] pcie_hard_ip_0_bar0_readdata,               //                                     .readdata
+		output wire        pcie_hard_ip_0_bar0_readdatavalid,          //                                     .readdatavalid
+		input  wire        pcie_hard_ip_0_bar0_write,                  //                                     .write
+		input  wire [63:0] pcie_hard_ip_0_bar0_writedata,              //                                     .writedata
+		output wire [1:0]  hexlport_s1_address,                        //                          hexlport_s1.address
+		output wire        hexlport_s1_write,                          //                                     .write
+		input  wire [31:0] hexlport_s1_readdata,                       //                                     .readdata
+		output wire [31:0] hexlport_s1_writedata,                      //                                     .writedata
+		output wire        hexlport_s1_chipselect,                     //                                     .chipselect
+		output wire [1:0]  hexrport_s1_address,                        //                          hexrport_s1.address
+		output wire        hexrport_s1_write,                          //                                     .write
+		input  wire [31:0] hexrport_s1_readdata,                       //                                     .readdata
+		output wire [31:0] hexrport_s1_writedata,                      //                                     .writedata
+		output wire        hexrport_s1_chipselect,                     //                                     .chipselect
+		output wire [1:0]  keysport_s1_address,                        //                          keysport_s1.address
+		input  wire [31:0] keysport_s1_readdata,                       //                                     .readdata
+		output wire [1:0]  ledsgreenport_s1_address,                   //                     ledsgreenport_s1.address
+		output wire        ledsgreenport_s1_write,                     //                                     .write
+		input  wire [31:0] ledsgreenport_s1_readdata,                  //                                     .readdata
+		output wire [31:0] ledsgreenport_s1_writedata,                 //                                     .writedata
+		output wire        ledsgreenport_s1_chipselect,                //                                     .chipselect
+		output wire [1:0]  ledsredport_s1_address,                     //                       ledsredport_s1.address
+		output wire        ledsredport_s1_write,                       //                                     .write
+		input  wire [31:0] ledsredport_s1_readdata,                    //                                     .readdata
+		output wire [31:0] ledsredport_s1_writedata,                   //                                     .writedata
+		output wire        ledsredport_s1_chipselect,                  //                                     .chipselect
+		output wire [11:0] pcie_hard_ip_0_cra_address,                 //                   pcie_hard_ip_0_cra.address
+		output wire        pcie_hard_ip_0_cra_write,                   //                                     .write
+		output wire        pcie_hard_ip_0_cra_read,                    //                                     .read
+		input  wire [31:0] pcie_hard_ip_0_cra_readdata,                //                                     .readdata
+		output wire [31:0] pcie_hard_ip_0_cra_writedata,               //                                     .writedata
+		output wire [3:0]  pcie_hard_ip_0_cra_byteenable,              //                                     .byteenable
+		input  wire        pcie_hard_ip_0_cra_waitrequest,             //                                     .waitrequest
+		output wire        pcie_hard_ip_0_cra_chipselect,              //                                     .chipselect
+		output wire [14:0] pcie_hard_ip_0_txs_address,                 //                   pcie_hard_ip_0_txs.address
+		output wire        pcie_hard_ip_0_txs_write,                   //                                     .write
+		output wire        pcie_hard_ip_0_txs_read,                    //                                     .read
+		input  wire [63:0] pcie_hard_ip_0_txs_readdata,                //                                     .readdata
+		output wire [63:0] pcie_hard_ip_0_txs_writedata,               //                                     .writedata
+		output wire [6:0]  pcie_hard_ip_0_txs_burstcount,              //                                     .burstcount
+		output wire [7:0]  pcie_hard_ip_0_txs_byteenable,              //                                     .byteenable
+		input  wire        pcie_hard_ip_0_txs_readdatavalid,           //                                     .readdatavalid
+		input  wire        pcie_hard_ip_0_txs_waitrequest,             //                                     .waitrequest
+		output wire        pcie_hard_ip_0_txs_chipselect,              //                                     .chipselect
+		output wire [1:0]  swport_s1_address,                          //                            swport_s1.address
+		input  wire [31:0] swport_s1_readdata                          //                                     .readdata
 	);
 
 	wire          pcie_hard_ip_0_bar0_translator_avalon_universal_master_0_waitrequest;   // pcie_hard_ip_0_bar0_agent:av_waitrequest -> pcie_hard_ip_0_bar0_translator:uav_waitrequest
@@ -94,27 +94,27 @@ module pcihellocore_mm_interconnect_0 (
 	wire          pcie_hard_ip_0_cra_agent_rsp_fifo_out_ready;                            // pcie_hard_ip_0_cra_agent:rf_sink_ready -> pcie_hard_ip_0_cra_agent_rsp_fifo:out_ready
 	wire          pcie_hard_ip_0_cra_agent_rsp_fifo_out_startofpacket;                    // pcie_hard_ip_0_cra_agent_rsp_fifo:out_startofpacket -> pcie_hard_ip_0_cra_agent:rf_sink_startofpacket
 	wire          pcie_hard_ip_0_cra_agent_rsp_fifo_out_endofpacket;                      // pcie_hard_ip_0_cra_agent_rsp_fifo:out_endofpacket -> pcie_hard_ip_0_cra_agent:rf_sink_endofpacket
-	wire   [31:0] hexport_s1_agent_m0_readdata;                                           // hexport_s1_translator:uav_readdata -> hexport_s1_agent:m0_readdata
-	wire          hexport_s1_agent_m0_waitrequest;                                        // hexport_s1_translator:uav_waitrequest -> hexport_s1_agent:m0_waitrequest
-	wire          hexport_s1_agent_m0_debugaccess;                                        // hexport_s1_agent:m0_debugaccess -> hexport_s1_translator:uav_debugaccess
-	wire   [31:0] hexport_s1_agent_m0_address;                                            // hexport_s1_agent:m0_address -> hexport_s1_translator:uav_address
-	wire    [3:0] hexport_s1_agent_m0_byteenable;                                         // hexport_s1_agent:m0_byteenable -> hexport_s1_translator:uav_byteenable
-	wire          hexport_s1_agent_m0_read;                                               // hexport_s1_agent:m0_read -> hexport_s1_translator:uav_read
-	wire          hexport_s1_agent_m0_readdatavalid;                                      // hexport_s1_translator:uav_readdatavalid -> hexport_s1_agent:m0_readdatavalid
-	wire          hexport_s1_agent_m0_lock;                                               // hexport_s1_agent:m0_lock -> hexport_s1_translator:uav_lock
-	wire   [31:0] hexport_s1_agent_m0_writedata;                                          // hexport_s1_agent:m0_writedata -> hexport_s1_translator:uav_writedata
-	wire          hexport_s1_agent_m0_write;                                              // hexport_s1_agent:m0_write -> hexport_s1_translator:uav_write
-	wire    [2:0] hexport_s1_agent_m0_burstcount;                                         // hexport_s1_agent:m0_burstcount -> hexport_s1_translator:uav_burstcount
-	wire          hexport_s1_agent_rf_source_valid;                                       // hexport_s1_agent:rf_source_valid -> hexport_s1_agent_rsp_fifo:in_valid
-	wire  [113:0] hexport_s1_agent_rf_source_data;                                        // hexport_s1_agent:rf_source_data -> hexport_s1_agent_rsp_fifo:in_data
-	wire          hexport_s1_agent_rf_source_ready;                                       // hexport_s1_agent_rsp_fifo:in_ready -> hexport_s1_agent:rf_source_ready
-	wire          hexport_s1_agent_rf_source_startofpacket;                               // hexport_s1_agent:rf_source_startofpacket -> hexport_s1_agent_rsp_fifo:in_startofpacket
-	wire          hexport_s1_agent_rf_source_endofpacket;                                 // hexport_s1_agent:rf_source_endofpacket -> hexport_s1_agent_rsp_fifo:in_endofpacket
-	wire          hexport_s1_agent_rsp_fifo_out_valid;                                    // hexport_s1_agent_rsp_fifo:out_valid -> hexport_s1_agent:rf_sink_valid
-	wire  [113:0] hexport_s1_agent_rsp_fifo_out_data;                                     // hexport_s1_agent_rsp_fifo:out_data -> hexport_s1_agent:rf_sink_data
-	wire          hexport_s1_agent_rsp_fifo_out_ready;                                    // hexport_s1_agent:rf_sink_ready -> hexport_s1_agent_rsp_fifo:out_ready
-	wire          hexport_s1_agent_rsp_fifo_out_startofpacket;                            // hexport_s1_agent_rsp_fifo:out_startofpacket -> hexport_s1_agent:rf_sink_startofpacket
-	wire          hexport_s1_agent_rsp_fifo_out_endofpacket;                              // hexport_s1_agent_rsp_fifo:out_endofpacket -> hexport_s1_agent:rf_sink_endofpacket
+	wire   [31:0] hexrport_s1_agent_m0_readdata;                                          // hexrport_s1_translator:uav_readdata -> hexrport_s1_agent:m0_readdata
+	wire          hexrport_s1_agent_m0_waitrequest;                                       // hexrport_s1_translator:uav_waitrequest -> hexrport_s1_agent:m0_waitrequest
+	wire          hexrport_s1_agent_m0_debugaccess;                                       // hexrport_s1_agent:m0_debugaccess -> hexrport_s1_translator:uav_debugaccess
+	wire   [31:0] hexrport_s1_agent_m0_address;                                           // hexrport_s1_agent:m0_address -> hexrport_s1_translator:uav_address
+	wire    [3:0] hexrport_s1_agent_m0_byteenable;                                        // hexrport_s1_agent:m0_byteenable -> hexrport_s1_translator:uav_byteenable
+	wire          hexrport_s1_agent_m0_read;                                              // hexrport_s1_agent:m0_read -> hexrport_s1_translator:uav_read
+	wire          hexrport_s1_agent_m0_readdatavalid;                                     // hexrport_s1_translator:uav_readdatavalid -> hexrport_s1_agent:m0_readdatavalid
+	wire          hexrport_s1_agent_m0_lock;                                              // hexrport_s1_agent:m0_lock -> hexrport_s1_translator:uav_lock
+	wire   [31:0] hexrport_s1_agent_m0_writedata;                                         // hexrport_s1_agent:m0_writedata -> hexrport_s1_translator:uav_writedata
+	wire          hexrport_s1_agent_m0_write;                                             // hexrport_s1_agent:m0_write -> hexrport_s1_translator:uav_write
+	wire    [2:0] hexrport_s1_agent_m0_burstcount;                                        // hexrport_s1_agent:m0_burstcount -> hexrport_s1_translator:uav_burstcount
+	wire          hexrport_s1_agent_rf_source_valid;                                      // hexrport_s1_agent:rf_source_valid -> hexrport_s1_agent_rsp_fifo:in_valid
+	wire  [113:0] hexrport_s1_agent_rf_source_data;                                       // hexrport_s1_agent:rf_source_data -> hexrport_s1_agent_rsp_fifo:in_data
+	wire          hexrport_s1_agent_rf_source_ready;                                      // hexrport_s1_agent_rsp_fifo:in_ready -> hexrport_s1_agent:rf_source_ready
+	wire          hexrport_s1_agent_rf_source_startofpacket;                              // hexrport_s1_agent:rf_source_startofpacket -> hexrport_s1_agent_rsp_fifo:in_startofpacket
+	wire          hexrport_s1_agent_rf_source_endofpacket;                                // hexrport_s1_agent:rf_source_endofpacket -> hexrport_s1_agent_rsp_fifo:in_endofpacket
+	wire          hexrport_s1_agent_rsp_fifo_out_valid;                                   // hexrport_s1_agent_rsp_fifo:out_valid -> hexrport_s1_agent:rf_sink_valid
+	wire  [113:0] hexrport_s1_agent_rsp_fifo_out_data;                                    // hexrport_s1_agent_rsp_fifo:out_data -> hexrport_s1_agent:rf_sink_data
+	wire          hexrport_s1_agent_rsp_fifo_out_ready;                                   // hexrport_s1_agent:rf_sink_ready -> hexrport_s1_agent_rsp_fifo:out_ready
+	wire          hexrport_s1_agent_rsp_fifo_out_startofpacket;                           // hexrport_s1_agent_rsp_fifo:out_startofpacket -> hexrport_s1_agent:rf_sink_startofpacket
+	wire          hexrport_s1_agent_rsp_fifo_out_endofpacket;                             // hexrport_s1_agent_rsp_fifo:out_endofpacket -> hexrport_s1_agent:rf_sink_endofpacket
 	wire   [31:0] ledsgreenport_s1_agent_m0_readdata;                                     // ledsgreenport_s1_translator:uav_readdata -> ledsgreenport_s1_agent:m0_readdata
 	wire          ledsgreenport_s1_agent_m0_waitrequest;                                  // ledsgreenport_s1_translator:uav_waitrequest -> ledsgreenport_s1_agent:m0_waitrequest
 	wire          ledsgreenport_s1_agent_m0_debugaccess;                                  // ledsgreenport_s1_agent:m0_debugaccess -> ledsgreenport_s1_translator:uav_debugaccess
@@ -157,27 +157,27 @@ module pcihellocore_mm_interconnect_0 (
 	wire          ledsredport_s1_agent_rsp_fifo_out_ready;                                // ledsredport_s1_agent:rf_sink_ready -> ledsredport_s1_agent_rsp_fifo:out_ready
 	wire          ledsredport_s1_agent_rsp_fifo_out_startofpacket;                        // ledsredport_s1_agent_rsp_fifo:out_startofpacket -> ledsredport_s1_agent:rf_sink_startofpacket
 	wire          ledsredport_s1_agent_rsp_fifo_out_endofpacket;                          // ledsredport_s1_agent_rsp_fifo:out_endofpacket -> ledsredport_s1_agent:rf_sink_endofpacket
-	wire   [31:0] switchesport_s1_agent_m0_readdata;                                      // switchesport_s1_translator:uav_readdata -> switchesport_s1_agent:m0_readdata
-	wire          switchesport_s1_agent_m0_waitrequest;                                   // switchesport_s1_translator:uav_waitrequest -> switchesport_s1_agent:m0_waitrequest
-	wire          switchesport_s1_agent_m0_debugaccess;                                   // switchesport_s1_agent:m0_debugaccess -> switchesport_s1_translator:uav_debugaccess
-	wire   [31:0] switchesport_s1_agent_m0_address;                                       // switchesport_s1_agent:m0_address -> switchesport_s1_translator:uav_address
-	wire    [3:0] switchesport_s1_agent_m0_byteenable;                                    // switchesport_s1_agent:m0_byteenable -> switchesport_s1_translator:uav_byteenable
-	wire          switchesport_s1_agent_m0_read;                                          // switchesport_s1_agent:m0_read -> switchesport_s1_translator:uav_read
-	wire          switchesport_s1_agent_m0_readdatavalid;                                 // switchesport_s1_translator:uav_readdatavalid -> switchesport_s1_agent:m0_readdatavalid
-	wire          switchesport_s1_agent_m0_lock;                                          // switchesport_s1_agent:m0_lock -> switchesport_s1_translator:uav_lock
-	wire   [31:0] switchesport_s1_agent_m0_writedata;                                     // switchesport_s1_agent:m0_writedata -> switchesport_s1_translator:uav_writedata
-	wire          switchesport_s1_agent_m0_write;                                         // switchesport_s1_agent:m0_write -> switchesport_s1_translator:uav_write
-	wire    [2:0] switchesport_s1_agent_m0_burstcount;                                    // switchesport_s1_agent:m0_burstcount -> switchesport_s1_translator:uav_burstcount
-	wire          switchesport_s1_agent_rf_source_valid;                                  // switchesport_s1_agent:rf_source_valid -> switchesport_s1_agent_rsp_fifo:in_valid
-	wire  [113:0] switchesport_s1_agent_rf_source_data;                                   // switchesport_s1_agent:rf_source_data -> switchesport_s1_agent_rsp_fifo:in_data
-	wire          switchesport_s1_agent_rf_source_ready;                                  // switchesport_s1_agent_rsp_fifo:in_ready -> switchesport_s1_agent:rf_source_ready
-	wire          switchesport_s1_agent_rf_source_startofpacket;                          // switchesport_s1_agent:rf_source_startofpacket -> switchesport_s1_agent_rsp_fifo:in_startofpacket
-	wire          switchesport_s1_agent_rf_source_endofpacket;                            // switchesport_s1_agent:rf_source_endofpacket -> switchesport_s1_agent_rsp_fifo:in_endofpacket
-	wire          switchesport_s1_agent_rsp_fifo_out_valid;                               // switchesport_s1_agent_rsp_fifo:out_valid -> switchesport_s1_agent:rf_sink_valid
-	wire  [113:0] switchesport_s1_agent_rsp_fifo_out_data;                                // switchesport_s1_agent_rsp_fifo:out_data -> switchesport_s1_agent:rf_sink_data
-	wire          switchesport_s1_agent_rsp_fifo_out_ready;                               // switchesport_s1_agent:rf_sink_ready -> switchesport_s1_agent_rsp_fifo:out_ready
-	wire          switchesport_s1_agent_rsp_fifo_out_startofpacket;                       // switchesport_s1_agent_rsp_fifo:out_startofpacket -> switchesport_s1_agent:rf_sink_startofpacket
-	wire          switchesport_s1_agent_rsp_fifo_out_endofpacket;                         // switchesport_s1_agent_rsp_fifo:out_endofpacket -> switchesport_s1_agent:rf_sink_endofpacket
+	wire   [31:0] swport_s1_agent_m0_readdata;                                            // swport_s1_translator:uav_readdata -> swport_s1_agent:m0_readdata
+	wire          swport_s1_agent_m0_waitrequest;                                         // swport_s1_translator:uav_waitrequest -> swport_s1_agent:m0_waitrequest
+	wire          swport_s1_agent_m0_debugaccess;                                         // swport_s1_agent:m0_debugaccess -> swport_s1_translator:uav_debugaccess
+	wire   [31:0] swport_s1_agent_m0_address;                                             // swport_s1_agent:m0_address -> swport_s1_translator:uav_address
+	wire    [3:0] swport_s1_agent_m0_byteenable;                                          // swport_s1_agent:m0_byteenable -> swport_s1_translator:uav_byteenable
+	wire          swport_s1_agent_m0_read;                                                // swport_s1_agent:m0_read -> swport_s1_translator:uav_read
+	wire          swport_s1_agent_m0_readdatavalid;                                       // swport_s1_translator:uav_readdatavalid -> swport_s1_agent:m0_readdatavalid
+	wire          swport_s1_agent_m0_lock;                                                // swport_s1_agent:m0_lock -> swport_s1_translator:uav_lock
+	wire   [31:0] swport_s1_agent_m0_writedata;                                           // swport_s1_agent:m0_writedata -> swport_s1_translator:uav_writedata
+	wire          swport_s1_agent_m0_write;                                               // swport_s1_agent:m0_write -> swport_s1_translator:uav_write
+	wire    [2:0] swport_s1_agent_m0_burstcount;                                          // swport_s1_agent:m0_burstcount -> swport_s1_translator:uav_burstcount
+	wire          swport_s1_agent_rf_source_valid;                                        // swport_s1_agent:rf_source_valid -> swport_s1_agent_rsp_fifo:in_valid
+	wire  [113:0] swport_s1_agent_rf_source_data;                                         // swport_s1_agent:rf_source_data -> swport_s1_agent_rsp_fifo:in_data
+	wire          swport_s1_agent_rf_source_ready;                                        // swport_s1_agent_rsp_fifo:in_ready -> swport_s1_agent:rf_source_ready
+	wire          swport_s1_agent_rf_source_startofpacket;                                // swport_s1_agent:rf_source_startofpacket -> swport_s1_agent_rsp_fifo:in_startofpacket
+	wire          swport_s1_agent_rf_source_endofpacket;                                  // swport_s1_agent:rf_source_endofpacket -> swport_s1_agent_rsp_fifo:in_endofpacket
+	wire          swport_s1_agent_rsp_fifo_out_valid;                                     // swport_s1_agent_rsp_fifo:out_valid -> swport_s1_agent:rf_sink_valid
+	wire  [113:0] swport_s1_agent_rsp_fifo_out_data;                                      // swport_s1_agent_rsp_fifo:out_data -> swport_s1_agent:rf_sink_data
+	wire          swport_s1_agent_rsp_fifo_out_ready;                                     // swport_s1_agent:rf_sink_ready -> swport_s1_agent_rsp_fifo:out_ready
+	wire          swport_s1_agent_rsp_fifo_out_startofpacket;                             // swport_s1_agent_rsp_fifo:out_startofpacket -> swport_s1_agent:rf_sink_startofpacket
+	wire          swport_s1_agent_rsp_fifo_out_endofpacket;                               // swport_s1_agent_rsp_fifo:out_endofpacket -> swport_s1_agent:rf_sink_endofpacket
 	wire   [31:0] keysport_s1_agent_m0_readdata;                                          // keysport_s1_translator:uav_readdata -> keysport_s1_agent:m0_readdata
 	wire          keysport_s1_agent_m0_waitrequest;                                       // keysport_s1_translator:uav_waitrequest -> keysport_s1_agent:m0_waitrequest
 	wire          keysport_s1_agent_m0_debugaccess;                                       // keysport_s1_agent:m0_debugaccess -> keysport_s1_translator:uav_debugaccess
@@ -257,11 +257,11 @@ module pcihellocore_mm_interconnect_0 (
 	wire          pcie_hard_ip_0_cra_agent_rp_ready;                                      // router_001:sink_ready -> pcie_hard_ip_0_cra_agent:rp_ready
 	wire          pcie_hard_ip_0_cra_agent_rp_startofpacket;                              // pcie_hard_ip_0_cra_agent:rp_startofpacket -> router_001:sink_startofpacket
 	wire          pcie_hard_ip_0_cra_agent_rp_endofpacket;                                // pcie_hard_ip_0_cra_agent:rp_endofpacket -> router_001:sink_endofpacket
-	wire          hexport_s1_agent_rp_valid;                                              // hexport_s1_agent:rp_valid -> router_002:sink_valid
-	wire  [112:0] hexport_s1_agent_rp_data;                                               // hexport_s1_agent:rp_data -> router_002:sink_data
-	wire          hexport_s1_agent_rp_ready;                                              // router_002:sink_ready -> hexport_s1_agent:rp_ready
-	wire          hexport_s1_agent_rp_startofpacket;                                      // hexport_s1_agent:rp_startofpacket -> router_002:sink_startofpacket
-	wire          hexport_s1_agent_rp_endofpacket;                                        // hexport_s1_agent:rp_endofpacket -> router_002:sink_endofpacket
+	wire          hexrport_s1_agent_rp_valid;                                             // hexrport_s1_agent:rp_valid -> router_002:sink_valid
+	wire  [112:0] hexrport_s1_agent_rp_data;                                              // hexrport_s1_agent:rp_data -> router_002:sink_data
+	wire          hexrport_s1_agent_rp_ready;                                             // router_002:sink_ready -> hexrport_s1_agent:rp_ready
+	wire          hexrport_s1_agent_rp_startofpacket;                                     // hexrport_s1_agent:rp_startofpacket -> router_002:sink_startofpacket
+	wire          hexrport_s1_agent_rp_endofpacket;                                       // hexrport_s1_agent:rp_endofpacket -> router_002:sink_endofpacket
 	wire          ledsgreenport_s1_agent_rp_valid;                                        // ledsgreenport_s1_agent:rp_valid -> router_003:sink_valid
 	wire  [112:0] ledsgreenport_s1_agent_rp_data;                                         // ledsgreenport_s1_agent:rp_data -> router_003:sink_data
 	wire          ledsgreenport_s1_agent_rp_ready;                                        // router_003:sink_ready -> ledsgreenport_s1_agent:rp_ready
@@ -272,11 +272,11 @@ module pcihellocore_mm_interconnect_0 (
 	wire          ledsredport_s1_agent_rp_ready;                                          // router_004:sink_ready -> ledsredport_s1_agent:rp_ready
 	wire          ledsredport_s1_agent_rp_startofpacket;                                  // ledsredport_s1_agent:rp_startofpacket -> router_004:sink_startofpacket
 	wire          ledsredport_s1_agent_rp_endofpacket;                                    // ledsredport_s1_agent:rp_endofpacket -> router_004:sink_endofpacket
-	wire          switchesport_s1_agent_rp_valid;                                         // switchesport_s1_agent:rp_valid -> router_005:sink_valid
-	wire  [112:0] switchesport_s1_agent_rp_data;                                          // switchesport_s1_agent:rp_data -> router_005:sink_data
-	wire          switchesport_s1_agent_rp_ready;                                         // router_005:sink_ready -> switchesport_s1_agent:rp_ready
-	wire          switchesport_s1_agent_rp_startofpacket;                                 // switchesport_s1_agent:rp_startofpacket -> router_005:sink_startofpacket
-	wire          switchesport_s1_agent_rp_endofpacket;                                   // switchesport_s1_agent:rp_endofpacket -> router_005:sink_endofpacket
+	wire          swport_s1_agent_rp_valid;                                               // swport_s1_agent:rp_valid -> router_005:sink_valid
+	wire  [112:0] swport_s1_agent_rp_data;                                                // swport_s1_agent:rp_data -> router_005:sink_data
+	wire          swport_s1_agent_rp_ready;                                               // router_005:sink_ready -> swport_s1_agent:rp_ready
+	wire          swport_s1_agent_rp_startofpacket;                                       // swport_s1_agent:rp_startofpacket -> router_005:sink_startofpacket
+	wire          swport_s1_agent_rp_endofpacket;                                         // swport_s1_agent:rp_endofpacket -> router_005:sink_endofpacket
 	wire          keysport_s1_agent_rp_valid;                                             // keysport_s1_agent:rp_valid -> router_006:sink_valid
 	wire  [112:0] keysport_s1_agent_rp_data;                                              // keysport_s1_agent:rp_data -> router_006:sink_data
 	wire          keysport_s1_agent_rp_ready;                                             // router_006:sink_ready -> keysport_s1_agent:rp_ready
@@ -327,12 +327,12 @@ module pcihellocore_mm_interconnect_0 (
 	wire    [7:0] pcie_hard_ip_0_cra_burst_adapter_source0_channel;                       // pcie_hard_ip_0_cra_burst_adapter:source0_channel -> pcie_hard_ip_0_cra_agent:cp_channel
 	wire          pcie_hard_ip_0_cra_burst_adapter_source0_startofpacket;                 // pcie_hard_ip_0_cra_burst_adapter:source0_startofpacket -> pcie_hard_ip_0_cra_agent:cp_startofpacket
 	wire          pcie_hard_ip_0_cra_burst_adapter_source0_endofpacket;                   // pcie_hard_ip_0_cra_burst_adapter:source0_endofpacket -> pcie_hard_ip_0_cra_agent:cp_endofpacket
-	wire          hexport_s1_burst_adapter_source0_valid;                                 // hexport_s1_burst_adapter:source0_valid -> hexport_s1_agent:cp_valid
-	wire  [112:0] hexport_s1_burst_adapter_source0_data;                                  // hexport_s1_burst_adapter:source0_data -> hexport_s1_agent:cp_data
-	wire          hexport_s1_burst_adapter_source0_ready;                                 // hexport_s1_agent:cp_ready -> hexport_s1_burst_adapter:source0_ready
-	wire    [7:0] hexport_s1_burst_adapter_source0_channel;                               // hexport_s1_burst_adapter:source0_channel -> hexport_s1_agent:cp_channel
-	wire          hexport_s1_burst_adapter_source0_startofpacket;                         // hexport_s1_burst_adapter:source0_startofpacket -> hexport_s1_agent:cp_startofpacket
-	wire          hexport_s1_burst_adapter_source0_endofpacket;                           // hexport_s1_burst_adapter:source0_endofpacket -> hexport_s1_agent:cp_endofpacket
+	wire          hexrport_s1_burst_adapter_source0_valid;                                // hexrport_s1_burst_adapter:source0_valid -> hexrport_s1_agent:cp_valid
+	wire  [112:0] hexrport_s1_burst_adapter_source0_data;                                 // hexrport_s1_burst_adapter:source0_data -> hexrport_s1_agent:cp_data
+	wire          hexrport_s1_burst_adapter_source0_ready;                                // hexrport_s1_agent:cp_ready -> hexrport_s1_burst_adapter:source0_ready
+	wire    [7:0] hexrport_s1_burst_adapter_source0_channel;                              // hexrport_s1_burst_adapter:source0_channel -> hexrport_s1_agent:cp_channel
+	wire          hexrport_s1_burst_adapter_source0_startofpacket;                        // hexrport_s1_burst_adapter:source0_startofpacket -> hexrport_s1_agent:cp_startofpacket
+	wire          hexrport_s1_burst_adapter_source0_endofpacket;                          // hexrport_s1_burst_adapter:source0_endofpacket -> hexrport_s1_agent:cp_endofpacket
 	wire          ledsgreenport_s1_burst_adapter_source0_valid;                           // ledsgreenport_s1_burst_adapter:source0_valid -> ledsgreenport_s1_agent:cp_valid
 	wire  [112:0] ledsgreenport_s1_burst_adapter_source0_data;                            // ledsgreenport_s1_burst_adapter:source0_data -> ledsgreenport_s1_agent:cp_data
 	wire          ledsgreenport_s1_burst_adapter_source0_ready;                           // ledsgreenport_s1_agent:cp_ready -> ledsgreenport_s1_burst_adapter:source0_ready
@@ -345,12 +345,12 @@ module pcihellocore_mm_interconnect_0 (
 	wire    [7:0] ledsredport_s1_burst_adapter_source0_channel;                           // ledsredport_s1_burst_adapter:source0_channel -> ledsredport_s1_agent:cp_channel
 	wire          ledsredport_s1_burst_adapter_source0_startofpacket;                     // ledsredport_s1_burst_adapter:source0_startofpacket -> ledsredport_s1_agent:cp_startofpacket
 	wire          ledsredport_s1_burst_adapter_source0_endofpacket;                       // ledsredport_s1_burst_adapter:source0_endofpacket -> ledsredport_s1_agent:cp_endofpacket
-	wire          switchesport_s1_burst_adapter_source0_valid;                            // switchesport_s1_burst_adapter:source0_valid -> switchesport_s1_agent:cp_valid
-	wire  [112:0] switchesport_s1_burst_adapter_source0_data;                             // switchesport_s1_burst_adapter:source0_data -> switchesport_s1_agent:cp_data
-	wire          switchesport_s1_burst_adapter_source0_ready;                            // switchesport_s1_agent:cp_ready -> switchesport_s1_burst_adapter:source0_ready
-	wire    [7:0] switchesport_s1_burst_adapter_source0_channel;                          // switchesport_s1_burst_adapter:source0_channel -> switchesport_s1_agent:cp_channel
-	wire          switchesport_s1_burst_adapter_source0_startofpacket;                    // switchesport_s1_burst_adapter:source0_startofpacket -> switchesport_s1_agent:cp_startofpacket
-	wire          switchesport_s1_burst_adapter_source0_endofpacket;                      // switchesport_s1_burst_adapter:source0_endofpacket -> switchesport_s1_agent:cp_endofpacket
+	wire          swport_s1_burst_adapter_source0_valid;                                  // swport_s1_burst_adapter:source0_valid -> swport_s1_agent:cp_valid
+	wire  [112:0] swport_s1_burst_adapter_source0_data;                                   // swport_s1_burst_adapter:source0_data -> swport_s1_agent:cp_data
+	wire          swport_s1_burst_adapter_source0_ready;                                  // swport_s1_agent:cp_ready -> swport_s1_burst_adapter:source0_ready
+	wire    [7:0] swport_s1_burst_adapter_source0_channel;                                // swport_s1_burst_adapter:source0_channel -> swport_s1_agent:cp_channel
+	wire          swport_s1_burst_adapter_source0_startofpacket;                          // swport_s1_burst_adapter:source0_startofpacket -> swport_s1_agent:cp_startofpacket
+	wire          swport_s1_burst_adapter_source0_endofpacket;                            // swport_s1_burst_adapter:source0_endofpacket -> swport_s1_agent:cp_endofpacket
 	wire          keysport_s1_burst_adapter_source0_valid;                                // keysport_s1_burst_adapter:source0_valid -> keysport_s1_agent:cp_valid
 	wire  [112:0] keysport_s1_burst_adapter_source0_data;                                 // keysport_s1_burst_adapter:source0_data -> keysport_s1_agent:cp_data
 	wire          keysport_s1_burst_adapter_source0_ready;                                // keysport_s1_agent:cp_ready -> keysport_s1_burst_adapter:source0_ready
@@ -471,18 +471,18 @@ module pcihellocore_mm_interconnect_0 (
 	wire    [7:0] pcie_hard_ip_0_cra_rsp_width_adapter_src_channel;                       // pcie_hard_ip_0_cra_rsp_width_adapter:out_channel -> rsp_demux:sink_channel
 	wire          pcie_hard_ip_0_cra_rsp_width_adapter_src_startofpacket;                 // pcie_hard_ip_0_cra_rsp_width_adapter:out_startofpacket -> rsp_demux:sink_startofpacket
 	wire          pcie_hard_ip_0_cra_rsp_width_adapter_src_endofpacket;                   // pcie_hard_ip_0_cra_rsp_width_adapter:out_endofpacket -> rsp_demux:sink_endofpacket
-	wire          router_002_src_valid;                                                   // router_002:src_valid -> hexport_s1_rsp_width_adapter:in_valid
-	wire  [112:0] router_002_src_data;                                                    // router_002:src_data -> hexport_s1_rsp_width_adapter:in_data
-	wire          router_002_src_ready;                                                   // hexport_s1_rsp_width_adapter:in_ready -> router_002:src_ready
-	wire    [7:0] router_002_src_channel;                                                 // router_002:src_channel -> hexport_s1_rsp_width_adapter:in_channel
-	wire          router_002_src_startofpacket;                                           // router_002:src_startofpacket -> hexport_s1_rsp_width_adapter:in_startofpacket
-	wire          router_002_src_endofpacket;                                             // router_002:src_endofpacket -> hexport_s1_rsp_width_adapter:in_endofpacket
-	wire          hexport_s1_rsp_width_adapter_src_valid;                                 // hexport_s1_rsp_width_adapter:out_valid -> rsp_demux_001:sink_valid
-	wire  [148:0] hexport_s1_rsp_width_adapter_src_data;                                  // hexport_s1_rsp_width_adapter:out_data -> rsp_demux_001:sink_data
-	wire          hexport_s1_rsp_width_adapter_src_ready;                                 // rsp_demux_001:sink_ready -> hexport_s1_rsp_width_adapter:out_ready
-	wire    [7:0] hexport_s1_rsp_width_adapter_src_channel;                               // hexport_s1_rsp_width_adapter:out_channel -> rsp_demux_001:sink_channel
-	wire          hexport_s1_rsp_width_adapter_src_startofpacket;                         // hexport_s1_rsp_width_adapter:out_startofpacket -> rsp_demux_001:sink_startofpacket
-	wire          hexport_s1_rsp_width_adapter_src_endofpacket;                           // hexport_s1_rsp_width_adapter:out_endofpacket -> rsp_demux_001:sink_endofpacket
+	wire          router_002_src_valid;                                                   // router_002:src_valid -> hexrport_s1_rsp_width_adapter:in_valid
+	wire  [112:0] router_002_src_data;                                                    // router_002:src_data -> hexrport_s1_rsp_width_adapter:in_data
+	wire          router_002_src_ready;                                                   // hexrport_s1_rsp_width_adapter:in_ready -> router_002:src_ready
+	wire    [7:0] router_002_src_channel;                                                 // router_002:src_channel -> hexrport_s1_rsp_width_adapter:in_channel
+	wire          router_002_src_startofpacket;                                           // router_002:src_startofpacket -> hexrport_s1_rsp_width_adapter:in_startofpacket
+	wire          router_002_src_endofpacket;                                             // router_002:src_endofpacket -> hexrport_s1_rsp_width_adapter:in_endofpacket
+	wire          hexrport_s1_rsp_width_adapter_src_valid;                                // hexrport_s1_rsp_width_adapter:out_valid -> rsp_demux_001:sink_valid
+	wire  [148:0] hexrport_s1_rsp_width_adapter_src_data;                                 // hexrport_s1_rsp_width_adapter:out_data -> rsp_demux_001:sink_data
+	wire          hexrport_s1_rsp_width_adapter_src_ready;                                // rsp_demux_001:sink_ready -> hexrport_s1_rsp_width_adapter:out_ready
+	wire    [7:0] hexrport_s1_rsp_width_adapter_src_channel;                              // hexrport_s1_rsp_width_adapter:out_channel -> rsp_demux_001:sink_channel
+	wire          hexrport_s1_rsp_width_adapter_src_startofpacket;                        // hexrport_s1_rsp_width_adapter:out_startofpacket -> rsp_demux_001:sink_startofpacket
+	wire          hexrport_s1_rsp_width_adapter_src_endofpacket;                          // hexrport_s1_rsp_width_adapter:out_endofpacket -> rsp_demux_001:sink_endofpacket
 	wire          router_003_src_valid;                                                   // router_003:src_valid -> ledsgreenport_s1_rsp_width_adapter:in_valid
 	wire  [112:0] router_003_src_data;                                                    // router_003:src_data -> ledsgreenport_s1_rsp_width_adapter:in_data
 	wire          router_003_src_ready;                                                   // ledsgreenport_s1_rsp_width_adapter:in_ready -> router_003:src_ready
@@ -507,18 +507,18 @@ module pcihellocore_mm_interconnect_0 (
 	wire    [7:0] ledsredport_s1_rsp_width_adapter_src_channel;                           // ledsredport_s1_rsp_width_adapter:out_channel -> rsp_demux_003:sink_channel
 	wire          ledsredport_s1_rsp_width_adapter_src_startofpacket;                     // ledsredport_s1_rsp_width_adapter:out_startofpacket -> rsp_demux_003:sink_startofpacket
 	wire          ledsredport_s1_rsp_width_adapter_src_endofpacket;                       // ledsredport_s1_rsp_width_adapter:out_endofpacket -> rsp_demux_003:sink_endofpacket
-	wire          router_005_src_valid;                                                   // router_005:src_valid -> switchesport_s1_rsp_width_adapter:in_valid
-	wire  [112:0] router_005_src_data;                                                    // router_005:src_data -> switchesport_s1_rsp_width_adapter:in_data
-	wire          router_005_src_ready;                                                   // switchesport_s1_rsp_width_adapter:in_ready -> router_005:src_ready
-	wire    [7:0] router_005_src_channel;                                                 // router_005:src_channel -> switchesport_s1_rsp_width_adapter:in_channel
-	wire          router_005_src_startofpacket;                                           // router_005:src_startofpacket -> switchesport_s1_rsp_width_adapter:in_startofpacket
-	wire          router_005_src_endofpacket;                                             // router_005:src_endofpacket -> switchesport_s1_rsp_width_adapter:in_endofpacket
-	wire          switchesport_s1_rsp_width_adapter_src_valid;                            // switchesport_s1_rsp_width_adapter:out_valid -> rsp_demux_004:sink_valid
-	wire  [148:0] switchesport_s1_rsp_width_adapter_src_data;                             // switchesport_s1_rsp_width_adapter:out_data -> rsp_demux_004:sink_data
-	wire          switchesport_s1_rsp_width_adapter_src_ready;                            // rsp_demux_004:sink_ready -> switchesport_s1_rsp_width_adapter:out_ready
-	wire    [7:0] switchesport_s1_rsp_width_adapter_src_channel;                          // switchesport_s1_rsp_width_adapter:out_channel -> rsp_demux_004:sink_channel
-	wire          switchesport_s1_rsp_width_adapter_src_startofpacket;                    // switchesport_s1_rsp_width_adapter:out_startofpacket -> rsp_demux_004:sink_startofpacket
-	wire          switchesport_s1_rsp_width_adapter_src_endofpacket;                      // switchesport_s1_rsp_width_adapter:out_endofpacket -> rsp_demux_004:sink_endofpacket
+	wire          router_005_src_valid;                                                   // router_005:src_valid -> swport_s1_rsp_width_adapter:in_valid
+	wire  [112:0] router_005_src_data;                                                    // router_005:src_data -> swport_s1_rsp_width_adapter:in_data
+	wire          router_005_src_ready;                                                   // swport_s1_rsp_width_adapter:in_ready -> router_005:src_ready
+	wire    [7:0] router_005_src_channel;                                                 // router_005:src_channel -> swport_s1_rsp_width_adapter:in_channel
+	wire          router_005_src_startofpacket;                                           // router_005:src_startofpacket -> swport_s1_rsp_width_adapter:in_startofpacket
+	wire          router_005_src_endofpacket;                                             // router_005:src_endofpacket -> swport_s1_rsp_width_adapter:in_endofpacket
+	wire          swport_s1_rsp_width_adapter_src_valid;                                  // swport_s1_rsp_width_adapter:out_valid -> rsp_demux_004:sink_valid
+	wire  [148:0] swport_s1_rsp_width_adapter_src_data;                                   // swport_s1_rsp_width_adapter:out_data -> rsp_demux_004:sink_data
+	wire          swport_s1_rsp_width_adapter_src_ready;                                  // rsp_demux_004:sink_ready -> swport_s1_rsp_width_adapter:out_ready
+	wire    [7:0] swport_s1_rsp_width_adapter_src_channel;                                // swport_s1_rsp_width_adapter:out_channel -> rsp_demux_004:sink_channel
+	wire          swport_s1_rsp_width_adapter_src_startofpacket;                          // swport_s1_rsp_width_adapter:out_startofpacket -> rsp_demux_004:sink_startofpacket
+	wire          swport_s1_rsp_width_adapter_src_endofpacket;                            // swport_s1_rsp_width_adapter:out_endofpacket -> rsp_demux_004:sink_endofpacket
 	wire          router_006_src_valid;                                                   // router_006:src_valid -> keysport_s1_rsp_width_adapter:in_valid
 	wire  [112:0] router_006_src_data;                                                    // router_006:src_data -> keysport_s1_rsp_width_adapter:in_data
 	wire          router_006_src_ready;                                                   // keysport_s1_rsp_width_adapter:in_ready -> router_006:src_ready
@@ -555,18 +555,18 @@ module pcihellocore_mm_interconnect_0 (
 	wire    [7:0] pcie_hard_ip_0_cra_cmd_width_adapter_src_channel;                       // pcie_hard_ip_0_cra_cmd_width_adapter:out_channel -> pcie_hard_ip_0_cra_burst_adapter:sink0_channel
 	wire          pcie_hard_ip_0_cra_cmd_width_adapter_src_startofpacket;                 // pcie_hard_ip_0_cra_cmd_width_adapter:out_startofpacket -> pcie_hard_ip_0_cra_burst_adapter:sink0_startofpacket
 	wire          pcie_hard_ip_0_cra_cmd_width_adapter_src_endofpacket;                   // pcie_hard_ip_0_cra_cmd_width_adapter:out_endofpacket -> pcie_hard_ip_0_cra_burst_adapter:sink0_endofpacket
-	wire          cmd_mux_001_src_valid;                                                  // cmd_mux_001:src_valid -> hexport_s1_cmd_width_adapter:in_valid
-	wire  [148:0] cmd_mux_001_src_data;                                                   // cmd_mux_001:src_data -> hexport_s1_cmd_width_adapter:in_data
-	wire          cmd_mux_001_src_ready;                                                  // hexport_s1_cmd_width_adapter:in_ready -> cmd_mux_001:src_ready
-	wire    [7:0] cmd_mux_001_src_channel;                                                // cmd_mux_001:src_channel -> hexport_s1_cmd_width_adapter:in_channel
-	wire          cmd_mux_001_src_startofpacket;                                          // cmd_mux_001:src_startofpacket -> hexport_s1_cmd_width_adapter:in_startofpacket
-	wire          cmd_mux_001_src_endofpacket;                                            // cmd_mux_001:src_endofpacket -> hexport_s1_cmd_width_adapter:in_endofpacket
-	wire          hexport_s1_cmd_width_adapter_src_valid;                                 // hexport_s1_cmd_width_adapter:out_valid -> hexport_s1_burst_adapter:sink0_valid
-	wire  [112:0] hexport_s1_cmd_width_adapter_src_data;                                  // hexport_s1_cmd_width_adapter:out_data -> hexport_s1_burst_adapter:sink0_data
-	wire          hexport_s1_cmd_width_adapter_src_ready;                                 // hexport_s1_burst_adapter:sink0_ready -> hexport_s1_cmd_width_adapter:out_ready
-	wire    [7:0] hexport_s1_cmd_width_adapter_src_channel;                               // hexport_s1_cmd_width_adapter:out_channel -> hexport_s1_burst_adapter:sink0_channel
-	wire          hexport_s1_cmd_width_adapter_src_startofpacket;                         // hexport_s1_cmd_width_adapter:out_startofpacket -> hexport_s1_burst_adapter:sink0_startofpacket
-	wire          hexport_s1_cmd_width_adapter_src_endofpacket;                           // hexport_s1_cmd_width_adapter:out_endofpacket -> hexport_s1_burst_adapter:sink0_endofpacket
+	wire          cmd_mux_001_src_valid;                                                  // cmd_mux_001:src_valid -> hexrport_s1_cmd_width_adapter:in_valid
+	wire  [148:0] cmd_mux_001_src_data;                                                   // cmd_mux_001:src_data -> hexrport_s1_cmd_width_adapter:in_data
+	wire          cmd_mux_001_src_ready;                                                  // hexrport_s1_cmd_width_adapter:in_ready -> cmd_mux_001:src_ready
+	wire    [7:0] cmd_mux_001_src_channel;                                                // cmd_mux_001:src_channel -> hexrport_s1_cmd_width_adapter:in_channel
+	wire          cmd_mux_001_src_startofpacket;                                          // cmd_mux_001:src_startofpacket -> hexrport_s1_cmd_width_adapter:in_startofpacket
+	wire          cmd_mux_001_src_endofpacket;                                            // cmd_mux_001:src_endofpacket -> hexrport_s1_cmd_width_adapter:in_endofpacket
+	wire          hexrport_s1_cmd_width_adapter_src_valid;                                // hexrport_s1_cmd_width_adapter:out_valid -> hexrport_s1_burst_adapter:sink0_valid
+	wire  [112:0] hexrport_s1_cmd_width_adapter_src_data;                                 // hexrport_s1_cmd_width_adapter:out_data -> hexrport_s1_burst_adapter:sink0_data
+	wire          hexrport_s1_cmd_width_adapter_src_ready;                                // hexrport_s1_burst_adapter:sink0_ready -> hexrport_s1_cmd_width_adapter:out_ready
+	wire    [7:0] hexrport_s1_cmd_width_adapter_src_channel;                              // hexrport_s1_cmd_width_adapter:out_channel -> hexrport_s1_burst_adapter:sink0_channel
+	wire          hexrport_s1_cmd_width_adapter_src_startofpacket;                        // hexrport_s1_cmd_width_adapter:out_startofpacket -> hexrport_s1_burst_adapter:sink0_startofpacket
+	wire          hexrport_s1_cmd_width_adapter_src_endofpacket;                          // hexrport_s1_cmd_width_adapter:out_endofpacket -> hexrport_s1_burst_adapter:sink0_endofpacket
 	wire          cmd_mux_002_src_valid;                                                  // cmd_mux_002:src_valid -> ledsgreenport_s1_cmd_width_adapter:in_valid
 	wire  [148:0] cmd_mux_002_src_data;                                                   // cmd_mux_002:src_data -> ledsgreenport_s1_cmd_width_adapter:in_data
 	wire          cmd_mux_002_src_ready;                                                  // ledsgreenport_s1_cmd_width_adapter:in_ready -> cmd_mux_002:src_ready
@@ -591,18 +591,18 @@ module pcihellocore_mm_interconnect_0 (
 	wire    [7:0] ledsredport_s1_cmd_width_adapter_src_channel;                           // ledsredport_s1_cmd_width_adapter:out_channel -> ledsredport_s1_burst_adapter:sink0_channel
 	wire          ledsredport_s1_cmd_width_adapter_src_startofpacket;                     // ledsredport_s1_cmd_width_adapter:out_startofpacket -> ledsredport_s1_burst_adapter:sink0_startofpacket
 	wire          ledsredport_s1_cmd_width_adapter_src_endofpacket;                       // ledsredport_s1_cmd_width_adapter:out_endofpacket -> ledsredport_s1_burst_adapter:sink0_endofpacket
-	wire          cmd_mux_004_src_valid;                                                  // cmd_mux_004:src_valid -> switchesport_s1_cmd_width_adapter:in_valid
-	wire  [148:0] cmd_mux_004_src_data;                                                   // cmd_mux_004:src_data -> switchesport_s1_cmd_width_adapter:in_data
-	wire          cmd_mux_004_src_ready;                                                  // switchesport_s1_cmd_width_adapter:in_ready -> cmd_mux_004:src_ready
-	wire    [7:0] cmd_mux_004_src_channel;                                                // cmd_mux_004:src_channel -> switchesport_s1_cmd_width_adapter:in_channel
-	wire          cmd_mux_004_src_startofpacket;                                          // cmd_mux_004:src_startofpacket -> switchesport_s1_cmd_width_adapter:in_startofpacket
-	wire          cmd_mux_004_src_endofpacket;                                            // cmd_mux_004:src_endofpacket -> switchesport_s1_cmd_width_adapter:in_endofpacket
-	wire          switchesport_s1_cmd_width_adapter_src_valid;                            // switchesport_s1_cmd_width_adapter:out_valid -> switchesport_s1_burst_adapter:sink0_valid
-	wire  [112:0] switchesport_s1_cmd_width_adapter_src_data;                             // switchesport_s1_cmd_width_adapter:out_data -> switchesport_s1_burst_adapter:sink0_data
-	wire          switchesport_s1_cmd_width_adapter_src_ready;                            // switchesport_s1_burst_adapter:sink0_ready -> switchesport_s1_cmd_width_adapter:out_ready
-	wire    [7:0] switchesport_s1_cmd_width_adapter_src_channel;                          // switchesport_s1_cmd_width_adapter:out_channel -> switchesport_s1_burst_adapter:sink0_channel
-	wire          switchesport_s1_cmd_width_adapter_src_startofpacket;                    // switchesport_s1_cmd_width_adapter:out_startofpacket -> switchesport_s1_burst_adapter:sink0_startofpacket
-	wire          switchesport_s1_cmd_width_adapter_src_endofpacket;                      // switchesport_s1_cmd_width_adapter:out_endofpacket -> switchesport_s1_burst_adapter:sink0_endofpacket
+	wire          cmd_mux_004_src_valid;                                                  // cmd_mux_004:src_valid -> swport_s1_cmd_width_adapter:in_valid
+	wire  [148:0] cmd_mux_004_src_data;                                                   // cmd_mux_004:src_data -> swport_s1_cmd_width_adapter:in_data
+	wire          cmd_mux_004_src_ready;                                                  // swport_s1_cmd_width_adapter:in_ready -> cmd_mux_004:src_ready
+	wire    [7:0] cmd_mux_004_src_channel;                                                // cmd_mux_004:src_channel -> swport_s1_cmd_width_adapter:in_channel
+	wire          cmd_mux_004_src_startofpacket;                                          // cmd_mux_004:src_startofpacket -> swport_s1_cmd_width_adapter:in_startofpacket
+	wire          cmd_mux_004_src_endofpacket;                                            // cmd_mux_004:src_endofpacket -> swport_s1_cmd_width_adapter:in_endofpacket
+	wire          swport_s1_cmd_width_adapter_src_valid;                                  // swport_s1_cmd_width_adapter:out_valid -> swport_s1_burst_adapter:sink0_valid
+	wire  [112:0] swport_s1_cmd_width_adapter_src_data;                                   // swport_s1_cmd_width_adapter:out_data -> swport_s1_burst_adapter:sink0_data
+	wire          swport_s1_cmd_width_adapter_src_ready;                                  // swport_s1_burst_adapter:sink0_ready -> swport_s1_cmd_width_adapter:out_ready
+	wire    [7:0] swport_s1_cmd_width_adapter_src_channel;                                // swport_s1_cmd_width_adapter:out_channel -> swport_s1_burst_adapter:sink0_channel
+	wire          swport_s1_cmd_width_adapter_src_startofpacket;                          // swport_s1_cmd_width_adapter:out_startofpacket -> swport_s1_burst_adapter:sink0_startofpacket
+	wire          swport_s1_cmd_width_adapter_src_endofpacket;                            // swport_s1_cmd_width_adapter:out_endofpacket -> swport_s1_burst_adapter:sink0_endofpacket
 	wire          cmd_mux_005_src_valid;                                                  // cmd_mux_005:src_valid -> keysport_s1_cmd_width_adapter:in_valid
 	wire  [148:0] cmd_mux_005_src_data;                                                   // cmd_mux_005:src_data -> keysport_s1_cmd_width_adapter:in_data
 	wire          cmd_mux_005_src_ready;                                                  // keysport_s1_cmd_width_adapter:in_ready -> cmd_mux_005:src_ready
@@ -635,13 +635,13 @@ module pcihellocore_mm_interconnect_0 (
 	wire   [33:0] avalon_st_adapter_out_0_data;                                           // avalon_st_adapter:out_0_data -> pcie_hard_ip_0_cra_agent:rdata_fifo_sink_data
 	wire          avalon_st_adapter_out_0_ready;                                          // pcie_hard_ip_0_cra_agent:rdata_fifo_sink_ready -> avalon_st_adapter:out_0_ready
 	wire    [0:0] avalon_st_adapter_out_0_error;                                          // avalon_st_adapter:out_0_error -> pcie_hard_ip_0_cra_agent:rdata_fifo_sink_error
-	wire          hexport_s1_agent_rdata_fifo_src_valid;                                  // hexport_s1_agent:rdata_fifo_src_valid -> avalon_st_adapter_001:in_0_valid
-	wire   [33:0] hexport_s1_agent_rdata_fifo_src_data;                                   // hexport_s1_agent:rdata_fifo_src_data -> avalon_st_adapter_001:in_0_data
-	wire          hexport_s1_agent_rdata_fifo_src_ready;                                  // avalon_st_adapter_001:in_0_ready -> hexport_s1_agent:rdata_fifo_src_ready
-	wire          avalon_st_adapter_001_out_0_valid;                                      // avalon_st_adapter_001:out_0_valid -> hexport_s1_agent:rdata_fifo_sink_valid
-	wire   [33:0] avalon_st_adapter_001_out_0_data;                                       // avalon_st_adapter_001:out_0_data -> hexport_s1_agent:rdata_fifo_sink_data
-	wire          avalon_st_adapter_001_out_0_ready;                                      // hexport_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_001:out_0_ready
-	wire    [0:0] avalon_st_adapter_001_out_0_error;                                      // avalon_st_adapter_001:out_0_error -> hexport_s1_agent:rdata_fifo_sink_error
+	wire          hexrport_s1_agent_rdata_fifo_src_valid;                                 // hexrport_s1_agent:rdata_fifo_src_valid -> avalon_st_adapter_001:in_0_valid
+	wire   [33:0] hexrport_s1_agent_rdata_fifo_src_data;                                  // hexrport_s1_agent:rdata_fifo_src_data -> avalon_st_adapter_001:in_0_data
+	wire          hexrport_s1_agent_rdata_fifo_src_ready;                                 // avalon_st_adapter_001:in_0_ready -> hexrport_s1_agent:rdata_fifo_src_ready
+	wire          avalon_st_adapter_001_out_0_valid;                                      // avalon_st_adapter_001:out_0_valid -> hexrport_s1_agent:rdata_fifo_sink_valid
+	wire   [33:0] avalon_st_adapter_001_out_0_data;                                       // avalon_st_adapter_001:out_0_data -> hexrport_s1_agent:rdata_fifo_sink_data
+	wire          avalon_st_adapter_001_out_0_ready;                                      // hexrport_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_001:out_0_ready
+	wire    [0:0] avalon_st_adapter_001_out_0_error;                                      // avalon_st_adapter_001:out_0_error -> hexrport_s1_agent:rdata_fifo_sink_error
 	wire          ledsgreenport_s1_agent_rdata_fifo_src_valid;                            // ledsgreenport_s1_agent:rdata_fifo_src_valid -> avalon_st_adapter_002:in_0_valid
 	wire   [33:0] ledsgreenport_s1_agent_rdata_fifo_src_data;                             // ledsgreenport_s1_agent:rdata_fifo_src_data -> avalon_st_adapter_002:in_0_data
 	wire          ledsgreenport_s1_agent_rdata_fifo_src_ready;                            // avalon_st_adapter_002:in_0_ready -> ledsgreenport_s1_agent:rdata_fifo_src_ready
@@ -656,13 +656,13 @@ module pcihellocore_mm_interconnect_0 (
 	wire   [33:0] avalon_st_adapter_003_out_0_data;                                       // avalon_st_adapter_003:out_0_data -> ledsredport_s1_agent:rdata_fifo_sink_data
 	wire          avalon_st_adapter_003_out_0_ready;                                      // ledsredport_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_003:out_0_ready
 	wire    [0:0] avalon_st_adapter_003_out_0_error;                                      // avalon_st_adapter_003:out_0_error -> ledsredport_s1_agent:rdata_fifo_sink_error
-	wire          switchesport_s1_agent_rdata_fifo_src_valid;                             // switchesport_s1_agent:rdata_fifo_src_valid -> avalon_st_adapter_004:in_0_valid
-	wire   [33:0] switchesport_s1_agent_rdata_fifo_src_data;                              // switchesport_s1_agent:rdata_fifo_src_data -> avalon_st_adapter_004:in_0_data
-	wire          switchesport_s1_agent_rdata_fifo_src_ready;                             // avalon_st_adapter_004:in_0_ready -> switchesport_s1_agent:rdata_fifo_src_ready
-	wire          avalon_st_adapter_004_out_0_valid;                                      // avalon_st_adapter_004:out_0_valid -> switchesport_s1_agent:rdata_fifo_sink_valid
-	wire   [33:0] avalon_st_adapter_004_out_0_data;                                       // avalon_st_adapter_004:out_0_data -> switchesport_s1_agent:rdata_fifo_sink_data
-	wire          avalon_st_adapter_004_out_0_ready;                                      // switchesport_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_004:out_0_ready
-	wire    [0:0] avalon_st_adapter_004_out_0_error;                                      // avalon_st_adapter_004:out_0_error -> switchesport_s1_agent:rdata_fifo_sink_error
+	wire          swport_s1_agent_rdata_fifo_src_valid;                                   // swport_s1_agent:rdata_fifo_src_valid -> avalon_st_adapter_004:in_0_valid
+	wire   [33:0] swport_s1_agent_rdata_fifo_src_data;                                    // swport_s1_agent:rdata_fifo_src_data -> avalon_st_adapter_004:in_0_data
+	wire          swport_s1_agent_rdata_fifo_src_ready;                                   // avalon_st_adapter_004:in_0_ready -> swport_s1_agent:rdata_fifo_src_ready
+	wire          avalon_st_adapter_004_out_0_valid;                                      // avalon_st_adapter_004:out_0_valid -> swport_s1_agent:rdata_fifo_sink_valid
+	wire   [33:0] avalon_st_adapter_004_out_0_data;                                       // avalon_st_adapter_004:out_0_data -> swport_s1_agent:rdata_fifo_sink_data
+	wire          avalon_st_adapter_004_out_0_ready;                                      // swport_s1_agent:rdata_fifo_sink_ready -> avalon_st_adapter_004:out_0_ready
+	wire    [0:0] avalon_st_adapter_004_out_0_error;                                      // avalon_st_adapter_004:out_0_error -> swport_s1_agent:rdata_fifo_sink_error
 	wire          keysport_s1_agent_rdata_fifo_src_valid;                                 // keysport_s1_agent:rdata_fifo_src_valid -> avalon_st_adapter_005:in_0_valid
 	wire   [33:0] keysport_s1_agent_rdata_fifo_src_data;                                  // keysport_s1_agent:rdata_fifo_src_data -> avalon_st_adapter_005:in_0_data
 	wire          keysport_s1_agent_rdata_fifo_src_ready;                                 // avalon_st_adapter_005:in_0_ready -> keysport_s1_agent:rdata_fifo_src_ready
@@ -711,7 +711,7 @@ module pcihellocore_mm_interconnect_0 (
 		.AV_REGISTERINCOMINGSIGNALS  (0)
 	) pcie_hard_ip_0_bar0_translator (
 		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),                                       //                       clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset),                              //                     reset.reset
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset),                             //                     reset.reset
 		.uav_address            (pcie_hard_ip_0_bar0_translator_avalon_universal_master_0_address),       // avalon_universal_master_0.address
 		.uav_burstcount         (pcie_hard_ip_0_bar0_translator_avalon_universal_master_0_burstcount),    //                          .burstcount
 		.uav_read               (pcie_hard_ip_0_bar0_translator_avalon_universal_master_0_read),          //                          .read
@@ -772,41 +772,41 @@ module pcihellocore_mm_interconnect_0 (
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
 	) pcie_hard_ip_0_cra_translator (
-		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),          //                      clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (pcie_hard_ip_0_cra_agent_m0_address),       // avalon_universal_slave_0.address
-		.uav_burstcount         (pcie_hard_ip_0_cra_agent_m0_burstcount),    //                         .burstcount
-		.uav_read               (pcie_hard_ip_0_cra_agent_m0_read),          //                         .read
-		.uav_write              (pcie_hard_ip_0_cra_agent_m0_write),         //                         .write
-		.uav_waitrequest        (pcie_hard_ip_0_cra_agent_m0_waitrequest),   //                         .waitrequest
-		.uav_readdatavalid      (pcie_hard_ip_0_cra_agent_m0_readdatavalid), //                         .readdatavalid
-		.uav_byteenable         (pcie_hard_ip_0_cra_agent_m0_byteenable),    //                         .byteenable
-		.uav_readdata           (pcie_hard_ip_0_cra_agent_m0_readdata),      //                         .readdata
-		.uav_writedata          (pcie_hard_ip_0_cra_agent_m0_writedata),     //                         .writedata
-		.uav_lock               (pcie_hard_ip_0_cra_agent_m0_lock),          //                         .lock
-		.uav_debugaccess        (pcie_hard_ip_0_cra_agent_m0_debugaccess),   //                         .debugaccess
-		.av_address             (pcie_hard_ip_0_cra_address),                //      avalon_anti_slave_0.address
-		.av_write               (pcie_hard_ip_0_cra_write),                  //                         .write
-		.av_read                (pcie_hard_ip_0_cra_read),                   //                         .read
-		.av_readdata            (pcie_hard_ip_0_cra_readdata),               //                         .readdata
-		.av_writedata           (pcie_hard_ip_0_cra_writedata),              //                         .writedata
-		.av_byteenable          (pcie_hard_ip_0_cra_byteenable),             //                         .byteenable
-		.av_waitrequest         (pcie_hard_ip_0_cra_waitrequest),            //                         .waitrequest
-		.av_chipselect          (pcie_hard_ip_0_cra_chipselect),             //                         .chipselect
-		.av_begintransfer       (),                                          //              (terminated)
-		.av_beginbursttransfer  (),                                          //              (terminated)
-		.av_burstcount          (),                                          //              (terminated)
-		.av_readdatavalid       (1'b0),                                      //              (terminated)
-		.av_writebyteenable     (),                                          //              (terminated)
-		.av_lock                (),                                          //              (terminated)
-		.av_clken               (),                                          //              (terminated)
-		.uav_clken              (1'b0),                                      //              (terminated)
-		.av_debugaccess         (),                                          //              (terminated)
-		.av_outputenable        (),                                          //              (terminated)
-		.uav_response           (),                                          //              (terminated)
-		.av_response            (2'b00),                                     //              (terminated)
-		.uav_writeresponsevalid (),                                          //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                       //              (terminated)
+		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),           //                      clk.clk
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (pcie_hard_ip_0_cra_agent_m0_address),        // avalon_universal_slave_0.address
+		.uav_burstcount         (pcie_hard_ip_0_cra_agent_m0_burstcount),     //                         .burstcount
+		.uav_read               (pcie_hard_ip_0_cra_agent_m0_read),           //                         .read
+		.uav_write              (pcie_hard_ip_0_cra_agent_m0_write),          //                         .write
+		.uav_waitrequest        (pcie_hard_ip_0_cra_agent_m0_waitrequest),    //                         .waitrequest
+		.uav_readdatavalid      (pcie_hard_ip_0_cra_agent_m0_readdatavalid),  //                         .readdatavalid
+		.uav_byteenable         (pcie_hard_ip_0_cra_agent_m0_byteenable),     //                         .byteenable
+		.uav_readdata           (pcie_hard_ip_0_cra_agent_m0_readdata),       //                         .readdata
+		.uav_writedata          (pcie_hard_ip_0_cra_agent_m0_writedata),      //                         .writedata
+		.uav_lock               (pcie_hard_ip_0_cra_agent_m0_lock),           //                         .lock
+		.uav_debugaccess        (pcie_hard_ip_0_cra_agent_m0_debugaccess),    //                         .debugaccess
+		.av_address             (pcie_hard_ip_0_cra_address),                 //      avalon_anti_slave_0.address
+		.av_write               (pcie_hard_ip_0_cra_write),                   //                         .write
+		.av_read                (pcie_hard_ip_0_cra_read),                    //                         .read
+		.av_readdata            (pcie_hard_ip_0_cra_readdata),                //                         .readdata
+		.av_writedata           (pcie_hard_ip_0_cra_writedata),               //                         .writedata
+		.av_byteenable          (pcie_hard_ip_0_cra_byteenable),              //                         .byteenable
+		.av_waitrequest         (pcie_hard_ip_0_cra_waitrequest),             //                         .waitrequest
+		.av_chipselect          (pcie_hard_ip_0_cra_chipselect),              //                         .chipselect
+		.av_begintransfer       (),                                           //              (terminated)
+		.av_beginbursttransfer  (),                                           //              (terminated)
+		.av_burstcount          (),                                           //              (terminated)
+		.av_readdatavalid       (1'b0),                                       //              (terminated)
+		.av_writebyteenable     (),                                           //              (terminated)
+		.av_lock                (),                                           //              (terminated)
+		.av_clken               (),                                           //              (terminated)
+		.uav_clken              (1'b0),                                       //              (terminated)
+		.av_debugaccess         (),                                           //              (terminated)
+		.av_outputenable        (),                                           //              (terminated)
+		.uav_response           (),                                           //              (terminated)
+		.av_response            (2'b00),                                      //              (terminated)
+		.uav_writeresponsevalid (),                                           //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                        //              (terminated)
 	);
 
 	altera_merlin_slave_translator #(
@@ -835,42 +835,42 @@ module pcihellocore_mm_interconnect_0 (
 		.AV_WRITE_WAIT_CYCLES           (0),
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
-	) hexport_s1_translator (
-		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),          //                      clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (hexport_s1_agent_m0_address),               // avalon_universal_slave_0.address
-		.uav_burstcount         (hexport_s1_agent_m0_burstcount),            //                         .burstcount
-		.uav_read               (hexport_s1_agent_m0_read),                  //                         .read
-		.uav_write              (hexport_s1_agent_m0_write),                 //                         .write
-		.uav_waitrequest        (hexport_s1_agent_m0_waitrequest),           //                         .waitrequest
-		.uav_readdatavalid      (hexport_s1_agent_m0_readdatavalid),         //                         .readdatavalid
-		.uav_byteenable         (hexport_s1_agent_m0_byteenable),            //                         .byteenable
-		.uav_readdata           (hexport_s1_agent_m0_readdata),              //                         .readdata
-		.uav_writedata          (hexport_s1_agent_m0_writedata),             //                         .writedata
-		.uav_lock               (hexport_s1_agent_m0_lock),                  //                         .lock
-		.uav_debugaccess        (hexport_s1_agent_m0_debugaccess),           //                         .debugaccess
-		.av_address             (hexport_s1_address),                        //      avalon_anti_slave_0.address
-		.av_write               (hexport_s1_write),                          //                         .write
-		.av_readdata            (hexport_s1_readdata),                       //                         .readdata
-		.av_writedata           (hexport_s1_writedata),                      //                         .writedata
-		.av_chipselect          (hexport_s1_chipselect),                     //                         .chipselect
-		.av_read                (),                                          //              (terminated)
-		.av_begintransfer       (),                                          //              (terminated)
-		.av_beginbursttransfer  (),                                          //              (terminated)
-		.av_burstcount          (),                                          //              (terminated)
-		.av_byteenable          (),                                          //              (terminated)
-		.av_readdatavalid       (1'b0),                                      //              (terminated)
-		.av_waitrequest         (1'b0),                                      //              (terminated)
-		.av_writebyteenable     (),                                          //              (terminated)
-		.av_lock                (),                                          //              (terminated)
-		.av_clken               (),                                          //              (terminated)
-		.uav_clken              (1'b0),                                      //              (terminated)
-		.av_debugaccess         (),                                          //              (terminated)
-		.av_outputenable        (),                                          //              (terminated)
-		.uav_response           (),                                          //              (terminated)
-		.av_response            (2'b00),                                     //              (terminated)
-		.uav_writeresponsevalid (),                                          //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                       //              (terminated)
+	) hexrport_s1_translator (
+		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),           //                      clk.clk
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (hexrport_s1_agent_m0_address),               // avalon_universal_slave_0.address
+		.uav_burstcount         (hexrport_s1_agent_m0_burstcount),            //                         .burstcount
+		.uav_read               (hexrport_s1_agent_m0_read),                  //                         .read
+		.uav_write              (hexrport_s1_agent_m0_write),                 //                         .write
+		.uav_waitrequest        (hexrport_s1_agent_m0_waitrequest),           //                         .waitrequest
+		.uav_readdatavalid      (hexrport_s1_agent_m0_readdatavalid),         //                         .readdatavalid
+		.uav_byteenable         (hexrport_s1_agent_m0_byteenable),            //                         .byteenable
+		.uav_readdata           (hexrport_s1_agent_m0_readdata),              //                         .readdata
+		.uav_writedata          (hexrport_s1_agent_m0_writedata),             //                         .writedata
+		.uav_lock               (hexrport_s1_agent_m0_lock),                  //                         .lock
+		.uav_debugaccess        (hexrport_s1_agent_m0_debugaccess),           //                         .debugaccess
+		.av_address             (hexrport_s1_address),                        //      avalon_anti_slave_0.address
+		.av_write               (hexrport_s1_write),                          //                         .write
+		.av_readdata            (hexrport_s1_readdata),                       //                         .readdata
+		.av_writedata           (hexrport_s1_writedata),                      //                         .writedata
+		.av_chipselect          (hexrport_s1_chipselect),                     //                         .chipselect
+		.av_read                (),                                           //              (terminated)
+		.av_begintransfer       (),                                           //              (terminated)
+		.av_beginbursttransfer  (),                                           //              (terminated)
+		.av_burstcount          (),                                           //              (terminated)
+		.av_byteenable          (),                                           //              (terminated)
+		.av_readdatavalid       (1'b0),                                       //              (terminated)
+		.av_waitrequest         (1'b0),                                       //              (terminated)
+		.av_writebyteenable     (),                                           //              (terminated)
+		.av_lock                (),                                           //              (terminated)
+		.av_clken               (),                                           //              (terminated)
+		.uav_clken              (1'b0),                                       //              (terminated)
+		.av_debugaccess         (),                                           //              (terminated)
+		.av_outputenable        (),                                           //              (terminated)
+		.uav_response           (),                                           //              (terminated)
+		.av_response            (2'b00),                                      //              (terminated)
+		.uav_writeresponsevalid (),                                           //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                        //              (terminated)
 	);
 
 	altera_merlin_slave_translator #(
@@ -900,41 +900,41 @@ module pcihellocore_mm_interconnect_0 (
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
 	) ledsgreenport_s1_translator (
-		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),          //                      clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (ledsgreenport_s1_agent_m0_address),         // avalon_universal_slave_0.address
-		.uav_burstcount         (ledsgreenport_s1_agent_m0_burstcount),      //                         .burstcount
-		.uav_read               (ledsgreenport_s1_agent_m0_read),            //                         .read
-		.uav_write              (ledsgreenport_s1_agent_m0_write),           //                         .write
-		.uav_waitrequest        (ledsgreenport_s1_agent_m0_waitrequest),     //                         .waitrequest
-		.uav_readdatavalid      (ledsgreenport_s1_agent_m0_readdatavalid),   //                         .readdatavalid
-		.uav_byteenable         (ledsgreenport_s1_agent_m0_byteenable),      //                         .byteenable
-		.uav_readdata           (ledsgreenport_s1_agent_m0_readdata),        //                         .readdata
-		.uav_writedata          (ledsgreenport_s1_agent_m0_writedata),       //                         .writedata
-		.uav_lock               (ledsgreenport_s1_agent_m0_lock),            //                         .lock
-		.uav_debugaccess        (ledsgreenport_s1_agent_m0_debugaccess),     //                         .debugaccess
-		.av_address             (ledsgreenport_s1_address),                  //      avalon_anti_slave_0.address
-		.av_write               (ledsgreenport_s1_write),                    //                         .write
-		.av_readdata            (ledsgreenport_s1_readdata),                 //                         .readdata
-		.av_writedata           (ledsgreenport_s1_writedata),                //                         .writedata
-		.av_chipselect          (ledsgreenport_s1_chipselect),               //                         .chipselect
-		.av_read                (),                                          //              (terminated)
-		.av_begintransfer       (),                                          //              (terminated)
-		.av_beginbursttransfer  (),                                          //              (terminated)
-		.av_burstcount          (),                                          //              (terminated)
-		.av_byteenable          (),                                          //              (terminated)
-		.av_readdatavalid       (1'b0),                                      //              (terminated)
-		.av_waitrequest         (1'b0),                                      //              (terminated)
-		.av_writebyteenable     (),                                          //              (terminated)
-		.av_lock                (),                                          //              (terminated)
-		.av_clken               (),                                          //              (terminated)
-		.uav_clken              (1'b0),                                      //              (terminated)
-		.av_debugaccess         (),                                          //              (terminated)
-		.av_outputenable        (),                                          //              (terminated)
-		.uav_response           (),                                          //              (terminated)
-		.av_response            (2'b00),                                     //              (terminated)
-		.uav_writeresponsevalid (),                                          //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                       //              (terminated)
+		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),           //                      clk.clk
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (ledsgreenport_s1_agent_m0_address),          // avalon_universal_slave_0.address
+		.uav_burstcount         (ledsgreenport_s1_agent_m0_burstcount),       //                         .burstcount
+		.uav_read               (ledsgreenport_s1_agent_m0_read),             //                         .read
+		.uav_write              (ledsgreenport_s1_agent_m0_write),            //                         .write
+		.uav_waitrequest        (ledsgreenport_s1_agent_m0_waitrequest),      //                         .waitrequest
+		.uav_readdatavalid      (ledsgreenport_s1_agent_m0_readdatavalid),    //                         .readdatavalid
+		.uav_byteenable         (ledsgreenport_s1_agent_m0_byteenable),       //                         .byteenable
+		.uav_readdata           (ledsgreenport_s1_agent_m0_readdata),         //                         .readdata
+		.uav_writedata          (ledsgreenport_s1_agent_m0_writedata),        //                         .writedata
+		.uav_lock               (ledsgreenport_s1_agent_m0_lock),             //                         .lock
+		.uav_debugaccess        (ledsgreenport_s1_agent_m0_debugaccess),      //                         .debugaccess
+		.av_address             (ledsgreenport_s1_address),                   //      avalon_anti_slave_0.address
+		.av_write               (ledsgreenport_s1_write),                     //                         .write
+		.av_readdata            (ledsgreenport_s1_readdata),                  //                         .readdata
+		.av_writedata           (ledsgreenport_s1_writedata),                 //                         .writedata
+		.av_chipselect          (ledsgreenport_s1_chipselect),                //                         .chipselect
+		.av_read                (),                                           //              (terminated)
+		.av_begintransfer       (),                                           //              (terminated)
+		.av_beginbursttransfer  (),                                           //              (terminated)
+		.av_burstcount          (),                                           //              (terminated)
+		.av_byteenable          (),                                           //              (terminated)
+		.av_readdatavalid       (1'b0),                                       //              (terminated)
+		.av_waitrequest         (1'b0),                                       //              (terminated)
+		.av_writebyteenable     (),                                           //              (terminated)
+		.av_lock                (),                                           //              (terminated)
+		.av_clken               (),                                           //              (terminated)
+		.uav_clken              (1'b0),                                       //              (terminated)
+		.av_debugaccess         (),                                           //              (terminated)
+		.av_outputenable        (),                                           //              (terminated)
+		.uav_response           (),                                           //              (terminated)
+		.av_response            (2'b00),                                      //              (terminated)
+		.uav_writeresponsevalid (),                                           //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                        //              (terminated)
 	);
 
 	altera_merlin_slave_translator #(
@@ -964,41 +964,41 @@ module pcihellocore_mm_interconnect_0 (
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
 	) ledsredport_s1_translator (
-		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),          //                      clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (ledsredport_s1_agent_m0_address),           // avalon_universal_slave_0.address
-		.uav_burstcount         (ledsredport_s1_agent_m0_burstcount),        //                         .burstcount
-		.uav_read               (ledsredport_s1_agent_m0_read),              //                         .read
-		.uav_write              (ledsredport_s1_agent_m0_write),             //                         .write
-		.uav_waitrequest        (ledsredport_s1_agent_m0_waitrequest),       //                         .waitrequest
-		.uav_readdatavalid      (ledsredport_s1_agent_m0_readdatavalid),     //                         .readdatavalid
-		.uav_byteenable         (ledsredport_s1_agent_m0_byteenable),        //                         .byteenable
-		.uav_readdata           (ledsredport_s1_agent_m0_readdata),          //                         .readdata
-		.uav_writedata          (ledsredport_s1_agent_m0_writedata),         //                         .writedata
-		.uav_lock               (ledsredport_s1_agent_m0_lock),              //                         .lock
-		.uav_debugaccess        (ledsredport_s1_agent_m0_debugaccess),       //                         .debugaccess
-		.av_address             (ledsredport_s1_address),                    //      avalon_anti_slave_0.address
-		.av_write               (ledsredport_s1_write),                      //                         .write
-		.av_readdata            (ledsredport_s1_readdata),                   //                         .readdata
-		.av_writedata           (ledsredport_s1_writedata),                  //                         .writedata
-		.av_chipselect          (ledsredport_s1_chipselect),                 //                         .chipselect
-		.av_read                (),                                          //              (terminated)
-		.av_begintransfer       (),                                          //              (terminated)
-		.av_beginbursttransfer  (),                                          //              (terminated)
-		.av_burstcount          (),                                          //              (terminated)
-		.av_byteenable          (),                                          //              (terminated)
-		.av_readdatavalid       (1'b0),                                      //              (terminated)
-		.av_waitrequest         (1'b0),                                      //              (terminated)
-		.av_writebyteenable     (),                                          //              (terminated)
-		.av_lock                (),                                          //              (terminated)
-		.av_clken               (),                                          //              (terminated)
-		.uav_clken              (1'b0),                                      //              (terminated)
-		.av_debugaccess         (),                                          //              (terminated)
-		.av_outputenable        (),                                          //              (terminated)
-		.uav_response           (),                                          //              (terminated)
-		.av_response            (2'b00),                                     //              (terminated)
-		.uav_writeresponsevalid (),                                          //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                       //              (terminated)
+		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),           //                      clk.clk
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (ledsredport_s1_agent_m0_address),            // avalon_universal_slave_0.address
+		.uav_burstcount         (ledsredport_s1_agent_m0_burstcount),         //                         .burstcount
+		.uav_read               (ledsredport_s1_agent_m0_read),               //                         .read
+		.uav_write              (ledsredport_s1_agent_m0_write),              //                         .write
+		.uav_waitrequest        (ledsredport_s1_agent_m0_waitrequest),        //                         .waitrequest
+		.uav_readdatavalid      (ledsredport_s1_agent_m0_readdatavalid),      //                         .readdatavalid
+		.uav_byteenable         (ledsredport_s1_agent_m0_byteenable),         //                         .byteenable
+		.uav_readdata           (ledsredport_s1_agent_m0_readdata),           //                         .readdata
+		.uav_writedata          (ledsredport_s1_agent_m0_writedata),          //                         .writedata
+		.uav_lock               (ledsredport_s1_agent_m0_lock),               //                         .lock
+		.uav_debugaccess        (ledsredport_s1_agent_m0_debugaccess),        //                         .debugaccess
+		.av_address             (ledsredport_s1_address),                     //      avalon_anti_slave_0.address
+		.av_write               (ledsredport_s1_write),                       //                         .write
+		.av_readdata            (ledsredport_s1_readdata),                    //                         .readdata
+		.av_writedata           (ledsredport_s1_writedata),                   //                         .writedata
+		.av_chipselect          (ledsredport_s1_chipselect),                  //                         .chipselect
+		.av_read                (),                                           //              (terminated)
+		.av_begintransfer       (),                                           //              (terminated)
+		.av_beginbursttransfer  (),                                           //              (terminated)
+		.av_burstcount          (),                                           //              (terminated)
+		.av_byteenable          (),                                           //              (terminated)
+		.av_readdatavalid       (1'b0),                                       //              (terminated)
+		.av_waitrequest         (1'b0),                                       //              (terminated)
+		.av_writebyteenable     (),                                           //              (terminated)
+		.av_lock                (),                                           //              (terminated)
+		.av_clken               (),                                           //              (terminated)
+		.uav_clken              (1'b0),                                       //              (terminated)
+		.av_debugaccess         (),                                           //              (terminated)
+		.av_outputenable        (),                                           //              (terminated)
+		.uav_response           (),                                           //              (terminated)
+		.av_response            (2'b00),                                      //              (terminated)
+		.uav_writeresponsevalid (),                                           //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                        //              (terminated)
 	);
 
 	altera_merlin_slave_translator #(
@@ -1027,42 +1027,42 @@ module pcihellocore_mm_interconnect_0 (
 		.AV_WRITE_WAIT_CYCLES           (0),
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
-	) switchesport_s1_translator (
-		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),          //                      clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (switchesport_s1_agent_m0_address),          // avalon_universal_slave_0.address
-		.uav_burstcount         (switchesport_s1_agent_m0_burstcount),       //                         .burstcount
-		.uav_read               (switchesport_s1_agent_m0_read),             //                         .read
-		.uav_write              (switchesport_s1_agent_m0_write),            //                         .write
-		.uav_waitrequest        (switchesport_s1_agent_m0_waitrequest),      //                         .waitrequest
-		.uav_readdatavalid      (switchesport_s1_agent_m0_readdatavalid),    //                         .readdatavalid
-		.uav_byteenable         (switchesport_s1_agent_m0_byteenable),       //                         .byteenable
-		.uav_readdata           (switchesport_s1_agent_m0_readdata),         //                         .readdata
-		.uav_writedata          (switchesport_s1_agent_m0_writedata),        //                         .writedata
-		.uav_lock               (switchesport_s1_agent_m0_lock),             //                         .lock
-		.uav_debugaccess        (switchesport_s1_agent_m0_debugaccess),      //                         .debugaccess
-		.av_address             (switchesport_s1_address),                   //      avalon_anti_slave_0.address
-		.av_readdata            (switchesport_s1_readdata),                  //                         .readdata
-		.av_write               (),                                          //              (terminated)
-		.av_read                (),                                          //              (terminated)
-		.av_writedata           (),                                          //              (terminated)
-		.av_begintransfer       (),                                          //              (terminated)
-		.av_beginbursttransfer  (),                                          //              (terminated)
-		.av_burstcount          (),                                          //              (terminated)
-		.av_byteenable          (),                                          //              (terminated)
-		.av_readdatavalid       (1'b0),                                      //              (terminated)
-		.av_waitrequest         (1'b0),                                      //              (terminated)
-		.av_writebyteenable     (),                                          //              (terminated)
-		.av_lock                (),                                          //              (terminated)
-		.av_chipselect          (),                                          //              (terminated)
-		.av_clken               (),                                          //              (terminated)
-		.uav_clken              (1'b0),                                      //              (terminated)
-		.av_debugaccess         (),                                          //              (terminated)
-		.av_outputenable        (),                                          //              (terminated)
-		.uav_response           (),                                          //              (terminated)
-		.av_response            (2'b00),                                     //              (terminated)
-		.uav_writeresponsevalid (),                                          //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                       //              (terminated)
+	) swport_s1_translator (
+		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),           //                      clk.clk
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (swport_s1_agent_m0_address),                 // avalon_universal_slave_0.address
+		.uav_burstcount         (swport_s1_agent_m0_burstcount),              //                         .burstcount
+		.uav_read               (swport_s1_agent_m0_read),                    //                         .read
+		.uav_write              (swport_s1_agent_m0_write),                   //                         .write
+		.uav_waitrequest        (swport_s1_agent_m0_waitrequest),             //                         .waitrequest
+		.uav_readdatavalid      (swport_s1_agent_m0_readdatavalid),           //                         .readdatavalid
+		.uav_byteenable         (swport_s1_agent_m0_byteenable),              //                         .byteenable
+		.uav_readdata           (swport_s1_agent_m0_readdata),                //                         .readdata
+		.uav_writedata          (swport_s1_agent_m0_writedata),               //                         .writedata
+		.uav_lock               (swport_s1_agent_m0_lock),                    //                         .lock
+		.uav_debugaccess        (swport_s1_agent_m0_debugaccess),             //                         .debugaccess
+		.av_address             (swport_s1_address),                          //      avalon_anti_slave_0.address
+		.av_readdata            (swport_s1_readdata),                         //                         .readdata
+		.av_write               (),                                           //              (terminated)
+		.av_read                (),                                           //              (terminated)
+		.av_writedata           (),                                           //              (terminated)
+		.av_begintransfer       (),                                           //              (terminated)
+		.av_beginbursttransfer  (),                                           //              (terminated)
+		.av_burstcount          (),                                           //              (terminated)
+		.av_byteenable          (),                                           //              (terminated)
+		.av_readdatavalid       (1'b0),                                       //              (terminated)
+		.av_waitrequest         (1'b0),                                       //              (terminated)
+		.av_writebyteenable     (),                                           //              (terminated)
+		.av_lock                (),                                           //              (terminated)
+		.av_chipselect          (),                                           //              (terminated)
+		.av_clken               (),                                           //              (terminated)
+		.uav_clken              (1'b0),                                       //              (terminated)
+		.av_debugaccess         (),                                           //              (terminated)
+		.av_outputenable        (),                                           //              (terminated)
+		.uav_response           (),                                           //              (terminated)
+		.av_response            (2'b00),                                      //              (terminated)
+		.uav_writeresponsevalid (),                                           //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                        //              (terminated)
 	);
 
 	altera_merlin_slave_translator #(
@@ -1092,41 +1092,41 @@ module pcihellocore_mm_interconnect_0 (
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
 	) keysport_s1_translator (
-		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),          //                      clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (keysport_s1_agent_m0_address),              // avalon_universal_slave_0.address
-		.uav_burstcount         (keysport_s1_agent_m0_burstcount),           //                         .burstcount
-		.uav_read               (keysport_s1_agent_m0_read),                 //                         .read
-		.uav_write              (keysport_s1_agent_m0_write),                //                         .write
-		.uav_waitrequest        (keysport_s1_agent_m0_waitrequest),          //                         .waitrequest
-		.uav_readdatavalid      (keysport_s1_agent_m0_readdatavalid),        //                         .readdatavalid
-		.uav_byteenable         (keysport_s1_agent_m0_byteenable),           //                         .byteenable
-		.uav_readdata           (keysport_s1_agent_m0_readdata),             //                         .readdata
-		.uav_writedata          (keysport_s1_agent_m0_writedata),            //                         .writedata
-		.uav_lock               (keysport_s1_agent_m0_lock),                 //                         .lock
-		.uav_debugaccess        (keysport_s1_agent_m0_debugaccess),          //                         .debugaccess
-		.av_address             (keysport_s1_address),                       //      avalon_anti_slave_0.address
-		.av_readdata            (keysport_s1_readdata),                      //                         .readdata
-		.av_write               (),                                          //              (terminated)
-		.av_read                (),                                          //              (terminated)
-		.av_writedata           (),                                          //              (terminated)
-		.av_begintransfer       (),                                          //              (terminated)
-		.av_beginbursttransfer  (),                                          //              (terminated)
-		.av_burstcount          (),                                          //              (terminated)
-		.av_byteenable          (),                                          //              (terminated)
-		.av_readdatavalid       (1'b0),                                      //              (terminated)
-		.av_waitrequest         (1'b0),                                      //              (terminated)
-		.av_writebyteenable     (),                                          //              (terminated)
-		.av_lock                (),                                          //              (terminated)
-		.av_chipselect          (),                                          //              (terminated)
-		.av_clken               (),                                          //              (terminated)
-		.uav_clken              (1'b0),                                      //              (terminated)
-		.av_debugaccess         (),                                          //              (terminated)
-		.av_outputenable        (),                                          //              (terminated)
-		.uav_response           (),                                          //              (terminated)
-		.av_response            (2'b00),                                     //              (terminated)
-		.uav_writeresponsevalid (),                                          //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                       //              (terminated)
+		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),           //                      clk.clk
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (keysport_s1_agent_m0_address),               // avalon_universal_slave_0.address
+		.uav_burstcount         (keysport_s1_agent_m0_burstcount),            //                         .burstcount
+		.uav_read               (keysport_s1_agent_m0_read),                  //                         .read
+		.uav_write              (keysport_s1_agent_m0_write),                 //                         .write
+		.uav_waitrequest        (keysport_s1_agent_m0_waitrequest),           //                         .waitrequest
+		.uav_readdatavalid      (keysport_s1_agent_m0_readdatavalid),         //                         .readdatavalid
+		.uav_byteenable         (keysport_s1_agent_m0_byteenable),            //                         .byteenable
+		.uav_readdata           (keysport_s1_agent_m0_readdata),              //                         .readdata
+		.uav_writedata          (keysport_s1_agent_m0_writedata),             //                         .writedata
+		.uav_lock               (keysport_s1_agent_m0_lock),                  //                         .lock
+		.uav_debugaccess        (keysport_s1_agent_m0_debugaccess),           //                         .debugaccess
+		.av_address             (keysport_s1_address),                        //      avalon_anti_slave_0.address
+		.av_readdata            (keysport_s1_readdata),                       //                         .readdata
+		.av_write               (),                                           //              (terminated)
+		.av_read                (),                                           //              (terminated)
+		.av_writedata           (),                                           //              (terminated)
+		.av_begintransfer       (),                                           //              (terminated)
+		.av_beginbursttransfer  (),                                           //              (terminated)
+		.av_burstcount          (),                                           //              (terminated)
+		.av_byteenable          (),                                           //              (terminated)
+		.av_readdatavalid       (1'b0),                                       //              (terminated)
+		.av_waitrequest         (1'b0),                                       //              (terminated)
+		.av_writebyteenable     (),                                           //              (terminated)
+		.av_lock                (),                                           //              (terminated)
+		.av_chipselect          (),                                           //              (terminated)
+		.av_clken               (),                                           //              (terminated)
+		.uav_clken              (1'b0),                                       //              (terminated)
+		.av_debugaccess         (),                                           //              (terminated)
+		.av_outputenable        (),                                           //              (terminated)
+		.uav_response           (),                                           //              (terminated)
+		.av_response            (2'b00),                                      //              (terminated)
+		.uav_writeresponsevalid (),                                           //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                        //              (terminated)
 	);
 
 	altera_merlin_slave_translator #(
@@ -1156,41 +1156,41 @@ module pcihellocore_mm_interconnect_0 (
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
 	) hexlport_s1_translator (
-		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),          //                      clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (hexlport_s1_agent_m0_address),              // avalon_universal_slave_0.address
-		.uav_burstcount         (hexlport_s1_agent_m0_burstcount),           //                         .burstcount
-		.uav_read               (hexlport_s1_agent_m0_read),                 //                         .read
-		.uav_write              (hexlport_s1_agent_m0_write),                //                         .write
-		.uav_waitrequest        (hexlport_s1_agent_m0_waitrequest),          //                         .waitrequest
-		.uav_readdatavalid      (hexlport_s1_agent_m0_readdatavalid),        //                         .readdatavalid
-		.uav_byteenable         (hexlport_s1_agent_m0_byteenable),           //                         .byteenable
-		.uav_readdata           (hexlport_s1_agent_m0_readdata),             //                         .readdata
-		.uav_writedata          (hexlport_s1_agent_m0_writedata),            //                         .writedata
-		.uav_lock               (hexlport_s1_agent_m0_lock),                 //                         .lock
-		.uav_debugaccess        (hexlport_s1_agent_m0_debugaccess),          //                         .debugaccess
-		.av_address             (hexlport_s1_address),                       //      avalon_anti_slave_0.address
-		.av_write               (hexlport_s1_write),                         //                         .write
-		.av_readdata            (hexlport_s1_readdata),                      //                         .readdata
-		.av_writedata           (hexlport_s1_writedata),                     //                         .writedata
-		.av_chipselect          (hexlport_s1_chipselect),                    //                         .chipselect
-		.av_read                (),                                          //              (terminated)
-		.av_begintransfer       (),                                          //              (terminated)
-		.av_beginbursttransfer  (),                                          //              (terminated)
-		.av_burstcount          (),                                          //              (terminated)
-		.av_byteenable          (),                                          //              (terminated)
-		.av_readdatavalid       (1'b0),                                      //              (terminated)
-		.av_waitrequest         (1'b0),                                      //              (terminated)
-		.av_writebyteenable     (),                                          //              (terminated)
-		.av_lock                (),                                          //              (terminated)
-		.av_clken               (),                                          //              (terminated)
-		.uav_clken              (1'b0),                                      //              (terminated)
-		.av_debugaccess         (),                                          //              (terminated)
-		.av_outputenable        (),                                          //              (terminated)
-		.uav_response           (),                                          //              (terminated)
-		.av_response            (2'b00),                                     //              (terminated)
-		.uav_writeresponsevalid (),                                          //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                       //              (terminated)
+		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),           //                      clk.clk
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (hexlport_s1_agent_m0_address),               // avalon_universal_slave_0.address
+		.uav_burstcount         (hexlport_s1_agent_m0_burstcount),            //                         .burstcount
+		.uav_read               (hexlport_s1_agent_m0_read),                  //                         .read
+		.uav_write              (hexlport_s1_agent_m0_write),                 //                         .write
+		.uav_waitrequest        (hexlport_s1_agent_m0_waitrequest),           //                         .waitrequest
+		.uav_readdatavalid      (hexlport_s1_agent_m0_readdatavalid),         //                         .readdatavalid
+		.uav_byteenable         (hexlport_s1_agent_m0_byteenable),            //                         .byteenable
+		.uav_readdata           (hexlport_s1_agent_m0_readdata),              //                         .readdata
+		.uav_writedata          (hexlport_s1_agent_m0_writedata),             //                         .writedata
+		.uav_lock               (hexlport_s1_agent_m0_lock),                  //                         .lock
+		.uav_debugaccess        (hexlport_s1_agent_m0_debugaccess),           //                         .debugaccess
+		.av_address             (hexlport_s1_address),                        //      avalon_anti_slave_0.address
+		.av_write               (hexlport_s1_write),                          //                         .write
+		.av_readdata            (hexlport_s1_readdata),                       //                         .readdata
+		.av_writedata           (hexlport_s1_writedata),                      //                         .writedata
+		.av_chipselect          (hexlport_s1_chipselect),                     //                         .chipselect
+		.av_read                (),                                           //              (terminated)
+		.av_begintransfer       (),                                           //              (terminated)
+		.av_beginbursttransfer  (),                                           //              (terminated)
+		.av_burstcount          (),                                           //              (terminated)
+		.av_byteenable          (),                                           //              (terminated)
+		.av_readdatavalid       (1'b0),                                       //              (terminated)
+		.av_waitrequest         (1'b0),                                       //              (terminated)
+		.av_writebyteenable     (),                                           //              (terminated)
+		.av_lock                (),                                           //              (terminated)
+		.av_clken               (),                                           //              (terminated)
+		.uav_clken              (1'b0),                                       //              (terminated)
+		.av_debugaccess         (),                                           //              (terminated)
+		.av_outputenable        (),                                           //              (terminated)
+		.uav_response           (),                                           //              (terminated)
+		.av_response            (2'b00),                                      //              (terminated)
+		.uav_writeresponsevalid (),                                           //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                        //              (terminated)
 	);
 
 	altera_merlin_slave_translator #(
@@ -1220,41 +1220,41 @@ module pcihellocore_mm_interconnect_0 (
 		.AV_SETUP_WAIT_CYCLES           (0),
 		.AV_DATA_HOLD_CYCLES            (0)
 	) pcie_hard_ip_0_txs_translator (
-		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),          //                      clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset), //                    reset.reset
-		.uav_address            (pcie_hard_ip_0_txs_agent_m0_address),       // avalon_universal_slave_0.address
-		.uav_burstcount         (pcie_hard_ip_0_txs_agent_m0_burstcount),    //                         .burstcount
-		.uav_read               (pcie_hard_ip_0_txs_agent_m0_read),          //                         .read
-		.uav_write              (pcie_hard_ip_0_txs_agent_m0_write),         //                         .write
-		.uav_waitrequest        (pcie_hard_ip_0_txs_agent_m0_waitrequest),   //                         .waitrequest
-		.uav_readdatavalid      (pcie_hard_ip_0_txs_agent_m0_readdatavalid), //                         .readdatavalid
-		.uav_byteenable         (pcie_hard_ip_0_txs_agent_m0_byteenable),    //                         .byteenable
-		.uav_readdata           (pcie_hard_ip_0_txs_agent_m0_readdata),      //                         .readdata
-		.uav_writedata          (pcie_hard_ip_0_txs_agent_m0_writedata),     //                         .writedata
-		.uav_lock               (pcie_hard_ip_0_txs_agent_m0_lock),          //                         .lock
-		.uav_debugaccess        (pcie_hard_ip_0_txs_agent_m0_debugaccess),   //                         .debugaccess
-		.av_address             (pcie_hard_ip_0_txs_address),                //      avalon_anti_slave_0.address
-		.av_write               (pcie_hard_ip_0_txs_write),                  //                         .write
-		.av_read                (pcie_hard_ip_0_txs_read),                   //                         .read
-		.av_readdata            (pcie_hard_ip_0_txs_readdata),               //                         .readdata
-		.av_writedata           (pcie_hard_ip_0_txs_writedata),              //                         .writedata
-		.av_burstcount          (pcie_hard_ip_0_txs_burstcount),             //                         .burstcount
-		.av_byteenable          (pcie_hard_ip_0_txs_byteenable),             //                         .byteenable
-		.av_readdatavalid       (pcie_hard_ip_0_txs_readdatavalid),          //                         .readdatavalid
-		.av_waitrequest         (pcie_hard_ip_0_txs_waitrequest),            //                         .waitrequest
-		.av_chipselect          (pcie_hard_ip_0_txs_chipselect),             //                         .chipselect
-		.av_begintransfer       (),                                          //              (terminated)
-		.av_beginbursttransfer  (),                                          //              (terminated)
-		.av_writebyteenable     (),                                          //              (terminated)
-		.av_lock                (),                                          //              (terminated)
-		.av_clken               (),                                          //              (terminated)
-		.uav_clken              (1'b0),                                      //              (terminated)
-		.av_debugaccess         (),                                          //              (terminated)
-		.av_outputenable        (),                                          //              (terminated)
-		.uav_response           (),                                          //              (terminated)
-		.av_response            (2'b00),                                     //              (terminated)
-		.uav_writeresponsevalid (),                                          //              (terminated)
-		.av_writeresponsevalid  (1'b0)                                       //              (terminated)
+		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),           //                      clk.clk
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset), //                    reset.reset
+		.uav_address            (pcie_hard_ip_0_txs_agent_m0_address),        // avalon_universal_slave_0.address
+		.uav_burstcount         (pcie_hard_ip_0_txs_agent_m0_burstcount),     //                         .burstcount
+		.uav_read               (pcie_hard_ip_0_txs_agent_m0_read),           //                         .read
+		.uav_write              (pcie_hard_ip_0_txs_agent_m0_write),          //                         .write
+		.uav_waitrequest        (pcie_hard_ip_0_txs_agent_m0_waitrequest),    //                         .waitrequest
+		.uav_readdatavalid      (pcie_hard_ip_0_txs_agent_m0_readdatavalid),  //                         .readdatavalid
+		.uav_byteenable         (pcie_hard_ip_0_txs_agent_m0_byteenable),     //                         .byteenable
+		.uav_readdata           (pcie_hard_ip_0_txs_agent_m0_readdata),       //                         .readdata
+		.uav_writedata          (pcie_hard_ip_0_txs_agent_m0_writedata),      //                         .writedata
+		.uav_lock               (pcie_hard_ip_0_txs_agent_m0_lock),           //                         .lock
+		.uav_debugaccess        (pcie_hard_ip_0_txs_agent_m0_debugaccess),    //                         .debugaccess
+		.av_address             (pcie_hard_ip_0_txs_address),                 //      avalon_anti_slave_0.address
+		.av_write               (pcie_hard_ip_0_txs_write),                   //                         .write
+		.av_read                (pcie_hard_ip_0_txs_read),                    //                         .read
+		.av_readdata            (pcie_hard_ip_0_txs_readdata),                //                         .readdata
+		.av_writedata           (pcie_hard_ip_0_txs_writedata),               //                         .writedata
+		.av_burstcount          (pcie_hard_ip_0_txs_burstcount),              //                         .burstcount
+		.av_byteenable          (pcie_hard_ip_0_txs_byteenable),              //                         .byteenable
+		.av_readdatavalid       (pcie_hard_ip_0_txs_readdatavalid),           //                         .readdatavalid
+		.av_waitrequest         (pcie_hard_ip_0_txs_waitrequest),             //                         .waitrequest
+		.av_chipselect          (pcie_hard_ip_0_txs_chipselect),              //                         .chipselect
+		.av_begintransfer       (),                                           //              (terminated)
+		.av_beginbursttransfer  (),                                           //              (terminated)
+		.av_writebyteenable     (),                                           //              (terminated)
+		.av_lock                (),                                           //              (terminated)
+		.av_clken               (),                                           //              (terminated)
+		.uav_clken              (1'b0),                                       //              (terminated)
+		.av_debugaccess         (),                                           //              (terminated)
+		.av_outputenable        (),                                           //              (terminated)
+		.uav_response           (),                                           //              (terminated)
+		.av_response            (2'b00),                                      //              (terminated)
+		.uav_writeresponsevalid (),                                           //              (terminated)
+		.av_writeresponsevalid  (1'b0)                                        //              (terminated)
 	);
 
 	altera_merlin_master_agent #(
@@ -1311,7 +1311,7 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_WRITERESPONSE         (0)
 	) pcie_hard_ip_0_bar0_agent (
 		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),                                       //       clk.clk
-		.reset                 (hexport_reset_reset_bridge_in_reset_reset),                              // clk_reset.reset
+		.reset                 (hexrport_reset_reset_bridge_in_reset_reset),                             // clk_reset.reset
 		.av_address            (pcie_hard_ip_0_bar0_translator_avalon_universal_master_0_address),       //        av.address
 		.av_write              (pcie_hard_ip_0_bar0_translator_avalon_universal_master_0_write),         //          .write
 		.av_read               (pcie_hard_ip_0_bar0_translator_avalon_universal_master_0_read),          //          .read
@@ -1378,7 +1378,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ECC_ENABLE                (0)
 	) pcie_hard_ip_0_cra_agent (
 		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),                       //             clk.clk
-		.reset                   (hexport_reset_reset_bridge_in_reset_reset),              //       clk_reset.reset
+		.reset                   (hexrport_reset_reset_bridge_in_reset_reset),             //       clk_reset.reset
 		.m0_address              (pcie_hard_ip_0_cra_agent_m0_address),                    //              m0.address
 		.m0_burstcount           (pcie_hard_ip_0_cra_agent_m0_burstcount),                 //                .burstcount
 		.m0_byteenable           (pcie_hard_ip_0_cra_agent_m0_byteenable),                 //                .byteenable
@@ -1437,7 +1437,7 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) pcie_hard_ip_0_cra_agent_rsp_fifo (
 		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),                    //       clk.clk
-		.reset             (hexport_reset_reset_bridge_in_reset_reset),           // clk_reset.reset
+		.reset             (hexrport_reset_reset_bridge_in_reset_reset),          // clk_reset.reset
 		.in_data           (pcie_hard_ip_0_cra_agent_rf_source_data),             //        in.data
 		.in_valid          (pcie_hard_ip_0_cra_agent_rf_source_valid),            //          .valid
 		.in_ready          (pcie_hard_ip_0_cra_agent_rf_source_ready),            //          .ready
@@ -1501,50 +1501,50 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_READRESPONSE          (0),
 		.USE_WRITERESPONSE         (0),
 		.ECC_ENABLE                (0)
-	) hexport_s1_agent (
-		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),               //             clk.clk
-		.reset                   (hexport_reset_reset_bridge_in_reset_reset),      //       clk_reset.reset
-		.m0_address              (hexport_s1_agent_m0_address),                    //              m0.address
-		.m0_burstcount           (hexport_s1_agent_m0_burstcount),                 //                .burstcount
-		.m0_byteenable           (hexport_s1_agent_m0_byteenable),                 //                .byteenable
-		.m0_debugaccess          (hexport_s1_agent_m0_debugaccess),                //                .debugaccess
-		.m0_lock                 (hexport_s1_agent_m0_lock),                       //                .lock
-		.m0_readdata             (hexport_s1_agent_m0_readdata),                   //                .readdata
-		.m0_readdatavalid        (hexport_s1_agent_m0_readdatavalid),              //                .readdatavalid
-		.m0_read                 (hexport_s1_agent_m0_read),                       //                .read
-		.m0_waitrequest          (hexport_s1_agent_m0_waitrequest),                //                .waitrequest
-		.m0_writedata            (hexport_s1_agent_m0_writedata),                  //                .writedata
-		.m0_write                (hexport_s1_agent_m0_write),                      //                .write
-		.rp_endofpacket          (hexport_s1_agent_rp_endofpacket),                //              rp.endofpacket
-		.rp_ready                (hexport_s1_agent_rp_ready),                      //                .ready
-		.rp_valid                (hexport_s1_agent_rp_valid),                      //                .valid
-		.rp_data                 (hexport_s1_agent_rp_data),                       //                .data
-		.rp_startofpacket        (hexport_s1_agent_rp_startofpacket),              //                .startofpacket
-		.cp_ready                (hexport_s1_burst_adapter_source0_ready),         //              cp.ready
-		.cp_valid                (hexport_s1_burst_adapter_source0_valid),         //                .valid
-		.cp_data                 (hexport_s1_burst_adapter_source0_data),          //                .data
-		.cp_startofpacket        (hexport_s1_burst_adapter_source0_startofpacket), //                .startofpacket
-		.cp_endofpacket          (hexport_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
-		.cp_channel              (hexport_s1_burst_adapter_source0_channel),       //                .channel
-		.rf_sink_ready           (hexport_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
-		.rf_sink_valid           (hexport_s1_agent_rsp_fifo_out_valid),            //                .valid
-		.rf_sink_startofpacket   (hexport_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
-		.rf_sink_endofpacket     (hexport_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
-		.rf_sink_data            (hexport_s1_agent_rsp_fifo_out_data),             //                .data
-		.rf_source_ready         (hexport_s1_agent_rf_source_ready),               //       rf_source.ready
-		.rf_source_valid         (hexport_s1_agent_rf_source_valid),               //                .valid
-		.rf_source_startofpacket (hexport_s1_agent_rf_source_startofpacket),       //                .startofpacket
-		.rf_source_endofpacket   (hexport_s1_agent_rf_source_endofpacket),         //                .endofpacket
-		.rf_source_data          (hexport_s1_agent_rf_source_data),                //                .data
-		.rdata_fifo_sink_ready   (avalon_st_adapter_001_out_0_ready),              // rdata_fifo_sink.ready
-		.rdata_fifo_sink_valid   (avalon_st_adapter_001_out_0_valid),              //                .valid
-		.rdata_fifo_sink_data    (avalon_st_adapter_001_out_0_data),               //                .data
-		.rdata_fifo_sink_error   (avalon_st_adapter_001_out_0_error),              //                .error
-		.rdata_fifo_src_ready    (hexport_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
-		.rdata_fifo_src_valid    (hexport_s1_agent_rdata_fifo_src_valid),          //                .valid
-		.rdata_fifo_src_data     (hexport_s1_agent_rdata_fifo_src_data),           //                .data
-		.m0_response             (2'b00),                                          //     (terminated)
-		.m0_writeresponsevalid   (1'b0)                                            //     (terminated)
+	) hexrport_s1_agent (
+		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),                //             clk.clk
+		.reset                   (hexrport_reset_reset_bridge_in_reset_reset),      //       clk_reset.reset
+		.m0_address              (hexrport_s1_agent_m0_address),                    //              m0.address
+		.m0_burstcount           (hexrport_s1_agent_m0_burstcount),                 //                .burstcount
+		.m0_byteenable           (hexrport_s1_agent_m0_byteenable),                 //                .byteenable
+		.m0_debugaccess          (hexrport_s1_agent_m0_debugaccess),                //                .debugaccess
+		.m0_lock                 (hexrport_s1_agent_m0_lock),                       //                .lock
+		.m0_readdata             (hexrport_s1_agent_m0_readdata),                   //                .readdata
+		.m0_readdatavalid        (hexrport_s1_agent_m0_readdatavalid),              //                .readdatavalid
+		.m0_read                 (hexrport_s1_agent_m0_read),                       //                .read
+		.m0_waitrequest          (hexrport_s1_agent_m0_waitrequest),                //                .waitrequest
+		.m0_writedata            (hexrport_s1_agent_m0_writedata),                  //                .writedata
+		.m0_write                (hexrport_s1_agent_m0_write),                      //                .write
+		.rp_endofpacket          (hexrport_s1_agent_rp_endofpacket),                //              rp.endofpacket
+		.rp_ready                (hexrport_s1_agent_rp_ready),                      //                .ready
+		.rp_valid                (hexrport_s1_agent_rp_valid),                      //                .valid
+		.rp_data                 (hexrport_s1_agent_rp_data),                       //                .data
+		.rp_startofpacket        (hexrport_s1_agent_rp_startofpacket),              //                .startofpacket
+		.cp_ready                (hexrport_s1_burst_adapter_source0_ready),         //              cp.ready
+		.cp_valid                (hexrport_s1_burst_adapter_source0_valid),         //                .valid
+		.cp_data                 (hexrport_s1_burst_adapter_source0_data),          //                .data
+		.cp_startofpacket        (hexrport_s1_burst_adapter_source0_startofpacket), //                .startofpacket
+		.cp_endofpacket          (hexrport_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
+		.cp_channel              (hexrport_s1_burst_adapter_source0_channel),       //                .channel
+		.rf_sink_ready           (hexrport_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
+		.rf_sink_valid           (hexrport_s1_agent_rsp_fifo_out_valid),            //                .valid
+		.rf_sink_startofpacket   (hexrport_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
+		.rf_sink_endofpacket     (hexrport_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
+		.rf_sink_data            (hexrport_s1_agent_rsp_fifo_out_data),             //                .data
+		.rf_source_ready         (hexrport_s1_agent_rf_source_ready),               //       rf_source.ready
+		.rf_source_valid         (hexrport_s1_agent_rf_source_valid),               //                .valid
+		.rf_source_startofpacket (hexrport_s1_agent_rf_source_startofpacket),       //                .startofpacket
+		.rf_source_endofpacket   (hexrport_s1_agent_rf_source_endofpacket),         //                .endofpacket
+		.rf_source_data          (hexrport_s1_agent_rf_source_data),                //                .data
+		.rdata_fifo_sink_ready   (avalon_st_adapter_001_out_0_ready),               // rdata_fifo_sink.ready
+		.rdata_fifo_sink_valid   (avalon_st_adapter_001_out_0_valid),               //                .valid
+		.rdata_fifo_sink_data    (avalon_st_adapter_001_out_0_data),                //                .data
+		.rdata_fifo_sink_error   (avalon_st_adapter_001_out_0_error),               //                .error
+		.rdata_fifo_src_ready    (hexrport_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
+		.rdata_fifo_src_valid    (hexrport_s1_agent_rdata_fifo_src_valid),          //                .valid
+		.rdata_fifo_src_data     (hexrport_s1_agent_rdata_fifo_src_data),           //                .data
+		.m0_response             (2'b00),                                           //     (terminated)
+		.m0_writeresponsevalid   (1'b0)                                             //     (terminated)
 	);
 
 	altera_avalon_sc_fifo #(
@@ -1560,32 +1560,32 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) hexport_s1_agent_rsp_fifo (
-		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),            //       clk.clk
-		.reset             (hexport_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
-		.in_data           (hexport_s1_agent_rf_source_data),             //        in.data
-		.in_valid          (hexport_s1_agent_rf_source_valid),            //          .valid
-		.in_ready          (hexport_s1_agent_rf_source_ready),            //          .ready
-		.in_startofpacket  (hexport_s1_agent_rf_source_startofpacket),    //          .startofpacket
-		.in_endofpacket    (hexport_s1_agent_rf_source_endofpacket),      //          .endofpacket
-		.out_data          (hexport_s1_agent_rsp_fifo_out_data),          //       out.data
-		.out_valid         (hexport_s1_agent_rsp_fifo_out_valid),         //          .valid
-		.out_ready         (hexport_s1_agent_rsp_fifo_out_ready),         //          .ready
-		.out_startofpacket (hexport_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
-		.out_endofpacket   (hexport_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
-		.csr_address       (2'b00),                                       // (terminated)
-		.csr_read          (1'b0),                                        // (terminated)
-		.csr_write         (1'b0),                                        // (terminated)
-		.csr_readdata      (),                                            // (terminated)
-		.csr_writedata     (32'b00000000000000000000000000000000),        // (terminated)
-		.almost_full_data  (),                                            // (terminated)
-		.almost_empty_data (),                                            // (terminated)
-		.in_empty          (1'b0),                                        // (terminated)
-		.out_empty         (),                                            // (terminated)
-		.in_error          (1'b0),                                        // (terminated)
-		.out_error         (),                                            // (terminated)
-		.in_channel        (1'b0),                                        // (terminated)
-		.out_channel       ()                                             // (terminated)
+	) hexrport_s1_agent_rsp_fifo (
+		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),             //       clk.clk
+		.reset             (hexrport_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
+		.in_data           (hexrport_s1_agent_rf_source_data),             //        in.data
+		.in_valid          (hexrport_s1_agent_rf_source_valid),            //          .valid
+		.in_ready          (hexrport_s1_agent_rf_source_ready),            //          .ready
+		.in_startofpacket  (hexrport_s1_agent_rf_source_startofpacket),    //          .startofpacket
+		.in_endofpacket    (hexrport_s1_agent_rf_source_endofpacket),      //          .endofpacket
+		.out_data          (hexrport_s1_agent_rsp_fifo_out_data),          //       out.data
+		.out_valid         (hexrport_s1_agent_rsp_fifo_out_valid),         //          .valid
+		.out_ready         (hexrport_s1_agent_rsp_fifo_out_ready),         //          .ready
+		.out_startofpacket (hexrport_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
+		.out_endofpacket   (hexrport_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
+		.csr_address       (2'b00),                                        // (terminated)
+		.csr_read          (1'b0),                                         // (terminated)
+		.csr_write         (1'b0),                                         // (terminated)
+		.csr_readdata      (),                                             // (terminated)
+		.csr_writedata     (32'b00000000000000000000000000000000),         // (terminated)
+		.almost_full_data  (),                                             // (terminated)
+		.almost_empty_data (),                                             // (terminated)
+		.in_empty          (1'b0),                                         // (terminated)
+		.out_empty         (),                                             // (terminated)
+		.in_error          (1'b0),                                         // (terminated)
+		.out_error         (),                                             // (terminated)
+		.in_channel        (1'b0),                                         // (terminated)
+		.out_channel       ()                                              // (terminated)
 	);
 
 	altera_merlin_slave_agent #(
@@ -1628,7 +1628,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ECC_ENABLE                (0)
 	) ledsgreenport_s1_agent (
 		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),                     //             clk.clk
-		.reset                   (hexport_reset_reset_bridge_in_reset_reset),            //       clk_reset.reset
+		.reset                   (hexrport_reset_reset_bridge_in_reset_reset),           //       clk_reset.reset
 		.m0_address              (ledsgreenport_s1_agent_m0_address),                    //              m0.address
 		.m0_burstcount           (ledsgreenport_s1_agent_m0_burstcount),                 //                .burstcount
 		.m0_byteenable           (ledsgreenport_s1_agent_m0_byteenable),                 //                .byteenable
@@ -1687,7 +1687,7 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) ledsgreenport_s1_agent_rsp_fifo (
 		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),                  //       clk.clk
-		.reset             (hexport_reset_reset_bridge_in_reset_reset),         // clk_reset.reset
+		.reset             (hexrport_reset_reset_bridge_in_reset_reset),        // clk_reset.reset
 		.in_data           (ledsgreenport_s1_agent_rf_source_data),             //        in.data
 		.in_valid          (ledsgreenport_s1_agent_rf_source_valid),            //          .valid
 		.in_ready          (ledsgreenport_s1_agent_rf_source_ready),            //          .ready
@@ -1753,7 +1753,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ECC_ENABLE                (0)
 	) ledsredport_s1_agent (
 		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),                   //             clk.clk
-		.reset                   (hexport_reset_reset_bridge_in_reset_reset),          //       clk_reset.reset
+		.reset                   (hexrport_reset_reset_bridge_in_reset_reset),         //       clk_reset.reset
 		.m0_address              (ledsredport_s1_agent_m0_address),                    //              m0.address
 		.m0_burstcount           (ledsredport_s1_agent_m0_burstcount),                 //                .burstcount
 		.m0_byteenable           (ledsredport_s1_agent_m0_byteenable),                 //                .byteenable
@@ -1812,7 +1812,7 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) ledsredport_s1_agent_rsp_fifo (
 		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
-		.reset             (hexport_reset_reset_bridge_in_reset_reset),       // clk_reset.reset
+		.reset             (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
 		.in_data           (ledsredport_s1_agent_rf_source_data),             //        in.data
 		.in_valid          (ledsredport_s1_agent_rf_source_valid),            //          .valid
 		.in_ready          (ledsredport_s1_agent_rf_source_ready),            //          .ready
@@ -1876,50 +1876,50 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_READRESPONSE          (0),
 		.USE_WRITERESPONSE         (0),
 		.ECC_ENABLE                (0)
-	) switchesport_s1_agent (
-		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),                    //             clk.clk
-		.reset                   (hexport_reset_reset_bridge_in_reset_reset),           //       clk_reset.reset
-		.m0_address              (switchesport_s1_agent_m0_address),                    //              m0.address
-		.m0_burstcount           (switchesport_s1_agent_m0_burstcount),                 //                .burstcount
-		.m0_byteenable           (switchesport_s1_agent_m0_byteenable),                 //                .byteenable
-		.m0_debugaccess          (switchesport_s1_agent_m0_debugaccess),                //                .debugaccess
-		.m0_lock                 (switchesport_s1_agent_m0_lock),                       //                .lock
-		.m0_readdata             (switchesport_s1_agent_m0_readdata),                   //                .readdata
-		.m0_readdatavalid        (switchesport_s1_agent_m0_readdatavalid),              //                .readdatavalid
-		.m0_read                 (switchesport_s1_agent_m0_read),                       //                .read
-		.m0_waitrequest          (switchesport_s1_agent_m0_waitrequest),                //                .waitrequest
-		.m0_writedata            (switchesport_s1_agent_m0_writedata),                  //                .writedata
-		.m0_write                (switchesport_s1_agent_m0_write),                      //                .write
-		.rp_endofpacket          (switchesport_s1_agent_rp_endofpacket),                //              rp.endofpacket
-		.rp_ready                (switchesport_s1_agent_rp_ready),                      //                .ready
-		.rp_valid                (switchesport_s1_agent_rp_valid),                      //                .valid
-		.rp_data                 (switchesport_s1_agent_rp_data),                       //                .data
-		.rp_startofpacket        (switchesport_s1_agent_rp_startofpacket),              //                .startofpacket
-		.cp_ready                (switchesport_s1_burst_adapter_source0_ready),         //              cp.ready
-		.cp_valid                (switchesport_s1_burst_adapter_source0_valid),         //                .valid
-		.cp_data                 (switchesport_s1_burst_adapter_source0_data),          //                .data
-		.cp_startofpacket        (switchesport_s1_burst_adapter_source0_startofpacket), //                .startofpacket
-		.cp_endofpacket          (switchesport_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
-		.cp_channel              (switchesport_s1_burst_adapter_source0_channel),       //                .channel
-		.rf_sink_ready           (switchesport_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
-		.rf_sink_valid           (switchesport_s1_agent_rsp_fifo_out_valid),            //                .valid
-		.rf_sink_startofpacket   (switchesport_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
-		.rf_sink_endofpacket     (switchesport_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
-		.rf_sink_data            (switchesport_s1_agent_rsp_fifo_out_data),             //                .data
-		.rf_source_ready         (switchesport_s1_agent_rf_source_ready),               //       rf_source.ready
-		.rf_source_valid         (switchesport_s1_agent_rf_source_valid),               //                .valid
-		.rf_source_startofpacket (switchesport_s1_agent_rf_source_startofpacket),       //                .startofpacket
-		.rf_source_endofpacket   (switchesport_s1_agent_rf_source_endofpacket),         //                .endofpacket
-		.rf_source_data          (switchesport_s1_agent_rf_source_data),                //                .data
-		.rdata_fifo_sink_ready   (avalon_st_adapter_004_out_0_ready),                   // rdata_fifo_sink.ready
-		.rdata_fifo_sink_valid   (avalon_st_adapter_004_out_0_valid),                   //                .valid
-		.rdata_fifo_sink_data    (avalon_st_adapter_004_out_0_data),                    //                .data
-		.rdata_fifo_sink_error   (avalon_st_adapter_004_out_0_error),                   //                .error
-		.rdata_fifo_src_ready    (switchesport_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
-		.rdata_fifo_src_valid    (switchesport_s1_agent_rdata_fifo_src_valid),          //                .valid
-		.rdata_fifo_src_data     (switchesport_s1_agent_rdata_fifo_src_data),           //                .data
-		.m0_response             (2'b00),                                               //     (terminated)
-		.m0_writeresponsevalid   (1'b0)                                                 //     (terminated)
+	) swport_s1_agent (
+		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),              //             clk.clk
+		.reset                   (hexrport_reset_reset_bridge_in_reset_reset),    //       clk_reset.reset
+		.m0_address              (swport_s1_agent_m0_address),                    //              m0.address
+		.m0_burstcount           (swport_s1_agent_m0_burstcount),                 //                .burstcount
+		.m0_byteenable           (swport_s1_agent_m0_byteenable),                 //                .byteenable
+		.m0_debugaccess          (swport_s1_agent_m0_debugaccess),                //                .debugaccess
+		.m0_lock                 (swport_s1_agent_m0_lock),                       //                .lock
+		.m0_readdata             (swport_s1_agent_m0_readdata),                   //                .readdata
+		.m0_readdatavalid        (swport_s1_agent_m0_readdatavalid),              //                .readdatavalid
+		.m0_read                 (swport_s1_agent_m0_read),                       //                .read
+		.m0_waitrequest          (swport_s1_agent_m0_waitrequest),                //                .waitrequest
+		.m0_writedata            (swport_s1_agent_m0_writedata),                  //                .writedata
+		.m0_write                (swport_s1_agent_m0_write),                      //                .write
+		.rp_endofpacket          (swport_s1_agent_rp_endofpacket),                //              rp.endofpacket
+		.rp_ready                (swport_s1_agent_rp_ready),                      //                .ready
+		.rp_valid                (swport_s1_agent_rp_valid),                      //                .valid
+		.rp_data                 (swport_s1_agent_rp_data),                       //                .data
+		.rp_startofpacket        (swport_s1_agent_rp_startofpacket),              //                .startofpacket
+		.cp_ready                (swport_s1_burst_adapter_source0_ready),         //              cp.ready
+		.cp_valid                (swport_s1_burst_adapter_source0_valid),         //                .valid
+		.cp_data                 (swport_s1_burst_adapter_source0_data),          //                .data
+		.cp_startofpacket        (swport_s1_burst_adapter_source0_startofpacket), //                .startofpacket
+		.cp_endofpacket          (swport_s1_burst_adapter_source0_endofpacket),   //                .endofpacket
+		.cp_channel              (swport_s1_burst_adapter_source0_channel),       //                .channel
+		.rf_sink_ready           (swport_s1_agent_rsp_fifo_out_ready),            //         rf_sink.ready
+		.rf_sink_valid           (swport_s1_agent_rsp_fifo_out_valid),            //                .valid
+		.rf_sink_startofpacket   (swport_s1_agent_rsp_fifo_out_startofpacket),    //                .startofpacket
+		.rf_sink_endofpacket     (swport_s1_agent_rsp_fifo_out_endofpacket),      //                .endofpacket
+		.rf_sink_data            (swport_s1_agent_rsp_fifo_out_data),             //                .data
+		.rf_source_ready         (swport_s1_agent_rf_source_ready),               //       rf_source.ready
+		.rf_source_valid         (swport_s1_agent_rf_source_valid),               //                .valid
+		.rf_source_startofpacket (swport_s1_agent_rf_source_startofpacket),       //                .startofpacket
+		.rf_source_endofpacket   (swport_s1_agent_rf_source_endofpacket),         //                .endofpacket
+		.rf_source_data          (swport_s1_agent_rf_source_data),                //                .data
+		.rdata_fifo_sink_ready   (avalon_st_adapter_004_out_0_ready),             // rdata_fifo_sink.ready
+		.rdata_fifo_sink_valid   (avalon_st_adapter_004_out_0_valid),             //                .valid
+		.rdata_fifo_sink_data    (avalon_st_adapter_004_out_0_data),              //                .data
+		.rdata_fifo_sink_error   (avalon_st_adapter_004_out_0_error),             //                .error
+		.rdata_fifo_src_ready    (swport_s1_agent_rdata_fifo_src_ready),          //  rdata_fifo_src.ready
+		.rdata_fifo_src_valid    (swport_s1_agent_rdata_fifo_src_valid),          //                .valid
+		.rdata_fifo_src_data     (swport_s1_agent_rdata_fifo_src_data),           //                .data
+		.m0_response             (2'b00),                                         //     (terminated)
+		.m0_writeresponsevalid   (1'b0)                                           //     (terminated)
 	);
 
 	altera_avalon_sc_fifo #(
@@ -1935,32 +1935,32 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_STORE_FORWARD   (0),
 		.USE_ALMOST_FULL_IF  (0),
 		.USE_ALMOST_EMPTY_IF (0)
-	) switchesport_s1_agent_rsp_fifo (
-		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),                 //       clk.clk
-		.reset             (hexport_reset_reset_bridge_in_reset_reset),        // clk_reset.reset
-		.in_data           (switchesport_s1_agent_rf_source_data),             //        in.data
-		.in_valid          (switchesport_s1_agent_rf_source_valid),            //          .valid
-		.in_ready          (switchesport_s1_agent_rf_source_ready),            //          .ready
-		.in_startofpacket  (switchesport_s1_agent_rf_source_startofpacket),    //          .startofpacket
-		.in_endofpacket    (switchesport_s1_agent_rf_source_endofpacket),      //          .endofpacket
-		.out_data          (switchesport_s1_agent_rsp_fifo_out_data),          //       out.data
-		.out_valid         (switchesport_s1_agent_rsp_fifo_out_valid),         //          .valid
-		.out_ready         (switchesport_s1_agent_rsp_fifo_out_ready),         //          .ready
-		.out_startofpacket (switchesport_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
-		.out_endofpacket   (switchesport_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
-		.csr_address       (2'b00),                                            // (terminated)
-		.csr_read          (1'b0),                                             // (terminated)
-		.csr_write         (1'b0),                                             // (terminated)
-		.csr_readdata      (),                                                 // (terminated)
-		.csr_writedata     (32'b00000000000000000000000000000000),             // (terminated)
-		.almost_full_data  (),                                                 // (terminated)
-		.almost_empty_data (),                                                 // (terminated)
-		.in_empty          (1'b0),                                             // (terminated)
-		.out_empty         (),                                                 // (terminated)
-		.in_error          (1'b0),                                             // (terminated)
-		.out_error         (),                                                 // (terminated)
-		.in_channel        (1'b0),                                             // (terminated)
-		.out_channel       ()                                                  // (terminated)
+	) swport_s1_agent_rsp_fifo (
+		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset             (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.in_data           (swport_s1_agent_rf_source_data),             //        in.data
+		.in_valid          (swport_s1_agent_rf_source_valid),            //          .valid
+		.in_ready          (swport_s1_agent_rf_source_ready),            //          .ready
+		.in_startofpacket  (swport_s1_agent_rf_source_startofpacket),    //          .startofpacket
+		.in_endofpacket    (swport_s1_agent_rf_source_endofpacket),      //          .endofpacket
+		.out_data          (swport_s1_agent_rsp_fifo_out_data),          //       out.data
+		.out_valid         (swport_s1_agent_rsp_fifo_out_valid),         //          .valid
+		.out_ready         (swport_s1_agent_rsp_fifo_out_ready),         //          .ready
+		.out_startofpacket (swport_s1_agent_rsp_fifo_out_startofpacket), //          .startofpacket
+		.out_endofpacket   (swport_s1_agent_rsp_fifo_out_endofpacket),   //          .endofpacket
+		.csr_address       (2'b00),                                      // (terminated)
+		.csr_read          (1'b0),                                       // (terminated)
+		.csr_write         (1'b0),                                       // (terminated)
+		.csr_readdata      (),                                           // (terminated)
+		.csr_writedata     (32'b00000000000000000000000000000000),       // (terminated)
+		.almost_full_data  (),                                           // (terminated)
+		.almost_empty_data (),                                           // (terminated)
+		.in_empty          (1'b0),                                       // (terminated)
+		.out_empty         (),                                           // (terminated)
+		.in_error          (1'b0),                                       // (terminated)
+		.out_error         (),                                           // (terminated)
+		.in_channel        (1'b0),                                       // (terminated)
+		.out_channel       ()                                            // (terminated)
 	);
 
 	altera_merlin_slave_agent #(
@@ -2003,7 +2003,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ECC_ENABLE                (0)
 	) keysport_s1_agent (
 		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),                //             clk.clk
-		.reset                   (hexport_reset_reset_bridge_in_reset_reset),       //       clk_reset.reset
+		.reset                   (hexrport_reset_reset_bridge_in_reset_reset),      //       clk_reset.reset
 		.m0_address              (keysport_s1_agent_m0_address),                    //              m0.address
 		.m0_burstcount           (keysport_s1_agent_m0_burstcount),                 //                .burstcount
 		.m0_byteenable           (keysport_s1_agent_m0_byteenable),                 //                .byteenable
@@ -2062,7 +2062,7 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) keysport_s1_agent_rsp_fifo (
 		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),             //       clk.clk
-		.reset             (hexport_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
+		.reset             (hexrport_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
 		.in_data           (keysport_s1_agent_rf_source_data),             //        in.data
 		.in_valid          (keysport_s1_agent_rf_source_valid),            //          .valid
 		.in_ready          (keysport_s1_agent_rf_source_ready),            //          .ready
@@ -2128,7 +2128,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ECC_ENABLE                (0)
 	) hexlport_s1_agent (
 		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),                //             clk.clk
-		.reset                   (hexport_reset_reset_bridge_in_reset_reset),       //       clk_reset.reset
+		.reset                   (hexrport_reset_reset_bridge_in_reset_reset),      //       clk_reset.reset
 		.m0_address              (hexlport_s1_agent_m0_address),                    //              m0.address
 		.m0_burstcount           (hexlport_s1_agent_m0_burstcount),                 //                .burstcount
 		.m0_byteenable           (hexlport_s1_agent_m0_byteenable),                 //                .byteenable
@@ -2187,7 +2187,7 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) hexlport_s1_agent_rsp_fifo (
 		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),             //       clk.clk
-		.reset             (hexport_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
+		.reset             (hexrport_reset_reset_bridge_in_reset_reset),   // clk_reset.reset
 		.in_data           (hexlport_s1_agent_rf_source_data),             //        in.data
 		.in_valid          (hexlport_s1_agent_rf_source_valid),            //          .valid
 		.in_ready          (hexlport_s1_agent_rf_source_ready),            //          .ready
@@ -2253,7 +2253,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ECC_ENABLE                (0)
 	) pcie_hard_ip_0_txs_agent (
 		.clk                     (pcie_hard_ip_0_pcie_core_clk_clk),                    //             clk.clk
-		.reset                   (hexport_reset_reset_bridge_in_reset_reset),           //       clk_reset.reset
+		.reset                   (hexrport_reset_reset_bridge_in_reset_reset),          //       clk_reset.reset
 		.m0_address              (pcie_hard_ip_0_txs_agent_m0_address),                 //              m0.address
 		.m0_burstcount           (pcie_hard_ip_0_txs_agent_m0_burstcount),              //                .burstcount
 		.m0_byteenable           (pcie_hard_ip_0_txs_agent_m0_byteenable),              //                .byteenable
@@ -2312,7 +2312,7 @@ module pcihellocore_mm_interconnect_0 (
 		.USE_ALMOST_EMPTY_IF (0)
 	) pcie_hard_ip_0_txs_agent_rsp_fifo (
 		.clk               (pcie_hard_ip_0_pcie_core_clk_clk),                    //       clk.clk
-		.reset             (hexport_reset_reset_bridge_in_reset_reset),           // clk_reset.reset
+		.reset             (hexrport_reset_reset_bridge_in_reset_reset),          // clk_reset.reset
 		.in_data           (pcie_hard_ip_0_txs_agent_rf_source_data),             //        in.data
 		.in_valid          (pcie_hard_ip_0_txs_agent_rf_source_valid),            //          .valid
 		.in_ready          (pcie_hard_ip_0_txs_agent_rf_source_ready),            //          .ready
@@ -2345,7 +2345,7 @@ module pcihellocore_mm_interconnect_0 (
 		.sink_startofpacket (pcie_hard_ip_0_bar0_agent_cp_startofpacket), //          .startofpacket
 		.sink_endofpacket   (pcie_hard_ip_0_bar0_agent_cp_endofpacket),   //          .endofpacket
 		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset),  // clk_reset.reset
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
 		.src_ready          (router_src_ready),                           //       src.ready
 		.src_valid          (router_src_valid),                           //          .valid
 		.src_data           (router_src_data),                            //          .data
@@ -2355,131 +2355,131 @@ module pcihellocore_mm_interconnect_0 (
 	);
 
 	pcihellocore_mm_interconnect_0_router_001 router_001 (
-		.sink_ready         (pcie_hard_ip_0_cra_agent_rp_ready),         //      sink.ready
-		.sink_valid         (pcie_hard_ip_0_cra_agent_rp_valid),         //          .valid
-		.sink_data          (pcie_hard_ip_0_cra_agent_rp_data),          //          .data
-		.sink_startofpacket (pcie_hard_ip_0_cra_agent_rp_startofpacket), //          .startofpacket
-		.sink_endofpacket   (pcie_hard_ip_0_cra_agent_rp_endofpacket),   //          .endofpacket
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready          (router_001_src_ready),                      //       src.ready
-		.src_valid          (router_001_src_valid),                      //          .valid
-		.src_data           (router_001_src_data),                       //          .data
-		.src_channel        (router_001_src_channel),                    //          .channel
-		.src_startofpacket  (router_001_src_startofpacket),              //          .startofpacket
-		.src_endofpacket    (router_001_src_endofpacket)                 //          .endofpacket
+		.sink_ready         (pcie_hard_ip_0_cra_agent_rp_ready),          //      sink.ready
+		.sink_valid         (pcie_hard_ip_0_cra_agent_rp_valid),          //          .valid
+		.sink_data          (pcie_hard_ip_0_cra_agent_rp_data),           //          .data
+		.sink_startofpacket (pcie_hard_ip_0_cra_agent_rp_startofpacket),  //          .startofpacket
+		.sink_endofpacket   (pcie_hard_ip_0_cra_agent_rp_endofpacket),    //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready          (router_001_src_ready),                       //       src.ready
+		.src_valid          (router_001_src_valid),                       //          .valid
+		.src_data           (router_001_src_data),                        //          .data
+		.src_channel        (router_001_src_channel),                     //          .channel
+		.src_startofpacket  (router_001_src_startofpacket),               //          .startofpacket
+		.src_endofpacket    (router_001_src_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_router_001 router_002 (
-		.sink_ready         (hexport_s1_agent_rp_ready),                 //      sink.ready
-		.sink_valid         (hexport_s1_agent_rp_valid),                 //          .valid
-		.sink_data          (hexport_s1_agent_rp_data),                  //          .data
-		.sink_startofpacket (hexport_s1_agent_rp_startofpacket),         //          .startofpacket
-		.sink_endofpacket   (hexport_s1_agent_rp_endofpacket),           //          .endofpacket
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready          (router_002_src_ready),                      //       src.ready
-		.src_valid          (router_002_src_valid),                      //          .valid
-		.src_data           (router_002_src_data),                       //          .data
-		.src_channel        (router_002_src_channel),                    //          .channel
-		.src_startofpacket  (router_002_src_startofpacket),              //          .startofpacket
-		.src_endofpacket    (router_002_src_endofpacket)                 //          .endofpacket
+		.sink_ready         (hexrport_s1_agent_rp_ready),                 //      sink.ready
+		.sink_valid         (hexrport_s1_agent_rp_valid),                 //          .valid
+		.sink_data          (hexrport_s1_agent_rp_data),                  //          .data
+		.sink_startofpacket (hexrport_s1_agent_rp_startofpacket),         //          .startofpacket
+		.sink_endofpacket   (hexrport_s1_agent_rp_endofpacket),           //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready          (router_002_src_ready),                       //       src.ready
+		.src_valid          (router_002_src_valid),                       //          .valid
+		.src_data           (router_002_src_data),                        //          .data
+		.src_channel        (router_002_src_channel),                     //          .channel
+		.src_startofpacket  (router_002_src_startofpacket),               //          .startofpacket
+		.src_endofpacket    (router_002_src_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_router_001 router_003 (
-		.sink_ready         (ledsgreenport_s1_agent_rp_ready),           //      sink.ready
-		.sink_valid         (ledsgreenport_s1_agent_rp_valid),           //          .valid
-		.sink_data          (ledsgreenport_s1_agent_rp_data),            //          .data
-		.sink_startofpacket (ledsgreenport_s1_agent_rp_startofpacket),   //          .startofpacket
-		.sink_endofpacket   (ledsgreenport_s1_agent_rp_endofpacket),     //          .endofpacket
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready          (router_003_src_ready),                      //       src.ready
-		.src_valid          (router_003_src_valid),                      //          .valid
-		.src_data           (router_003_src_data),                       //          .data
-		.src_channel        (router_003_src_channel),                    //          .channel
-		.src_startofpacket  (router_003_src_startofpacket),              //          .startofpacket
-		.src_endofpacket    (router_003_src_endofpacket)                 //          .endofpacket
+		.sink_ready         (ledsgreenport_s1_agent_rp_ready),            //      sink.ready
+		.sink_valid         (ledsgreenport_s1_agent_rp_valid),            //          .valid
+		.sink_data          (ledsgreenport_s1_agent_rp_data),             //          .data
+		.sink_startofpacket (ledsgreenport_s1_agent_rp_startofpacket),    //          .startofpacket
+		.sink_endofpacket   (ledsgreenport_s1_agent_rp_endofpacket),      //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready          (router_003_src_ready),                       //       src.ready
+		.src_valid          (router_003_src_valid),                       //          .valid
+		.src_data           (router_003_src_data),                        //          .data
+		.src_channel        (router_003_src_channel),                     //          .channel
+		.src_startofpacket  (router_003_src_startofpacket),               //          .startofpacket
+		.src_endofpacket    (router_003_src_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_router_001 router_004 (
-		.sink_ready         (ledsredport_s1_agent_rp_ready),             //      sink.ready
-		.sink_valid         (ledsredport_s1_agent_rp_valid),             //          .valid
-		.sink_data          (ledsredport_s1_agent_rp_data),              //          .data
-		.sink_startofpacket (ledsredport_s1_agent_rp_startofpacket),     //          .startofpacket
-		.sink_endofpacket   (ledsredport_s1_agent_rp_endofpacket),       //          .endofpacket
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready          (router_004_src_ready),                      //       src.ready
-		.src_valid          (router_004_src_valid),                      //          .valid
-		.src_data           (router_004_src_data),                       //          .data
-		.src_channel        (router_004_src_channel),                    //          .channel
-		.src_startofpacket  (router_004_src_startofpacket),              //          .startofpacket
-		.src_endofpacket    (router_004_src_endofpacket)                 //          .endofpacket
+		.sink_ready         (ledsredport_s1_agent_rp_ready),              //      sink.ready
+		.sink_valid         (ledsredport_s1_agent_rp_valid),              //          .valid
+		.sink_data          (ledsredport_s1_agent_rp_data),               //          .data
+		.sink_startofpacket (ledsredport_s1_agent_rp_startofpacket),      //          .startofpacket
+		.sink_endofpacket   (ledsredport_s1_agent_rp_endofpacket),        //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready          (router_004_src_ready),                       //       src.ready
+		.src_valid          (router_004_src_valid),                       //          .valid
+		.src_data           (router_004_src_data),                        //          .data
+		.src_channel        (router_004_src_channel),                     //          .channel
+		.src_startofpacket  (router_004_src_startofpacket),               //          .startofpacket
+		.src_endofpacket    (router_004_src_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_router_001 router_005 (
-		.sink_ready         (switchesport_s1_agent_rp_ready),            //      sink.ready
-		.sink_valid         (switchesport_s1_agent_rp_valid),            //          .valid
-		.sink_data          (switchesport_s1_agent_rp_data),             //          .data
-		.sink_startofpacket (switchesport_s1_agent_rp_startofpacket),    //          .startofpacket
-		.sink_endofpacket   (switchesport_s1_agent_rp_endofpacket),      //          .endofpacket
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready          (router_005_src_ready),                      //       src.ready
-		.src_valid          (router_005_src_valid),                      //          .valid
-		.src_data           (router_005_src_data),                       //          .data
-		.src_channel        (router_005_src_channel),                    //          .channel
-		.src_startofpacket  (router_005_src_startofpacket),              //          .startofpacket
-		.src_endofpacket    (router_005_src_endofpacket)                 //          .endofpacket
+		.sink_ready         (swport_s1_agent_rp_ready),                   //      sink.ready
+		.sink_valid         (swport_s1_agent_rp_valid),                   //          .valid
+		.sink_data          (swport_s1_agent_rp_data),                    //          .data
+		.sink_startofpacket (swport_s1_agent_rp_startofpacket),           //          .startofpacket
+		.sink_endofpacket   (swport_s1_agent_rp_endofpacket),             //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready          (router_005_src_ready),                       //       src.ready
+		.src_valid          (router_005_src_valid),                       //          .valid
+		.src_data           (router_005_src_data),                        //          .data
+		.src_channel        (router_005_src_channel),                     //          .channel
+		.src_startofpacket  (router_005_src_startofpacket),               //          .startofpacket
+		.src_endofpacket    (router_005_src_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_router_001 router_006 (
-		.sink_ready         (keysport_s1_agent_rp_ready),                //      sink.ready
-		.sink_valid         (keysport_s1_agent_rp_valid),                //          .valid
-		.sink_data          (keysport_s1_agent_rp_data),                 //          .data
-		.sink_startofpacket (keysport_s1_agent_rp_startofpacket),        //          .startofpacket
-		.sink_endofpacket   (keysport_s1_agent_rp_endofpacket),          //          .endofpacket
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready          (router_006_src_ready),                      //       src.ready
-		.src_valid          (router_006_src_valid),                      //          .valid
-		.src_data           (router_006_src_data),                       //          .data
-		.src_channel        (router_006_src_channel),                    //          .channel
-		.src_startofpacket  (router_006_src_startofpacket),              //          .startofpacket
-		.src_endofpacket    (router_006_src_endofpacket)                 //          .endofpacket
+		.sink_ready         (keysport_s1_agent_rp_ready),                 //      sink.ready
+		.sink_valid         (keysport_s1_agent_rp_valid),                 //          .valid
+		.sink_data          (keysport_s1_agent_rp_data),                  //          .data
+		.sink_startofpacket (keysport_s1_agent_rp_startofpacket),         //          .startofpacket
+		.sink_endofpacket   (keysport_s1_agent_rp_endofpacket),           //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready          (router_006_src_ready),                       //       src.ready
+		.src_valid          (router_006_src_valid),                       //          .valid
+		.src_data           (router_006_src_data),                        //          .data
+		.src_channel        (router_006_src_channel),                     //          .channel
+		.src_startofpacket  (router_006_src_startofpacket),               //          .startofpacket
+		.src_endofpacket    (router_006_src_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_router_001 router_007 (
-		.sink_ready         (hexlport_s1_agent_rp_ready),                //      sink.ready
-		.sink_valid         (hexlport_s1_agent_rp_valid),                //          .valid
-		.sink_data          (hexlport_s1_agent_rp_data),                 //          .data
-		.sink_startofpacket (hexlport_s1_agent_rp_startofpacket),        //          .startofpacket
-		.sink_endofpacket   (hexlport_s1_agent_rp_endofpacket),          //          .endofpacket
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready          (router_007_src_ready),                      //       src.ready
-		.src_valid          (router_007_src_valid),                      //          .valid
-		.src_data           (router_007_src_data),                       //          .data
-		.src_channel        (router_007_src_channel),                    //          .channel
-		.src_startofpacket  (router_007_src_startofpacket),              //          .startofpacket
-		.src_endofpacket    (router_007_src_endofpacket)                 //          .endofpacket
+		.sink_ready         (hexlport_s1_agent_rp_ready),                 //      sink.ready
+		.sink_valid         (hexlport_s1_agent_rp_valid),                 //          .valid
+		.sink_data          (hexlport_s1_agent_rp_data),                  //          .data
+		.sink_startofpacket (hexlport_s1_agent_rp_startofpacket),         //          .startofpacket
+		.sink_endofpacket   (hexlport_s1_agent_rp_endofpacket),           //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready          (router_007_src_ready),                       //       src.ready
+		.src_valid          (router_007_src_valid),                       //          .valid
+		.src_data           (router_007_src_data),                        //          .data
+		.src_channel        (router_007_src_channel),                     //          .channel
+		.src_startofpacket  (router_007_src_startofpacket),               //          .startofpacket
+		.src_endofpacket    (router_007_src_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_router_008 router_008 (
-		.sink_ready         (pcie_hard_ip_0_txs_agent_rp_ready),         //      sink.ready
-		.sink_valid         (pcie_hard_ip_0_txs_agent_rp_valid),         //          .valid
-		.sink_data          (pcie_hard_ip_0_txs_agent_rp_data),          //          .data
-		.sink_startofpacket (pcie_hard_ip_0_txs_agent_rp_startofpacket), //          .startofpacket
-		.sink_endofpacket   (pcie_hard_ip_0_txs_agent_rp_endofpacket),   //          .endofpacket
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready          (router_008_src_ready),                      //       src.ready
-		.src_valid          (router_008_src_valid),                      //          .valid
-		.src_data           (router_008_src_data),                       //          .data
-		.src_channel        (router_008_src_channel),                    //          .channel
-		.src_startofpacket  (router_008_src_startofpacket),              //          .startofpacket
-		.src_endofpacket    (router_008_src_endofpacket)                 //          .endofpacket
+		.sink_ready         (pcie_hard_ip_0_txs_agent_rp_ready),          //      sink.ready
+		.sink_valid         (pcie_hard_ip_0_txs_agent_rp_valid),          //          .valid
+		.sink_data          (pcie_hard_ip_0_txs_agent_rp_data),           //          .data
+		.sink_startofpacket (pcie_hard_ip_0_txs_agent_rp_startofpacket),  //          .startofpacket
+		.sink_endofpacket   (pcie_hard_ip_0_txs_agent_rp_endofpacket),    //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready          (router_008_src_ready),                       //       src.ready
+		.src_valid          (router_008_src_valid),                       //          .valid
+		.src_data           (router_008_src_data),                        //          .data
+		.src_channel        (router_008_src_channel),                     //          .channel
+		.src_startofpacket  (router_008_src_startofpacket),               //          .startofpacket
+		.src_endofpacket    (router_008_src_endofpacket)                  //          .endofpacket
 	);
 
 	altera_merlin_traffic_limiter #(
@@ -2505,7 +2505,7 @@ module pcihellocore_mm_interconnect_0 (
 		.REORDER                   (0)
 	) pcie_hard_ip_0_bar0_limiter (
 		.clk                    (pcie_hard_ip_0_pcie_core_clk_clk),                  //       clk.clk
-		.reset                  (hexport_reset_reset_bridge_in_reset_reset),         // clk_reset.reset
+		.reset                  (hexrport_reset_reset_bridge_in_reset_reset),        // clk_reset.reset
 		.cmd_sink_ready         (router_src_ready),                                  //  cmd_sink.ready
 		.cmd_sink_valid         (router_src_valid),                                  //          .valid
 		.cmd_sink_data          (router_src_data),                                   //          .data
@@ -2567,7 +2567,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ADAPTER_VERSION           ("13.1")
 	) pcie_hard_ip_0_cra_burst_adapter (
 		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),                       //       cr0.clk
-		.reset                 (hexport_reset_reset_bridge_in_reset_reset),              // cr0_reset.reset
+		.reset                 (hexrport_reset_reset_bridge_in_reset_reset),             // cr0_reset.reset
 		.sink0_valid           (pcie_hard_ip_0_cra_cmd_width_adapter_src_valid),         //     sink0.valid
 		.sink0_data            (pcie_hard_ip_0_cra_cmd_width_adapter_src_data),          //          .data
 		.sink0_channel         (pcie_hard_ip_0_cra_cmd_width_adapter_src_channel),       //          .channel
@@ -2615,21 +2615,21 @@ module pcihellocore_mm_interconnect_0 (
 		.BURSTWRAP_CONST_MASK      (1),
 		.BURSTWRAP_CONST_VALUE     (1),
 		.ADAPTER_VERSION           ("13.1")
-	) hexport_s1_burst_adapter (
-		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),               //       cr0.clk
-		.reset                 (hexport_reset_reset_bridge_in_reset_reset),      // cr0_reset.reset
-		.sink0_valid           (hexport_s1_cmd_width_adapter_src_valid),         //     sink0.valid
-		.sink0_data            (hexport_s1_cmd_width_adapter_src_data),          //          .data
-		.sink0_channel         (hexport_s1_cmd_width_adapter_src_channel),       //          .channel
-		.sink0_startofpacket   (hexport_s1_cmd_width_adapter_src_startofpacket), //          .startofpacket
-		.sink0_endofpacket     (hexport_s1_cmd_width_adapter_src_endofpacket),   //          .endofpacket
-		.sink0_ready           (hexport_s1_cmd_width_adapter_src_ready),         //          .ready
-		.source0_valid         (hexport_s1_burst_adapter_source0_valid),         //   source0.valid
-		.source0_data          (hexport_s1_burst_adapter_source0_data),          //          .data
-		.source0_channel       (hexport_s1_burst_adapter_source0_channel),       //          .channel
-		.source0_startofpacket (hexport_s1_burst_adapter_source0_startofpacket), //          .startofpacket
-		.source0_endofpacket   (hexport_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
-		.source0_ready         (hexport_s1_burst_adapter_source0_ready)          //          .ready
+	) hexrport_s1_burst_adapter (
+		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),                //       cr0.clk
+		.reset                 (hexrport_reset_reset_bridge_in_reset_reset),      // cr0_reset.reset
+		.sink0_valid           (hexrport_s1_cmd_width_adapter_src_valid),         //     sink0.valid
+		.sink0_data            (hexrport_s1_cmd_width_adapter_src_data),          //          .data
+		.sink0_channel         (hexrport_s1_cmd_width_adapter_src_channel),       //          .channel
+		.sink0_startofpacket   (hexrport_s1_cmd_width_adapter_src_startofpacket), //          .startofpacket
+		.sink0_endofpacket     (hexrport_s1_cmd_width_adapter_src_endofpacket),   //          .endofpacket
+		.sink0_ready           (hexrport_s1_cmd_width_adapter_src_ready),         //          .ready
+		.source0_valid         (hexrport_s1_burst_adapter_source0_valid),         //   source0.valid
+		.source0_data          (hexrport_s1_burst_adapter_source0_data),          //          .data
+		.source0_channel       (hexrport_s1_burst_adapter_source0_channel),       //          .channel
+		.source0_startofpacket (hexrport_s1_burst_adapter_source0_startofpacket), //          .startofpacket
+		.source0_endofpacket   (hexrport_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
+		.source0_ready         (hexrport_s1_burst_adapter_source0_ready)          //          .ready
 	);
 
 	altera_merlin_burst_adapter #(
@@ -2667,7 +2667,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ADAPTER_VERSION           ("13.1")
 	) ledsgreenport_s1_burst_adapter (
 		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),                     //       cr0.clk
-		.reset                 (hexport_reset_reset_bridge_in_reset_reset),            // cr0_reset.reset
+		.reset                 (hexrport_reset_reset_bridge_in_reset_reset),           // cr0_reset.reset
 		.sink0_valid           (ledsgreenport_s1_cmd_width_adapter_src_valid),         //     sink0.valid
 		.sink0_data            (ledsgreenport_s1_cmd_width_adapter_src_data),          //          .data
 		.sink0_channel         (ledsgreenport_s1_cmd_width_adapter_src_channel),       //          .channel
@@ -2717,7 +2717,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ADAPTER_VERSION           ("13.1")
 	) ledsredport_s1_burst_adapter (
 		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),                   //       cr0.clk
-		.reset                 (hexport_reset_reset_bridge_in_reset_reset),          // cr0_reset.reset
+		.reset                 (hexrport_reset_reset_bridge_in_reset_reset),         // cr0_reset.reset
 		.sink0_valid           (ledsredport_s1_cmd_width_adapter_src_valid),         //     sink0.valid
 		.sink0_data            (ledsredport_s1_cmd_width_adapter_src_data),          //          .data
 		.sink0_channel         (ledsredport_s1_cmd_width_adapter_src_channel),       //          .channel
@@ -2765,21 +2765,21 @@ module pcihellocore_mm_interconnect_0 (
 		.BURSTWRAP_CONST_MASK      (1),
 		.BURSTWRAP_CONST_VALUE     (1),
 		.ADAPTER_VERSION           ("13.1")
-	) switchesport_s1_burst_adapter (
-		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),                    //       cr0.clk
-		.reset                 (hexport_reset_reset_bridge_in_reset_reset),           // cr0_reset.reset
-		.sink0_valid           (switchesport_s1_cmd_width_adapter_src_valid),         //     sink0.valid
-		.sink0_data            (switchesport_s1_cmd_width_adapter_src_data),          //          .data
-		.sink0_channel         (switchesport_s1_cmd_width_adapter_src_channel),       //          .channel
-		.sink0_startofpacket   (switchesport_s1_cmd_width_adapter_src_startofpacket), //          .startofpacket
-		.sink0_endofpacket     (switchesport_s1_cmd_width_adapter_src_endofpacket),   //          .endofpacket
-		.sink0_ready           (switchesport_s1_cmd_width_adapter_src_ready),         //          .ready
-		.source0_valid         (switchesport_s1_burst_adapter_source0_valid),         //   source0.valid
-		.source0_data          (switchesport_s1_burst_adapter_source0_data),          //          .data
-		.source0_channel       (switchesport_s1_burst_adapter_source0_channel),       //          .channel
-		.source0_startofpacket (switchesport_s1_burst_adapter_source0_startofpacket), //          .startofpacket
-		.source0_endofpacket   (switchesport_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
-		.source0_ready         (switchesport_s1_burst_adapter_source0_ready)          //          .ready
+	) swport_s1_burst_adapter (
+		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),              //       cr0.clk
+		.reset                 (hexrport_reset_reset_bridge_in_reset_reset),    // cr0_reset.reset
+		.sink0_valid           (swport_s1_cmd_width_adapter_src_valid),         //     sink0.valid
+		.sink0_data            (swport_s1_cmd_width_adapter_src_data),          //          .data
+		.sink0_channel         (swport_s1_cmd_width_adapter_src_channel),       //          .channel
+		.sink0_startofpacket   (swport_s1_cmd_width_adapter_src_startofpacket), //          .startofpacket
+		.sink0_endofpacket     (swport_s1_cmd_width_adapter_src_endofpacket),   //          .endofpacket
+		.sink0_ready           (swport_s1_cmd_width_adapter_src_ready),         //          .ready
+		.source0_valid         (swport_s1_burst_adapter_source0_valid),         //   source0.valid
+		.source0_data          (swport_s1_burst_adapter_source0_data),          //          .data
+		.source0_channel       (swport_s1_burst_adapter_source0_channel),       //          .channel
+		.source0_startofpacket (swport_s1_burst_adapter_source0_startofpacket), //          .startofpacket
+		.source0_endofpacket   (swport_s1_burst_adapter_source0_endofpacket),   //          .endofpacket
+		.source0_ready         (swport_s1_burst_adapter_source0_ready)          //          .ready
 	);
 
 	altera_merlin_burst_adapter #(
@@ -2817,7 +2817,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ADAPTER_VERSION           ("13.1")
 	) keysport_s1_burst_adapter (
 		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),                //       cr0.clk
-		.reset                 (hexport_reset_reset_bridge_in_reset_reset),       // cr0_reset.reset
+		.reset                 (hexrport_reset_reset_bridge_in_reset_reset),      // cr0_reset.reset
 		.sink0_valid           (keysport_s1_cmd_width_adapter_src_valid),         //     sink0.valid
 		.sink0_data            (keysport_s1_cmd_width_adapter_src_data),          //          .data
 		.sink0_channel         (keysport_s1_cmd_width_adapter_src_channel),       //          .channel
@@ -2867,7 +2867,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ADAPTER_VERSION           ("13.1")
 	) hexlport_s1_burst_adapter (
 		.clk                   (pcie_hard_ip_0_pcie_core_clk_clk),                //       cr0.clk
-		.reset                 (hexport_reset_reset_bridge_in_reset_reset),       // cr0_reset.reset
+		.reset                 (hexrport_reset_reset_bridge_in_reset_reset),      // cr0_reset.reset
 		.sink0_valid           (hexlport_s1_cmd_width_adapter_src_valid),         //     sink0.valid
 		.sink0_data            (hexlport_s1_cmd_width_adapter_src_data),          //          .data
 		.sink0_channel         (hexlport_s1_cmd_width_adapter_src_channel),       //          .channel
@@ -2884,7 +2884,7 @@ module pcihellocore_mm_interconnect_0 (
 
 	pcihellocore_mm_interconnect_0_cmd_demux cmd_demux (
 		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),                  //        clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset),         //  clk_reset.reset
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset),        //  clk_reset.reset
 		.sink_ready         (pcie_hard_ip_0_bar0_limiter_cmd_src_ready),         //       sink.ready
 		.sink_channel       (pcie_hard_ip_0_bar0_limiter_cmd_src_channel),       //           .channel
 		.sink_data          (pcie_hard_ip_0_bar0_limiter_cmd_src_data),          //           .data
@@ -2942,144 +2942,144 @@ module pcihellocore_mm_interconnect_0 (
 	);
 
 	pcihellocore_mm_interconnect_0_cmd_mux cmd_mux (
-		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset               (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (cmd_mux_src_ready),                         //       src.ready
-		.src_valid           (cmd_mux_src_valid),                         //          .valid
-		.src_data            (cmd_mux_src_data),                          //          .data
-		.src_channel         (cmd_mux_src_channel),                       //          .channel
-		.src_startofpacket   (cmd_mux_src_startofpacket),                 //          .startofpacket
-		.src_endofpacket     (cmd_mux_src_endofpacket),                   //          .endofpacket
-		.sink0_ready         (cmd_demux_src0_ready),                      //     sink0.ready
-		.sink0_valid         (cmd_demux_src0_valid),                      //          .valid
-		.sink0_channel       (cmd_demux_src0_channel),                    //          .channel
-		.sink0_data          (cmd_demux_src0_data),                       //          .data
-		.sink0_startofpacket (cmd_demux_src0_startofpacket),              //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_src0_endofpacket)                 //          .endofpacket
+		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset               (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (cmd_mux_src_ready),                          //       src.ready
+		.src_valid           (cmd_mux_src_valid),                          //          .valid
+		.src_data            (cmd_mux_src_data),                           //          .data
+		.src_channel         (cmd_mux_src_channel),                        //          .channel
+		.src_startofpacket   (cmd_mux_src_startofpacket),                  //          .startofpacket
+		.src_endofpacket     (cmd_mux_src_endofpacket),                    //          .endofpacket
+		.sink0_ready         (cmd_demux_src0_ready),                       //     sink0.ready
+		.sink0_valid         (cmd_demux_src0_valid),                       //          .valid
+		.sink0_channel       (cmd_demux_src0_channel),                     //          .channel
+		.sink0_data          (cmd_demux_src0_data),                        //          .data
+		.sink0_startofpacket (cmd_demux_src0_startofpacket),               //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src0_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_cmd_mux cmd_mux_001 (
-		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset               (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (cmd_mux_001_src_ready),                     //       src.ready
-		.src_valid           (cmd_mux_001_src_valid),                     //          .valid
-		.src_data            (cmd_mux_001_src_data),                      //          .data
-		.src_channel         (cmd_mux_001_src_channel),                   //          .channel
-		.src_startofpacket   (cmd_mux_001_src_startofpacket),             //          .startofpacket
-		.src_endofpacket     (cmd_mux_001_src_endofpacket),               //          .endofpacket
-		.sink0_ready         (cmd_demux_src1_ready),                      //     sink0.ready
-		.sink0_valid         (cmd_demux_src1_valid),                      //          .valid
-		.sink0_channel       (cmd_demux_src1_channel),                    //          .channel
-		.sink0_data          (cmd_demux_src1_data),                       //          .data
-		.sink0_startofpacket (cmd_demux_src1_startofpacket),              //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_src1_endofpacket)                 //          .endofpacket
+		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset               (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (cmd_mux_001_src_ready),                      //       src.ready
+		.src_valid           (cmd_mux_001_src_valid),                      //          .valid
+		.src_data            (cmd_mux_001_src_data),                       //          .data
+		.src_channel         (cmd_mux_001_src_channel),                    //          .channel
+		.src_startofpacket   (cmd_mux_001_src_startofpacket),              //          .startofpacket
+		.src_endofpacket     (cmd_mux_001_src_endofpacket),                //          .endofpacket
+		.sink0_ready         (cmd_demux_src1_ready),                       //     sink0.ready
+		.sink0_valid         (cmd_demux_src1_valid),                       //          .valid
+		.sink0_channel       (cmd_demux_src1_channel),                     //          .channel
+		.sink0_data          (cmd_demux_src1_data),                        //          .data
+		.sink0_startofpacket (cmd_demux_src1_startofpacket),               //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src1_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_cmd_mux cmd_mux_002 (
-		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset               (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (cmd_mux_002_src_ready),                     //       src.ready
-		.src_valid           (cmd_mux_002_src_valid),                     //          .valid
-		.src_data            (cmd_mux_002_src_data),                      //          .data
-		.src_channel         (cmd_mux_002_src_channel),                   //          .channel
-		.src_startofpacket   (cmd_mux_002_src_startofpacket),             //          .startofpacket
-		.src_endofpacket     (cmd_mux_002_src_endofpacket),               //          .endofpacket
-		.sink0_ready         (cmd_demux_src2_ready),                      //     sink0.ready
-		.sink0_valid         (cmd_demux_src2_valid),                      //          .valid
-		.sink0_channel       (cmd_demux_src2_channel),                    //          .channel
-		.sink0_data          (cmd_demux_src2_data),                       //          .data
-		.sink0_startofpacket (cmd_demux_src2_startofpacket),              //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_src2_endofpacket)                 //          .endofpacket
+		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset               (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (cmd_mux_002_src_ready),                      //       src.ready
+		.src_valid           (cmd_mux_002_src_valid),                      //          .valid
+		.src_data            (cmd_mux_002_src_data),                       //          .data
+		.src_channel         (cmd_mux_002_src_channel),                    //          .channel
+		.src_startofpacket   (cmd_mux_002_src_startofpacket),              //          .startofpacket
+		.src_endofpacket     (cmd_mux_002_src_endofpacket),                //          .endofpacket
+		.sink0_ready         (cmd_demux_src2_ready),                       //     sink0.ready
+		.sink0_valid         (cmd_demux_src2_valid),                       //          .valid
+		.sink0_channel       (cmd_demux_src2_channel),                     //          .channel
+		.sink0_data          (cmd_demux_src2_data),                        //          .data
+		.sink0_startofpacket (cmd_demux_src2_startofpacket),               //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src2_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_cmd_mux cmd_mux_003 (
-		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset               (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (cmd_mux_003_src_ready),                     //       src.ready
-		.src_valid           (cmd_mux_003_src_valid),                     //          .valid
-		.src_data            (cmd_mux_003_src_data),                      //          .data
-		.src_channel         (cmd_mux_003_src_channel),                   //          .channel
-		.src_startofpacket   (cmd_mux_003_src_startofpacket),             //          .startofpacket
-		.src_endofpacket     (cmd_mux_003_src_endofpacket),               //          .endofpacket
-		.sink0_ready         (cmd_demux_src3_ready),                      //     sink0.ready
-		.sink0_valid         (cmd_demux_src3_valid),                      //          .valid
-		.sink0_channel       (cmd_demux_src3_channel),                    //          .channel
-		.sink0_data          (cmd_demux_src3_data),                       //          .data
-		.sink0_startofpacket (cmd_demux_src3_startofpacket),              //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_src3_endofpacket)                 //          .endofpacket
+		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset               (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (cmd_mux_003_src_ready),                      //       src.ready
+		.src_valid           (cmd_mux_003_src_valid),                      //          .valid
+		.src_data            (cmd_mux_003_src_data),                       //          .data
+		.src_channel         (cmd_mux_003_src_channel),                    //          .channel
+		.src_startofpacket   (cmd_mux_003_src_startofpacket),              //          .startofpacket
+		.src_endofpacket     (cmd_mux_003_src_endofpacket),                //          .endofpacket
+		.sink0_ready         (cmd_demux_src3_ready),                       //     sink0.ready
+		.sink0_valid         (cmd_demux_src3_valid),                       //          .valid
+		.sink0_channel       (cmd_demux_src3_channel),                     //          .channel
+		.sink0_data          (cmd_demux_src3_data),                        //          .data
+		.sink0_startofpacket (cmd_demux_src3_startofpacket),               //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src3_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_cmd_mux cmd_mux_004 (
-		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset               (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (cmd_mux_004_src_ready),                     //       src.ready
-		.src_valid           (cmd_mux_004_src_valid),                     //          .valid
-		.src_data            (cmd_mux_004_src_data),                      //          .data
-		.src_channel         (cmd_mux_004_src_channel),                   //          .channel
-		.src_startofpacket   (cmd_mux_004_src_startofpacket),             //          .startofpacket
-		.src_endofpacket     (cmd_mux_004_src_endofpacket),               //          .endofpacket
-		.sink0_ready         (cmd_demux_src4_ready),                      //     sink0.ready
-		.sink0_valid         (cmd_demux_src4_valid),                      //          .valid
-		.sink0_channel       (cmd_demux_src4_channel),                    //          .channel
-		.sink0_data          (cmd_demux_src4_data),                       //          .data
-		.sink0_startofpacket (cmd_demux_src4_startofpacket),              //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_src4_endofpacket)                 //          .endofpacket
+		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset               (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (cmd_mux_004_src_ready),                      //       src.ready
+		.src_valid           (cmd_mux_004_src_valid),                      //          .valid
+		.src_data            (cmd_mux_004_src_data),                       //          .data
+		.src_channel         (cmd_mux_004_src_channel),                    //          .channel
+		.src_startofpacket   (cmd_mux_004_src_startofpacket),              //          .startofpacket
+		.src_endofpacket     (cmd_mux_004_src_endofpacket),                //          .endofpacket
+		.sink0_ready         (cmd_demux_src4_ready),                       //     sink0.ready
+		.sink0_valid         (cmd_demux_src4_valid),                       //          .valid
+		.sink0_channel       (cmd_demux_src4_channel),                     //          .channel
+		.sink0_data          (cmd_demux_src4_data),                        //          .data
+		.sink0_startofpacket (cmd_demux_src4_startofpacket),               //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src4_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_cmd_mux cmd_mux_005 (
-		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset               (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (cmd_mux_005_src_ready),                     //       src.ready
-		.src_valid           (cmd_mux_005_src_valid),                     //          .valid
-		.src_data            (cmd_mux_005_src_data),                      //          .data
-		.src_channel         (cmd_mux_005_src_channel),                   //          .channel
-		.src_startofpacket   (cmd_mux_005_src_startofpacket),             //          .startofpacket
-		.src_endofpacket     (cmd_mux_005_src_endofpacket),               //          .endofpacket
-		.sink0_ready         (cmd_demux_src5_ready),                      //     sink0.ready
-		.sink0_valid         (cmd_demux_src5_valid),                      //          .valid
-		.sink0_channel       (cmd_demux_src5_channel),                    //          .channel
-		.sink0_data          (cmd_demux_src5_data),                       //          .data
-		.sink0_startofpacket (cmd_demux_src5_startofpacket),              //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_src5_endofpacket)                 //          .endofpacket
+		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset               (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (cmd_mux_005_src_ready),                      //       src.ready
+		.src_valid           (cmd_mux_005_src_valid),                      //          .valid
+		.src_data            (cmd_mux_005_src_data),                       //          .data
+		.src_channel         (cmd_mux_005_src_channel),                    //          .channel
+		.src_startofpacket   (cmd_mux_005_src_startofpacket),              //          .startofpacket
+		.src_endofpacket     (cmd_mux_005_src_endofpacket),                //          .endofpacket
+		.sink0_ready         (cmd_demux_src5_ready),                       //     sink0.ready
+		.sink0_valid         (cmd_demux_src5_valid),                       //          .valid
+		.sink0_channel       (cmd_demux_src5_channel),                     //          .channel
+		.sink0_data          (cmd_demux_src5_data),                        //          .data
+		.sink0_startofpacket (cmd_demux_src5_startofpacket),               //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src5_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_cmd_mux cmd_mux_006 (
-		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset               (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (cmd_mux_006_src_ready),                     //       src.ready
-		.src_valid           (cmd_mux_006_src_valid),                     //          .valid
-		.src_data            (cmd_mux_006_src_data),                      //          .data
-		.src_channel         (cmd_mux_006_src_channel),                   //          .channel
-		.src_startofpacket   (cmd_mux_006_src_startofpacket),             //          .startofpacket
-		.src_endofpacket     (cmd_mux_006_src_endofpacket),               //          .endofpacket
-		.sink0_ready         (cmd_demux_src6_ready),                      //     sink0.ready
-		.sink0_valid         (cmd_demux_src6_valid),                      //          .valid
-		.sink0_channel       (cmd_demux_src6_channel),                    //          .channel
-		.sink0_data          (cmd_demux_src6_data),                       //          .data
-		.sink0_startofpacket (cmd_demux_src6_startofpacket),              //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_src6_endofpacket)                 //          .endofpacket
+		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset               (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (cmd_mux_006_src_ready),                      //       src.ready
+		.src_valid           (cmd_mux_006_src_valid),                      //          .valid
+		.src_data            (cmd_mux_006_src_data),                       //          .data
+		.src_channel         (cmd_mux_006_src_channel),                    //          .channel
+		.src_startofpacket   (cmd_mux_006_src_startofpacket),              //          .startofpacket
+		.src_endofpacket     (cmd_mux_006_src_endofpacket),                //          .endofpacket
+		.sink0_ready         (cmd_demux_src6_ready),                       //     sink0.ready
+		.sink0_valid         (cmd_demux_src6_valid),                       //          .valid
+		.sink0_channel       (cmd_demux_src6_channel),                     //          .channel
+		.sink0_data          (cmd_demux_src6_data),                        //          .data
+		.sink0_startofpacket (cmd_demux_src6_startofpacket),               //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src6_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_cmd_mux cmd_mux_007 (
-		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset               (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (cmd_mux_007_src_ready),                     //       src.ready
-		.src_valid           (cmd_mux_007_src_valid),                     //          .valid
-		.src_data            (cmd_mux_007_src_data),                      //          .data
-		.src_channel         (cmd_mux_007_src_channel),                   //          .channel
-		.src_startofpacket   (cmd_mux_007_src_startofpacket),             //          .startofpacket
-		.src_endofpacket     (cmd_mux_007_src_endofpacket),               //          .endofpacket
-		.sink0_ready         (cmd_demux_src7_ready),                      //     sink0.ready
-		.sink0_valid         (cmd_demux_src7_valid),                      //          .valid
-		.sink0_channel       (cmd_demux_src7_channel),                    //          .channel
-		.sink0_data          (cmd_demux_src7_data),                       //          .data
-		.sink0_startofpacket (cmd_demux_src7_startofpacket),              //          .startofpacket
-		.sink0_endofpacket   (cmd_demux_src7_endofpacket)                 //          .endofpacket
+		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset               (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (cmd_mux_007_src_ready),                      //       src.ready
+		.src_valid           (cmd_mux_007_src_valid),                      //          .valid
+		.src_data            (cmd_mux_007_src_data),                       //          .data
+		.src_channel         (cmd_mux_007_src_channel),                    //          .channel
+		.src_startofpacket   (cmd_mux_007_src_startofpacket),              //          .startofpacket
+		.src_endofpacket     (cmd_mux_007_src_endofpacket),                //          .endofpacket
+		.sink0_ready         (cmd_demux_src7_ready),                       //     sink0.ready
+		.sink0_valid         (cmd_demux_src7_valid),                       //          .valid
+		.sink0_channel       (cmd_demux_src7_channel),                     //          .channel
+		.sink0_data          (cmd_demux_src7_data),                        //          .data
+		.sink0_startofpacket (cmd_demux_src7_startofpacket),               //          .startofpacket
+		.sink0_endofpacket   (cmd_demux_src7_endofpacket)                  //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_rsp_demux rsp_demux (
 		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),                       //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset),              // clk_reset.reset
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset),             // clk_reset.reset
 		.sink_ready         (pcie_hard_ip_0_cra_rsp_width_adapter_src_ready),         //      sink.ready
 		.sink_channel       (pcie_hard_ip_0_cra_rsp_width_adapter_src_channel),       //          .channel
 		.sink_data          (pcie_hard_ip_0_cra_rsp_width_adapter_src_data),          //          .data
@@ -3095,25 +3095,25 @@ module pcihellocore_mm_interconnect_0 (
 	);
 
 	pcihellocore_mm_interconnect_0_rsp_demux rsp_demux_001 (
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),               //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
-		.sink_ready         (hexport_s1_rsp_width_adapter_src_ready),         //      sink.ready
-		.sink_channel       (hexport_s1_rsp_width_adapter_src_channel),       //          .channel
-		.sink_data          (hexport_s1_rsp_width_adapter_src_data),          //          .data
-		.sink_startofpacket (hexport_s1_rsp_width_adapter_src_startofpacket), //          .startofpacket
-		.sink_endofpacket   (hexport_s1_rsp_width_adapter_src_endofpacket),   //          .endofpacket
-		.sink_valid         (hexport_s1_rsp_width_adapter_src_valid),         //          .valid
-		.src0_ready         (rsp_demux_001_src0_ready),                       //      src0.ready
-		.src0_valid         (rsp_demux_001_src0_valid),                       //          .valid
-		.src0_data          (rsp_demux_001_src0_data),                        //          .data
-		.src0_channel       (rsp_demux_001_src0_channel),                     //          .channel
-		.src0_startofpacket (rsp_demux_001_src0_startofpacket),               //          .startofpacket
-		.src0_endofpacket   (rsp_demux_001_src0_endofpacket)                  //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
+		.sink_ready         (hexrport_s1_rsp_width_adapter_src_ready),         //      sink.ready
+		.sink_channel       (hexrport_s1_rsp_width_adapter_src_channel),       //          .channel
+		.sink_data          (hexrport_s1_rsp_width_adapter_src_data),          //          .data
+		.sink_startofpacket (hexrport_s1_rsp_width_adapter_src_startofpacket), //          .startofpacket
+		.sink_endofpacket   (hexrport_s1_rsp_width_adapter_src_endofpacket),   //          .endofpacket
+		.sink_valid         (hexrport_s1_rsp_width_adapter_src_valid),         //          .valid
+		.src0_ready         (rsp_demux_001_src0_ready),                        //      src0.ready
+		.src0_valid         (rsp_demux_001_src0_valid),                        //          .valid
+		.src0_data          (rsp_demux_001_src0_data),                         //          .data
+		.src0_channel       (rsp_demux_001_src0_channel),                      //          .channel
+		.src0_startofpacket (rsp_demux_001_src0_startofpacket),                //          .startofpacket
+		.src0_endofpacket   (rsp_demux_001_src0_endofpacket)                   //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_rsp_demux rsp_demux_002 (
 		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),                     //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset),            // clk_reset.reset
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset),           // clk_reset.reset
 		.sink_ready         (ledsgreenport_s1_rsp_width_adapter_src_ready),         //      sink.ready
 		.sink_channel       (ledsgreenport_s1_rsp_width_adapter_src_channel),       //          .channel
 		.sink_data          (ledsgreenport_s1_rsp_width_adapter_src_data),          //          .data
@@ -3130,7 +3130,7 @@ module pcihellocore_mm_interconnect_0 (
 
 	pcihellocore_mm_interconnect_0_rsp_demux rsp_demux_003 (
 		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),                   //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset),          // clk_reset.reset
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset),         // clk_reset.reset
 		.sink_ready         (ledsredport_s1_rsp_width_adapter_src_ready),         //      sink.ready
 		.sink_channel       (ledsredport_s1_rsp_width_adapter_src_channel),       //          .channel
 		.sink_data          (ledsredport_s1_rsp_width_adapter_src_data),          //          .data
@@ -3146,25 +3146,25 @@ module pcihellocore_mm_interconnect_0 (
 	);
 
 	pcihellocore_mm_interconnect_0_rsp_demux rsp_demux_004 (
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),                    //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset),           // clk_reset.reset
-		.sink_ready         (switchesport_s1_rsp_width_adapter_src_ready),         //      sink.ready
-		.sink_channel       (switchesport_s1_rsp_width_adapter_src_channel),       //          .channel
-		.sink_data          (switchesport_s1_rsp_width_adapter_src_data),          //          .data
-		.sink_startofpacket (switchesport_s1_rsp_width_adapter_src_startofpacket), //          .startofpacket
-		.sink_endofpacket   (switchesport_s1_rsp_width_adapter_src_endofpacket),   //          .endofpacket
-		.sink_valid         (switchesport_s1_rsp_width_adapter_src_valid),         //          .valid
-		.src0_ready         (rsp_demux_004_src0_ready),                            //      src0.ready
-		.src0_valid         (rsp_demux_004_src0_valid),                            //          .valid
-		.src0_data          (rsp_demux_004_src0_data),                             //          .data
-		.src0_channel       (rsp_demux_004_src0_channel),                          //          .channel
-		.src0_startofpacket (rsp_demux_004_src0_startofpacket),                    //          .startofpacket
-		.src0_endofpacket   (rsp_demux_004_src0_endofpacket)                       //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),              //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
+		.sink_ready         (swport_s1_rsp_width_adapter_src_ready),         //      sink.ready
+		.sink_channel       (swport_s1_rsp_width_adapter_src_channel),       //          .channel
+		.sink_data          (swport_s1_rsp_width_adapter_src_data),          //          .data
+		.sink_startofpacket (swport_s1_rsp_width_adapter_src_startofpacket), //          .startofpacket
+		.sink_endofpacket   (swport_s1_rsp_width_adapter_src_endofpacket),   //          .endofpacket
+		.sink_valid         (swport_s1_rsp_width_adapter_src_valid),         //          .valid
+		.src0_ready         (rsp_demux_004_src0_ready),                      //      src0.ready
+		.src0_valid         (rsp_demux_004_src0_valid),                      //          .valid
+		.src0_data          (rsp_demux_004_src0_data),                       //          .data
+		.src0_channel       (rsp_demux_004_src0_channel),                    //          .channel
+		.src0_startofpacket (rsp_demux_004_src0_startofpacket),              //          .startofpacket
+		.src0_endofpacket   (rsp_demux_004_src0_endofpacket)                 //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_rsp_demux rsp_demux_005 (
 		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset),       // clk_reset.reset
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
 		.sink_ready         (keysport_s1_rsp_width_adapter_src_ready),         //      sink.ready
 		.sink_channel       (keysport_s1_rsp_width_adapter_src_channel),       //          .channel
 		.sink_data          (keysport_s1_rsp_width_adapter_src_data),          //          .data
@@ -3181,7 +3181,7 @@ module pcihellocore_mm_interconnect_0 (
 
 	pcihellocore_mm_interconnect_0_rsp_demux rsp_demux_006 (
 		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset),       // clk_reset.reset
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
 		.sink_ready         (hexlport_s1_rsp_width_adapter_src_ready),         //      sink.ready
 		.sink_channel       (hexlport_s1_rsp_width_adapter_src_channel),       //          .channel
 		.sink_data          (hexlport_s1_rsp_width_adapter_src_data),          //          .data
@@ -3197,79 +3197,79 @@ module pcihellocore_mm_interconnect_0 (
 	);
 
 	pcihellocore_mm_interconnect_0_rsp_demux rsp_demux_007 (
-		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset              (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.sink_ready         (router_008_src_ready),                      //      sink.ready
-		.sink_channel       (router_008_src_channel),                    //          .channel
-		.sink_data          (router_008_src_data),                       //          .data
-		.sink_startofpacket (router_008_src_startofpacket),              //          .startofpacket
-		.sink_endofpacket   (router_008_src_endofpacket),                //          .endofpacket
-		.sink_valid         (router_008_src_valid),                      //          .valid
-		.src0_ready         (rsp_demux_007_src0_ready),                  //      src0.ready
-		.src0_valid         (rsp_demux_007_src0_valid),                  //          .valid
-		.src0_data          (rsp_demux_007_src0_data),                   //          .data
-		.src0_channel       (rsp_demux_007_src0_channel),                //          .channel
-		.src0_startofpacket (rsp_demux_007_src0_startofpacket),          //          .startofpacket
-		.src0_endofpacket   (rsp_demux_007_src0_endofpacket)             //          .endofpacket
+		.clk                (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset              (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.sink_ready         (router_008_src_ready),                       //      sink.ready
+		.sink_channel       (router_008_src_channel),                     //          .channel
+		.sink_data          (router_008_src_data),                        //          .data
+		.sink_startofpacket (router_008_src_startofpacket),               //          .startofpacket
+		.sink_endofpacket   (router_008_src_endofpacket),                 //          .endofpacket
+		.sink_valid         (router_008_src_valid),                       //          .valid
+		.src0_ready         (rsp_demux_007_src0_ready),                   //      src0.ready
+		.src0_valid         (rsp_demux_007_src0_valid),                   //          .valid
+		.src0_data          (rsp_demux_007_src0_data),                    //          .data
+		.src0_channel       (rsp_demux_007_src0_channel),                 //          .channel
+		.src0_startofpacket (rsp_demux_007_src0_startofpacket),           //          .startofpacket
+		.src0_endofpacket   (rsp_demux_007_src0_endofpacket)              //          .endofpacket
 	);
 
 	pcihellocore_mm_interconnect_0_rsp_mux rsp_mux (
-		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),          //       clk.clk
-		.reset               (hexport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
-		.src_ready           (rsp_mux_src_ready),                         //       src.ready
-		.src_valid           (rsp_mux_src_valid),                         //          .valid
-		.src_data            (rsp_mux_src_data),                          //          .data
-		.src_channel         (rsp_mux_src_channel),                       //          .channel
-		.src_startofpacket   (rsp_mux_src_startofpacket),                 //          .startofpacket
-		.src_endofpacket     (rsp_mux_src_endofpacket),                   //          .endofpacket
-		.sink0_ready         (rsp_demux_src0_ready),                      //     sink0.ready
-		.sink0_valid         (rsp_demux_src0_valid),                      //          .valid
-		.sink0_channel       (rsp_demux_src0_channel),                    //          .channel
-		.sink0_data          (rsp_demux_src0_data),                       //          .data
-		.sink0_startofpacket (rsp_demux_src0_startofpacket),              //          .startofpacket
-		.sink0_endofpacket   (rsp_demux_src0_endofpacket),                //          .endofpacket
-		.sink1_ready         (rsp_demux_001_src0_ready),                  //     sink1.ready
-		.sink1_valid         (rsp_demux_001_src0_valid),                  //          .valid
-		.sink1_channel       (rsp_demux_001_src0_channel),                //          .channel
-		.sink1_data          (rsp_demux_001_src0_data),                   //          .data
-		.sink1_startofpacket (rsp_demux_001_src0_startofpacket),          //          .startofpacket
-		.sink1_endofpacket   (rsp_demux_001_src0_endofpacket),            //          .endofpacket
-		.sink2_ready         (rsp_demux_002_src0_ready),                  //     sink2.ready
-		.sink2_valid         (rsp_demux_002_src0_valid),                  //          .valid
-		.sink2_channel       (rsp_demux_002_src0_channel),                //          .channel
-		.sink2_data          (rsp_demux_002_src0_data),                   //          .data
-		.sink2_startofpacket (rsp_demux_002_src0_startofpacket),          //          .startofpacket
-		.sink2_endofpacket   (rsp_demux_002_src0_endofpacket),            //          .endofpacket
-		.sink3_ready         (rsp_demux_003_src0_ready),                  //     sink3.ready
-		.sink3_valid         (rsp_demux_003_src0_valid),                  //          .valid
-		.sink3_channel       (rsp_demux_003_src0_channel),                //          .channel
-		.sink3_data          (rsp_demux_003_src0_data),                   //          .data
-		.sink3_startofpacket (rsp_demux_003_src0_startofpacket),          //          .startofpacket
-		.sink3_endofpacket   (rsp_demux_003_src0_endofpacket),            //          .endofpacket
-		.sink4_ready         (rsp_demux_004_src0_ready),                  //     sink4.ready
-		.sink4_valid         (rsp_demux_004_src0_valid),                  //          .valid
-		.sink4_channel       (rsp_demux_004_src0_channel),                //          .channel
-		.sink4_data          (rsp_demux_004_src0_data),                   //          .data
-		.sink4_startofpacket (rsp_demux_004_src0_startofpacket),          //          .startofpacket
-		.sink4_endofpacket   (rsp_demux_004_src0_endofpacket),            //          .endofpacket
-		.sink5_ready         (rsp_demux_005_src0_ready),                  //     sink5.ready
-		.sink5_valid         (rsp_demux_005_src0_valid),                  //          .valid
-		.sink5_channel       (rsp_demux_005_src0_channel),                //          .channel
-		.sink5_data          (rsp_demux_005_src0_data),                   //          .data
-		.sink5_startofpacket (rsp_demux_005_src0_startofpacket),          //          .startofpacket
-		.sink5_endofpacket   (rsp_demux_005_src0_endofpacket),            //          .endofpacket
-		.sink6_ready         (rsp_demux_006_src0_ready),                  //     sink6.ready
-		.sink6_valid         (rsp_demux_006_src0_valid),                  //          .valid
-		.sink6_channel       (rsp_demux_006_src0_channel),                //          .channel
-		.sink6_data          (rsp_demux_006_src0_data),                   //          .data
-		.sink6_startofpacket (rsp_demux_006_src0_startofpacket),          //          .startofpacket
-		.sink6_endofpacket   (rsp_demux_006_src0_endofpacket),            //          .endofpacket
-		.sink7_ready         (rsp_demux_007_src0_ready),                  //     sink7.ready
-		.sink7_valid         (rsp_demux_007_src0_valid),                  //          .valid
-		.sink7_channel       (rsp_demux_007_src0_channel),                //          .channel
-		.sink7_data          (rsp_demux_007_src0_data),                   //          .data
-		.sink7_startofpacket (rsp_demux_007_src0_startofpacket),          //          .startofpacket
-		.sink7_endofpacket   (rsp_demux_007_src0_endofpacket)             //          .endofpacket
+		.clk                 (pcie_hard_ip_0_pcie_core_clk_clk),           //       clk.clk
+		.reset               (hexrport_reset_reset_bridge_in_reset_reset), // clk_reset.reset
+		.src_ready           (rsp_mux_src_ready),                          //       src.ready
+		.src_valid           (rsp_mux_src_valid),                          //          .valid
+		.src_data            (rsp_mux_src_data),                           //          .data
+		.src_channel         (rsp_mux_src_channel),                        //          .channel
+		.src_startofpacket   (rsp_mux_src_startofpacket),                  //          .startofpacket
+		.src_endofpacket     (rsp_mux_src_endofpacket),                    //          .endofpacket
+		.sink0_ready         (rsp_demux_src0_ready),                       //     sink0.ready
+		.sink0_valid         (rsp_demux_src0_valid),                       //          .valid
+		.sink0_channel       (rsp_demux_src0_channel),                     //          .channel
+		.sink0_data          (rsp_demux_src0_data),                        //          .data
+		.sink0_startofpacket (rsp_demux_src0_startofpacket),               //          .startofpacket
+		.sink0_endofpacket   (rsp_demux_src0_endofpacket),                 //          .endofpacket
+		.sink1_ready         (rsp_demux_001_src0_ready),                   //     sink1.ready
+		.sink1_valid         (rsp_demux_001_src0_valid),                   //          .valid
+		.sink1_channel       (rsp_demux_001_src0_channel),                 //          .channel
+		.sink1_data          (rsp_demux_001_src0_data),                    //          .data
+		.sink1_startofpacket (rsp_demux_001_src0_startofpacket),           //          .startofpacket
+		.sink1_endofpacket   (rsp_demux_001_src0_endofpacket),             //          .endofpacket
+		.sink2_ready         (rsp_demux_002_src0_ready),                   //     sink2.ready
+		.sink2_valid         (rsp_demux_002_src0_valid),                   //          .valid
+		.sink2_channel       (rsp_demux_002_src0_channel),                 //          .channel
+		.sink2_data          (rsp_demux_002_src0_data),                    //          .data
+		.sink2_startofpacket (rsp_demux_002_src0_startofpacket),           //          .startofpacket
+		.sink2_endofpacket   (rsp_demux_002_src0_endofpacket),             //          .endofpacket
+		.sink3_ready         (rsp_demux_003_src0_ready),                   //     sink3.ready
+		.sink3_valid         (rsp_demux_003_src0_valid),                   //          .valid
+		.sink3_channel       (rsp_demux_003_src0_channel),                 //          .channel
+		.sink3_data          (rsp_demux_003_src0_data),                    //          .data
+		.sink3_startofpacket (rsp_demux_003_src0_startofpacket),           //          .startofpacket
+		.sink3_endofpacket   (rsp_demux_003_src0_endofpacket),             //          .endofpacket
+		.sink4_ready         (rsp_demux_004_src0_ready),                   //     sink4.ready
+		.sink4_valid         (rsp_demux_004_src0_valid),                   //          .valid
+		.sink4_channel       (rsp_demux_004_src0_channel),                 //          .channel
+		.sink4_data          (rsp_demux_004_src0_data),                    //          .data
+		.sink4_startofpacket (rsp_demux_004_src0_startofpacket),           //          .startofpacket
+		.sink4_endofpacket   (rsp_demux_004_src0_endofpacket),             //          .endofpacket
+		.sink5_ready         (rsp_demux_005_src0_ready),                   //     sink5.ready
+		.sink5_valid         (rsp_demux_005_src0_valid),                   //          .valid
+		.sink5_channel       (rsp_demux_005_src0_channel),                 //          .channel
+		.sink5_data          (rsp_demux_005_src0_data),                    //          .data
+		.sink5_startofpacket (rsp_demux_005_src0_startofpacket),           //          .startofpacket
+		.sink5_endofpacket   (rsp_demux_005_src0_endofpacket),             //          .endofpacket
+		.sink6_ready         (rsp_demux_006_src0_ready),                   //     sink6.ready
+		.sink6_valid         (rsp_demux_006_src0_valid),                   //          .valid
+		.sink6_channel       (rsp_demux_006_src0_channel),                 //          .channel
+		.sink6_data          (rsp_demux_006_src0_data),                    //          .data
+		.sink6_startofpacket (rsp_demux_006_src0_startofpacket),           //          .startofpacket
+		.sink6_endofpacket   (rsp_demux_006_src0_endofpacket),             //          .endofpacket
+		.sink7_ready         (rsp_demux_007_src0_ready),                   //     sink7.ready
+		.sink7_valid         (rsp_demux_007_src0_valid),                   //          .valid
+		.sink7_channel       (rsp_demux_007_src0_channel),                 //          .channel
+		.sink7_data          (rsp_demux_007_src0_data),                    //          .data
+		.sink7_startofpacket (rsp_demux_007_src0_startofpacket),           //          .startofpacket
+		.sink7_endofpacket   (rsp_demux_007_src0_endofpacket)              //          .endofpacket
 	);
 
 	altera_merlin_width_adapter #(
@@ -3322,7 +3322,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) pcie_hard_ip_0_cra_rsp_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                       //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),              // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),             // clk_reset.reset
 		.in_valid             (router_001_src_valid),                                   //      sink.valid
 		.in_channel           (router_001_src_channel),                                 //          .channel
 		.in_startofpacket     (router_001_src_startofpacket),                           //          .startofpacket
@@ -3386,22 +3386,22 @@ module pcihellocore_mm_interconnect_0 (
 		.CONSTANT_BURST_SIZE           (1),
 		.PACKING                       (1),
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
-	) hexport_s1_rsp_width_adapter (
-		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),               //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
-		.in_valid             (router_002_src_valid),                           //      sink.valid
-		.in_channel           (router_002_src_channel),                         //          .channel
-		.in_startofpacket     (router_002_src_startofpacket),                   //          .startofpacket
-		.in_endofpacket       (router_002_src_endofpacket),                     //          .endofpacket
-		.in_ready             (router_002_src_ready),                           //          .ready
-		.in_data              (router_002_src_data),                            //          .data
-		.out_endofpacket      (hexport_s1_rsp_width_adapter_src_endofpacket),   //       src.endofpacket
-		.out_data             (hexport_s1_rsp_width_adapter_src_data),          //          .data
-		.out_channel          (hexport_s1_rsp_width_adapter_src_channel),       //          .channel
-		.out_valid            (hexport_s1_rsp_width_adapter_src_valid),         //          .valid
-		.out_ready            (hexport_s1_rsp_width_adapter_src_ready),         //          .ready
-		.out_startofpacket    (hexport_s1_rsp_width_adapter_src_startofpacket), //          .startofpacket
-		.in_command_size_data (3'b000)                                          // (terminated)
+	) hexrport_s1_rsp_width_adapter (
+		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
+		.in_valid             (router_002_src_valid),                            //      sink.valid
+		.in_channel           (router_002_src_channel),                          //          .channel
+		.in_startofpacket     (router_002_src_startofpacket),                    //          .startofpacket
+		.in_endofpacket       (router_002_src_endofpacket),                      //          .endofpacket
+		.in_ready             (router_002_src_ready),                            //          .ready
+		.in_data              (router_002_src_data),                             //          .data
+		.out_endofpacket      (hexrport_s1_rsp_width_adapter_src_endofpacket),   //       src.endofpacket
+		.out_data             (hexrport_s1_rsp_width_adapter_src_data),          //          .data
+		.out_channel          (hexrport_s1_rsp_width_adapter_src_channel),       //          .channel
+		.out_valid            (hexrport_s1_rsp_width_adapter_src_valid),         //          .valid
+		.out_ready            (hexrport_s1_rsp_width_adapter_src_ready),         //          .ready
+		.out_startofpacket    (hexrport_s1_rsp_width_adapter_src_startofpacket), //          .startofpacket
+		.in_command_size_data (3'b000)                                           // (terminated)
 	);
 
 	altera_merlin_width_adapter #(
@@ -3454,7 +3454,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) ledsgreenport_s1_rsp_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                     //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),            // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),           // clk_reset.reset
 		.in_valid             (router_003_src_valid),                                 //      sink.valid
 		.in_channel           (router_003_src_channel),                               //          .channel
 		.in_startofpacket     (router_003_src_startofpacket),                         //          .startofpacket
@@ -3520,7 +3520,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) ledsredport_s1_rsp_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                   //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),          // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),         // clk_reset.reset
 		.in_valid             (router_004_src_valid),                               //      sink.valid
 		.in_channel           (router_004_src_channel),                             //          .channel
 		.in_startofpacket     (router_004_src_startofpacket),                       //          .startofpacket
@@ -3584,22 +3584,22 @@ module pcihellocore_mm_interconnect_0 (
 		.CONSTANT_BURST_SIZE           (1),
 		.PACKING                       (1),
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
-	) switchesport_s1_rsp_width_adapter (
-		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                    //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),           // clk_reset.reset
-		.in_valid             (router_005_src_valid),                                //      sink.valid
-		.in_channel           (router_005_src_channel),                              //          .channel
-		.in_startofpacket     (router_005_src_startofpacket),                        //          .startofpacket
-		.in_endofpacket       (router_005_src_endofpacket),                          //          .endofpacket
-		.in_ready             (router_005_src_ready),                                //          .ready
-		.in_data              (router_005_src_data),                                 //          .data
-		.out_endofpacket      (switchesport_s1_rsp_width_adapter_src_endofpacket),   //       src.endofpacket
-		.out_data             (switchesport_s1_rsp_width_adapter_src_data),          //          .data
-		.out_channel          (switchesport_s1_rsp_width_adapter_src_channel),       //          .channel
-		.out_valid            (switchesport_s1_rsp_width_adapter_src_valid),         //          .valid
-		.out_ready            (switchesport_s1_rsp_width_adapter_src_ready),         //          .ready
-		.out_startofpacket    (switchesport_s1_rsp_width_adapter_src_startofpacket), //          .startofpacket
-		.in_command_size_data (3'b000)                                               // (terminated)
+	) swport_s1_rsp_width_adapter (
+		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),              //       clk.clk
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
+		.in_valid             (router_005_src_valid),                          //      sink.valid
+		.in_channel           (router_005_src_channel),                        //          .channel
+		.in_startofpacket     (router_005_src_startofpacket),                  //          .startofpacket
+		.in_endofpacket       (router_005_src_endofpacket),                    //          .endofpacket
+		.in_ready             (router_005_src_ready),                          //          .ready
+		.in_data              (router_005_src_data),                           //          .data
+		.out_endofpacket      (swport_s1_rsp_width_adapter_src_endofpacket),   //       src.endofpacket
+		.out_data             (swport_s1_rsp_width_adapter_src_data),          //          .data
+		.out_channel          (swport_s1_rsp_width_adapter_src_channel),       //          .channel
+		.out_valid            (swport_s1_rsp_width_adapter_src_valid),         //          .valid
+		.out_ready            (swport_s1_rsp_width_adapter_src_ready),         //          .ready
+		.out_startofpacket    (swport_s1_rsp_width_adapter_src_startofpacket), //          .startofpacket
+		.in_command_size_data (3'b000)                                         // (terminated)
 	);
 
 	altera_merlin_width_adapter #(
@@ -3652,7 +3652,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) keysport_s1_rsp_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),       // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
 		.in_valid             (router_006_src_valid),                            //      sink.valid
 		.in_channel           (router_006_src_channel),                          //          .channel
 		.in_startofpacket     (router_006_src_startofpacket),                    //          .startofpacket
@@ -3718,7 +3718,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) hexlport_s1_rsp_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),       // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
 		.in_valid             (router_007_src_valid),                            //      sink.valid
 		.in_channel           (router_007_src_channel),                          //          .channel
 		.in_startofpacket     (router_007_src_startofpacket),                    //          .startofpacket
@@ -3784,7 +3784,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) pcie_hard_ip_0_cra_cmd_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                       //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),              // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),             // clk_reset.reset
 		.in_valid             (cmd_mux_src_valid),                                      //      sink.valid
 		.in_channel           (cmd_mux_src_channel),                                    //          .channel
 		.in_startofpacket     (cmd_mux_src_startofpacket),                              //          .startofpacket
@@ -3848,22 +3848,22 @@ module pcihellocore_mm_interconnect_0 (
 		.CONSTANT_BURST_SIZE           (1),
 		.PACKING                       (1),
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
-	) hexport_s1_cmd_width_adapter (
-		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),               //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
-		.in_valid             (cmd_mux_001_src_valid),                          //      sink.valid
-		.in_channel           (cmd_mux_001_src_channel),                        //          .channel
-		.in_startofpacket     (cmd_mux_001_src_startofpacket),                  //          .startofpacket
-		.in_endofpacket       (cmd_mux_001_src_endofpacket),                    //          .endofpacket
-		.in_ready             (cmd_mux_001_src_ready),                          //          .ready
-		.in_data              (cmd_mux_001_src_data),                           //          .data
-		.out_endofpacket      (hexport_s1_cmd_width_adapter_src_endofpacket),   //       src.endofpacket
-		.out_data             (hexport_s1_cmd_width_adapter_src_data),          //          .data
-		.out_channel          (hexport_s1_cmd_width_adapter_src_channel),       //          .channel
-		.out_valid            (hexport_s1_cmd_width_adapter_src_valid),         //          .valid
-		.out_ready            (hexport_s1_cmd_width_adapter_src_ready),         //          .ready
-		.out_startofpacket    (hexport_s1_cmd_width_adapter_src_startofpacket), //          .startofpacket
-		.in_command_size_data (3'b000)                                          // (terminated)
+	) hexrport_s1_cmd_width_adapter (
+		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
+		.in_valid             (cmd_mux_001_src_valid),                           //      sink.valid
+		.in_channel           (cmd_mux_001_src_channel),                         //          .channel
+		.in_startofpacket     (cmd_mux_001_src_startofpacket),                   //          .startofpacket
+		.in_endofpacket       (cmd_mux_001_src_endofpacket),                     //          .endofpacket
+		.in_ready             (cmd_mux_001_src_ready),                           //          .ready
+		.in_data              (cmd_mux_001_src_data),                            //          .data
+		.out_endofpacket      (hexrport_s1_cmd_width_adapter_src_endofpacket),   //       src.endofpacket
+		.out_data             (hexrport_s1_cmd_width_adapter_src_data),          //          .data
+		.out_channel          (hexrport_s1_cmd_width_adapter_src_channel),       //          .channel
+		.out_valid            (hexrport_s1_cmd_width_adapter_src_valid),         //          .valid
+		.out_ready            (hexrport_s1_cmd_width_adapter_src_ready),         //          .ready
+		.out_startofpacket    (hexrport_s1_cmd_width_adapter_src_startofpacket), //          .startofpacket
+		.in_command_size_data (3'b000)                                           // (terminated)
 	);
 
 	altera_merlin_width_adapter #(
@@ -3916,7 +3916,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) ledsgreenport_s1_cmd_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                     //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),            // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),           // clk_reset.reset
 		.in_valid             (cmd_mux_002_src_valid),                                //      sink.valid
 		.in_channel           (cmd_mux_002_src_channel),                              //          .channel
 		.in_startofpacket     (cmd_mux_002_src_startofpacket),                        //          .startofpacket
@@ -3982,7 +3982,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) ledsredport_s1_cmd_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                   //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),          // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),         // clk_reset.reset
 		.in_valid             (cmd_mux_003_src_valid),                              //      sink.valid
 		.in_channel           (cmd_mux_003_src_channel),                            //          .channel
 		.in_startofpacket     (cmd_mux_003_src_startofpacket),                      //          .startofpacket
@@ -4046,22 +4046,22 @@ module pcihellocore_mm_interconnect_0 (
 		.CONSTANT_BURST_SIZE           (1),
 		.PACKING                       (1),
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
-	) switchesport_s1_cmd_width_adapter (
-		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                    //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),           // clk_reset.reset
-		.in_valid             (cmd_mux_004_src_valid),                               //      sink.valid
-		.in_channel           (cmd_mux_004_src_channel),                             //          .channel
-		.in_startofpacket     (cmd_mux_004_src_startofpacket),                       //          .startofpacket
-		.in_endofpacket       (cmd_mux_004_src_endofpacket),                         //          .endofpacket
-		.in_ready             (cmd_mux_004_src_ready),                               //          .ready
-		.in_data              (cmd_mux_004_src_data),                                //          .data
-		.out_endofpacket      (switchesport_s1_cmd_width_adapter_src_endofpacket),   //       src.endofpacket
-		.out_data             (switchesport_s1_cmd_width_adapter_src_data),          //          .data
-		.out_channel          (switchesport_s1_cmd_width_adapter_src_channel),       //          .channel
-		.out_valid            (switchesport_s1_cmd_width_adapter_src_valid),         //          .valid
-		.out_ready            (switchesport_s1_cmd_width_adapter_src_ready),         //          .ready
-		.out_startofpacket    (switchesport_s1_cmd_width_adapter_src_startofpacket), //          .startofpacket
-		.in_command_size_data (3'b000)                                               // (terminated)
+	) swport_s1_cmd_width_adapter (
+		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),              //       clk.clk
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),    // clk_reset.reset
+		.in_valid             (cmd_mux_004_src_valid),                         //      sink.valid
+		.in_channel           (cmd_mux_004_src_channel),                       //          .channel
+		.in_startofpacket     (cmd_mux_004_src_startofpacket),                 //          .startofpacket
+		.in_endofpacket       (cmd_mux_004_src_endofpacket),                   //          .endofpacket
+		.in_ready             (cmd_mux_004_src_ready),                         //          .ready
+		.in_data              (cmd_mux_004_src_data),                          //          .data
+		.out_endofpacket      (swport_s1_cmd_width_adapter_src_endofpacket),   //       src.endofpacket
+		.out_data             (swport_s1_cmd_width_adapter_src_data),          //          .data
+		.out_channel          (swport_s1_cmd_width_adapter_src_channel),       //          .channel
+		.out_valid            (swport_s1_cmd_width_adapter_src_valid),         //          .valid
+		.out_ready            (swport_s1_cmd_width_adapter_src_ready),         //          .ready
+		.out_startofpacket    (swport_s1_cmd_width_adapter_src_startofpacket), //          .startofpacket
+		.in_command_size_data (3'b000)                                         // (terminated)
 	);
 
 	altera_merlin_width_adapter #(
@@ -4114,7 +4114,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) keysport_s1_cmd_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),       // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
 		.in_valid             (cmd_mux_005_src_valid),                           //      sink.valid
 		.in_channel           (cmd_mux_005_src_channel),                         //          .channel
 		.in_startofpacket     (cmd_mux_005_src_startofpacket),                   //          .startofpacket
@@ -4180,7 +4180,7 @@ module pcihellocore_mm_interconnect_0 (
 		.ENABLE_ADDRESS_ALIGNMENT      (0)
 	) hexlport_s1_cmd_width_adapter (
 		.clk                  (pcie_hard_ip_0_pcie_core_clk_clk),                //       clk.clk
-		.reset                (hexport_reset_reset_bridge_in_reset_reset),       // clk_reset.reset
+		.reset                (hexrport_reset_reset_bridge_in_reset_reset),      // clk_reset.reset
 		.in_valid             (cmd_mux_006_src_valid),                           //      sink.valid
 		.in_channel           (cmd_mux_006_src_channel),                         //          .channel
 		.in_startofpacket     (cmd_mux_006_src_startofpacket),                   //          .startofpacket
@@ -4215,7 +4215,7 @@ module pcihellocore_mm_interconnect_0 (
 		.outReadyLatency (0)
 	) avalon_st_adapter (
 		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),              // in_clk_0.clk
-		.in_rst_0_reset (hexport_reset_reset_bridge_in_reset_reset),     // in_rst_0.reset
+		.in_rst_0_reset (hexrport_reset_reset_bridge_in_reset_reset),    // in_rst_0.reset
 		.in_0_data      (pcie_hard_ip_0_cra_agent_rdata_fifo_src_data),  //     in_0.data
 		.in_0_valid     (pcie_hard_ip_0_cra_agent_rdata_fifo_src_valid), //         .valid
 		.in_0_ready     (pcie_hard_ip_0_cra_agent_rdata_fifo_src_ready), //         .ready
@@ -4243,15 +4243,15 @@ module pcihellocore_mm_interconnect_0 (
 		.outUseReady     (1),
 		.outReadyLatency (0)
 	) avalon_st_adapter_001 (
-		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),          // in_clk_0.clk
-		.in_rst_0_reset (hexport_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
-		.in_0_data      (hexport_s1_agent_rdata_fifo_src_data),      //     in_0.data
-		.in_0_valid     (hexport_s1_agent_rdata_fifo_src_valid),     //         .valid
-		.in_0_ready     (hexport_s1_agent_rdata_fifo_src_ready),     //         .ready
-		.out_0_data     (avalon_st_adapter_001_out_0_data),          //    out_0.data
-		.out_0_valid    (avalon_st_adapter_001_out_0_valid),         //         .valid
-		.out_0_ready    (avalon_st_adapter_001_out_0_ready),         //         .ready
-		.out_0_error    (avalon_st_adapter_001_out_0_error)          //         .error
+		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),           // in_clk_0.clk
+		.in_rst_0_reset (hexrport_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
+		.in_0_data      (hexrport_s1_agent_rdata_fifo_src_data),      //     in_0.data
+		.in_0_valid     (hexrport_s1_agent_rdata_fifo_src_valid),     //         .valid
+		.in_0_ready     (hexrport_s1_agent_rdata_fifo_src_ready),     //         .ready
+		.out_0_data     (avalon_st_adapter_001_out_0_data),           //    out_0.data
+		.out_0_valid    (avalon_st_adapter_001_out_0_valid),          //         .valid
+		.out_0_ready    (avalon_st_adapter_001_out_0_ready),          //         .ready
+		.out_0_error    (avalon_st_adapter_001_out_0_error)           //         .error
 	);
 
 	pcihellocore_mm_interconnect_0_avalon_st_adapter #(
@@ -4273,7 +4273,7 @@ module pcihellocore_mm_interconnect_0 (
 		.outReadyLatency (0)
 	) avalon_st_adapter_002 (
 		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),            // in_clk_0.clk
-		.in_rst_0_reset (hexport_reset_reset_bridge_in_reset_reset),   // in_rst_0.reset
+		.in_rst_0_reset (hexrport_reset_reset_bridge_in_reset_reset),  // in_rst_0.reset
 		.in_0_data      (ledsgreenport_s1_agent_rdata_fifo_src_data),  //     in_0.data
 		.in_0_valid     (ledsgreenport_s1_agent_rdata_fifo_src_valid), //         .valid
 		.in_0_ready     (ledsgreenport_s1_agent_rdata_fifo_src_ready), //         .ready
@@ -4301,15 +4301,15 @@ module pcihellocore_mm_interconnect_0 (
 		.outUseReady     (1),
 		.outReadyLatency (0)
 	) avalon_st_adapter_003 (
-		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),          // in_clk_0.clk
-		.in_rst_0_reset (hexport_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
-		.in_0_data      (ledsredport_s1_agent_rdata_fifo_src_data),  //     in_0.data
-		.in_0_valid     (ledsredport_s1_agent_rdata_fifo_src_valid), //         .valid
-		.in_0_ready     (ledsredport_s1_agent_rdata_fifo_src_ready), //         .ready
-		.out_0_data     (avalon_st_adapter_003_out_0_data),          //    out_0.data
-		.out_0_valid    (avalon_st_adapter_003_out_0_valid),         //         .valid
-		.out_0_ready    (avalon_st_adapter_003_out_0_ready),         //         .ready
-		.out_0_error    (avalon_st_adapter_003_out_0_error)          //         .error
+		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),           // in_clk_0.clk
+		.in_rst_0_reset (hexrport_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
+		.in_0_data      (ledsredport_s1_agent_rdata_fifo_src_data),   //     in_0.data
+		.in_0_valid     (ledsredport_s1_agent_rdata_fifo_src_valid),  //         .valid
+		.in_0_ready     (ledsredport_s1_agent_rdata_fifo_src_ready),  //         .ready
+		.out_0_data     (avalon_st_adapter_003_out_0_data),           //    out_0.data
+		.out_0_valid    (avalon_st_adapter_003_out_0_valid),          //         .valid
+		.out_0_ready    (avalon_st_adapter_003_out_0_ready),          //         .ready
+		.out_0_error    (avalon_st_adapter_003_out_0_error)           //         .error
 	);
 
 	pcihellocore_mm_interconnect_0_avalon_st_adapter #(
@@ -4331,10 +4331,10 @@ module pcihellocore_mm_interconnect_0 (
 		.outReadyLatency (0)
 	) avalon_st_adapter_004 (
 		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),           // in_clk_0.clk
-		.in_rst_0_reset (hexport_reset_reset_bridge_in_reset_reset),  // in_rst_0.reset
-		.in_0_data      (switchesport_s1_agent_rdata_fifo_src_data),  //     in_0.data
-		.in_0_valid     (switchesport_s1_agent_rdata_fifo_src_valid), //         .valid
-		.in_0_ready     (switchesport_s1_agent_rdata_fifo_src_ready), //         .ready
+		.in_rst_0_reset (hexrport_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
+		.in_0_data      (swport_s1_agent_rdata_fifo_src_data),        //     in_0.data
+		.in_0_valid     (swport_s1_agent_rdata_fifo_src_valid),       //         .valid
+		.in_0_ready     (swport_s1_agent_rdata_fifo_src_ready),       //         .ready
 		.out_0_data     (avalon_st_adapter_004_out_0_data),           //    out_0.data
 		.out_0_valid    (avalon_st_adapter_004_out_0_valid),          //         .valid
 		.out_0_ready    (avalon_st_adapter_004_out_0_ready),          //         .ready
@@ -4359,15 +4359,15 @@ module pcihellocore_mm_interconnect_0 (
 		.outUseReady     (1),
 		.outReadyLatency (0)
 	) avalon_st_adapter_005 (
-		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),          // in_clk_0.clk
-		.in_rst_0_reset (hexport_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
-		.in_0_data      (keysport_s1_agent_rdata_fifo_src_data),     //     in_0.data
-		.in_0_valid     (keysport_s1_agent_rdata_fifo_src_valid),    //         .valid
-		.in_0_ready     (keysport_s1_agent_rdata_fifo_src_ready),    //         .ready
-		.out_0_data     (avalon_st_adapter_005_out_0_data),          //    out_0.data
-		.out_0_valid    (avalon_st_adapter_005_out_0_valid),         //         .valid
-		.out_0_ready    (avalon_st_adapter_005_out_0_ready),         //         .ready
-		.out_0_error    (avalon_st_adapter_005_out_0_error)          //         .error
+		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),           // in_clk_0.clk
+		.in_rst_0_reset (hexrport_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
+		.in_0_data      (keysport_s1_agent_rdata_fifo_src_data),      //     in_0.data
+		.in_0_valid     (keysport_s1_agent_rdata_fifo_src_valid),     //         .valid
+		.in_0_ready     (keysport_s1_agent_rdata_fifo_src_ready),     //         .ready
+		.out_0_data     (avalon_st_adapter_005_out_0_data),           //    out_0.data
+		.out_0_valid    (avalon_st_adapter_005_out_0_valid),          //         .valid
+		.out_0_ready    (avalon_st_adapter_005_out_0_ready),          //         .ready
+		.out_0_error    (avalon_st_adapter_005_out_0_error)           //         .error
 	);
 
 	pcihellocore_mm_interconnect_0_avalon_st_adapter #(
@@ -4388,15 +4388,15 @@ module pcihellocore_mm_interconnect_0 (
 		.outUseReady     (1),
 		.outReadyLatency (0)
 	) avalon_st_adapter_006 (
-		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),          // in_clk_0.clk
-		.in_rst_0_reset (hexport_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
-		.in_0_data      (hexlport_s1_agent_rdata_fifo_src_data),     //     in_0.data
-		.in_0_valid     (hexlport_s1_agent_rdata_fifo_src_valid),    //         .valid
-		.in_0_ready     (hexlport_s1_agent_rdata_fifo_src_ready),    //         .ready
-		.out_0_data     (avalon_st_adapter_006_out_0_data),          //    out_0.data
-		.out_0_valid    (avalon_st_adapter_006_out_0_valid),         //         .valid
-		.out_0_ready    (avalon_st_adapter_006_out_0_ready),         //         .ready
-		.out_0_error    (avalon_st_adapter_006_out_0_error)          //         .error
+		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),           // in_clk_0.clk
+		.in_rst_0_reset (hexrport_reset_reset_bridge_in_reset_reset), // in_rst_0.reset
+		.in_0_data      (hexlport_s1_agent_rdata_fifo_src_data),      //     in_0.data
+		.in_0_valid     (hexlport_s1_agent_rdata_fifo_src_valid),     //         .valid
+		.in_0_ready     (hexlport_s1_agent_rdata_fifo_src_ready),     //         .ready
+		.out_0_data     (avalon_st_adapter_006_out_0_data),           //    out_0.data
+		.out_0_valid    (avalon_st_adapter_006_out_0_valid),          //         .valid
+		.out_0_ready    (avalon_st_adapter_006_out_0_ready),          //         .ready
+		.out_0_error    (avalon_st_adapter_006_out_0_error)           //         .error
 	);
 
 	pcihellocore_mm_interconnect_0_avalon_st_adapter_007 #(
@@ -4418,7 +4418,7 @@ module pcihellocore_mm_interconnect_0 (
 		.outReadyLatency (0)
 	) avalon_st_adapter_007 (
 		.in_clk_0_clk   (pcie_hard_ip_0_pcie_core_clk_clk),              // in_clk_0.clk
-		.in_rst_0_reset (hexport_reset_reset_bridge_in_reset_reset),     // in_rst_0.reset
+		.in_rst_0_reset (hexrport_reset_reset_bridge_in_reset_reset),    // in_rst_0.reset
 		.in_0_data      (pcie_hard_ip_0_txs_agent_rdata_fifo_src_data),  //     in_0.data
 		.in_0_valid     (pcie_hard_ip_0_txs_agent_rdata_fifo_src_valid), //         .valid
 		.in_0_ready     (pcie_hard_ip_0_txs_agent_rdata_fifo_src_ready), //         .ready

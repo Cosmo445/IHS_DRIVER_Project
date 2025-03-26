@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="pcihellocore" kind="pcihellocore" version="1.0" fabric="QSYS">
  <!-- Format version 17.1 590 (Future versions may contain additional information.) -->
- <!-- 2025.03.20.15:19:03 -->
+ <!-- 2025.03.26.15:22:57 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1742494743</value>
+  <value>1743013377</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -843,7 +843,11 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="hexport" kind="altera_avalon_pio" version="17.1" path="hexport">
+ <module
+   name="hexrport"
+   kind="altera_avalon_pio"
+   version="17.1"
+   path="hexrport">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <assignment>
@@ -896,7 +900,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.RESET_VALUE</name>
-   <value>0</value>
+   <value>1077952576</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -916,7 +920,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.resetvalue</name>
-   <value>0</value>
+   <value>1077952576</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -980,7 +984,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="resetValue">
    <type>long</type>
-   <value>0</value>
+   <value>1077952576</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -5692,9 +5696,9 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>hexport</moduleName>
+    <moduleName>hexrport</moduleName>
     <slaveName>clk</slaveName>
-    <name>hexport.clk</name>
+    <name>hexrport.clk</name>
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
@@ -5710,9 +5714,9 @@ parameters are a RESULT of the module parameters. -->
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
-    <moduleName>switchesport</moduleName>
+    <moduleName>swport</moduleName>
     <slaveName>clk</slaveName>
-    <name>switchesport.clk</name>
+    <name>swport.clk</name>
    </clockDomainMember>
    <clockDomainMember>
     <isBridge>false</isBridge>
@@ -7003,10 +7007,10 @@ parameters are a RESULT of the module parameters. -->
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>hexport</moduleName>
+    <moduleName>hexrport</moduleName>
     <slaveName>s1</slaveName>
-    <name>hexport.s1</name>
-    <baseAddress>49152</baseAddress>
+    <name>hexrport.s1</name>
+    <baseAddress>49248</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -7014,7 +7018,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>ledsgreenport</moduleName>
     <slaveName>s1</slaveName>
     <name>ledsgreenport.s1</name>
-    <baseAddress>49248</baseAddress>
+    <baseAddress>49312</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -7022,15 +7026,15 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>ledsredport</moduleName>
     <slaveName>s1</slaveName>
     <name>ledsredport.s1</name>
-    <baseAddress>49216</baseAddress>
+    <baseAddress>49280</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>switchesport</moduleName>
+    <moduleName>swport</moduleName>
     <slaveName>s1</slaveName>
-    <name>switchesport.s1</name>
-    <baseAddress>49184</baseAddress>
+    <name>swport.s1</name>
+    <baseAddress>49152</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -7038,7 +7042,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>keysport</moduleName>
     <slaveName>s1</slaveName>
     <name>keysport.s1</name>
-    <baseAddress>49312</baseAddress>
+    <baseAddress>49184</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -7046,7 +7050,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>hexlport</moduleName>
     <slaveName>s1</slaveName>
     <name>hexlport.s1</name>
-    <baseAddress>49280</baseAddress>
+    <baseAddress>49216</baseAddress>
     <span>16</span>
    </memoryBlock>
    <memoryBlock>
@@ -7874,11 +7878,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module
-   name="switchesport"
-   kind="altera_avalon_pio"
-   version="17.1"
-   path="switchesport">
+ <module name="swport" kind="altera_avalon_pio" version="17.1" path="swport">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <assignment>
@@ -8686,11 +8686,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>cra</endConnectionPoint>
  </connection>
  <connection
-   name="pcie_hard_ip_0.bar0/hexport.s1"
+   name="pcie_hard_ip_0.bar0/hexrport.s1"
    kind="avalon"
    version="17.1"
    start="pcie_hard_ip_0.bar0"
-   end="hexport.s1">
+   end="hexrport.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -8701,7 +8701,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0xc000</value>
+   <value>0xc060</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8733,7 +8733,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>pcie_hard_ip_0</startModule>
   <startConnectionPoint>bar0</startConnectionPoint>
-  <endModule>hexport</endModule>
+  <endModule>hexrport</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
@@ -8752,7 +8752,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0xc060</value>
+   <value>0xc0a0</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8803,7 +8803,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0xc040</value>
+   <value>0xc080</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8839,11 +8839,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="pcie_hard_ip_0.bar0/switchesport.s1"
+   name="pcie_hard_ip_0.bar0/swport.s1"
    kind="avalon"
    version="17.1"
    start="pcie_hard_ip_0.bar0"
-   end="switchesport.s1">
+   end="swport.s1">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -8854,7 +8854,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0xc020</value>
+   <value>0xc000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8886,7 +8886,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>pcie_hard_ip_0</startModule>
   <startConnectionPoint>bar0</startConnectionPoint>
-  <endModule>switchesport</endModule>
+  <endModule>swport</endModule>
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
@@ -8905,7 +8905,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0xc0a0</value>
+   <value>0xc020</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -8956,7 +8956,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0xc080</value>
+   <value>0xc040</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -9070,11 +9070,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>cal_blk_clk</endConnectionPoint>
  </connection>
  <connection
-   name="pcie_hard_ip_0.pcie_core_clk/hexport.clk"
+   name="pcie_hard_ip_0.pcie_core_clk/hexrport.clk"
    kind="clock"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_clk"
-   end="hexport.clk">
+   end="hexrport.clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -9093,7 +9093,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>pcie_hard_ip_0</startModule>
   <startConnectionPoint>pcie_core_clk</startConnectionPoint>
-  <endModule>hexport</endModule>
+  <endModule>hexrport</endModule>
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
@@ -9151,11 +9151,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="pcie_hard_ip_0.pcie_core_clk/switchesport.clk"
+   name="pcie_hard_ip_0.pcie_core_clk/swport.clk"
    kind="clock"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_clk"
-   end="switchesport.clk">
+   end="swport.clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -9174,7 +9174,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>pcie_hard_ip_0</startModule>
   <startConnectionPoint>pcie_core_clk</startConnectionPoint>
-  <endModule>switchesport</endModule>
+  <endModule>swport</endModule>
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
@@ -9286,11 +9286,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reconfig_gxbclk</endConnectionPoint>
  </connection>
  <connection
-   name="pcie_hard_ip_0.pcie_core_reset/hexport.reset"
+   name="pcie_hard_ip_0.pcie_core_reset/hexrport.reset"
    kind="reset"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_reset"
-   end="hexport.reset">
+   end="hexrport.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -9309,7 +9309,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>pcie_hard_ip_0</startModule>
   <startConnectionPoint>pcie_core_reset</startConnectionPoint>
-  <endModule>hexport</endModule>
+  <endModule>hexrport</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
@@ -9367,11 +9367,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="pcie_hard_ip_0.pcie_core_reset/switchesport.reset"
+   name="pcie_hard_ip_0.pcie_core_reset/swport.reset"
    kind="reset"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_reset"
-   end="switchesport.reset">
+   end="swport.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
    <value>UNKNOWN</value>
@@ -9390,7 +9390,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>pcie_hard_ip_0</startModule>
   <startConnectionPoint>pcie_core_reset</startConnectionPoint>
-  <endModule>switchesport</endModule>
+  <endModule>swport</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection

@@ -33,52 +33,52 @@ KEY[0] => key_bus[0].IN1
 KEY[1] => key_bus[1].IN1
 KEY[2] => key_bus[2].IN1
 KEY[3] => key_bus[3].IN1
-SW[0] => switchbus[0].IN1
-SW[1] => switchbus[1].IN1
-SW[2] => switchbus[2].IN1
-SW[3] => switchbus[3].IN1
-SW[4] => switchbus[4].IN1
-SW[5] => switchbus[5].IN1
-SW[6] => switchbus[6].IN1
-SW[7] => switchbus[7].IN1
-SW[8] => switchbus[8].IN1
-SW[9] => switchbus[9].IN1
-SW[10] => switchbus[10].IN1
-SW[11] => switchbus[11].IN1
-SW[12] => switchbus[12].IN1
-SW[13] => switchbus[13].IN1
-SW[14] => switchbus[14].IN1
-SW[15] => switchbus[15].IN1
-SW[16] => switchbus[16].IN1
-SW[17] => switchbus[17].IN1
-HEX0[0] <= pcihellocore:u0.hexport_external_connection_export
-HEX0[1] <= pcihellocore:u0.hexport_external_connection_export
-HEX0[2] <= pcihellocore:u0.hexport_external_connection_export
-HEX0[3] <= pcihellocore:u0.hexport_external_connection_export
-HEX0[4] <= pcihellocore:u0.hexport_external_connection_export
-HEX0[5] <= pcihellocore:u0.hexport_external_connection_export
-HEX0[6] <= pcihellocore:u0.hexport_external_connection_export
-HEX1[0] <= pcihellocore:u0.hexport_external_connection_export
-HEX1[1] <= pcihellocore:u0.hexport_external_connection_export
-HEX1[2] <= pcihellocore:u0.hexport_external_connection_export
-HEX1[3] <= pcihellocore:u0.hexport_external_connection_export
-HEX1[4] <= pcihellocore:u0.hexport_external_connection_export
-HEX1[5] <= pcihellocore:u0.hexport_external_connection_export
-HEX1[6] <= pcihellocore:u0.hexport_external_connection_export
-HEX2[0] <= pcihellocore:u0.hexport_external_connection_export
-HEX2[1] <= pcihellocore:u0.hexport_external_connection_export
-HEX2[2] <= pcihellocore:u0.hexport_external_connection_export
-HEX2[3] <= pcihellocore:u0.hexport_external_connection_export
-HEX2[4] <= pcihellocore:u0.hexport_external_connection_export
-HEX2[5] <= pcihellocore:u0.hexport_external_connection_export
-HEX2[6] <= pcihellocore:u0.hexport_external_connection_export
-HEX3[0] <= pcihellocore:u0.hexport_external_connection_export
-HEX3[1] <= pcihellocore:u0.hexport_external_connection_export
-HEX3[2] <= pcihellocore:u0.hexport_external_connection_export
-HEX3[3] <= pcihellocore:u0.hexport_external_connection_export
-HEX3[4] <= pcihellocore:u0.hexport_external_connection_export
-HEX3[5] <= pcihellocore:u0.hexport_external_connection_export
-HEX3[6] <= pcihellocore:u0.hexport_external_connection_export
+SW[0] => sw_bus[0].IN1
+SW[1] => sw_bus[1].IN1
+SW[2] => sw_bus[2].IN1
+SW[3] => sw_bus[3].IN1
+SW[4] => sw_bus[4].IN1
+SW[5] => sw_bus[5].IN1
+SW[6] => sw_bus[6].IN1
+SW[7] => sw_bus[7].IN1
+SW[8] => sw_bus[8].IN1
+SW[9] => sw_bus[9].IN1
+SW[10] => sw_bus[10].IN1
+SW[11] => sw_bus[11].IN1
+SW[12] => sw_bus[12].IN1
+SW[13] => sw_bus[13].IN1
+SW[14] => sw_bus[14].IN1
+SW[15] => sw_bus[15].IN1
+SW[16] => sw_bus[16].IN1
+SW[17] => sw_bus[17].IN1
+HEX0[0] <= pcihellocore:u0.hexrport_external_connection_export
+HEX0[1] <= pcihellocore:u0.hexrport_external_connection_export
+HEX0[2] <= pcihellocore:u0.hexrport_external_connection_export
+HEX0[3] <= pcihellocore:u0.hexrport_external_connection_export
+HEX0[4] <= pcihellocore:u0.hexrport_external_connection_export
+HEX0[5] <= pcihellocore:u0.hexrport_external_connection_export
+HEX0[6] <= pcihellocore:u0.hexrport_external_connection_export
+HEX1[0] <= pcihellocore:u0.hexrport_external_connection_export
+HEX1[1] <= pcihellocore:u0.hexrport_external_connection_export
+HEX1[2] <= pcihellocore:u0.hexrport_external_connection_export
+HEX1[3] <= pcihellocore:u0.hexrport_external_connection_export
+HEX1[4] <= pcihellocore:u0.hexrport_external_connection_export
+HEX1[5] <= pcihellocore:u0.hexrport_external_connection_export
+HEX1[6] <= pcihellocore:u0.hexrport_external_connection_export
+HEX2[0] <= pcihellocore:u0.hexrport_external_connection_export
+HEX2[1] <= pcihellocore:u0.hexrport_external_connection_export
+HEX2[2] <= pcihellocore:u0.hexrport_external_connection_export
+HEX2[3] <= pcihellocore:u0.hexrport_external_connection_export
+HEX2[4] <= pcihellocore:u0.hexrport_external_connection_export
+HEX2[5] <= pcihellocore:u0.hexrport_external_connection_export
+HEX2[6] <= pcihellocore:u0.hexrport_external_connection_export
+HEX3[0] <= pcihellocore:u0.hexrport_external_connection_export
+HEX3[1] <= pcihellocore:u0.hexrport_external_connection_export
+HEX3[2] <= pcihellocore:u0.hexrport_external_connection_export
+HEX3[3] <= pcihellocore:u0.hexrport_external_connection_export
+HEX3[4] <= pcihellocore:u0.hexrport_external_connection_export
+HEX3[5] <= pcihellocore:u0.hexrport_external_connection_export
+HEX3[6] <= pcihellocore:u0.hexrport_external_connection_export
 HEX4[0] <= pcihellocore:u0.hexlport_external_connection_export
 HEX4[1] <= pcihellocore:u0.hexlport_external_connection_export
 HEX4[2] <= pcihellocore:u0.hexlport_external_connection_export
@@ -150,38 +150,38 @@ hexlport_external_connection_export[28] <= pcihellocore_hexlport:hexlport.out_po
 hexlport_external_connection_export[29] <= pcihellocore_hexlport:hexlport.out_port
 hexlport_external_connection_export[30] <= pcihellocore_hexlport:hexlport.out_port
 hexlport_external_connection_export[31] <= pcihellocore_hexlport:hexlport.out_port
-hexport_external_connection_export[0] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[1] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[2] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[3] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[4] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[5] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[6] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[7] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[8] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[9] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[10] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[11] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[12] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[13] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[14] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[15] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[16] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[17] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[18] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[19] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[20] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[21] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[22] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[23] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[24] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[25] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[26] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[27] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[28] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[29] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[30] <= pcihellocore_hexport:hexport.out_port
-hexport_external_connection_export[31] <= pcihellocore_hexport:hexport.out_port
+hexrport_external_connection_export[0] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[1] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[2] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[3] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[4] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[5] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[6] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[7] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[8] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[9] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[10] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[11] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[12] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[13] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[14] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[15] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[16] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[17] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[18] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[19] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[20] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[21] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[22] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[23] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[24] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[25] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[26] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[27] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[28] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[29] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[30] <= pcihellocore_hexlport:hexrport.out_port
+hexrport_external_connection_export[31] <= pcihellocore_hexlport:hexrport.out_port
 keysport_external_connection_export[0] => keysport_external_connection_export[0].IN1
 keysport_external_connection_export[1] => keysport_external_connection_export[1].IN1
 keysport_external_connection_export[2] => keysport_external_connection_export[2].IN1
@@ -214,108 +214,108 @@ keysport_external_connection_export[28] => keysport_external_connection_export[2
 keysport_external_connection_export[29] => keysport_external_connection_export[29].IN1
 keysport_external_connection_export[30] => keysport_external_connection_export[30].IN1
 keysport_external_connection_export[31] => keysport_external_connection_export[31].IN1
-ledsgreenport_external_connection_export[0] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[1] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[2] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[3] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[4] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[5] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[6] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[7] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[8] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[9] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[10] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[11] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[12] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[13] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[14] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[15] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[16] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[17] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[18] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[19] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[20] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[21] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[22] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[23] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[24] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[25] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[26] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[27] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[28] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[29] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[30] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsgreenport_external_connection_export[31] <= pcihellocore_hexport:ledsgreenport.out_port
-ledsredport_external_connection_export[0] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[1] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[2] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[3] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[4] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[5] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[6] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[7] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[8] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[9] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[10] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[11] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[12] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[13] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[14] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[15] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[16] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[17] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[18] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[19] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[20] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[21] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[22] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[23] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[24] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[25] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[26] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[27] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[28] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[29] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[30] <= pcihellocore_hexport:ledsredport.out_port
-ledsredport_external_connection_export[31] <= pcihellocore_hexport:ledsredport.out_port
+ledsgreenport_external_connection_export[0] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[1] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[2] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[3] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[4] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[5] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[6] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[7] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[8] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[9] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[10] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[11] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[12] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[13] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[14] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[15] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[16] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[17] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[18] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[19] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[20] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[21] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[22] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[23] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[24] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[25] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[26] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[27] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[28] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[29] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[30] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsgreenport_external_connection_export[31] <= pcihellocore_ledsgreenport:ledsgreenport.out_port
+ledsredport_external_connection_export[0] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[1] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[2] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[3] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[4] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[5] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[6] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[7] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[8] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[9] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[10] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[11] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[12] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[13] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[14] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[15] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[16] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[17] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[18] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[19] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[20] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[21] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[22] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[23] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[24] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[25] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[26] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[27] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[28] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[29] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[30] <= pcihellocore_ledsgreenport:ledsredport.out_port
+ledsredport_external_connection_export[31] <= pcihellocore_ledsgreenport:ledsredport.out_port
 pcie_hard_ip_0_pcie_rstn_export => pcie_hard_ip_0_pcie_rstn_export.IN1
 pcie_hard_ip_0_powerdown_pll_powerdown => pcie_hard_ip_0_powerdown_pll_powerdown.IN1
 pcie_hard_ip_0_powerdown_gxb_powerdown => pcie_hard_ip_0_powerdown_gxb_powerdown.IN1
 pcie_hard_ip_0_refclk_export => pcie_hard_ip_0_refclk_export.IN1
 pcie_hard_ip_0_rx_in_rx_datain_0 => pcie_hard_ip_0_rx_in_rx_datain_0.IN1
 pcie_hard_ip_0_tx_out_tx_dataout_0 <= pcihellocore_pcie_hard_ip_0:pcie_hard_ip_0.tx_out_tx_dataout_0
-switchesport_external_connection_export[0] => switchesport_external_connection_export[0].IN1
-switchesport_external_connection_export[1] => switchesport_external_connection_export[1].IN1
-switchesport_external_connection_export[2] => switchesport_external_connection_export[2].IN1
-switchesport_external_connection_export[3] => switchesport_external_connection_export[3].IN1
-switchesport_external_connection_export[4] => switchesport_external_connection_export[4].IN1
-switchesport_external_connection_export[5] => switchesport_external_connection_export[5].IN1
-switchesport_external_connection_export[6] => switchesport_external_connection_export[6].IN1
-switchesport_external_connection_export[7] => switchesport_external_connection_export[7].IN1
-switchesport_external_connection_export[8] => switchesport_external_connection_export[8].IN1
-switchesport_external_connection_export[9] => switchesport_external_connection_export[9].IN1
-switchesport_external_connection_export[10] => switchesport_external_connection_export[10].IN1
-switchesport_external_connection_export[11] => switchesport_external_connection_export[11].IN1
-switchesport_external_connection_export[12] => switchesport_external_connection_export[12].IN1
-switchesport_external_connection_export[13] => switchesport_external_connection_export[13].IN1
-switchesport_external_connection_export[14] => switchesport_external_connection_export[14].IN1
-switchesport_external_connection_export[15] => switchesport_external_connection_export[15].IN1
-switchesport_external_connection_export[16] => switchesport_external_connection_export[16].IN1
-switchesport_external_connection_export[17] => switchesport_external_connection_export[17].IN1
-switchesport_external_connection_export[18] => switchesport_external_connection_export[18].IN1
-switchesport_external_connection_export[19] => switchesport_external_connection_export[19].IN1
-switchesport_external_connection_export[20] => switchesport_external_connection_export[20].IN1
-switchesport_external_connection_export[21] => switchesport_external_connection_export[21].IN1
-switchesport_external_connection_export[22] => switchesport_external_connection_export[22].IN1
-switchesport_external_connection_export[23] => switchesport_external_connection_export[23].IN1
-switchesport_external_connection_export[24] => switchesport_external_connection_export[24].IN1
-switchesport_external_connection_export[25] => switchesport_external_connection_export[25].IN1
-switchesport_external_connection_export[26] => switchesport_external_connection_export[26].IN1
-switchesport_external_connection_export[27] => switchesport_external_connection_export[27].IN1
-switchesport_external_connection_export[28] => switchesport_external_connection_export[28].IN1
-switchesport_external_connection_export[29] => switchesport_external_connection_export[29].IN1
-switchesport_external_connection_export[30] => switchesport_external_connection_export[30].IN1
-switchesport_external_connection_export[31] => switchesport_external_connection_export[31].IN1
+swport_external_connection_export[0] => swport_external_connection_export[0].IN1
+swport_external_connection_export[1] => swport_external_connection_export[1].IN1
+swport_external_connection_export[2] => swport_external_connection_export[2].IN1
+swport_external_connection_export[3] => swport_external_connection_export[3].IN1
+swport_external_connection_export[4] => swport_external_connection_export[4].IN1
+swport_external_connection_export[5] => swport_external_connection_export[5].IN1
+swport_external_connection_export[6] => swport_external_connection_export[6].IN1
+swport_external_connection_export[7] => swport_external_connection_export[7].IN1
+swport_external_connection_export[8] => swport_external_connection_export[8].IN1
+swport_external_connection_export[9] => swport_external_connection_export[9].IN1
+swport_external_connection_export[10] => swport_external_connection_export[10].IN1
+swport_external_connection_export[11] => swport_external_connection_export[11].IN1
+swport_external_connection_export[12] => swport_external_connection_export[12].IN1
+swport_external_connection_export[13] => swport_external_connection_export[13].IN1
+swport_external_connection_export[14] => swport_external_connection_export[14].IN1
+swport_external_connection_export[15] => swport_external_connection_export[15].IN1
+swport_external_connection_export[16] => swport_external_connection_export[16].IN1
+swport_external_connection_export[17] => swport_external_connection_export[17].IN1
+swport_external_connection_export[18] => swport_external_connection_export[18].IN1
+swport_external_connection_export[19] => swport_external_connection_export[19].IN1
+swport_external_connection_export[20] => swport_external_connection_export[20].IN1
+swport_external_connection_export[21] => swport_external_connection_export[21].IN1
+swport_external_connection_export[22] => swport_external_connection_export[22].IN1
+swport_external_connection_export[23] => swport_external_connection_export[23].IN1
+swport_external_connection_export[24] => swport_external_connection_export[24].IN1
+swport_external_connection_export[25] => swport_external_connection_export[25].IN1
+swport_external_connection_export[26] => swport_external_connection_export[26].IN1
+swport_external_connection_export[27] => swport_external_connection_export[27].IN1
+swport_external_connection_export[28] => swport_external_connection_export[28].IN1
+swport_external_connection_export[29] => swport_external_connection_export[29].IN1
+swport_external_connection_export[30] => swport_external_connection_export[30].IN1
+swport_external_connection_export[31] => swport_external_connection_export[31].IN1
 
 
 |pcihello|pcihellocore:u0|pcihellocore_hexlport:hexlport
@@ -485,7 +485,7 @@ readdata[30] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_hexport:hexport
+|pcihello|pcihellocore:u0|pcihellocore_hexlport:hexrport
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 chipselect => always0.IN0
@@ -527,7 +527,7 @@ reset_n => data_out[2].ACLR
 reset_n => data_out[3].ACLR
 reset_n => data_out[4].ACLR
 reset_n => data_out[5].ACLR
-reset_n => data_out[6].ACLR
+reset_n => data_out[6].PRESET
 reset_n => data_out[7].ACLR
 reset_n => data_out[8].ACLR
 reset_n => data_out[9].ACLR
@@ -535,7 +535,7 @@ reset_n => data_out[10].ACLR
 reset_n => data_out[11].ACLR
 reset_n => data_out[12].ACLR
 reset_n => data_out[13].ACLR
-reset_n => data_out[14].ACLR
+reset_n => data_out[14].PRESET
 reset_n => data_out[15].ACLR
 reset_n => data_out[16].ACLR
 reset_n => data_out[17].ACLR
@@ -543,7 +543,7 @@ reset_n => data_out[18].ACLR
 reset_n => data_out[19].ACLR
 reset_n => data_out[20].ACLR
 reset_n => data_out[21].ACLR
-reset_n => data_out[22].ACLR
+reset_n => data_out[22].PRESET
 reset_n => data_out[23].ACLR
 reset_n => data_out[24].ACLR
 reset_n => data_out[25].ACLR
@@ -551,7 +551,7 @@ reset_n => data_out[26].ACLR
 reset_n => data_out[27].ACLR
 reset_n => data_out[28].ACLR
 reset_n => data_out[29].ACLR
-reset_n => data_out[30].ACLR
+reset_n => data_out[30].PRESET
 reset_n => data_out[31].ACLR
 write_n => always0.IN1
 writedata[0] => data_out[0].DATAIN
@@ -785,7 +785,7 @@ readdata[30] <= readdata[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_hexport:ledsgreenport
+|pcihello|pcihellocore:u0|pcihellocore_ledsgreenport:ledsgreenport
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 chipselect => always0.IN0
@@ -952,7 +952,7 @@ readdata[30] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 readdata[31] <= read_mux_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_hexport:ledsredport
+|pcihello|pcihellocore:u0|pcihellocore_ledsgreenport:ledsredport
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 chipselect => always0.IN0
@@ -36761,7 +36761,7 @@ clk => altera_reset_synchronizer_int_chain[1].CLK
 reset_out <= altera_reset_synchronizer_int_chain_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_keysport:switchesport
+|pcihello|pcihellocore:u0|pcihellocore_keysport:swport
 address[0] => Equal0.IN31
 address[1] => Equal0.IN30
 clk => readdata[0]~reg0.CLK
@@ -36896,7 +36896,7 @@ readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 |pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0
 pcie_hard_ip_0_pcie_core_clk_clk => pcie_hard_ip_0_pcie_core_clk_clk.IN83
-hexport_reset_reset_bridge_in_reset_reset => hexport_reset_reset_bridge_in_reset_reset.IN83
+hexrport_reset_reset_bridge_in_reset_reset => hexrport_reset_reset_bridge_in_reset_reset.IN83
 pcie_hard_ip_0_bar0_address[0] => pcie_hard_ip_0_bar0_address[0].IN1
 pcie_hard_ip_0_bar0_address[1] => pcie_hard_ip_0_bar0_address[1].IN1
 pcie_hard_ip_0_bar0_address[2] => pcie_hard_ip_0_bar0_address[2].IN1
@@ -37144,74 +37144,74 @@ hexlport_s1_writedata[29] <= altera_merlin_slave_translator:hexlport_s1_translat
 hexlport_s1_writedata[30] <= altera_merlin_slave_translator:hexlport_s1_translator.av_writedata
 hexlport_s1_writedata[31] <= altera_merlin_slave_translator:hexlport_s1_translator.av_writedata
 hexlport_s1_chipselect <= altera_merlin_slave_translator:hexlport_s1_translator.av_chipselect
-hexport_s1_address[0] <= altera_merlin_slave_translator:hexport_s1_translator.av_address
-hexport_s1_address[1] <= altera_merlin_slave_translator:hexport_s1_translator.av_address
-hexport_s1_write <= altera_merlin_slave_translator:hexport_s1_translator.av_write
-hexport_s1_readdata[0] => hexport_s1_readdata[0].IN1
-hexport_s1_readdata[1] => hexport_s1_readdata[1].IN1
-hexport_s1_readdata[2] => hexport_s1_readdata[2].IN1
-hexport_s1_readdata[3] => hexport_s1_readdata[3].IN1
-hexport_s1_readdata[4] => hexport_s1_readdata[4].IN1
-hexport_s1_readdata[5] => hexport_s1_readdata[5].IN1
-hexport_s1_readdata[6] => hexport_s1_readdata[6].IN1
-hexport_s1_readdata[7] => hexport_s1_readdata[7].IN1
-hexport_s1_readdata[8] => hexport_s1_readdata[8].IN1
-hexport_s1_readdata[9] => hexport_s1_readdata[9].IN1
-hexport_s1_readdata[10] => hexport_s1_readdata[10].IN1
-hexport_s1_readdata[11] => hexport_s1_readdata[11].IN1
-hexport_s1_readdata[12] => hexport_s1_readdata[12].IN1
-hexport_s1_readdata[13] => hexport_s1_readdata[13].IN1
-hexport_s1_readdata[14] => hexport_s1_readdata[14].IN1
-hexport_s1_readdata[15] => hexport_s1_readdata[15].IN1
-hexport_s1_readdata[16] => hexport_s1_readdata[16].IN1
-hexport_s1_readdata[17] => hexport_s1_readdata[17].IN1
-hexport_s1_readdata[18] => hexport_s1_readdata[18].IN1
-hexport_s1_readdata[19] => hexport_s1_readdata[19].IN1
-hexport_s1_readdata[20] => hexport_s1_readdata[20].IN1
-hexport_s1_readdata[21] => hexport_s1_readdata[21].IN1
-hexport_s1_readdata[22] => hexport_s1_readdata[22].IN1
-hexport_s1_readdata[23] => hexport_s1_readdata[23].IN1
-hexport_s1_readdata[24] => hexport_s1_readdata[24].IN1
-hexport_s1_readdata[25] => hexport_s1_readdata[25].IN1
-hexport_s1_readdata[26] => hexport_s1_readdata[26].IN1
-hexport_s1_readdata[27] => hexport_s1_readdata[27].IN1
-hexport_s1_readdata[28] => hexport_s1_readdata[28].IN1
-hexport_s1_readdata[29] => hexport_s1_readdata[29].IN1
-hexport_s1_readdata[30] => hexport_s1_readdata[30].IN1
-hexport_s1_readdata[31] => hexport_s1_readdata[31].IN1
-hexport_s1_writedata[0] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[1] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[2] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[3] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[4] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[5] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[6] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[7] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[8] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[9] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[10] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[11] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[12] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[13] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[14] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[15] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[16] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[17] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[18] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[19] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[20] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[21] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[22] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[23] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[24] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[25] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[26] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[27] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[28] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[29] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[30] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_writedata[31] <= altera_merlin_slave_translator:hexport_s1_translator.av_writedata
-hexport_s1_chipselect <= altera_merlin_slave_translator:hexport_s1_translator.av_chipselect
+hexrport_s1_address[0] <= altera_merlin_slave_translator:hexrport_s1_translator.av_address
+hexrport_s1_address[1] <= altera_merlin_slave_translator:hexrport_s1_translator.av_address
+hexrport_s1_write <= altera_merlin_slave_translator:hexrport_s1_translator.av_write
+hexrport_s1_readdata[0] => hexrport_s1_readdata[0].IN1
+hexrport_s1_readdata[1] => hexrport_s1_readdata[1].IN1
+hexrport_s1_readdata[2] => hexrport_s1_readdata[2].IN1
+hexrport_s1_readdata[3] => hexrport_s1_readdata[3].IN1
+hexrport_s1_readdata[4] => hexrport_s1_readdata[4].IN1
+hexrport_s1_readdata[5] => hexrport_s1_readdata[5].IN1
+hexrport_s1_readdata[6] => hexrport_s1_readdata[6].IN1
+hexrport_s1_readdata[7] => hexrport_s1_readdata[7].IN1
+hexrport_s1_readdata[8] => hexrport_s1_readdata[8].IN1
+hexrport_s1_readdata[9] => hexrport_s1_readdata[9].IN1
+hexrport_s1_readdata[10] => hexrport_s1_readdata[10].IN1
+hexrport_s1_readdata[11] => hexrport_s1_readdata[11].IN1
+hexrport_s1_readdata[12] => hexrport_s1_readdata[12].IN1
+hexrport_s1_readdata[13] => hexrport_s1_readdata[13].IN1
+hexrport_s1_readdata[14] => hexrport_s1_readdata[14].IN1
+hexrport_s1_readdata[15] => hexrport_s1_readdata[15].IN1
+hexrport_s1_readdata[16] => hexrport_s1_readdata[16].IN1
+hexrport_s1_readdata[17] => hexrport_s1_readdata[17].IN1
+hexrport_s1_readdata[18] => hexrport_s1_readdata[18].IN1
+hexrport_s1_readdata[19] => hexrport_s1_readdata[19].IN1
+hexrport_s1_readdata[20] => hexrport_s1_readdata[20].IN1
+hexrport_s1_readdata[21] => hexrport_s1_readdata[21].IN1
+hexrport_s1_readdata[22] => hexrport_s1_readdata[22].IN1
+hexrport_s1_readdata[23] => hexrport_s1_readdata[23].IN1
+hexrport_s1_readdata[24] => hexrport_s1_readdata[24].IN1
+hexrport_s1_readdata[25] => hexrport_s1_readdata[25].IN1
+hexrport_s1_readdata[26] => hexrport_s1_readdata[26].IN1
+hexrport_s1_readdata[27] => hexrport_s1_readdata[27].IN1
+hexrport_s1_readdata[28] => hexrport_s1_readdata[28].IN1
+hexrport_s1_readdata[29] => hexrport_s1_readdata[29].IN1
+hexrport_s1_readdata[30] => hexrport_s1_readdata[30].IN1
+hexrport_s1_readdata[31] => hexrport_s1_readdata[31].IN1
+hexrport_s1_writedata[0] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[1] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[2] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[3] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[4] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[5] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[6] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[7] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[8] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[9] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[10] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[11] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[12] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[13] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[14] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[15] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[16] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[17] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[18] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[19] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[20] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[21] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[22] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[23] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[24] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[25] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[26] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[27] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[28] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[29] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[30] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_writedata[31] <= altera_merlin_slave_translator:hexrport_s1_translator.av_writedata
+hexrport_s1_chipselect <= altera_merlin_slave_translator:hexrport_s1_translator.av_chipselect
 keysport_s1_address[0] <= altera_merlin_slave_translator:keysport_s1_translator.av_address
 keysport_s1_address[1] <= altera_merlin_slave_translator:keysport_s1_translator.av_address
 keysport_s1_readdata[0] => keysport_s1_readdata[0].IN1
@@ -37629,40 +37629,40 @@ pcie_hard_ip_0_txs_byteenable[7] <= altera_merlin_slave_translator:pcie_hard_ip_
 pcie_hard_ip_0_txs_readdatavalid => pcie_hard_ip_0_txs_readdatavalid.IN1
 pcie_hard_ip_0_txs_waitrequest => pcie_hard_ip_0_txs_waitrequest.IN1
 pcie_hard_ip_0_txs_chipselect <= altera_merlin_slave_translator:pcie_hard_ip_0_txs_translator.av_chipselect
-switchesport_s1_address[0] <= altera_merlin_slave_translator:switchesport_s1_translator.av_address
-switchesport_s1_address[1] <= altera_merlin_slave_translator:switchesport_s1_translator.av_address
-switchesport_s1_readdata[0] => switchesport_s1_readdata[0].IN1
-switchesport_s1_readdata[1] => switchesport_s1_readdata[1].IN1
-switchesport_s1_readdata[2] => switchesport_s1_readdata[2].IN1
-switchesport_s1_readdata[3] => switchesport_s1_readdata[3].IN1
-switchesport_s1_readdata[4] => switchesport_s1_readdata[4].IN1
-switchesport_s1_readdata[5] => switchesport_s1_readdata[5].IN1
-switchesport_s1_readdata[6] => switchesport_s1_readdata[6].IN1
-switchesport_s1_readdata[7] => switchesport_s1_readdata[7].IN1
-switchesport_s1_readdata[8] => switchesport_s1_readdata[8].IN1
-switchesport_s1_readdata[9] => switchesport_s1_readdata[9].IN1
-switchesport_s1_readdata[10] => switchesport_s1_readdata[10].IN1
-switchesport_s1_readdata[11] => switchesport_s1_readdata[11].IN1
-switchesport_s1_readdata[12] => switchesport_s1_readdata[12].IN1
-switchesport_s1_readdata[13] => switchesport_s1_readdata[13].IN1
-switchesport_s1_readdata[14] => switchesport_s1_readdata[14].IN1
-switchesport_s1_readdata[15] => switchesport_s1_readdata[15].IN1
-switchesport_s1_readdata[16] => switchesport_s1_readdata[16].IN1
-switchesport_s1_readdata[17] => switchesport_s1_readdata[17].IN1
-switchesport_s1_readdata[18] => switchesport_s1_readdata[18].IN1
-switchesport_s1_readdata[19] => switchesport_s1_readdata[19].IN1
-switchesport_s1_readdata[20] => switchesport_s1_readdata[20].IN1
-switchesport_s1_readdata[21] => switchesport_s1_readdata[21].IN1
-switchesport_s1_readdata[22] => switchesport_s1_readdata[22].IN1
-switchesport_s1_readdata[23] => switchesport_s1_readdata[23].IN1
-switchesport_s1_readdata[24] => switchesport_s1_readdata[24].IN1
-switchesport_s1_readdata[25] => switchesport_s1_readdata[25].IN1
-switchesport_s1_readdata[26] => switchesport_s1_readdata[26].IN1
-switchesport_s1_readdata[27] => switchesport_s1_readdata[27].IN1
-switchesport_s1_readdata[28] => switchesport_s1_readdata[28].IN1
-switchesport_s1_readdata[29] => switchesport_s1_readdata[29].IN1
-switchesport_s1_readdata[30] => switchesport_s1_readdata[30].IN1
-switchesport_s1_readdata[31] => switchesport_s1_readdata[31].IN1
+swport_s1_address[0] <= altera_merlin_slave_translator:swport_s1_translator.av_address
+swport_s1_address[1] <= altera_merlin_slave_translator:swport_s1_translator.av_address
+swport_s1_readdata[0] => swport_s1_readdata[0].IN1
+swport_s1_readdata[1] => swport_s1_readdata[1].IN1
+swport_s1_readdata[2] => swport_s1_readdata[2].IN1
+swport_s1_readdata[3] => swport_s1_readdata[3].IN1
+swport_s1_readdata[4] => swport_s1_readdata[4].IN1
+swport_s1_readdata[5] => swport_s1_readdata[5].IN1
+swport_s1_readdata[6] => swport_s1_readdata[6].IN1
+swport_s1_readdata[7] => swport_s1_readdata[7].IN1
+swport_s1_readdata[8] => swport_s1_readdata[8].IN1
+swport_s1_readdata[9] => swport_s1_readdata[9].IN1
+swport_s1_readdata[10] => swport_s1_readdata[10].IN1
+swport_s1_readdata[11] => swport_s1_readdata[11].IN1
+swport_s1_readdata[12] => swport_s1_readdata[12].IN1
+swport_s1_readdata[13] => swport_s1_readdata[13].IN1
+swport_s1_readdata[14] => swport_s1_readdata[14].IN1
+swport_s1_readdata[15] => swport_s1_readdata[15].IN1
+swport_s1_readdata[16] => swport_s1_readdata[16].IN1
+swport_s1_readdata[17] => swport_s1_readdata[17].IN1
+swport_s1_readdata[18] => swport_s1_readdata[18].IN1
+swport_s1_readdata[19] => swport_s1_readdata[19].IN1
+swport_s1_readdata[20] => swport_s1_readdata[20].IN1
+swport_s1_readdata[21] => swport_s1_readdata[21].IN1
+swport_s1_readdata[22] => swport_s1_readdata[22].IN1
+swport_s1_readdata[23] => swport_s1_readdata[23].IN1
+swport_s1_readdata[24] => swport_s1_readdata[24].IN1
+swport_s1_readdata[25] => swport_s1_readdata[25].IN1
+swport_s1_readdata[26] => swport_s1_readdata[26].IN1
+swport_s1_readdata[27] => swport_s1_readdata[27].IN1
+swport_s1_readdata[28] => swport_s1_readdata[28].IN1
+swport_s1_readdata[29] => swport_s1_readdata[29].IN1
+swport_s1_readdata[30] => swport_s1_readdata[30].IN1
+swport_s1_readdata[31] => swport_s1_readdata[31].IN1
 
 
 |pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_master_translator:pcie_hard_ip_0_bar0_translator
@@ -38618,7 +38618,7 @@ av_response[1] => ~NO_FANOUT~
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:hexport_s1_translator
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:hexrport_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -39497,7 +39497,7 @@ av_response[1] => ~NO_FANOUT~
 av_writeresponsevalid => uav_writeresponsevalid.DATAIN
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:switchesport_s1_translator
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_translator:swport_s1_translator
 clk => in_transfer.CLK
 clk => end_beginbursttransfer.CLK
 clk => end_begintransfer.CLK
@@ -43349,7 +43349,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:hexport_s1_agent
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:hexrport_s1_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -44080,7 +44080,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:hexport_s1_agent|altera_merlin_burst_uncompressor:uncompressor
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:hexrport_s1_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -44494,7 +44494,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:hexport_s1_agent_rsp_fifo
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:hexrport_s1_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -49421,7 +49421,7 @@ almost_full_data <= <GND>
 almost_empty_data <= <GND>
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:switchesport_s1_agent
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:swport_s1_agent
 clk => clk.IN1
 reset => reset.IN1
 m0_address[0] <= <GND>
@@ -50152,7 +50152,7 @@ rp_startofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_startof
 rp_endofpacket <= altera_merlin_burst_uncompressor:uncompressor.source_endofpacket
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:switchesport_s1_agent|altera_merlin_burst_uncompressor:uncompressor
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_slave_agent:swport_s1_agent|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -50566,7 +50566,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:switchesport_s1_agent_rsp_fifo
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_avalon_sc_fifo:swport_s1_agent_rsp_fifo
 clk => csr_readdata[0]~reg0.CLK
 clk => csr_readdata[1]~reg0.CLK
 clk => csr_readdata[2]~reg0.CLK
@@ -66058,7 +66058,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter
 clk => clk.IN1
 reset => reset.IN1
 sink0_valid => sink0_valid.IN1
@@ -66313,7 +66313,7 @@ source0_endofpacket <= altera_merlin_burst_adapter_13_1:altera_merlin_burst_adap
 source0_ready => source0_ready.IN1
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter
 clk => clk.IN1
 reset => reset.IN1
 sink0_valid => in_valid.IN1
@@ -66591,7 +66591,7 @@ source0_ready => nxt_out_eop.OUTPUTSELECT
 source0_ready => nxt_uncomp_subburst_byte_cnt.IN1
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_address_alignment:align_address_to_size
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_address_alignment:align_address_to_size
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 in_data[0] => LessThan0.IN6
@@ -66672,12 +66672,12 @@ out_data[33] <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 out_ready => ~NO_FANOUT~
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_burstwrap_increment:the_burstwrap_increment
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_burstwrap_increment:the_burstwrap_increment
 mask[0] => inc[0].DATAIN
 inc[0] <= mask[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 a[0] => a_reg[0].IN3
@@ -66725,7 +66725,7 @@ result[8] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
 result[9] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -66761,7 +66761,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -66840,7 +66840,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -66876,7 +66876,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -66955,7 +66955,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -66991,7 +66991,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -67070,7 +67070,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -67106,7 +67106,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -67185,7 +67185,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -67221,7 +67221,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -67300,7 +67300,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -67336,7 +67336,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:hexrport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -70129,7 +70129,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter
 clk => clk.IN1
 reset => reset.IN1
 sink0_valid => sink0_valid.IN1
@@ -70384,7 +70384,7 @@ source0_endofpacket <= altera_merlin_burst_adapter_13_1:altera_merlin_burst_adap
 source0_ready => source0_ready.IN1
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter
 clk => clk.IN1
 reset => reset.IN1
 sink0_valid => in_valid.IN1
@@ -70662,7 +70662,7 @@ source0_ready => nxt_out_eop.OUTPUTSELECT
 source0_ready => nxt_uncomp_subburst_byte_cnt.IN1
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_address_alignment:align_address_to_size
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_address_alignment:align_address_to_size
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 in_data[0] => LessThan0.IN6
@@ -70743,12 +70743,12 @@ out_data[33] <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
 out_ready => ~NO_FANOUT~
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_burstwrap_increment:the_burstwrap_increment
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_burstwrap_increment:the_burstwrap_increment
 mask[0] => inc[0].DATAIN
 inc[0] <= mask[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min
 clk => ~NO_FANOUT~
 reset => ~NO_FANOUT~
 a[0] => a_reg[0].IN3
@@ -70796,7 +70796,7 @@ result[8] <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
 result[9] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -70832,7 +70832,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ab_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -70911,7 +70911,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -70947,7 +70947,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:ac_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -71026,7 +71026,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -71062,7 +71062,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:bc_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -71141,7 +71141,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -71177,7 +71177,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:da_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -71256,7 +71256,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -71292,7 +71292,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:db_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -71371,7 +71371,7 @@ sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -71407,7 +71407,7 @@ diff[9] <= altera_merlin_burst_adapter_adder:subtract.sum
 diff[10] <= altera_merlin_burst_adapter_adder:subtract.sum
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:switchesport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub|altera_merlin_burst_adapter_adder:subtract
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_burst_adapter:swport_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|altera_merlin_burst_adapter_min:the_min|altera_merlin_burst_adapter_subtractor:dc_sub|altera_merlin_burst_adapter_adder:subtract
 cin => sum.IN1
 cin => carry.IN0
 cin => carry.IN0
@@ -84247,7 +84247,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:hexport_s1_rsp_width_adapter
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:hexrport_s1_rsp_width_adapter
 clk => clk.IN1
 reset => reset.IN1
 in_ready <= in_ready.DB_MAX_OUTPUT_PORT_TYPE
@@ -84554,7 +84554,7 @@ in_command_size_data[1] => ~NO_FANOUT~
 in_command_size_data[2] => ~NO_FANOUT~
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:hexport_s1_rsp_width_adapter|altera_merlin_burst_uncompressor:uncompressor
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:hexrport_s1_rsp_width_adapter|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -86410,7 +86410,7 @@ source_burstsize[1] <= sink_burstsize[1].DB_MAX_OUTPUT_PORT_TYPE
 source_burstsize[2] <= sink_burstsize[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:switchesport_s1_rsp_width_adapter
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:swport_s1_rsp_width_adapter
 clk => clk.IN1
 reset => reset.IN1
 in_ready <= in_ready.DB_MAX_OUTPUT_PORT_TYPE
@@ -86717,7 +86717,7 @@ in_command_size_data[1] => ~NO_FANOUT~
 in_command_size_data[2] => ~NO_FANOUT~
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:switchesport_s1_rsp_width_adapter|altera_merlin_burst_uncompressor:uncompressor
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:swport_s1_rsp_width_adapter|altera_merlin_burst_uncompressor:uncompressor
 clk => burst_uncompress_address_offset[0].CLK
 clk => burst_uncompress_address_offset[1].CLK
 clk => burst_uncompress_address_offset[2].CLK
@@ -89197,7 +89197,7 @@ in_command_size_data[1] => ~NO_FANOUT~
 in_command_size_data[2] => ~NO_FANOUT~
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:hexport_s1_cmd_width_adapter
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:hexrport_s1_cmd_width_adapter
 clk => byteen_reg[0].CLK
 clk => byteen_reg[1].CLK
 clk => byteen_reg[2].CLK
@@ -91069,7 +91069,7 @@ in_command_size_data[1] => ~NO_FANOUT~
 in_command_size_data[2] => ~NO_FANOUT~
 
 
-|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:switchesport_s1_cmd_width_adapter
+|pcihello|pcihellocore:u0|pcihellocore_mm_interconnect_0:mm_interconnect_0|altera_merlin_width_adapter:swport_s1_cmd_width_adapter
 clk => byteen_reg[0].CLK
 clk => byteen_reg[1].CLK
 clk => byteen_reg[2].CLK

@@ -68,8 +68,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 488)
 		(input)
-		(text "switchesport_external_connection_export[31..0]" (rect 0 0 186 12)(font "Arial" (font_size 8)))
-		(text "switchesport_external_connection_export[31..0]" (rect 4 477 280 488)(font "Arial" (font_size 8)))
+		(text "swport_external_connection_export[31..0]" (rect 0 0 164 12)(font "Arial" (font_size 8)))
+		(text "swport_external_connection_export[31..0]" (rect 4 477 244 488)(font "Arial" (font_size 8)))
 		(line (pt 0 488)(pt 256 488)(line_width 3))
 	)
 	(port
@@ -82,8 +82,8 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 112)
 		(output)
-		(text "hexport_external_connection_export[31..0]" (rect 0 0 167 12)(font "Arial" (font_size 8)))
-		(text "hexport_external_connection_export[31..0]" (rect 4 101 250 112)(font "Arial" (font_size 8)))
+		(text "hexrport_external_connection_export[31..0]" (rect 0 0 171 12)(font "Arial" (font_size 8)))
+		(text "hexrport_external_connection_export[31..0]" (rect 4 101 256 112)(font "Arial" (font_size 8)))
 		(line (pt 0 112)(pt 256 112)(line_width 3))
 	)
 	(port
@@ -110,7 +110,7 @@ refer to the applicable agreement for further details.
 	(drawing
 		(text "hexlport_external_connection" (rect 88 43 344 99)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 261 67 558 144)(font "Arial" (color 0 0 0)))
-		(text "hexport_external_connection" (rect 91 83 344 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "hexrport_external_connection" (rect 86 83 340 179)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 261 107 558 224)(font "Arial" (color 0 0 0)))
 		(text "keysport_external_connection" (rect 84 123 336 259)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 261 147 558 304)(font "Arial" (color 0 0 0)))
@@ -129,7 +129,7 @@ refer to the applicable agreement for further details.
 		(text "rx_datain_0" (rect 261 403 588 816)(font "Arial" (color 0 0 0)))
 		(text "pcie_hard_ip_0_tx_out" (rect 123 419 372 851)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "tx_dataout_0" (rect 261 443 594 896)(font "Arial" (color 0 0 0)))
-		(text "switchesport_external_connection" (rect 60 459 312 931)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "swport_external_connection" (rect 94 459 344 931)(font "Arial" (color 128 0 0)(font_size 9)))
 		(text "export" (rect 261 483 558 976)(font "Arial" (color 0 0 0)))
 		(text " pcihellocore " (rect 555 504 1194 1018)(font "Arial" ))
 		(line (pt 256 32)(pt 352 32)(line_width 1))

@@ -1,5 +1,5 @@
 Restore Archived Project report for pcihello
-Tue Mar 18 15:58:02 2025
+Wed Mar 26 14:56:46 2025
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------+
 ; Restore Archived Project Summary                                        ;
 +---------------------------------+---------------------------------------+
-; Restore Archived Project Status ; Successful - Tue Mar 18 15:58:02 2025 ;
+; Restore Archived Project Status ; Successful - Wed Mar 26 14:56:46 2025 ;
 ; Revision Name                   ; pcihello                              ;
 ; Top-level Entity Name           ; pcihello                              ;
 ; Family                          ; Cyclone IV GX                         ;
@@ -47,13 +47,13 @@ refer to the applicable agreement for further details.
 ; Restore Archived Project Messages ;
 +-----------------------------------+
 Warning (292006): Can't contact license server "27200@pesqueira.cin.ufpe.br" -- this server will be ignored.
-Info: Successfully restored 'D:/Users/mfss2/Desktop/GitHub/IHS_DRIVER_Project/docs/mapeamento/pcihello.qar' into the 'D:/Users/mfss2/Desktop/GitHub/IHS_DRIVER_Project/docs/mapeamento/pcihello_restored/' directory
+Info: Successfully restored 'D:/Users/mfss2/Desktop/GitHub/IHS_DRIVER_Project/Hardware/mapeamento/pcihello.qar' into the 'D:/Users/mfss2/Desktop/GitHub/IHS_DRIVER_Project/Hardware/mapeamento/pcihello_restored/' directory
 Info: Generated report 'pcihello.restore.rpt'
 Info (23030): Evaluation of Tcl script c:/altera/17.1/quartus/common/tcl/apps/qpm/qar.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 105 warnings
-    Info: Peak virtual memory: 4868 megabytes
-    Info: Processing ended: Tue Mar 18 15:58:02 2025
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4869 megabytes
+    Info: Processing ended: Wed Mar 26 14:56:46 2025
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

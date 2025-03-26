@@ -67,7 +67,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
   </table>
   <table class="blueBar">
    <tr>
-    <td class="l">2025.03.20.15:08:13</td>
+    <td class="l">2025.03.26.15:21:47</td>
     <td class="r">Datasheet</td>
    </tr>
   </table>
@@ -87,7 +87,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <a href="#module_hexlport"><b>hexlport</b>
      </a> altera_avalon_pio 17.1
      <br/>&#160;&#160;
-     <a href="#module_hexport"><b>hexport</b>
+     <a href="#module_hexrport"><b>hexrport</b>
      </a> altera_avalon_pio 17.1
      <br/>&#160;&#160;
      <a href="#module_keysport"><b>keysport</b>
@@ -102,7 +102,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
      <a href="#module_pcie_hard_ip_0"><b>pcie_hard_ip_0</b>
      </a> altera_pcie_hard_ip 17.1
      <br/>&#160;&#160;
-     <a href="#module_switchesport"><b>switchesport</b>
+     <a href="#module_swport"><b>swport</b>
      </a> altera_avalon_pio 17.1</span>
    </div>
   </div>
@@ -128,33 +128,11 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>0000c080</td>
+    <td class="addr"><span style="color:#989898">0x</span>0000c040</td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
-     <a href="#module_hexport"><b>hexport</b>
-     </a>
-    </td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>0000c000</td>
-   </tr>
-   <tr>
-    <td class="slavemodule">&#160;
-     <a href="#module_keysport"><b>keysport</b>
-     </a>
-    </td>
-    <td class="empty"></td>
-   </tr>
-   <tr>
-    <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>0000c0a0</td>
-   </tr>
-   <tr>
-    <td class="slavemodule">&#160;
-     <a href="#module_ledsgreenport"><b>ledsgreenport</b>
+     <a href="#module_hexrport"><b>hexrport</b>
      </a>
     </td>
     <td class="empty"></td>
@@ -165,6 +143,28 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slavemodule">&#160;
+     <a href="#module_keysport"><b>keysport</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>0000c020</td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
+     <a href="#module_ledsgreenport"><b>ledsgreenport</b>
+     </a>
+    </td>
+    <td class="empty"></td>
+   </tr>
+   <tr>
+    <td class="slaveb">s1&#160;</td>
+    <td class="addr"><span style="color:#989898">0x</span>0000c0a0</td>
+   </tr>
+   <tr>
+    <td class="slavemodule">&#160;
      <a href="#module_ledsredport"><b>ledsredport</b>
      </a>
     </td>
@@ -172,7 +172,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>0000c040</td>
+    <td class="addr"><span style="color:#989898">0x</span>0000c080</td>
    </tr>
    <tr>
     <td class="slavemodule">&#160;
@@ -191,14 +191,14 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
    </tr>
    <tr>
     <td class="slavemodule">&#160;
-     <a href="#module_switchesport"><b>switchesport</b>
+     <a href="#module_swport"><b>swport</b>
      </a>
     </td>
     <td class="empty"></td>
    </tr>
    <tr>
     <td class="slaveb">s1&#160;</td>
-    <td class="addr"><span style="color:#989898">0x</span>0000c020</td>
+    <td class="addr"><span style="color:#989898">0x</span>0000c000</td>
    </tr>
   </table>
   <a name="module_hexlport"> </a>
@@ -393,10 +393,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_hexport"> </a>
+  <a name="module_hexrport"> </a>
   <div>
    <hr/>
-   <h2>hexport</h2>altera_avalon_pio v17.1
+   <h2>hexrport</h2>altera_avalon_pio v17.1
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -405,7 +405,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_pcie_hard_ip_0">pcie_hard_ip_0</a>
       </td>
       <td class="from">bar0&#160;&#160;</td>
-      <td class="main" rowspan="6">hexport</td>
+      <td class="main" rowspan="6">hexrport</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>
@@ -461,7 +461,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">resetValue</td>
-        <td class="parametervalue">0</td>
+        <td class="parametervalue">1077952576</td>
        </tr>
        <tr>
         <td class="parametername">simDoTestBenchWiring</td>
@@ -578,7 +578,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        </tr>
        <tr>
         <td class="parametername">RESET_VALUE</td>
-        <td class="parametervalue">0</td>
+        <td class="parametervalue">1077952576</td>
        </tr>
       </table>
      </td>
@@ -1174,7 +1174,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td class="main" rowspan="41">pcie_hard_ip_0</td>
       <td class="from">bar0&#160;&#160;</td>
       <td class="neighbor" rowspan="6">
-       <a href="#module_hexport">hexport</a>
+       <a href="#module_hexrport">hexrport</a>
       </td>
      </tr>
      <tr>
@@ -1282,7 +1282,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
       <td></td>
       <td class="from">bar0&#160;&#160;</td>
       <td class="neighbor" rowspan="6">
-       <a href="#module_switchesport">switchesport</a>
+       <a href="#module_swport">swport</a>
       </td>
      </tr>
      <tr>
@@ -2202,10 +2202,10 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
     </tr>
    </table>
   </div>
-  <a name="module_switchesport"> </a>
+  <a name="module_swport"> </a>
   <div>
    <hr/>
-   <h2>switchesport</h2>altera_avalon_pio v17.1
+   <h2>swport</h2>altera_avalon_pio v17.1
    <br/>
    <div class="greydiv">
     <table class="connectionboxes">
@@ -2214,7 +2214,7 @@ div.greydiv { vertical-align:top ; text-align:center ; background:#eeeeee ; bord
        <a href="#module_pcie_hard_ip_0">pcie_hard_ip_0</a>
       </td>
       <td class="from">bar0&#160;&#160;</td>
-      <td class="main" rowspan="6">switchesport</td>
+      <td class="main" rowspan="6">swport</td>
      </tr>
      <tr>
       <td class="to">&#160;&#160;s1</td>

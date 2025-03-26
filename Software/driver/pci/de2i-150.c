@@ -233,28 +233,28 @@ static long int my_ioctl(struct file*, unsigned int cmd, unsigned long arg)
 {
 	switch(cmd){
 	case RD_SWITCHES:
-		read_pointer = bar0_mmio + 0xC020; //TODO: update offset
+		read_pointer = bar0_mmio + 0xC000; //TODO: update offset
 		rd_name_idx = IDX_SWITCH;
 		break;
 	case RD_PBUTTONS:
-		read_pointer = bar0_mmio + 0xC0A0; //TODO: update offset
+		read_pointer = bar0_mmio + 0xC020; //TODO: update offset
 		rd_name_idx = IDX_PBUTTONS;
 		break;
 	case WR_L_DISPLAY:
-		write_pointer = bar0_mmio + 0xC080; //TODO: update offset
+		write_pointer = bar0_mmio + 0xC040; //TODO: update offset
 		wr_name_idx = IDX_DISPLAYL;
 		break;
 	case WR_R_DISPLAY:
-		write_pointer = bar0_mmio + 0xC000; //TODO: update offset
+		write_pointer = bar0_mmio + 0xC060; //TODO: update offset
 		wr_name_idx = IDX_DISPLAYR;
 		break;
 	case WR_RED_LEDS:
-		write_pointer = bar0_mmio + 0xC040; //TODO: update offset
-		wr_name_idx = IDX_DISPLAYR;
+		write_pointer = bar0_mmio + 0xC080; //TODO: update offset
+		wr_name_idx = IDX_GREENLED;
 		break;
 	case WR_GREEN_LEDS:
-		write_pointer = bar0_mmio + 0xC060; //TODO: update offset
-		wr_name_idx = IDX_DISPLAYR;
+		write_pointer = bar0_mmio + 0xC0A0; //TODO: update offset
+		wr_name_idx = IDX_REDLED;
 		break;
 	default:
 		printk("my_driver: unknown ioctl command: 0x%X\n", cmd);
