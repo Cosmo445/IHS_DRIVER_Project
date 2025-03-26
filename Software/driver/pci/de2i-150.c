@@ -298,8 +298,8 @@ static int __init my_pci_probe(struct pci_dev *dev, const struct pci_device_id *
 	bar0_mmio = pci_iomap(dev, 0, bar_len);
 
 	/* initialize a default peripheral read and write pointer */
-	read_pointer  = bar0_mmio + 0xC020; // switches
-	write_pointer = bar0_mmio + 0xC040; // leds red
+	read_pointer  = bar0_mmio + 0xC000; // switches
+	write_pointer = bar0_mmio + 0xC080; // leds red
 
 	return 0;
 }
@@ -322,4 +322,5 @@ static void __exit my_pci_remove(struct pci_dev *dev)
 }
 
 module_init(my_init);
+
 module_exit(my_exit);
