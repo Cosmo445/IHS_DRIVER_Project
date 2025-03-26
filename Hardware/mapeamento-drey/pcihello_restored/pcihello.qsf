@@ -287,6 +287,10 @@ set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/ -tag from_archive
 set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/submodules/ -tag from_archive
 set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/ -tag from_archive
 set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/submodules/ -tag from_archive
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name QIP_FILE pcihellocore/synthesis/pcihellocore.qip
 set_global_assignment -name VERILOG_FILE pcihello.v
 set_global_assignment -name QSYS_FILE pcihellocore.qsys
@@ -295,62 +299,14 @@ set_global_assignment -name SOURCE_FILE pcihello.cmp
 set_global_assignment -name SDC_FILE pcihello.sdc
 set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_rsp_xbar_mux.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_rsp_xbar_demux.sv
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_pcie_hard_ip_0_altgx_internal.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_pcie_hard_ip_0.v
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_irq_mapper.sv
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_inport.v
 set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_id_router_003.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_id_router.sv
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_hexport.v
 set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_cmd_xbar_demux.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_addr_router.sv
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_txresp_cntrl.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_txavl_cntrl.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_tx_cntrl.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_tx.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_rx_resp.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_rx_cntrl.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_rx.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_reg_fifo.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_p2a_addrtrans.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_cr_mailbox.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_cr_interrupt.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_cr_avalon.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_control_register.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_app.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_a2p_vartrans.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_a2p_fixtrans.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_stif_a2p_addrtrans.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_lite_app.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpciexpav_clksync.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpcie_rs_serdes.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpcie_pll_125_250.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpcie_pll_100_250.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpcie_pipe_interface.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpcie_pcie_reconfig_bridge.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altpcie_hip_pipen1b_qsys.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_reset_synchronizer.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_reset_controller.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_pcie_hard_ip_reset_controller.v
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_width_adapter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_traffic_limiter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_slave_translator.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_slave_agent.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_master_translator.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_master_agent.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_burst_uncompressor.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_burst_adapter.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_arbitrator.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_merlin_address_alignment.sv
 set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_irq_clock_crosser.sv
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_pipeline_base.v
+set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_pipeline_base.v -library pcihellocore
 set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
 set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_clock_crosser.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_sc_fifo.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/pcihellocore.v
+set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_sc_fifo.v -library pcihellocore
 set_global_assignment -name SDC_FILE pcihello.SDC
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
-set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -45,8 +45,8 @@ static void __exit my_pci_remove (struct pci_dev *dev);
 /* pci ids which this driver supports */
 
 static struct pci_device_id pci_ids[] = {
-	{PCI_DEVICE(MY_PCI_VENDOR_ID, MY_PCI_DEVICE_ID), },
-	{0, }
+	{ PCI_DEVICE(MY_PCI_VENDOR_ID, MY_PCI_DEVICE_ID), },
+	{ 0, }
 };
 MODULE_DEVICE_TABLE(pci, pci_ids);
 
@@ -100,7 +100,8 @@ enum perf_names_idx {
 	IDX_DISPLAYL,
 	IDX_DISPLAYR,
 	IDX_GREENLED,
-	IDX_REDLED
+	IDX_REDLED,
+	IDX_SWITCH_1
 };
 static int wr_name_idx = IDX_DISPLAYR;
 static int rd_name_idx = IDX_SWITCH;
@@ -125,7 +126,7 @@ static int __init my_init(void)
 	printk("my_driver: device number %d was registered!\n", MAJOR(my_device_nbr));
 
 	/* 2. create class : appears at /sys/class */
-	if ((my_class = class_create(THIS_MODULE, DRIVER_CLASS)) == NULL) {
+	if ((my_class = class_create(DRIVER_CLASS)) == NULL) {
 		printk("my_driver: device class count not be created!\n");
 		goto ClassError;
 	}
@@ -255,6 +256,10 @@ static long int my_ioctl(struct file*, unsigned int cmd, unsigned long arg)
 	case WR_GREEN_LEDS:
 		write_pointer = bar0_mmio + 0xC0A0; //TODO: update offset
 		wr_name_idx = IDX_DISPLAYR;
+		break;
+	case RD_SWITCHES_1:
+		read_pointer = bar0_mmio + 0xC0C0; //TODO: update offset
+		rd_name_idx = IDX_SWITCH_1;
 		break;
 	default:
 		printk("my_driver: unknown ioctl command: 0x%X\n", cmd);

@@ -9,7 +9,7 @@
    categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
-   element hexport
+   element hexrport
    {
       datum _sortIndex
       {
@@ -17,27 +17,11 @@
          type = "int";
       }
    }
-   element hexport.s1
+   element hexrport.s1
    {
       datum baseAddress
       {
          value = "49152";
-         type = "String";
-      }
-   }
-   element inport
-   {
-      datum _sortIndex
-      {
-         value = "2";
-         type = "int";
-      }
-   }
-   element inport.s1
-   {
-      datum baseAddress
-      {
-         value = "49184";
          type = "String";
       }
    }
@@ -70,6 +54,30 @@
          type = "String";
       }
    }
+   element sw07port
+   {
+      datum _sortIndex
+      {
+         value = "2";
+         type = "int";
+      }
+   }
+   element sw07port.s1
+   {
+      datum baseAddress
+      {
+         value = "49184";
+         type = "String";
+      }
+   }
+   element sw15port
+   {
+      datum _sortIndex
+      {
+         value = "3";
+         type = "int";
+      }
+   }
 }
 ]]></parameter>
  <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
@@ -92,13 +100,8 @@
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
-   name="hexport_external_connection"
-   internal="hexport.external_connection"
-   type="conduit"
-   dir="end" />
- <interface
-   name="inport_external_connection"
-   internal="inport.external_connection"
+   name="hexrport_external_connection"
+   internal="hexrport.external_connection"
    type="conduit"
    dir="end" />
  <interface
@@ -126,7 +129,17 @@
    internal="pcie_hard_ip_0.tx_out"
    type="conduit"
    dir="end" />
- <module name="hexport" kind="altera_avalon_pio" version="17.1" enabled="1">
+ <interface
+   name="sw07port_external_connection"
+   internal="sw07port.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="sw15port_external_connection"
+   internal="sw15port.external_connection"
+   type="conduit"
+   dir="end" />
+ <module name="hexrport" kind="altera_avalon_pio" version="17.1" enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -136,20 +149,6 @@
   <parameter name="generateIRQ" value="false" />
   <parameter name="irqType" value="LEVEL" />
   <parameter name="resetValue" value="1077952576" />
-  <parameter name="simDoTestBenchWiring" value="false" />
-  <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="32" />
- </module>
- <module name="inport" kind="altera_avalon_pio" version="17.1" enabled="1">
-  <parameter name="bitClearingEdgeCapReg" value="false" />
-  <parameter name="bitModifyingOutReg" value="false" />
-  <parameter name="captureEdge" value="false" />
-  <parameter name="clockRate" value="62500000" />
-  <parameter name="direction" value="Input" />
-  <parameter name="edgeType" value="RISING" />
-  <parameter name="generateIRQ" value="false" />
-  <parameter name="irqType" value="LEVEL" />
-  <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
   <parameter name="width" value="32" />
@@ -279,6 +278,34 @@
   <parameter name="use_crc_forwarding" value="false" />
   <parameter name="vendor_id" value="4466" />
  </module>
+ <module name="sw07port" kind="altera_avalon_pio" version="17.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="62500000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
+ <module name="sw15port" kind="altera_avalon_pio" version="17.1" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="62500000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="32" />
+ </module>
  <connection
    kind="avalon"
    version="17.1"
@@ -292,7 +319,7 @@
    kind="avalon"
    version="17.1"
    start="pcie_hard_ip_0.bar0"
-   end="inport.s1">
+   end="sw07port.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0xc000" />
   <parameter name="defaultConnection" value="false" />
@@ -301,9 +328,18 @@
    kind="avalon"
    version="17.1"
    start="pcie_hard_ip_0.bar0"
-   end="hexport.s1">
+   end="hexrport.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0xc060" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="17.1"
+   start="pcie_hard_ip_0.bar0"
+   end="sw15port.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0xc0c0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -324,12 +360,17 @@
    kind="clock"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_clk"
-   end="inport.clk" />
+   end="sw07port.clk" />
  <connection
    kind="clock"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_clk"
-   end="hexport.clk" />
+   end="hexrport.clk" />
+ <connection
+   kind="clock"
+   version="17.1"
+   start="pcie_hard_ip_0.pcie_core_clk"
+   end="sw15port.clk" />
  <connection
    kind="clock"
    version="17.1"
@@ -344,12 +385,17 @@
    kind="reset"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_reset"
-   end="inport.reset" />
+   end="sw07port.reset" />
  <connection
    kind="reset"
    version="17.1"
    start="pcie_hard_ip_0.pcie_core_reset"
-   end="hexport.reset" />
+   end="hexrport.reset" />
+ <connection
+   kind="reset"
+   version="17.1"
+   start="pcie_hard_ip_0.pcie_core_reset"
+   end="sw15port.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

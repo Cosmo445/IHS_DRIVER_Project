@@ -88,8 +88,9 @@ inout 		          		FAN_CTRL;
 //  REG/WIRE declarations
 //=======================================================
 
-wire [31:0] hexbus;
-wire [31:0] inbus;
+wire [31:0] hexrbus;
+wire [31:0] sw07bus;
+wire [31:0] sw815bus;
 
 
 //=======================================================
@@ -97,25 +98,27 @@ wire [31:0] inbus;
 //=======================================================
 
     pcihellocore u0 (
-        .pcie_hard_ip_0_rx_in_rx_datain_0       (PCIE_RX_P[0]),       //     pcie_hard_ip_0_rx_in.rx_datain_0
-        .pcie_hard_ip_0_tx_out_tx_dataout_0     (PCIE_TX_P[0]),     //    pcie_hard_ip_0_tx_out.tx_dataout_0
-        .pcie_hard_ip_0_powerdown_pll_powerdown (PCIE_WAKE_N), // pcie_hard_ip_0_powerdown.pll_powerdown
-        .pcie_hard_ip_0_powerdown_gxb_powerdown (PCIE_WAKE_N), //                         .gxb_powerdown
-        .pcie_hard_ip_0_refclk_export           (PCIE_REFCLK_P),           //    pcie_hard_ip_0_refclk.export
-        .pcie_hard_ip_0_pcie_rstn_export        (PCIE_PERST_N),
-        .hexport_external_connection_export     (hexbus),     // hexport_external_connection.export
-        .inport_external_connection_export      (inbus)       //  inport_external_connection.export
-    );
+        .pcie_hard_ip_0_rx_in_rx_datain_0       (PCIE_RX_P[0]),   //   pcie_hard_ip_0_rx_in.rx_datain_0
+        .pcie_hard_ip_0_tx_out_tx_dataout_0     (PCIE_TX_P[0]),   //   pcie_hard_ip_0_tx_out.tx_dataout_0
+        .pcie_hard_ip_0_powerdown_pll_powerdown (PCIE_WAKE_N),    //   pcie_hard_ip_0_powerdown.pll_powerdown
+        .pcie_hard_ip_0_powerdown_gxb_powerdown (PCIE_WAKE_N),    //   .gxb_powerdown
+        .pcie_hard_ip_0_refclk_export           (PCIE_REFCLK_P),  //    pcie_hard_ip_0_refclk.export
+        .pcie_hard_ip_0_pcie_rstn_export        (PCIE_PERST_N), 
+        .hexrport_external_connection_export    (hexrbus),        // hexport_external_connection.export
+        .sw07port_external_connection_export    (sw07bus),        // sw07port_external_connection.export
+        .sw15port_external_connection_export    (sw815bus)        // sw15port_external_connection.export
+	 );
 
 
 	//////////// FAN Control //////////
 assign FAN_CTRL = 1'b1; // turn off FAN
 
-assign HEX0 = hexbus[ 6: 0];
-assign HEX1 = hexbus[14: 8];
-assign HEX2 = hexbus[22:16];
-assign HEX3 = hexbus[30:24];
+assign HEX0 = hexrbus[ 6: 0];
+assign HEX1 = hexrbus[14: 8];
+assign HEX2 = hexrbus[22:16];
+assign HEX3 = hexrbus[30:24];
 
-assign inbus = SW[17:0];
+assign sw07bus = SW[7:0];
+assign sw815bus = SW[17:8];
 
 endmodule

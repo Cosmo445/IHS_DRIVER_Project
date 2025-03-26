@@ -18,19 +18,19 @@
 // altera message_level Level1 
 // altera message_off 10034 10035 10036 10037 10230 10240 10030 
 
-module pcihellocore_hexport (
-                              // inputs:
-                               address,
-                               chipselect,
-                               clk,
-                               reset_n,
-                               write_n,
-                               writedata,
+module pcihellocore_hexrport (
+                               // inputs:
+                                address,
+                                chipselect,
+                                clk,
+                                reset_n,
+                                write_n,
+                                writedata,
 
-                              // outputs:
-                               out_port,
-                               readdata
-                            )
+                               // outputs:
+                                out_port,
+                                readdata
+                             )
 ;
 
   output  [ 31: 0] out_port;

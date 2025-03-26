@@ -28,6 +28,7 @@ int main(int argc, char** argv)
     }
 
     unsigned int data = 0x40404079;
+    unsigned int data_1 = 0x00000000;
 
 /*
     ioctl(fd, RD_SWITCHES);
@@ -55,8 +56,15 @@ int main(int argc, char** argv)
 
         // PRINTA LEITURA NO TERMINAL
         printf("new data: 0x%X\n", data);
-        for(int i = 1<<18; i > 0; i>>=1) {
+        for(int i = 1<<8; i > 0; i>>=1) {
             printf("%c", data & i ? '1':'0');
+        }
+        printf("\n");
+        
+        ioctl(fd, RD_SWITCHES_1);
+        read(fd, &data_1, 1);
+        for(int i = 1<<10; i > 0; i>>=1) {
+            printf("%c", data_1 & i ? '1':'0');
         }
         printf("\n");
 
