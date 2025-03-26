@@ -44,13 +44,18 @@ int main(int argc, char** argv)
             printf("%c", data & i ? '1':'0');
         }
         printf("\n");
-
-        //ESCREVE LEITURA NOS 7SEG DA DIREITA
+        // ESCREVE LEITURA NOS 7SEG DA DIREITA
         ioctl(fd, WR_R_DISPLAY);
         retval = write(fd, &data, sizeof(data));
-
         // ESCREVE LEITURA NOS LEDS
         ioctl(fd, WR_RED_LEDS);
+        retval = write(fd, &data, sizeof(data));
+
+        // LÊ DOS BOTOES
+        ioctl(fd, RD_PBUTTONS);
+        read(fd, &data, 4);
+        //ESCREVE LEITURA NOS 7SEG DA ESQUERDA
+        ioctl(fd, WR_L_DISPLAY);
         retval = write(fd, &data, sizeof(data));
 
         // ANIMACAO DOS LEDS VERDES
