@@ -29,8 +29,12 @@ int main(int argc, char **argv) {
     }
 
     lcd_init(fd);
-
-    // while(1);
+    int info = 0b0000000000000000001010001001000001;
+    while(1) {
+    	lcd_write_info(fd, info);
+    }
+    
+    close(fd);
 
     return 0;
 }
