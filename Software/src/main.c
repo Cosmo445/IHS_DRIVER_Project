@@ -1,3 +1,7 @@
+#define RODANDO_NA_PLACA 0
+
+#if RODANDO_NA_PLACA
+
 #include <stdio.h>	/* printf */
 #include <stdlib.h>	/* malloc, atoi, rand... */
 #include <string.h>	/* memcpy, strlen... */
@@ -9,21 +13,29 @@
 #include <errno.h>	/* error codes */
 
 // ioctl commands defined for the pci driver header
-#include "ioctl_cmds.h"
+#include "../include/ioctl_cmds.h"
 
-#include "raylib.h"
+#endif
+
 #include <stdio.h>
+#include "raylib.h"
 
 //https://www.raylib.com/cheatsheet/cheatsheet.html
 //https://github.com/raysan5/raylib/discussions/2478
 
 
 // Funcoes hardware (((TODO: fazer)))
+void readBotoes();
+char botao____(char);
 char botaoLeft();
 char botaoUp();
 char botaoDown();
 char botaoRight();
+
+void readSwitches();
 int switches();
+int switch_(int);
+
 void leds_verm(int);
 void leds_verd(int);
 char contaBits[16];
@@ -34,36 +46,83 @@ char energiaArmas();
 char quantasVelas();
 char quantasValvulas();
 
-char botaoLeft() 
-    { return IsKeyPressed(KEY_LEFT); }
-char botaoUp() 
-    { return IsKeyPressed(KEY_UP); }
-char botaoDown() 
-    { return IsKeyPressed(KEY_DOWN); }
-char botaoRight() 
-    { return IsKeyPressed(KEY_RIGHT); }
-int switches() {
-    return 
-        (((int)IsKeyPressed(KEY_V))<<17) +
-        (((int)IsKeyPressed(KEY_B))<<16) +
-        (((int)IsKeyPressed(KEY_N))<<15) +
-        (((int)IsKeyPressed(KEY_M))<<14) +
-        (((int)IsKeyPressed(KEY_E))<<13) +
-        (((int)IsKeyPressed(KEY_R))<<12) +
-        (((int)IsKeyPressed(KEY_T))<<11) +
-        (((int)IsKeyPressed(KEY_Y))<<10) +
-        (((int)IsKeyPressed(KEY_U))<< 9) +
-        (((int)IsKeyPressed(KEY_I))<< 8) +
-        (((int)IsKeyPressed(KEY_O))<< 7) +
-        (((int)IsKeyPressed(KEY_P))<< 6) +
-        (((int)IsKeyPressed(KEY_F))<< 5) +
-        (((int)IsKeyPressed(KEY_G))<< 4) +
-        (((int)IsKeyPressed(KEY_H))<< 3) +
-        (((int)IsKeyPressed(KEY_J))<< 2) +
-        (((int)IsKeyPressed(KEY_K))<< 1) +
-        (((int)IsKeyPressed(KEY_L))<< 0)
+char rd_botoes;
+#ifdef O_RDWR
+int fd;
+#endif
+void readBotoes() {
+    #ifdef RD_PBUTTONS
+    // LÊ DOS BOTOES DA PLACA
+    ioctl(fd, RD_PBUTTONS);
+    read(fd, &rd_botoes, 1);
+    #else
+    rd_botoes = 
+        (IsKeyPressed(KEY_LEFT)  <<3) +
+        (IsKeyPressed(KEY_UP)    <<2) +
+        (IsKeyPressed(KEY_DOWN)  <<1) +
+        (IsKeyPressed(KEY_RIGHT) <<0)
     ;
+    #endif
 }
+char botao____(char qual) {
+    static char retorno = 0, pressed_prev[4] = {1,1,1,1}, pressed_now = 0;
+    pressed_now = !(rd_botoes&(1<<qual));
+	retorno = (!pressed_prev[qual]) && pressed_now; // se pressionado, mas n acabou de pressionar
+	pressed_prev[qual] = pressed_now;             // guarda pressed now pra proxima chamada
+	return retorno;
+}
+char botaoLeft() { 
+    return botao____(3);
+}
+char botaoUp() { 
+    return botao____(2);
+}
+char botaoDown() {
+    return botao____(1);
+}
+char botaoRight() { 
+    return botao____(0);
+}
+
+int rd_switches;
+void readSwitches() {
+    #ifdef RD_SWITCHES
+    ioctl(fd, RD_SWITCHES);
+    read(fd, &rd_switches, 4);
+    #else
+    static int pressed_prev = 0, pressed_now = 0, pressed_true;
+    pressed_now =
+        (((int)IsKeyPressed(KEY_E))<<17) +
+        (((int)IsKeyPressed(KEY_R))<<16) +
+        (((int)IsKeyPressed(KEY_T))<<15) +
+        (((int)IsKeyPressed(KEY_Y))<<14) +
+        (((int)IsKeyPressed(KEY_U))<<13) +
+        (((int)IsKeyPressed(KEY_I))<<12) +
+        (((int)IsKeyPressed(KEY_O))<<11) +
+        (((int)IsKeyPressed(KEY_P))<<10) +
+        (((int)IsKeyPressed(KEY_H))<< 9) +
+        (((int)IsKeyPressed(KEY_J))<< 8) +
+        (((int)IsKeyPressed(KEY_K))<< 7) +
+        (((int)IsKeyPressed(KEY_L))<< 6) +
+        (((int)IsKeyPressed(KEY_X))<< 5) +
+        (((int)IsKeyPressed(KEY_C))<< 4) +
+        (((int)IsKeyPressed(KEY_V))<< 3) +
+        (((int)IsKeyPressed(KEY_B))<< 2) +
+        (((int)IsKeyPressed(KEY_N))<< 1) +
+        (((int)IsKeyPressed(KEY_M))<< 0)
+    ;
+    pressed_true = (~pressed_prev) & pressed_now;
+    pressed_prev = pressed_now;
+    rd_switches ^= pressed_true;
+    #endif
+}
+int switches() {
+    return rd_switches;
+}
+int switch_(int qual){
+    return rd_switches&(1<<qual);
+}
+
 void leds_verm(int valor) {
     ;
 }
@@ -95,6 +154,7 @@ char quantasValvulas() {
     return contaBits[(switches()>> 0)&15];
 }
 
+
 // Cenas do jogo
 enum cenas_enum {
     MENU = 0,
@@ -106,6 +166,7 @@ enum cenas_enum {
 int cena_atual = MENU;
 
 int FASE = 1;
+
 
 // Update de variáveis
 void runMenu();
@@ -133,17 +194,15 @@ void runMenu() {
     if(botaoUp()) cena_atual = opcao+1;
 }
 void runControles() {
-    if(botaoDown())
-        cena_atual = MENU;
+    if(botaoDown()) cena_atual = MENU;
 }
 void runCreditos() {
-    if(botaoDown())
-        cena_atual = MENU;
+    if(botaoDown()) cena_atual = MENU;
 }
 void runJogo() {
-    if(botaoDown())
-        cena_atual = MENU;
     
+    // slides
+    if(botaoDown()) cena_atual = MENU;
     if(botaoRight()) {
         if(FASE<3) FASE++;
         else FASE = 1;
@@ -154,6 +213,7 @@ void runJogo() {
     }
     
     // Coisas que rodam em todas a fases
+    readSwitches();
     
     // Coisas que so rodam em algumas fases
     switch (FASE) {
@@ -173,9 +233,7 @@ void runJogo() {
 void telaMenu();
 void telaControles();
 void telaCreditos();
-void telaJogo_1();
-void telaJogo_2();
-void telaJogo_3();
+void telaJogo();
 
 void telaInicio();
 
@@ -258,6 +316,7 @@ void telaCreditos() {
 void telaJogo() {
     ClearBackground(RAYWHITE);
     
+    // Elementos visuais de certas fases
     switch (FASE) {
         case 1:
             DrawText("JOGO_1", 190, 200, 20, GRAY);
@@ -271,6 +330,23 @@ void telaJogo() {
             DrawText("JOGO_3", 190, 200, 20, GRAY);
             DrawTexture(FundoJogo_3, 0, 0, WHITE);
     }
+    
+    // Elementos visuais de todas a fases
+    
+    // TODO: make static or global (to precompute)
+    int SwWi = ScWi/40, SwHe=ScHe/15, GapWi = (ScWi-SwWi*18)/19;
+    for(int i = 0; i < 18; i++) {
+        
+        // TODO: desenha 'net' do botao, fios que conectam botao a um componente
+        // cor da net muda quando se aperta um botao; tipo redstone
+        
+        DrawRectangle(
+            GapWi+(i)*(GapWi+SwWi), 
+            ScHe-(ScHe/10), 
+            SwWi, SwHe, 
+            switch_(17-i) ? (Color){200,10,10,255} : (Color){10,10,10,255}
+        );
+    }
 }
 
 
@@ -278,7 +354,6 @@ void telaJogo() {
 int frame = 0;
 int fade_frames = 24;
 void animarfade(Color *fade) {
-    
     if(frame<=fade_frames) {
         
         fade->a -= 255/fade_frames;
@@ -315,13 +390,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut purus eget
 Integer blandit nisi ut hendrerit gravida. Pellentesque lorem arcu, imperdiet nec justo laoreet, feugiat\n\
 porta turpis. Morbi scelerisque sem vel risus ultrices, ut iaculis odio posuere.\
 ";
-    _BD
-        ClearBackground(BLACK);
-        DrawRectangle(0, 0, ScWi, ScHe, fade);
-    _ED
     
     SetTargetFPS(24);
-    while(!WindowShouldClose() && !IsKeyPressed(KEY_S)) {
+    while(!WindowShouldClose() && !botaoUp()) {
+        
+        readBotoes();
         
         _BD
             ClearBackground(RAYWHITE);
@@ -342,7 +415,7 @@ int jogo_fechado = 0;
 //------------------------------------------------------------------------------------
 // Program main entry point
 //------------------------------------------------------------------------------------
-int main(void)
+int main(int argc, char** argv)
 {
     // Initialization
     //--------------------------------------------------------------------------------------
@@ -362,11 +435,15 @@ int main(void)
         _y2 = (int)(0.475 * ((double)ScHe))
     ;
     
+    #ifdef O_RDWR
+    fd = open(argv[1], O_RDWR);
+    #endif
+    
     initFundos();
     
     initContaBit();
     
-    /* TODO: cria THREAD para leitura de switches. */
+    /* TODO: cria THREAD para leitura de switches, botões e escrita de leds.. */
     
     //--------------------------------------------------------------------------------------
     
@@ -377,6 +454,7 @@ int main(void)
     {
         // Update
         //----------------------------------------------------------------------------------
+        readBotoes();
         //----------------------------------------------------------------------------------
 
         // Draw
@@ -408,9 +486,13 @@ int main(void)
     //--------------------------------------------------------------------------------------
     jogo_fechado = 1;
     
+    destroiFundos();
+    
     CloseWindow();        // Close window and OpenGL context
     
-    destroiFundos();
+    #ifdef O_RDWR
+    close(fd);
+    #endif
     //--------------------------------------------------------------------------------------
 
     return 0;
