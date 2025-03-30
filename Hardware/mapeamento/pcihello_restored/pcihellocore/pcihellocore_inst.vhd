@@ -11,7 +11,8 @@
 			pcie_hard_ip_0_refclk_export             : in  std_logic                     := 'X';             -- export
 			pcie_hard_ip_0_rx_in_rx_datain_0         : in  std_logic                     := 'X';             -- rx_datain_0
 			pcie_hard_ip_0_tx_out_tx_dataout_0       : out std_logic;                                        -- tx_dataout_0
-			swport_external_connection_export        : in  std_logic_vector(31 downto 0) := (others => 'X')  -- export
+			swport_external_connection_export        : in  std_logic_vector(31 downto 0) := (others => 'X'); -- export
+			lcdport_external_connection_export       : out std_logic_vector(31 downto 0)                     -- export
 		);
 	end component pcihellocore;
 
@@ -28,6 +29,7 @@
 			pcie_hard_ip_0_refclk_export             => CONNECTED_TO_pcie_hard_ip_0_refclk_export,             --             pcie_hard_ip_0_refclk.export
 			pcie_hard_ip_0_rx_in_rx_datain_0         => CONNECTED_TO_pcie_hard_ip_0_rx_in_rx_datain_0,         --              pcie_hard_ip_0_rx_in.rx_datain_0
 			pcie_hard_ip_0_tx_out_tx_dataout_0       => CONNECTED_TO_pcie_hard_ip_0_tx_out_tx_dataout_0,       --             pcie_hard_ip_0_tx_out.tx_dataout_0
-			swport_external_connection_export        => CONNECTED_TO_swport_external_connection_export         --        swport_external_connection.export
+			swport_external_connection_export        => CONNECTED_TO_swport_external_connection_export,        --        swport_external_connection.export
+			lcdport_external_connection_export       => CONNECTED_TO_lcdport_external_connection_export        --       lcdport_external_connection.export
 		);
 

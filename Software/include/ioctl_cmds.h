@@ -7,5 +7,6 @@
 #define WR_R_DISPLAY  _IO('a', 'd')
 #define WR_RED_LEDS   _IO('a', 'e')
 #define WR_GREEN_LEDS _IO('a', 'f')
+#define WR_LCD        _IO('a', 'g')
 
 #endif /* __IOCTL_CMDS_H__ */

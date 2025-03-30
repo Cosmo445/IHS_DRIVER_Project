@@ -309,4 +309,28 @@ set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/alter
 set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_clock_crosser.v
 set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_sc_fifo.v -library pcihellocore
 set_global_assignment -name SDC_FILE pcihello.SDC
+set_location_assignment PIN_AF4 -to LCD_EN
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_EN
+set_location_assignment PIN_AE4 -to LCD_DATA[7]
+set_location_assignment PIN_AH4 -to LCD_DATA[6]
+set_location_assignment PIN_AE3 -to LCD_DATA[5]
+set_location_assignment PIN_AH2 -to LCD_DATA[4]
+set_location_assignment PIN_AE5 -to LCD_DATA[3]
+set_location_assignment PIN_AH3 -to LCD_DATA[2]
+set_location_assignment PIN_AF3 -to LCD_DATA[1]
+set_location_assignment PIN_AG4 -to LCD_DATA[0]
+set_location_assignment PIN_AF27 -to LCD_ON
+set_location_assignment PIN_AG3 -to LCD_RS
+set_location_assignment PIN_AJ3 -to LCD_RW
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_RS
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_RW
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

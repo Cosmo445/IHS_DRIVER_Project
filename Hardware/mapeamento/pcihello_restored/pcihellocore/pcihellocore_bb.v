@@ -11,7 +11,8 @@ module pcihellocore (
 	pcie_hard_ip_0_refclk_export,
 	pcie_hard_ip_0_rx_in_rx_datain_0,
 	pcie_hard_ip_0_tx_out_tx_dataout_0,
-	swport_external_connection_export);	
+	swport_external_connection_export,
+	lcdport_external_connection_export);	
 
 	output	[31:0]	hexlport_external_connection_export;
 	output	[31:0]	hexrport_external_connection_export;
@@ -25,4 +26,5 @@ module pcihellocore (
 	input		pcie_hard_ip_0_rx_in_rx_datain_0;
 	output		pcie_hard_ip_0_tx_out_tx_dataout_0;
 	input	[31:0]	swport_external_connection_export;
+	output	[31:0]	lcdport_external_connection_export;
 endmodule

@@ -91,7 +91,8 @@ static const char* peripheral[] = {
 	"display_l",
 	"display_r",
 	"green_leds",
-	"red_leds"
+	"red_leds",
+	"lcd"
 };
 
 enum perf_names_idx {
@@ -100,7 +101,8 @@ enum perf_names_idx {
 	IDX_DISPLAYL,
 	IDX_DISPLAYR,
 	IDX_GREENLED,
-	IDX_REDLED
+	IDX_REDLED,
+	IDX_LCD
 };
 static int wr_name_idx = IDX_DISPLAYR;
 static int rd_name_idx = IDX_SWITCH;
@@ -233,28 +235,32 @@ static long int my_ioctl(struct file*, unsigned int cmd, unsigned long arg)
 {
 	switch(cmd){
 	case RD_SWITCHES:
-		read_pointer = bar0_mmio + 0xC000; //TODO: update offset
+		read_pointer = bar0_mmio + 0xC000;
 		rd_name_idx = IDX_SWITCH;
 		break;
 	case RD_PBUTTONS:
-		read_pointer = bar0_mmio + 0xC020; //TODO: update offset
+		read_pointer = bar0_mmio + 0xC020; 
 		rd_name_idx = IDX_PBUTTONS;
 		break;
 	case WR_L_DISPLAY:
-		write_pointer = bar0_mmio + 0xC040; //TODO: update offset
+		write_pointer = bar0_mmio + 0xC040; 
 		wr_name_idx = IDX_DISPLAYL;
 		break;
 	case WR_R_DISPLAY:
-		write_pointer = bar0_mmio + 0xC060; //TODO: update offset
+		write_pointer = bar0_mmio + 0xC060; 
 		wr_name_idx = IDX_DISPLAYR;
 		break;
 	case WR_RED_LEDS:
-		write_pointer = bar0_mmio + 0xC080; //TODO: update offset
+		write_pointer = bar0_mmio + 0xC080; 
 		wr_name_idx = IDX_GREENLED;
 		break;
 	case WR_GREEN_LEDS:
-		write_pointer = bar0_mmio + 0xC0A0; //TODO: update offset
+		write_pointer = bar0_mmio + 0xC0A0; 
 		wr_name_idx = IDX_REDLED;
+		break;
+	case WR_LCD:
+		write_pointer = bar0_mmio + 0xC0C0;
+		wr_name_idx = IDX_LCD;
 		break;
 	default:
 		printk("my_driver: unknown ioctl command: 0x%X\n", cmd);
