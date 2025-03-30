@@ -79,11 +79,6 @@ int main(int argc, char** argv)
         ioctl(fd, WR_L_DISPLAY);
         retval = write(fd, &data, sizeof(data));
 
-
-
-
-
-
         // LÊ DOS SWICHES
         ioctl(fd, RD_SWITCHES);
         read(fd, &data, 4);
@@ -104,8 +99,9 @@ int main(int argc, char** argv)
         read(fd, &data, 4);
 
         // ANIMACAO DOS LEDS VERDES
-        verde<<=1;
-        if(verde==0) verde=1;
+        //verde<<=1;
+        //if(verde==0) verde=1;
+        verde = rand();
         ioctl(fd, WR_GREEN_LEDS);
         write(fd, &verde, sizeof(verde));
         
