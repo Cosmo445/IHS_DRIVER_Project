@@ -1,18 +1,42 @@
 TODO Cósmico Express
 
-- arte fundo_estático menu
-- arte fundo_estático créditos
-- arte fundo_estático controles
-- arte fundo_estático jogo
+/* 
+loop do jogo tem dois componentes principais:
+  update de variaveis
+  draw de elementos graficos
+*/
 
-- arte sprite velas
+Arte:
 
-- código update/draw controle_nave_mapa
-- código update/draw obstáculos_mapa
-- código update/draw combustível_mapa
-- código update/draw nave_escudos_armas_velas
+- fundo_estático menu
+- fundo_estático créditos
+- fundo_estático controles
+- fundo_estático jogo
 
-- código update cálculo_de_recursos
-- código draw displays_de_recursos
+- sprite velas
 
-- draw calcular_valores_nets
+Código:
+
+  > mapa
+- update/draw controle_nave
+- update/draw obstáculos
+- update/draw combustível
+
+- draw nave_escudos_armas_velas
+
+  > recursos
+- update cálculo
+
+  > interface
+- draw displays_de_recursos
+  - danos: 1 retângulo de altura variável
+  - combustível, fluido: triângulo inclinado
+  - leds combustível, fluido: circulo
+- draw extensão_switches
+  - reator, escudos, armas, velas, valvulas: retângulos de cor variável
+  - draw calcular_valores_nets
+
+  > outros
+
+
+- update ataques
