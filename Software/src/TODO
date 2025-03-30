@@ -1,0 +1,18 @@
+TODO Cósmico Express
+
+- arte fundo_estático menu
+- arte fundo_estático créditos
+- arte fundo_estático controles
+- arte fundo_estático jogo
+
+- arte sprite velas
+
+- código update/draw controle_nave_mapa
+- código update/draw obstáculos_mapa
+- código update/draw combustível_mapa
+- código update/draw nave_escudos_armas_velas
+
+- código update cálculo_de_recursos
+- código draw displays_de_recursos
+
+- draw calcular_valores_nets
