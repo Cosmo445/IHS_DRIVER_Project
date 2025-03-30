@@ -35,7 +35,7 @@ int main(int argc, char** argv)
         read(fd, &data, 4);
 
         ioctl(fd, WR_GPIO);
-        retval = write(fd, &data, 14);
+        retval = write(fd, &data, 4);
     }
 
     close(fd);
