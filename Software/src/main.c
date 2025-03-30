@@ -28,11 +28,8 @@
 
 // Funcoes hardware
 void readBotoes();
-char botao____(char);
-char botaoLeft();
-char botaoUp();
-char botaoDown();
-char botaoRight();
+char botaoPullup(char);
+char botaoPress(char);
 
 void readSwitches();
 int switches();
@@ -51,42 +48,40 @@ int mapeiaEsq(int, int);
 void writePerifericos();
 void resetPerifericos();
 
-char rd_botoes;
+char rd_botoes = 0;
 #if RODANDO_NA_PLACA
 int fd;
 #endif
+enum botoes {
+    RIGHT = 0,
+    DOWN = 1,
+    UP = 2,
+    LEFT = 3
+};
 void readBotoes() {
     #if RODANDO_NA_PLACA
     // LÊ DOS BOTOES DA PLACA
     ioctl(fd, RD_PBUTTONS);
     read(fd, &rd_botoes, 1);
+    rd_botoes = ~rd_botoes;
     #else
     rd_botoes = 
-        (IsKeyPressed(KEY_LEFT)  <<3) +
-        (IsKeyPressed(KEY_UP)    <<2) +
-        (IsKeyPressed(KEY_DOWN)  <<1) +
-        (IsKeyPressed(KEY_RIGHT) <<0)
+        (IsKeyDown(KEY_LEFT)  <<3) +
+        (IsKeyDown(KEY_UP)    <<2) +
+        (IsKeyDown(KEY_DOWN)  <<1) +
+        (IsKeyDown(KEY_RIGHT) <<0)
     ;
     #endif
 }
-char botao____(char qual) {
+char botaoPullup(char qual) {
     static char retorno = 0, pressed_prev[4] = {1,1,1,1}, pressed_now = 0;
-    pressed_now = !(rd_botoes&(1<<qual));
+    pressed_now = rd_botoes&(1<<qual);
 	retorno = (!pressed_prev[qual]) && pressed_now; // se pressionado, mas n acabou de pressionar
 	pressed_prev[qual] = pressed_now;             // guarda pressed now pra proxima chamada
 	return retorno;
 }
-char botaoLeft() { 
-    return botao____(3);
-}
-char botaoUp() { 
-    return botao____(2);
-}
-char botaoDown() {
-    return botao____(1);
-}
-char botaoRight() { 
-    return botao____(0);
+char botaoPress(char qual) {
+	return rd_botoes&(1<<qual);
 }
 
 int rd_switches;
@@ -243,6 +238,20 @@ int cena_atual = MENU;
 
 int FASE = 1;
 
+#define sclw_rian(x) ((x)*1366/ScWi)
+Vector2 NavePos = {};
+Vector2 NaveFacing = {};
+
+Vector2 NaveVel = {};
+float NaveRot = 0.0;
+
+Vector2 NaveInit[3] = {};
+Vector2 NaveInitFac[3] = {};
+
+Vector2 Nave[3] = {};
+
+Rectangle Mapa = {};
+
 // Update de variáveis
 void runMenu();
 void runControles();
@@ -260,44 +269,109 @@ int COMBUSTIVEL = 10000, FLUIDO = 100;
 int DANOS = 0;
 
 void runMenu() {
-    if(botaoRight()) {
+    if(botaoPullup(RIGHT)) {
         if(opcao==2) opcao = 0;
         else opcao++;
     }
-    if(botaoLeft()) {
+    if(botaoPullup(LEFT)) {
         if(opcao==0) opcao = 2;
         else opcao--;
     }
     
-    if(botaoUp())
-    	cena_atual = opcao+1,
-        BATERIA = 1000, PRESSAO = 0, TEMPERATURA = 0;
+    if(botaoPullup(UP)) {
+    	cena_atual = opcao+1;
+        if(cena_atual == JOGO) {
+            BATERIA = 1000, PRESSAO = 0, TEMPERATURA = 0; 
+            NavePos = NaveInit[FASE-1];
+            NaveFacing = NaveInitFac[FASE-1];
+            NaveVel = (Vector2){};
+            NaveRot = 0.0;
+        }
+    }
 }
 void runControles() {
-    if(botaoDown()) cena_atual = MENU;
+    if(botaoPullup(DOWN)) cena_atual = MENU;
 }
 void runCreditos() {
-    if(botaoDown()) cena_atual = MENU;
+    if(botaoPullup(DOWN)) cena_atual = MENU;
 }
+
+Vector2 somaVec(Vector2 va, Vector2 vb) {
+    return (Vector2){va.x + vb.x, va.y + vb.y};
+}
+Vector2 menosVec(Vector2 v) {
+    return (Vector2) {-v.x, -v.y};
+}
+Vector2 normalRight(Vector2 v) {
+    return (Vector2){v.y, -v.x};
+};
+Vector2 normalLeft(Vector2 v) {
+    return (Vector2){-v.y, v.x};
+};
+Vector2 mulEscVec(Vector2 v, double e) {
+    return (Vector2) {  v.x * e, v.y*e  };
+}
+Vector2 rotateVec(Vector2 v, double rad) {
+    return (Vector2){
+        (cos(rad) * v.x) - (sin(rad) * v.y), 
+        (sin(rad) * v.x) + (cos(rad) * v.y)
+    };
+}
+
 void runJogo() {
     
     // slides
-    if(botaoDown()) {
+    if(IsKeyPressed(KEY_BACKSPACE)) {
         cena_atual = MENU, resetPerifericos();
         return;
     }
-    if(botaoRight()) {
+    if(IsKeyPressed(KEY_ENTER)) {
         if(FASE<3) FASE++;
         else FASE = 1;
-    }
-    if(botaoLeft()) {
-        if(FASE>1) FASE--;
-        else FASE = 3;
     }
     
     // Coisas que rodam em todas a fases
     readSwitches();
     writePerifericos();
+    
+    // Controle da nave
+    if(COMBUSTIVEL > 0) {
+        if(botaoPress(UP))    
+            NaveVel = somaVec(NaveVel, mulEscVec(NaveFacing, 0.0013)),
+            COMBUSTIVEL-=5;
+        if(botaoPress(DOWN))  
+            NaveVel = somaVec(NaveVel, mulEscVec(NaveFacing, -0.001)),
+            COMBUSTIVEL-=4;
+        if(botaoPress(RIGHT) && NaveRot<0.5) 
+            NaveRot += 0.03,
+            COMBUSTIVEL-=2;
+        if(botaoPress(LEFT) && NaveRot>-0.5)
+            NaveRot -= 0.03,
+            COMBUSTIVEL-=2;
+    }
+    
+    // Atualiza nave
+    NavePos = somaVec(NavePos, NaveVel);
+    NaveFacing = rotateVec(NaveFacing, NaveRot);
+    if(!CheckCollisionPointRec(NavePos, Mapa))
+        NavePos = somaVec(NavePos, menosVec(mulEscVec(NaveVel,1.1))),
+        COMBUSTIVEL -= 20,
+        NaveVel = (Vector2){};
+    
+    // Triângulo de desenho da nave
+    Nave[0] = somaVec(NavePos, NaveFacing);
+    Nave[1] = somaVec(
+        NavePos, 
+        mulEscVec( somaVec(
+            normalRight(NaveFacing), menosVec(NaveFacing)
+        ), 0.4)
+    );
+    Nave[2] = somaVec(
+        NavePos, 
+        mulEscVec( somaVec(
+            normalLeft(NaveFacing), menosVec(NaveFacing)
+        ), 0.4)
+    );
     
     // Coisas que so rodam em algumas fases
     switch (FASE) {
@@ -305,14 +379,24 @@ void runJogo() {
             //
         break;
         case 2:
-    		BATERIA--;
+            // RUN REATOR
+            COMBUSTIVEL -= forcaReator();
+            BATERIA += forcaReator();
+            // RUN ESCUDOS/ARMAS
+    		BATERIA -= energiaEscudos();
+    		BATERIA -= energiaArmas();
             //
         break;
         case 3:
-    		BATERIA--;
-        	PRESSAO++;
-        	TEMPERATURA++;
-            //
+            // RUN REATOR
+            COMBUSTIVEL -= forcaReator();
+            BATERIA += forcaReator();
+            // RUN ESCUDOS/ARMAS
+    		BATERIA -= energiaEscudos();
+    		BATERIA -= energiaArmas();
+            // RUN TEMP/PRES
+        	PRESSAO += forcaReator();
+        	TEMPERATURA += forcaReator();
     }
 }
 
@@ -415,6 +499,25 @@ void DrawLineStripEx(const Vector2 *points, int pointCount, float thick, Color c
         DrawLineEx(points[i-1], points[i], thick, color);
 }
 
+void DrawSwitchRec(int i, Color cor) { 
+    DrawRectangle(
+        _GapWi + (i)*(_GapWi+_SwWi), 
+        ScHe - (ScHe/10), 
+        _SwWi, _SwHe, 
+        cor 
+    );
+}
+void DrawNetLines(int i, Color cor) {
+    DrawLineStripEx( pontos[i], ponto_qtd[i], 3, cor );
+}
+void DrawNave() {
+    
+    DrawTriangle(Nave[0], Nave[1], Nave[2], BLACK);
+    #if DEV_MODO 
+    DrawCircle(NavePos.x, NavePos.y, 2, RED);
+    #endif
+}
+
 void telaJogo() {
     ClearBackground(RAYWHITE);
     
@@ -435,32 +538,27 @@ void telaJogo() {
     
     // Elementos visuais de todas a fases
     
-    #define DrawSwitchRec() \
-    DrawRectangle( \
-        _GapWi + (i)*(_GapWi+_SwWi), \
-        ScHe - (ScHe/10), \
-        _SwWi, _SwHe, \
-        _cor \
-    )
-    #define DrawNetLines() \
-    DrawLineStripEx( pontos[i], ponto_qtd[i], 3, _cor )
-    static Color _cor;
+    static Color cor;
     Color CORON = (Color){200, 10, 25,255}, COROFF = (Color){ 40, 40, 25,255};
     int i = 0;
     for(; i < 12; i++) {
-        _cor = ((FASE!=1) && switch_(17-i)) ?  CORON : COROFF;
+        cor = ((FASE!=1) && switch_(17-i)) ?  CORON : COROFF;
         // TODO: desenha 'net' do botao, fios que conectam botao a um componente
         // cor da net muda quando se aperta um botao; tipo redstone
         
-        DrawNetLines();
-        DrawSwitchRec();
+        //DrawNetLines(i, cor);
+        DrawSwitchRec(i, cor);
     }
     for(; i < 18; i++) {
-        _cor = ((FASE==3) && switch_(17-i)) ?  CORON : COROFF;
+        cor = ((FASE==3) && switch_(17-i)) ?  CORON : COROFF;
         
-        DrawNetLines();
-        DrawSwitchRec();
+        //DrawNetLines(i, cor);
+        DrawSwitchRec(i, cor);
     }
+    
+    DrawRectangleRec(Mapa, (Color){0,0,0,100});
+    
+    DrawNave();
 }
 
 
@@ -478,7 +576,7 @@ void animartexto(char *texto) {
     static char temp;
     
     if(texto[ind]) ind++;
-    if(botaoRight())
+    if(botaoPullup(RIGHT))
         for(int i = 0; i < 10 && texto[ind]; i++)
             ind++; 
     
@@ -502,7 +600,7 @@ porta turpis. Morbi scelerisque sem vel risus ultrices, ut iaculis odio posuere.
 ";
     
     SetTargetFPS(24);
-    while(!WindowShouldClose() && !botaoUp() && frame <= fade_frames) {
+    while(!WindowShouldClose() && !botaoPress(UP) && frame <= fade_frames) {
         readBotoes();
         _BD
             ClearBackground(RAYWHITE);
@@ -510,7 +608,7 @@ porta turpis. Morbi scelerisque sem vel risus ultrices, ut iaculis odio posuere.
         _ED
         frame++;
     }
-    while(!WindowShouldClose() && !botaoUp()) {
+    while(!WindowShouldClose() && !botaoPress(UP)) {
         readBotoes();
         _BD
             ClearBackground(RAYWHITE);
@@ -529,10 +627,10 @@ BATERIA: %i\n\
 PRESSAO: %i\n\
 TEMPERATURA: %i\n\
 FLUIDO: %i\n\
-LCD:\n\
-|\n\
-|\n", 
-    COMBUSTIVEL, BATERIA, PRESSAO, TEMPERATURA, FLUIDO);
+pos: %f, %f", 
+    COMBUSTIVEL, BATERIA, PRESSAO, TEMPERATURA, FLUIDO,
+    NavePos.x, NavePos.y
+    );
     DrawText(texto, 10, 10, 20, BLACK);
 }
 
@@ -593,6 +691,27 @@ void initGeral() {
     // possiveis pontos computaveis
     for(int i = 0; i < 18; i++)
         pontos[i][3] = (Vector2){pontos[i][0].x, ScHe - (ScHe/7)};
+    
+    NaveInit[0] = (Vector2){sclw_rian(930), sclw_rian(120)};
+    NaveInitFac[0] = (Vector2){-16,16};
+    
+    NaveInit[1] = (Vector2){sclw_rian(400), sclw_rian(300)};
+    NaveInitFac[1] = (Vector2){20,0};
+    
+    NaveInit[2] = (Vector2){sclw_rian(380),sclw_rian(490)};
+    NaveInitFac[2] = (Vector2){13,-13};
+    
+    NavePos = NaveInit[0];
+    NaveFacing = NaveInitFac[0];
+    
+    Mapa = (Rectangle) {
+        sclw_rian(350), sclw_rian(40),
+        sclw_rian(650), sclw_rian(480)
+    };
+    
+    #if DEV_MODO
+    cena_atual = JOGO;
+    #endif
     
     initFundos();
     
