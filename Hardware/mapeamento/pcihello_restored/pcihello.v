@@ -38,13 +38,19 @@ module pcihello(
 	PCIE_WAKE_N,
 
 	//////////// Fan Control //////////
-	FAN_CTRL, 
+	FAN_CTRL,
 	
+	
+	
+	//////////// LCD //////////
 	LCD_DATA,
 	LCD_EN,
 	LCD_RW,
 	LCD_RS,
-	LCD_ON
+	LCD_ON,
+	
+	////////// HEADER /////////
+	GPIO
 );
 
 //=======================================================
@@ -97,6 +103,12 @@ output 			  		 		LCD_RS;
 output 			  		 		LCD_ON;
 
 
+//////////// HEADER //////////////
+output           [31:0]   GPIO;
+
+
+
+
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
@@ -108,6 +120,7 @@ wire [31:0] red_bus;
 wire [31:0] sw_bus;
 wire [31:0] key_bus;
 wire [31:0] lcd_bus;
+wire [31:0] gpio_bus;
 
 
 //=======================================================
@@ -127,7 +140,8 @@ wire [31:0] lcd_bus;
         .hexlport_external_connection_export       (hexl_bus),       // hexlport_external_connection.export
         .swport_external_connection_export         (sw_bus),         // swport_external_connection.export
         .keysport_external_connection_export       (key_bus),        // keysport_external_connection.export
-		  .lcdport_external_connection_export 			(lcd_bus)			// lcdport_external_connection.export
+		  .lcdport_external_connection_export 			(lcd_bus),			// lcdport_external_connection.export
+		  .gpioport_external_connection_export			(gpio_bus)			// GPIOport_external_connection.export
 	 );
 
 	//////////// FAN Control //////////
@@ -153,6 +167,8 @@ assign LCD_EN = lcd_bus[9];
 assign LCD_RW = lcd_bus[11];
 assign LCD_RS = lcd_bus[13];
 assign LCD_ON = lcd_bus[15];
+
+assign GPIO = gpio_bus[31:0];
 
 
 endmodule

@@ -8,5 +8,8 @@
 #define WR_RED_LEDS   _IO('a', 'e')
 #define WR_GREEN_LEDS _IO('a', 'f')
 #define WR_LCD        _IO('a', 'g')
+#define WR_GPIO       _IO('a', 'h')
 
 #endif /* __IOCTL_CMDS_H__ */
+
+

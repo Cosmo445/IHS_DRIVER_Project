@@ -92,7 +92,8 @@ static const char* peripheral[] = {
 	"display_r",
 	"green_leds",
 	"red_leds",
-	"lcd"
+	"lcd",
+	"gpio"
 };
 
 enum perf_names_idx {
@@ -102,7 +103,8 @@ enum perf_names_idx {
 	IDX_DISPLAYR,
 	IDX_GREENLED,
 	IDX_REDLED,
-	IDX_LCD
+	IDX_LCD,
+	IDX_GPIO
 };
 static int wr_name_idx = IDX_DISPLAYR;
 static int rd_name_idx = IDX_SWITCH;
@@ -261,6 +263,10 @@ static long int my_ioctl(struct file*, unsigned int cmd, unsigned long arg)
 	case WR_LCD:
 		write_pointer = bar0_mmio + 0xC0C0;
 		wr_name_idx = IDX_LCD;
+		break;
+	case WR_GPIO:
+		write_pointer = bar0_mmio + 0xC0E0;
+		wr_name_idx = IDX_GPIO;
 		break;
 	default:
 		printk("my_driver: unknown ioctl command: 0x%X\n", cmd);
