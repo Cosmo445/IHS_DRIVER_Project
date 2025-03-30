@@ -415,26 +415,160 @@ void DrawLineStripEx(const Vector2 *points, int pointCount, float thick, Color c
         DrawLineEx(points[i-1], points[i], thick, color);
 }
 
+
+
 void telaJogo() {
     ClearBackground(RAYWHITE);
+    
+    Color cor_ptr_fluido = GRAY;
+    Color cor_led1_fluido = GRAY;
+    Color cor_led2_fluido = GRAY;
+    Color cor_led3_fluido = GRAY;
+    
+    // Constantes de concersão das medidas absolutas para se adaptar ao tipo de tela;
+    const float kw = ScWi / 1920;
+    const float kh = ScHe / 1080;
+    
+    const Color cor_on = (Color){200, 10, 25,255};
+    const Color cor_off = (Color){40, 40, 25,255};
+    
+    Color cor_painel_solar = cor_off;
+    Color cor_reator = cor_off;
+    Color cor_escudos = cor_off;
+    Color cor_armas = cor_off;
+    Color cor_valvulas = cor_off;
     
     // Elementos visuais de certas fases
     switch (FASE) {
         case 1:
-            DrawText("JOGO_1", 190, 200, 20, GRAY);
             DrawTexture(FundoJogo_1, 0, 0, WHITE);
+            DrawText("JOGO_1", (int)(kw*190), (int)(kh*200), 20, GRAY);
         break;
         case 2:
-            DrawText("JOGO_2", 190, 200, 20, GRAY);
             DrawTexture(FundoJogo_2, 0, 0, WHITE);
+            DrawText("JOGO_2", (int)(kw*190), (int)(kh*200), 20, GRAY);
+            cor_reator = cor_on;
+            cor_escudos = cor_on;
+            cor_armas = cor_on;
         break;
         case 3:
-            DrawText("JOGO_3", 190, 200, 20, GRAY);
+            cor_ptr_fluido = BLUE;
+            cor_led1_fluido = RED;
+            cor_led2_fluido = YELLOW;
+            cor_led3_fluido = GREEN;
+            cor_painel_solar = cor_on;
+            cor_reator = cor_on;
+            cor_escudos = cor_on;
+            cor_armas = cor_on;
+            cor_valvulas = cor_on;
             DrawTexture(FundoJogo_3, 0, 0, WHITE);
+            DrawText("JOGO_3", (int)(kw*190), (int)(kh*200), 20, GRAY);
     }
     
-    // Elementos visuais de todas a fases
     
+    // Terminal do reator
+    for (int i = 0; i < 4; i++) {
+        if (switch_(17-i))
+            DrawRectangle((int)(kw*(160 + 152*i/4)), (int)(kh*852), (int)(kw*148/4), (int)(kh*62), cor_reator);
+        else
+            DrawRectangle((int)(kw*(160 + 152*i/4)), (int)(kh*852), (int)(kw*148/4), (int)(kh*62), cor_off);     
+    }
+    
+    // Terminal dos escudos
+    for (int i = 0; i < 4; i++) {
+        if (switch_(13-i))
+            DrawRectangle((int)(kw*(570 + 152*i/4)), (int)(kh*852), (int)(kw*148/4), (int)(kh*62), cor_escudos);
+        else
+            DrawRectangle((int)(kw*(570 + 152*i/4)), (int)(kh*852), (int)(kw*148/4), (int)(kh*62), cor_off);     
+    }
+    
+    // Terminal das armas
+    for (int i = 0; i < 4; i++) {
+        if (switch_(9-i))
+            DrawRectangle((int)(kw*(982 + 152*i/4)), (int)(kh*852), (int)(kw*148/4), (int)(kh*62), cor_armas);
+        else
+            DrawRectangle((int)(kw*(982 + 152*i/4)), (int)(kh*852), (int)(kw*148/4), (int)(kh*62), cor_off);     
+    }
+    
+    // Terminal das valvulas
+    for (int i = 0; i < 4; i++) {
+        if (switch_(3-i))
+            DrawRectangle((int)(kw*(1597 + 152*i/4)), (int)(kh*852), (int)(kw*148/4), (int)(kh*62), cor_valvulas);
+        else
+            DrawRectangle((int)(kw*(1597 + 152*i/4)), (int)(kh*852), (int)(kw*148/4), (int)(kh*62), cor_off);     
+    }
+    
+    // Terminal dos paineis solares
+    if (switch_(5))
+        DrawRectangle((int)(kw*1547), (int)(kh*553), (int)(kw*86), (int)(kh*90), cor_painel_solar);
+    else
+        DrawRectangle((int)(kw*1547), (int)(kh*553), (int)(kw*86), (int)(kh*90), cor_off);
+        
+    if (switch_(4))
+        DrawRectangle((int)(kw*1678), (int)(kh*553), (int)(kw*86), (int)(kh*90), cor_painel_solar);
+    else
+        DrawRectangle((int)(kw*1678), (int)(kh*553), (int)(kw*86), (int)(kh*90), cor_off);
+    
+    // Fundo do painel de danos
+    Color cor_painel = (Color){255, 0, 0, 128};
+    int nivel_dano = 150; // Valor máximo = 233
+    DrawRectangle((int)(kw*135), (int)(kh*(718 - nivel_dano)), 197, (int)(kh*nivel_dano), cor_painel);
+    
+    // Luzes do nivel de combustivel
+    DrawCircle((int)(kw*156), (int)(kh*124), 17, RED);
+    DrawCircle((int)(kw*230), (int)(kh*124), 17, YELLOW);
+    DrawCircle((int)(kw*305), (int)(kh*124), 17, GREEN);
+    
+    // Ponteiro de combustivel
+    Vector2 p1c = {(int)(kw*213), (int)(kh*351)};
+    Vector2 p2c = {(int)(kw*390), (int)(kh*282)}; // Varia de acordo com o combustivel
+    Vector2 p3c = {(int)(kw*245), (int)(kh*351)};
+    
+    int combustivel = 10000;
+    if (combustivel > 5000) {
+        p2c = (Vector2){(int)(kw*390), (int)(kh*282)}; // Varia de acordo com o combustivel
+    }
+    else if (combustivel > 2500 && combustivel <= 5000) {
+        p2c = (Vector2) {(int)(kw*231), (int)(kh*183)}; // Substituir pelo ponto correto
+        DrawCircle((int)(kw*305), (int)(kh*124), 17, GRAY);
+        
+    }
+    else {
+        p2c = (Vector2) {(int)(kw*71), 286}; // substituir pelo ponto correto
+        DrawCircle((int)(kw*305), (int)(kh*124), 17, GRAY);
+        DrawCircle((int)(kw*230), (int)(kh*124), 17, GRAY);
+        
+    }
+    DrawTriangle(p3c, p2c, p1c, RED);
+    
+    
+    // Luzes do nivel de fluido termico
+    DrawCircle((int)(kw*1624), (int)(kh*123), 17, cor_led1_fluido);
+    DrawCircle((int)(kw*1699), (int)(kh*123), 17, cor_led2_fluido);
+    DrawCircle((int)(kw*1774), (int)(kh*123), 17, cor_led3_fluido);
+    
+    // Ponteiro de fluido termico
+    Vector2 p1f = {(int)(kw*1682), (int)(kh*351)};
+    Vector2 p2f = {(int)(kw*1854), (int)(kh*282)}; // Varia de acordo com o combustivel
+    Vector2 p3f = {(int)(kw*1714), (int)(kh*351)};
+    
+    int fluido_termico = 50;
+    if (fluido_termico > 50) {
+        p2f = (Vector2){(int)(kw*1854), (int)(kh*282)}; // Varia de acordo com o combustivel
+    }
+    else if (fluido_termico > 25 && fluido_termico <= 50) {
+        p2f = (Vector2) {(int)(kw*1700), (int)(kh*183)}; // Substituir pelo ponto correto
+        DrawCircle((int)(kw*1774), (int)(kh*123), 17, GRAY);
+
+    }
+    else {
+        p2f = (Vector2) {(int)(kw*1541), (int)(kh*286)}; // substituir pelo ponto correto
+        DrawCircle((int)(kw*1699), (int)(kh*123), 17, GRAY);
+        DrawCircle((int)(kw*1774), (int)(kh*123), 17, GRAY);
+    }
+    DrawTriangle(p3f, p2f, p1f, cor_ptr_fluido);
+    
+    // Elementos visuais de todas a fases
     #define DrawSwitchRec() \
     DrawRectangle( \
         _GapWi + (i)*(_GapWi+_SwWi), \
@@ -452,13 +586,13 @@ void telaJogo() {
         // TODO: desenha 'net' do botao, fios que conectam botao a um componente
         // cor da net muda quando se aperta um botao; tipo redstone
         
-        DrawNetLines();
+        //DrawNetLines();
         DrawSwitchRec();
     }
     for(; i < 18; i++) {
         _cor = ((FASE==3) && switch_(17-i)) ?  CORON : COROFF;
         
-        DrawNetLines();
+        //DrawNetLines();
         DrawSwitchRec();
     }
 }
