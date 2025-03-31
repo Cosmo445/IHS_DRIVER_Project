@@ -1,6 +1,6 @@
 #define RODANDO_NA_PLACA 1
 
-#define DEV_MODO 1
+#define DEV_MODO 0
 
 #if RODANDO_NA_PLACA
 
@@ -27,9 +27,11 @@
 //https://github.com/raysan5/raylib/discussions/2478
 
 int opcao = 0;
-int BATERIA = 1000, PRESSAO = 50, TEMPERATURA = 50;
-int COMBUSTIVEL = 10000, FLUIDO = 100;
+int BATERIA = 1000, PRESSAO = 0, TEMPERATURA = 0;
+int COMBUSTIVEL = 10000, FLUIDO = 500;
 int DANOS = 0;
+int TEMPO = 0;
+int EVENTO_ATUAL = 0;
 
 // Funcoes hardware
 void readBotoes();
@@ -55,9 +57,6 @@ int mapeiaDir(int);
 int mapeiaEsq(int, int);
 void writePerifericos();
 void resetPerifericos();
-
-int subtemperatura;
-int subpressao;
 
 char rd_botoes;
 #if RODANDO_NA_PLACA
@@ -131,48 +130,10 @@ void readSwitches() {
     #endif
 }
 
-int loseEvent = 0;
-
-void eventoAsteroide(int tempoAtual) {
-
-	int data = 0b11111111111111111111111111111111; 
-	
-    if (COMBUSTIVEL <= tempoAtual && COMBUSTIVEL >= tempoAtual - 100) {
-    	lcd_write_msg(fd, "  !ASTEROIDES!  ");
-        ioctl(fd, WR_GPIO);
-        write(fd, &data, 4);
-    }
-    
-    
-    if(COMBUSTIVEL <= tempoAtual && COMBUSTIVEL >= tempoAtual - 200) {
-        
-    }
-    
-    if ((COMBUSTIVEL <= tempoAtual - 200 && COMBUSTIVEL >= tempoAtual - 203) && !switch_(13) && loseEvent == 0) {
-            DANOS += 50;
-            loseEvent= 1 ;// Evita múltiplas execuções dentro do mesmo ataque
-            //lcd_write_msg(fd, "                "); // Limpa o LCD após o ataque
-            data = 0x00000000;
-            ioctl(fd, WR_GPIO);
-            //write(fd, &data, 4); // Reseta o dispositivo
-    }
-       
-
-    // Resetando o evento ao final do tempo limite
-    if (COMBUSTIVEL <= tempoAtual - 200) {
-        loseEvent = 0;
-        lcd_write_msg(fd, "                ");
-       	int data = 0x00000000;
-       	ioctl(fd, WR_GPIO);
-        write(fd, &data, 4);
-    }
-    
-}
-
 void alertaGPIO() {
 
 
-    if (BATERIA < 250 || PRESSAO < 25 || TEMPERATURA < 25) {
+    if (BATERIA < 250 || PRESSAO > 75 || TEMPERATURA > 75) {
         int gpio_val = 4;
         ioctl(fd, WR_GPIO);  // Configura GPIO para escrita
         write(fd, &gpio_val, 4);  // Escreve no GPIO 1
@@ -192,7 +153,6 @@ int switch_(int qual){
 }
 
 void initContaBit() {
-    // TODO implementar em assembly
     for(int i = 0; i < 16; i++) {
         contaBits[i]=0;
         for(int j = i; j; j>>=1)
@@ -271,21 +231,29 @@ void writePerifericos() {
 void resetPerifericos() {
     #if RODANDO_NA_PLACA
     
-    static int reset;
+    unsigned int reset;
     
     // RESETA LEDS
-    reset = 0;
+    reset = 0x0;
     ioctl(fd, WR_RED_LEDS);
     write(fd, &reset, sizeof(reset));
     ioctl(fd, WR_GREEN_LEDS);
     write(fd, &reset, sizeof(reset));
     
     // RESETA 7SEG DA DIREITA E DA ESQUERDA
-    reset = ~0;
+    reset = 0xFFFFFFFF;
     ioctl(fd, WR_R_DISPLAY);
     write(fd, &reset, sizeof(reset));
     ioctl(fd, WR_L_DISPLAY);
     write(fd, &reset, sizeof(reset));
+    
+    // RESETA O LCD
+    lcd_write_control(fd, 1);
+    
+    // RESETA BUZZER
+    reset = 0x00000000;
+    ioctl(fd, WR_GPIO);
+    write(fd, &reset, 4);
     
     #else 
     // fazer nada
@@ -303,7 +271,7 @@ enum cenas_enum {
 
 int cena_atual = MENU;
 
-int FASE = 1;
+int FASE = 3;
 
 // Update de variáveis
 void runMenu();
@@ -329,7 +297,10 @@ void runMenu() {
     
     if(botaoUp())
     	cena_atual = opcao+1,
-        BATERIA = 1000, PRESSAO = 50, TEMPERATURA = 50, DANOS = 0, COMBUSTIVEL = 10000;
+    	TEMPO = 0,
+        BATERIA = 1000, PRESSAO = 0, TEMPERATURA = 0, 
+        DANOS = 0, COMBUSTIVEL = 10000,
+        EVENTO_ATUAL = 0;
 }
 void runControles() {
     if(botaoDown()) cena_atual = MENU;
@@ -337,67 +308,196 @@ void runControles() {
 void runCreditos() {
     if(botaoDown()) cena_atual = MENU;
 }
+
+void alertaBateria (){
+	
+    #if RODANDO_NA_PLACA
+	int data = 0b11111111111111111111111111111111;
+    lcd_write_msg(fd, "BATERIA ACABANDO");
+    ioctl(fd, WR_GPIO);
+    write(fd, &data, 4);
+    #endif
+    
+}
+void alertaTemperatura (){
+	
+    #if RODANDO_NA_PLACA
+	int data = 0b11111111111111111111111111111111;
+    lcd_write_msg(fd, "ALTA TEMPERATURA");
+    ioctl(fd, WR_GPIO);
+    write(fd, &data, 4);
+    #endif
+    
+}
+void alertaSuperPressao (){
+	
+    #if RODANDO_NA_PLACA
+	int data = 0b11111111111111111111111111111111;
+    lcd_write_msg(fd, " !SUPERPRESSAO! ");
+    ioctl(fd, WR_GPIO);
+    write(fd, &data, 4);
+    #endif
+    
+}
+
+void resetEvento() {
+    EVENTO_ATUAL = 0;
+}
+void eventoAtaque(int end){
+    EVENTO_ATUAL = 2;
+    if (TEMPO == end) {
+        DANOS += (8 - energiaEscudos() - energiaArmas() + quantasVelas());
+        resetEvento();
+    }
+}
+void eventoAsteroide(int end) {
+    EVENTO_ATUAL = 1;
+    if (TEMPO == end) {
+        DANOS += (4 - energiaEscudos() + quantasVelas());
+        resetEvento();
+    }
+}
+
 void runJogo() {
     
     // slides
     if(botaoDown()) {
         cena_atual = MENU, resetPerifericos();
+    	#if RODANDO_NA_PLACA
+    	resetPerifericos();
+    	#endif
         return;
-    }
-    if(botaoRight()) {
-        if(FASE<3) FASE++;
-        else FASE = 1;
-    }
-    if(botaoLeft()) {
-        if(FASE>1) FASE--;
-        else FASE = 3;
     }
     
     // Coisas que rodam em todas a fases
     readSwitches();
     writePerifericos();
-    
-    // Coisas que so rodam em algumas fases
-    	
-    	alertaGPIO();
-    	
-    	COMBUSTIVEL -= 4;
-    	BATERIA -= forcaReator();
-    	BATERIA -= energiaEscudos();
-    	BATERIA -= energiaArmas();
-    	if (BATERIA < 1000)
-    		BATERIA += quantasVelas();
-    	
-    	if(COMBUSTIVEL < 9700 && COMBUSTIVEL > 9450)eventoAsteroide(9700);
-    	if(COMBUSTIVEL < 9100 && COMBUSTIVEL > 8850)eventoAsteroide(9100);
-    	if(COMBUSTIVEL < 8200 && COMBUSTIVEL > 7950)eventoAsteroide(8200);
-    	
-    	
-    	subpressao = subpressao - forcaReator() + quantasValvulas();
-    	if (subpressao < -10) {
-    		subpressao = 0;	
-    		PRESSAO--;
-    	}
-    	else if (subpressao > 10){
-    		subpressao = 0;
-    		PRESSAO++;
-    	}
-    	subtemperatura = subtemperatura - quantasValvulas() + quantasVelas() + forcaReator();
-    	if (subtemperatura < -15) {
-    		subtemperatura = 0;
-    		TEMPERATURA--;
-    	}
-    	else if (subtemperatura > 15) {
-    		subtemperatura = 0;
-    		TEMPERATURA++;
-    		
-    	}	
-
-    		
-    	if (COMBUSTIVEL <= 0 || BATERIA <= 0 || (PRESSAO >= 100 || PRESSAO <= 0) || (TEMPERATURA >= 100 || TEMPERATURA <= 0)) 
-        	cena_atual = MENU;
+    alertaGPIO();
     
     
+    TEMPO++;
+    
+    COMBUSTIVEL -= 5;
+    
+    
+    // RUN REATOR
+    if(FLUIDO > 0) {
+    	COMBUSTIVEL -= forcaReator();
+    	BATERIA += forcaReator();
+    	
+    	// PRSSAO AFETADA POR REATOR E VALVULAS
+    	PRESSAO += forcaReator();
+    	PRESSAO -= quantasValvulas();
+    	
+    	// TEMP AFETADA POR REATOR E VELA
+    	TEMPERATURA += forcaReator();
+    	
+    	FLUIDO -= quantasValvulas();
+    }
+    
+    PRESSAO--;
+    TEMPERATURA--;
+    TEMPERATURA -= quantasVelas();
+    
+    // PAINEIS AUMENTAM BATERIA
+    BATERIA += quantasVelas();
+    
+    // RUN ARMAS E ESCUDOS
+    BATERIA -= energiaEscudos();
+    BATERIA -= energiaArmas();
+    
+    // LIMITES UPPER E LOWER
+    if (BATERIA > 1000) BATERIA = 1000;
+    if (BATERIA < 0) BATERIA = 0;
+    
+    if (PRESSAO > 100) PRESSAO = 100;
+    if (PRESSAO < 0) PRESSAO = 0;
+    
+    if (TEMPERATURA > 100) TEMPERATURA = 100;
+    if (TEMPERATURA < 0) TEMPERATURA = 0;
+    
+    if(FLUIDO < 0) FLUIDO = 0;
+    
+    
+    // RUN EVENTOS
+    // FASE 1
+    int evento = 0;
+    #define __asteroides(inicio) \
+    if(((inicio*12) < TEMPO) && (TEMPO <= (inicio+2)*12)) evento=1,eventoAsteroide((inicio+2)*12);
+    #define __ataque(inicio) \
+    if(((inicio*12) < TEMPO) && (TEMPO <= (inicio+2)*12)) evento=1,eventoAtaque((inicio+2)*12);
+    
+    // FASE 1
+    __asteroides(5)
+    __asteroides(15)
+    __asteroides(25)
+    
+    // FASE 2
+    __ataque(40)
+    __asteroides(50)
+    __ataque(60)
+    
+    // FASE 3
+    __ataque(70)
+    __ataque(80)
+    __asteroides(90)
+    
+    if(!evento) {
+		if(BATERIA < 100) alertaBateria();
+		if(PRESSAO > 75) alertaSuperPressao();
+		if(TEMPERATURA > 75)  alertaTemperatura();
+    }
+    else {
+    	#if RODANDO_NA_PLACA
+    	int data;
+    	switch (EVENTO_ATUAL) {
+    		case 1:
+				data = 0b11111111111111111111111111111111;
+    			lcd_write_msg(fd, "  !ASTEROIDES!  ");
+    			ioctl(fd, WR_GPIO);
+    			write(fd, &data, 4);
+    		break;
+    		case 2:
+				data = 0b11111111111111111111111111111111;
+    			lcd_write_msg(fd, "  !SOB ATAQUE!  ");
+    			ioctl(fd, WR_GPIO);
+    			write(fd, &data, 4);
+    		break;
+    		default:
+    			// Resetando o evento ao final do tempo limite
+    			//lcd_write_msg(fd, "                ");
+    			//lcd_write_msg(fd, "  ESTA TUDO DBOA");
+    			lcd_clear(fd);
+    			data = 0x00000000;
+    			ioctl(fd, WR_GPIO);
+    			write(fd, &data, 4);
+    	}
+		#endif
+    }
+    
+    
+    // CASOS DE PERDA
+    if (DANOS >= 20 || COMBUSTIVEL <= 0 || BATERIA <= 0 || PRESSAO >= 100 || TEMPERATURA >= 100) {
+    	cena_atual = MENU;
+    	#if RODANDO_NA_PLACA
+    	resetPerifericos();
+    	#endif
+    }
+    	
+    // CASO DE VITORIA
+    if (TEMPO == 100*12) {
+    	cena_atual = MENU;
+    	#if RODANDO_NA_PLACA
+    	resetPerifericos();
+    	#endif
+    }
+    	
+    /*
+    // CASOS DE PERDA
+    if (DANOS >= 20 || COMBUSTIVEL <= 0 || BATERIA <= 0 || PRESSAO >= 100 || TEMPERATURA >= 100) 
+    	cena_atual = MENU;
+    
+    */
 }
 
 
@@ -423,7 +523,6 @@ Texture2D
 
 int ScWi, ScHe;
 int _x1, _x2, _y1, _y2; //coordenadas para print no menu
-// TODO: make static or global (to precompute)
 int _SwWi, _SwHe, _GapWi;
 
 int ponto_qtd[18] = {
@@ -431,7 +530,7 @@ int ponto_qtd[18] = {
 };
 Vector2 pontos[18][10] = {};
 
-// TODO: fundos menu, controles, creditos
+// TODO: fundos controles, creditos
 void initFundos() {
 	
     Image Fundo_img_temp;
@@ -454,6 +553,11 @@ void initFundos() {
     Fundo_img_temp = LoadImage("./fundo/Menu.png");
     ImageResize(&Fundo_img_temp, ScWi, ScHe);
         FundoMenu = LoadTextureFromImage(Fundo_img_temp); 
+    UnloadImage(Fundo_img_temp);
+    
+    Fundo_img_temp = LoadImage("./fundo/Controles.png");
+    ImageResize(&Fundo_img_temp, ScWi, ScHe);
+        FundoControles = LoadTextureFromImage(Fundo_img_temp); 
     UnloadImage(Fundo_img_temp);
     
     Fundo_img_temp = LoadImage("./fundo/Init+Menu/futugatama.png");
@@ -479,6 +583,7 @@ void destroiFundos(){
     UnloadTexture(FundoJogo_2);
     UnloadTexture(FundoJogo_3);
     UnloadTexture(FundoMenu);
+    UnloadTexture(FundoControles);
     UnloadTexture(Futugatama);
     UnloadTexture(FundoInicio);
     UnloadTexture(FundoLorem);
@@ -512,6 +617,9 @@ void telaControles() {
     ClearBackground(RAYWHITE);
     
     DrawText("CONTROLES", 190, 200, 20, GRAY);
+    
+    DrawTexture(FundoControles, 0, 0, WHITE);
+    
 }
 void telaCreditos() {
     ClearBackground(RAYWHITE);
@@ -621,7 +729,7 @@ void telaJogo() {
     
     // Fundo do painel de danos
     Color cor_painel = (Color){255, 0, 0, 128};
-    DrawRectangle((int)(kw*135), (int)(kh*(718 - DANOS)), 197, (int)(kh*DANOS), cor_painel);
+    DrawRectangle((int)(kw*135), (int)(kh*(718 - DANOS*12)), 197, (int)(kh*DANOS*12), cor_painel);
     
     // Luzes do nivel de combustivel
     DrawCircle((int)(kw*156), (int)(kh*124), 17, RED);
@@ -660,10 +768,10 @@ void telaJogo() {
     Vector2 p2f = {(int)(kw*1854), (int)(kh*282)}; // Varia de acordo com o combustivel
     Vector2 p3f = {(int)(kw*1714), (int)(kh*351)};
     
-    if (TEMPERATURA > 50) {
+    if (FLUIDO > 250) {
         p2f = (Vector2){(int)(kw*1854), (int)(kh*282)}; // Varia de acordo com o combustivel
     }
-    else if (TEMPERATURA > 25 && TEMPERATURA <= 50) {
+    else if (FLUIDO > 100 && FLUIDO <= 250) {
         p2f = (Vector2) {(int)(kw*1700), (int)(kh*183)}; // Substituir pelo ponto correto
         DrawCircle((int)(kw*1774), (int)(kh*123), 17, GRAY);
 
@@ -690,16 +798,10 @@ void telaJogo() {
     int i = 0;
     for(; i < 12; i++) {
         _cor = ((FASE!=1) && switch_(17-i)) ?  CORON : COROFF;
-        // TODO: desenha 'net' do botao, fios que conectam botao a um componente
-        // cor da net muda quando se aperta um botao; tipo redstone
-        
-        //DrawNetLines();
         DrawSwitchRec();
     }
     for(; i < 18; i++) {
         _cor = ((FASE==3) && switch_(17-i)) ?  CORON : COROFF;
-        
-        //DrawNetLines();
         DrawSwitchRec();
     }
 }
@@ -726,7 +828,7 @@ void animartexto(char *texto) {
     temp = texto[ind];
     texto[ind] = 0;
     
-    DrawText(texto, 190, 200, 20, GRAY);
+    DrawText(texto, 190, 200, 100, GRAY);
     
     texto[ind] = temp;
     
@@ -737,9 +839,7 @@ void jogoInicio() {
     Color fade = (Color){0, 0, 0, 255};
     
     char texto[] = "\
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut purus eget tortor dapibus sodales.\n\
-Integer blandit nisi ut hendrerit gravida. Pellentesque lorem arcu, imperdiet nec justo laoreet, feugiat\n\
-porta turpis. Morbi scelerisque sem vel risus ultrices, ut iaculis odio posuere.\
+Pilote a nave. Tente chegar\nseguro ao seu destino. \
 ";
 	
     SetTargetFPS(12);
@@ -791,13 +891,13 @@ void dev_print() {
 BATERIA: %i\n\
 PRESSAO: %i\n\
 DANO: %i\n\
-loseEvent: %i\n\
 TEMPERATURA: %i\n\
 FLUIDO: %i\n\
-LCD:\n\
-|\n\
-|\n"
-    ,COMBUSTIVEL, BATERIA, PRESSAO, DANOS, loseEvent, TEMPERATURA, FLUIDO);
+TEMPO: %i\n\
+EVENTO: %s\n"
+    ,COMBUSTIVEL, BATERIA, PRESSAO, DANOS, TEMPERATURA, FLUIDO, TEMPO/12,
+    EVENTO_ATUAL==0?("nenhum"):(EVENTO_ATUAL==1?("asteroides"):("ataque"))
+    );
     DrawText(texto, 10, 10, 20, BLACK);
 }
 
@@ -809,8 +909,6 @@ void initGeral(char **argv) {
     ToggleFullscreen();
     HideCursor();
     
-    // Clear LCD
-    lcd_write_msg(fd, "                ");
     
     int temp = GetCurrentMonitor();
     ScWi = GetMonitorWidth(temp);
@@ -868,6 +966,9 @@ void initGeral(char **argv) {
     
     #if RODANDO_NA_PLACA
     fd = open(argv[1], O_RDWR);
+    lcd_write_msg(fd, "=COSMIC EXPRESS=");
+    lcd_write_control(fd, 0x2); // cursor home
+    lcd_write_control(fd, 0xc); // no cursor
     #endif
     
     /* TODO: cria THREAD para leitura de switches, botões e escrita de leds.. */
@@ -934,6 +1035,7 @@ int main(int argc, char** argv)
     CloseWindow();        // Close window and OpenGL context
     
     #if RODANDO_NA_PLACA
+    resetPerifericos();
     close(fd);
     #endif
     //--------------------------------------------------------------------------------------
