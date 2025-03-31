@@ -1,6 +1,6 @@
-#define RODANDO_NA_PLACA 0
+#define RODANDO_NA_PLACA 1
 
-#define DEV_MODO 1
+#define DEV_MODO 0
 
 #if RODANDO_NA_PLACA
 
@@ -25,6 +25,10 @@
 //https://www.raylib.com/cheatsheet/cheatsheet.html
 //https://github.com/raysan5/raylib/discussions/2478
 
+int opcao = 0;
+int BATERIA = 1000, PRESSAO = 0, TEMPERATURA = 0;
+int COMBUSTIVEL = 10000, FLUIDO = 100;
+int DANOS = 0;
 
 // Funcoes hardware
 void readBotoes();
@@ -254,10 +258,6 @@ enum opcoes_menu {
     op_CREDITOS = 1,
     op_JOGO = 2
 };
-int opcao = 0;
-int BATERIA = 1000, PRESSAO = 0, TEMPERATURA = 0;
-int COMBUSTIVEL = 10000, FLUIDO = 100;
-int DANOS = 0;
 
 void runMenu() {
     if(botaoRight()) {
@@ -306,14 +306,20 @@ void runJogo() {
         break;
         case 2:
     		BATERIA--;
+            if (BATERIA <= 0) 
+                cena_atual = MENU;
+        
             //
         break;
         case 3:
     		BATERIA--;
         	PRESSAO++;
         	TEMPERATURA++;
+            if (BATERIA <= 0 || PRESSAO >= 100 || TEMPERATURA >= 100) 
+                cena_atual = MENU;
             //
     }
+    
 }
 
 
@@ -670,7 +676,7 @@ LCD:\n\
     DrawText(texto, 10, 10, 20, BLACK);
 }
 
-void initGeral() {
+void initGeral(char **argv) {
     
     InitWindow(0, 0, "jogo nave");
     SetTargetFPS(12);
