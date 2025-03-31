@@ -1,6 +1,6 @@
 #define RODANDO_NA_PLACA 1
 
-#define DEV_MODO 0
+#define DEV_MODO 1
 
 #if RODANDO_NA_PLACA
 
@@ -16,6 +16,7 @@
 
 // ioctl commands defined for the pci driver header
 #include "../include/ioctl_cmds.h"
+#include "../include/liquid_crystal/liquid_crystal.h"
 
 #endif
 
@@ -26,7 +27,7 @@
 //https://github.com/raysan5/raylib/discussions/2478
 
 int opcao = 0;
-int BATERIA = 1000, PRESSAO = 0, TEMPERATURA = 0;
+int BATERIA = 1000, PRESSAO = 50, TEMPERATURA = 50;
 int COMBUSTIVEL = 10000, FLUIDO = 100;
 int DANOS = 0;
 
@@ -54,6 +55,9 @@ int mapeiaDir(int);
 int mapeiaEsq(int, int);
 void writePerifericos();
 void resetPerifericos();
+
+int subtemperatura;
+int subpressao;
 
 char rd_botoes;
 #if RODANDO_NA_PLACA
@@ -126,6 +130,60 @@ void readSwitches() {
     rd_switches ^= pressed_true;
     #endif
 }
+
+int loseEvent = 0;
+
+void eventoAsteroide(int tempoAtual) {
+
+	int data = 0b11111111111111111111111111111111; 
+	
+    if (COMBUSTIVEL <= tempoAtual && COMBUSTIVEL >= tempoAtual - 100) {
+    	lcd_write_msg(fd, "  !ASTEROIDES!  ");
+        ioctl(fd, WR_GPIO);
+        write(fd, &data, 4);
+    }
+    
+    
+    if(COMBUSTIVEL <= tempoAtual && COMBUSTIVEL >= tempoAtual - 200) {
+        
+    }
+    
+    if ((COMBUSTIVEL <= tempoAtual - 200 && COMBUSTIVEL >= tempoAtual - 203) && !switch_(13) && loseEvent == 0) {
+            DANOS += 50;
+            loseEvent= 1 ;// Evita múltiplas execuções dentro do mesmo ataque
+            //lcd_write_msg(fd, "                "); // Limpa o LCD após o ataque
+            data = 0x00000000;
+            ioctl(fd, WR_GPIO);
+            //write(fd, &data, 4); // Reseta o dispositivo
+    }
+       
+
+    // Resetando o evento ao final do tempo limite
+    if (COMBUSTIVEL <= tempoAtual - 200) {
+        loseEvent = 0;
+        lcd_write_msg(fd, "                ");
+       	int data = 0x00000000;
+       	ioctl(fd, WR_GPIO);
+        write(fd, &data, 4);
+    }
+    
+}
+
+void alertaGPIO() {
+
+
+    if (BATERIA < 250 || PRESSAO < 25 || TEMPERATURA < 25) {
+        int gpio_val = 4;
+        ioctl(fd, WR_GPIO);  // Configura GPIO para escrita
+        write(fd, &gpio_val, 4);  // Escreve no GPIO 1
+    } else {
+        int gpio_val = 0;
+        ioctl(fd, WR_GPIO);  // Configura GPIO para escrita
+        write(fd, &gpio_val, 4);  // Escreve no GPIO 0
+    }
+    
+}
+
 int switches() {
     return rd_switches;
 }
@@ -271,7 +329,7 @@ void runMenu() {
     
     if(botaoUp())
     	cena_atual = opcao+1,
-        BATERIA = 1000, PRESSAO = 0, TEMPERATURA = 0;
+        BATERIA = 1000, PRESSAO = 50, TEMPERATURA = 50, DANOS = 0, COMBUSTIVEL = 10000;
 }
 void runControles() {
     if(botaoDown()) cena_atual = MENU;
@@ -300,25 +358,45 @@ void runJogo() {
     writePerifericos();
     
     // Coisas que so rodam em algumas fases
-    switch (FASE) {
-        case 1:
-            //
-        break;
-        case 2:
-    		BATERIA--;
-            if (BATERIA <= 0) 
-                cena_atual = MENU;
-        
-            //
-        break;
-        case 3:
-    		BATERIA--;
-        	PRESSAO++;
-        	TEMPERATURA++;
-            if (BATERIA <= 0 || PRESSAO >= 100 || TEMPERATURA >= 100) 
-                cena_atual = MENU;
-            //
-    }
+    	
+    	alertaGPIO();
+    	
+    	COMBUSTIVEL -= 4;
+    	BATERIA -= forcaReator();
+    	BATERIA -= energiaEscudos();
+    	BATERIA -= energiaArmas();
+    	if (BATERIA < 1000)
+    		BATERIA += quantasVelas();
+    	
+    	if(COMBUSTIVEL < 9700 && COMBUSTIVEL > 9450)eventoAsteroide(9700);
+    	if(COMBUSTIVEL < 9100 && COMBUSTIVEL > 8850)eventoAsteroide(9100);
+    	if(COMBUSTIVEL < 8200 && COMBUSTIVEL > 7950)eventoAsteroide(8200);
+    	
+    	
+    	subpressao = subpressao - forcaReator() + quantasValvulas();
+    	if (subpressao < -10) {
+    		subpressao = 0;	
+    		PRESSAO--;
+    	}
+    	else if (subpressao > 10){
+    		subpressao = 0;
+    		PRESSAO++;
+    	}
+    	subtemperatura = subtemperatura - quantasValvulas() + quantasVelas() + forcaReator();
+    	if (subtemperatura < -15) {
+    		subtemperatura = 0;
+    		TEMPERATURA--;
+    	}
+    	else if (subtemperatura > 15) {
+    		subtemperatura = 0;
+    		TEMPERATURA++;
+    		
+    	}	
+
+    		
+    	if (COMBUSTIVEL <= 0 || BATERIA <= 0 || (PRESSAO >= 100 || PRESSAO <= 0) || (TEMPERATURA >= 100 || TEMPERATURA <= 0)) 
+        	cena_atual = MENU;
+    
     
 }
 
@@ -337,7 +415,10 @@ Texture2D
     FundoCreditos,
     FundoJogo_1,
     FundoJogo_2,
-    FundoJogo_3
+    FundoJogo_3,
+    Futugatama,
+   	FundoInicio,
+   	FundoLorem
 ;
 
 int ScWi, ScHe;
@@ -352,6 +433,7 @@ Vector2 pontos[18][10] = {};
 
 // TODO: fundos menu, controles, creditos
 void initFundos() {
+	
     Image Fundo_img_temp;
     
     Fundo_img_temp = LoadImage("./fundo/Jogo_1.png");
@@ -374,6 +456,21 @@ void initFundos() {
         FundoMenu = LoadTextureFromImage(Fundo_img_temp); 
     UnloadImage(Fundo_img_temp);
     
+    Fundo_img_temp = LoadImage("./fundo/Init+Menu/futugatama.png");
+    ImageResize(&Fundo_img_temp, ScWi, ScHe);
+        Futugatama = LoadTextureFromImage(Fundo_img_temp); 
+    UnloadImage(Fundo_img_temp);
+    
+    Fundo_img_temp = LoadImage("./fundo/Init+Menu/open_cosmic_IHS.png");
+    ImageResize(&Fundo_img_temp, ScWi, ScHe);
+        FundoInicio = LoadTextureFromImage(Fundo_img_temp); 
+    UnloadImage(Fundo_img_temp);
+    
+    Fundo_img_temp = LoadImage("./fundo/Init+Menu/Lorem_ground.png");
+    ImageResize(&Fundo_img_temp, ScWi, ScHe);
+        FundoLorem = LoadTextureFromImage(Fundo_img_temp); 
+    UnloadImage(Fundo_img_temp);
+    
     //Fundo = LoadTexture("./texturas/Fundo.png");
 }
 
@@ -382,6 +479,9 @@ void destroiFundos(){
     UnloadTexture(FundoJogo_2);
     UnloadTexture(FundoJogo_3);
     UnloadTexture(FundoMenu);
+    UnloadTexture(Futugatama);
+    UnloadTexture(FundoInicio);
+    UnloadTexture(FundoLorem);
 }
 
 #define _BD BeginDrawing();
@@ -392,6 +492,10 @@ void telaMenu() {
     DrawText("MENU", 190, 200, 20, GRAY);
     
     DrawTexture(FundoMenu, 0, 0, WHITE);
+    
+    lcd_write_msg(fd, "=COSMIC EXPRESS=");
+    lcd_write_control(fd, 0x2); // cursor home
+    lcd_write_control(fd, 0xc); // no cursor
     
     switch (opcao) {
         case op_CONTROLES:
@@ -517,8 +621,7 @@ void telaJogo() {
     
     // Fundo do painel de danos
     Color cor_painel = (Color){255, 0, 0, 128};
-    int nivel_dano = 150; // Valor máximo = 233
-    DrawRectangle((int)(kw*135), (int)(kh*(718 - nivel_dano)), 197, (int)(kh*nivel_dano), cor_painel);
+    DrawRectangle((int)(kw*135), (int)(kh*(718 - DANOS)), 197, (int)(kh*DANOS), cor_painel);
     
     // Luzes do nivel de combustivel
     DrawCircle((int)(kw*156), (int)(kh*124), 17, RED);
@@ -530,11 +633,10 @@ void telaJogo() {
     Vector2 p2c = {(int)(kw*390), (int)(kh*282)}; // Varia de acordo com o combustivel
     Vector2 p3c = {(int)(kw*245), (int)(kh*351)};
     
-    int combustivel = 10000;
-    if (combustivel > 5000) {
+    if (COMBUSTIVEL > 5000) {
         p2c = (Vector2){(int)(kw*390), (int)(kh*282)}; // Varia de acordo com o combustivel
     }
-    else if (combustivel > 2500 && combustivel <= 5000) {
+    else if (COMBUSTIVEL > 2500 && COMBUSTIVEL <= 5000) {
         p2c = (Vector2) {(int)(kw*231), (int)(kh*183)}; // Substituir pelo ponto correto
         DrawCircle((int)(kw*305), (int)(kh*124), 17, GRAY);
         
@@ -558,11 +660,10 @@ void telaJogo() {
     Vector2 p2f = {(int)(kw*1854), (int)(kh*282)}; // Varia de acordo com o combustivel
     Vector2 p3f = {(int)(kw*1714), (int)(kh*351)};
     
-    int fluido_termico = 50;
-    if (fluido_termico > 50) {
+    if (TEMPERATURA > 50) {
         p2f = (Vector2){(int)(kw*1854), (int)(kh*282)}; // Varia de acordo com o combustivel
     }
-    else if (fluido_termico > 25 && fluido_termico <= 50) {
+    else if (TEMPERATURA > 25 && TEMPERATURA <= 50) {
         p2f = (Vector2) {(int)(kw*1700), (int)(kh*183)}; // Substituir pelo ponto correto
         DrawCircle((int)(kw*1774), (int)(kh*123), 17, GRAY);
 
@@ -640,12 +741,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut purus eget
 Integer blandit nisi ut hendrerit gravida. Pellentesque lorem arcu, imperdiet nec justo laoreet, feugiat\n\
 porta turpis. Morbi scelerisque sem vel risus ultrices, ut iaculis odio posuere.\
 ";
+	
+    SetTargetFPS(12);
+    while(!WindowShouldClose() && !botaoUp() && frame <= fade_frames) {
+        readBotoes();
+        _BD
+			DrawTexture(Futugatama, 0, 0, WHITE);
+			animarfade(&fade);
+        _ED
+        frame++;
+    }
+    frame = 0;
+    ClearBackground(RAYWHITE);
+    while(!WindowShouldClose() && !botaoUp() && frame <= fade_frames) {
+        readBotoes();
+        _BD
+    		DrawTexture(FundoInicio, 0, 0, WHITE);
+        _ED
+        frame++;
+    }
     
+    frame = 0;
+    ClearBackground(RAYWHITE);
     SetTargetFPS(24);
     while(!WindowShouldClose() && !botaoUp() && frame <= fade_frames) {
         readBotoes();
         _BD
-            ClearBackground(RAYWHITE);
+            //ClearBackground(RAYWHITE);
+            DrawTexture(FundoLorem, 0, 0, WHITE);
             animarfade(&fade);
         _ED
         frame++;
@@ -653,7 +776,7 @@ porta turpis. Morbi scelerisque sem vel risus ultrices, ut iaculis odio posuere.
     while(!WindowShouldClose() && !botaoUp()) {
         readBotoes();
         _BD
-            ClearBackground(RAYWHITE);
+            //ClearBackground(RAYWHITE);
             animartexto(texto);
         _ED
         frame++;
@@ -667,12 +790,14 @@ void dev_print() {
 "COMBUSTIVEL: %i\n\
 BATERIA: %i\n\
 PRESSAO: %i\n\
+DANO: %i\n\
+loseEvent: %i\n\
 TEMPERATURA: %i\n\
 FLUIDO: %i\n\
 LCD:\n\
 |\n\
-|\n", 
-    COMBUSTIVEL, BATERIA, PRESSAO, TEMPERATURA, FLUIDO);
+|\n"
+    ,COMBUSTIVEL, BATERIA, PRESSAO, DANOS, loseEvent, TEMPERATURA, FLUIDO);
     DrawText(texto, 10, 10, 20, BLACK);
 }
 
@@ -683,6 +808,9 @@ void initGeral(char **argv) {
     
     ToggleFullscreen();
     HideCursor();
+    
+    // Clear LCD
+    lcd_write_msg(fd, "                ");
     
     int temp = GetCurrentMonitor();
     ScWi = GetMonitorWidth(temp);
@@ -755,7 +883,7 @@ int main(int argc, char** argv)
 {
     // Initialization
     //--------------------------------------------------------------------------------------
-    initGeral();
+    initGeral(argv);
     //--------------------------------------------------------------------------------------
     
     // Cutscene inicial do jogo
