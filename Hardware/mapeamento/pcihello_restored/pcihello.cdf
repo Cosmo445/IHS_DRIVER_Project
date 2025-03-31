@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CGX150DF31) Path("D:/Users/lessl/Downloads/main/IHS_DRIVER_Project-main/Hardware/mapeamento/pcihello_restored/") File("pcihello.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CGX150DF31) Path("D:/Users/clfm/Documents/IHS_DRIVER_Project/Hardware/mapeamento/pcihello_restored/") File("pcihello.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

@@ -287,28 +287,6 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/ -tag from_archive
-set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/submodules/ -tag from_archive
-set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/ -tag from_archive
-set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/submodules/ -tag from_archive
-set_global_assignment -name QIP_FILE pcihellocore/synthesis/pcihellocore.qip
-set_global_assignment -name VERILOG_FILE pcihello.v
-set_global_assignment -name QSYS_FILE pcihellocore.qsys
-set_global_assignment -name SOURCE_FILE pcihellocore.cmp
-set_global_assignment -name SOURCE_FILE pcihello.cmp
-set_global_assignment -name SDC_FILE pcihello.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_rsp_xbar_mux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_rsp_xbar_demux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_id_router_003.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_id_router.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_cmd_xbar_demux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_addr_router.sv
-set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_irq_clock_crosser.sv
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_pipeline_base.v -library pcihellocore
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_clock_crosser.v
-set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_sc_fifo.v -library pcihellocore
-set_global_assignment -name SDC_FILE pcihello.SDC
 set_location_assignment PIN_AF4 -to LCD_EN
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_EN
 set_location_assignment PIN_AE4 -to LCD_DATA[7]
@@ -333,4 +311,92 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA[0]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_DATA
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_RS
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LCD_RW
+set_global_assignment -name QIP_FILE pcihellocore/synthesis/pcihellocore.qip
+set_global_assignment -name VERILOG_FILE pcihello.v
+set_global_assignment -name QSYS_FILE pcihellocore.qsys
+set_global_assignment -name SOURCE_FILE pcihellocore.cmp
+set_global_assignment -name SOURCE_FILE pcihello.cmp
+set_global_assignment -name SDC_FILE pcihello.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_rsp_xbar_mux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_rsp_xbar_demux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_id_router_003.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_id_router.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_cmd_xbar_demux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/pcihellocore_addr_router.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pcihellocore/synthesis/submodules/altera_irq_clock_crosser.sv
+set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_pipeline_base.v -library pcihellocore
+set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_st_clock_crosser.v
+set_global_assignment -name VERILOG_FILE pcihellocore/synthesis/submodules/altera_avalon_sc_fifo.v -library pcihellocore
+set_global_assignment -name SDC_FILE pcihello.SDC
+set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/ -tag from_archive
+set_global_assignment -name SEARCH_PATH db/ip/pcihellocore/submodules/ -tag from_archive
+set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/ -tag from_archive
+set_global_assignment -name SEARCH_PATH pcihellocore/synthesis/submodules/ -tag from_archive
+set_location_assignment PIN_A27 -to GPIO[31]
+set_location_assignment PIN_A28 -to GPIO[30]
+set_location_assignment PIN_A19 -to GPIO[29]
+set_location_assignment PIN_A26 -to GPIO[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[31]
+set_location_assignment PIN_A25 -to GPIO[27]
+set_location_assignment PIN_G23 -to GPIO[26]
+set_location_assignment PIN_G24 -to GPIO[25]
+set_location_assignment PIN_G22 -to GPIO[24]
+set_location_assignment PIN_F22 -to GPIO[23]
+set_location_assignment PIN_G20 -to GPIO[22]
+set_location_assignment PIN_F23 -to GPIO[21]
+set_location_assignment PIN_E21 -to GPIO[20]
+set_location_assignment PIN_F20 -to GPIO[19]
+set_location_assignment PIN_D25 -to GPIO[18]
+set_location_assignment PIN_D28 -to GPIO[17]
+set_location_assignment PIN_C26 -to GPIO[16]
+set_location_assignment PIN_C25 -to GPIO[15]
+set_location_assignment PIN_B28 -to GPIO[14]
+set_location_assignment PIN_D24 -to GPIO[13]
+set_location_assignment PIN_D23 -to GPIO[12]
+set_location_assignment PIN_D21 -to GPIO[11]
+set_location_assignment PIN_D22 -to GPIO[10]
+set_location_assignment PIN_C21 -to GPIO[9]
+set_location_assignment PIN_B21 -to GPIO[8]
+set_location_assignment PIN_K22 -to GPIO[7]
+set_location_assignment PIN_F19 -to GPIO[6]
+set_location_assignment PIN_K21 -to GPIO[5]
+set_location_assignment PIN_D19 -to GPIO[4]
+set_location_assignment PIN_F18 -to GPIO[3]
+set_location_assignment PIN_D18 -to GPIO[2]
+set_location_assignment PIN_F17 -to GPIO[1]
+set_location_assignment PIN_G16 -to GPIO[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[30]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[29]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[27]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[26]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[25]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[24]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to "GPIO[10](n)"
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to GPIO
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

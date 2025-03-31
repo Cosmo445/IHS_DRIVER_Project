@@ -384,6 +384,134 @@
 					"strict" : false
 				},
 				{
+					"name" : "GPIO[0]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[3]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[4]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[5]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[6]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[7]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[8]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[9]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[10]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[11]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[12]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[13]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[14]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[15]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[16]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[17]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[18]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[19]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[20]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[21]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[22]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[23]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[24]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[25]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[26]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[27]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[28]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[29]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[30]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[31]",
+					"strict" : false
+				},
+				{
 					"name" : "PCIE_PERST_N",
 					"strict" : false
 				},
