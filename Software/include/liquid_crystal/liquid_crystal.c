@@ -1,20 +1,21 @@
 #include "liquid_crystal.h"
 
-
-
 //===================================================================================
 /* recebe uma string a ser "escrita" no lcd, função mais próxima do usuário */
+
 void lcd_write_msg(int fd, char *msg) {
 
     /* vai ficar em loop até achar um '\0' */
-	uint8_t count = 0;
-    while (msg[count] != 0 && count < 16) {
+    uint8_t count = 0;
+    while (msg[count] != 0 && count < 17) {
+	/* passa o fd e a letra a ser "escrita" no lcd */
         lcd_write_char(fd, msg[count]);
         count++;
     }
 
-    if(count > 15) {
-        //printk("System error: overflow mensage!!");
+    /* Se o usuário digitar uma mensagem maior que 16 letras (sem levar em conta ao '\0' final da string) */
+    if(count > 16) {
+        printf("Erro: overflow mensage!");
     }
 
 }
