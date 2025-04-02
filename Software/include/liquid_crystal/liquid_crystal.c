@@ -1,7 +1,7 @@
 #include "liquid_crystal.h"
 
 //===================================================================================
-/* Recebe uma string a ser "escrita" no lcd, função mais próxima do usuário */
+/* Recebe uma string a ser "escrita" no lcd - função mais próxima do usuário */
 void lcd_write_msg(int fd, char *msg) {
 
     /* Vai ficar em loop até achar um '\0' */
@@ -58,14 +58,6 @@ void lcd_drive_write(int fd, uint32_t data) {
     ioctl(fd, WR_LCD);
     /* escreve no ldc o conteúdo de data */
     write(fd, &data, 4);
-
-        //int en = ((data & 0b00000000000000000000001000000000) == 0) ? 0 : 1;
-        //int rw = ((data & 0b00000000000000000000100000000000) == 0) ? 0 : 1;
-        //int rs = ((data & 0b00000000000000000010000000000000) == 0) ? 0 : 1;
-        //int on = ((data & 0b00000000000000001000000000000000) == 0) ? 0 : 1;
-        //int ch = data & 0b00000000000000000000000011111111;
-        //char caracter = ch;
-        //printf("Descrição: en = '%d', rw = '%d', rs = '%d', on = '%d', symbol = '%c' \n", en, rw, rs, on, caracter);
 
 }
 
